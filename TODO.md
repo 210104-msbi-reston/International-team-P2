@@ -1,8 +1,12 @@
 # Product backlog
-- [ ] Find sources of data on COVID-19 incidence and vaccination in the United States
-- [ ] Finish proposal
+## Coding
 - [ ] Create an SSIS project
-- [ ] Load data into project
+- [ ] Prepare data for SSIS project
+- [ ] Load data into SSIS project
+## Managment
+- [ ] Finish proposal
 - [ ] Project presentation
-- [ ] Prepare a speech
+## Research
+- [ ] Find sources of data on COVID-19 incidence and vaccination in the United States
+## Other
 - [ ] Project Documentation 
