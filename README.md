@@ -26,7 +26,7 @@ Based on open data sources, the project offers opportunities for collecting, agg
 - Git
 ...
 #### Project work breakdown
-[TODO] (TODO.md)
+[TODO](TODO.md)
 
 ...
 #### Project structure
