@@ -12,10 +12,10 @@
 ## Context and Goals
 Based on open data sources, the project offers opportunities for collecting, aggregating, transforming, analyzing and visualizing statistics on the incidence of COVID-19 in the United States.
 ## Technical solution overview
-SQL Server
-SSIS
-SSAS
-SSRS
+- SQL Server
+- SSIS
+- SSAS
+- SSRS
 ### Architecture
 ...
 ### Components
@@ -25,7 +25,9 @@ SSRS
 - Microsoft Visual Studio 2017
 - Git
 ...
-#### Project work breakdown 
+#### Project work breakdown
+[TODO] (TODO.md)
+
 ...
 #### Project structure
 ...
