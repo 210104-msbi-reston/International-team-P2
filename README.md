@@ -1,6 +1,6 @@
 # COVID-19 Data Analysis
 ## Context and Goals
-Our project will implement collect, process and analyze data from open sources on morbidity and mortality from COVID-19 to determine vaccine distribution priorities. The result of the project will be the creation of an informational guide with detailed recommendations for the US government on the distribution of vaccines by region (districts, cities, states), gender, race and social groups (doctors, police, etc.). The generated guide will be presented as a PDF file.
+Our project will collect, process and analyze data from open sources COVID-19 cases and deaths to determine vaccine distribution priorities. The result of the project will be the creation of an informational guide with detailed recommendations for the US government on the distribution of vaccines by region (districts, cities, states), gender, race and occupation (doctors, police, etc). The generated guide will be presented as a PDF file.
 ## Technical solution overview
 ### Automation
 1. Filter/download state daily case count data on [CDC website](https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36/data)
