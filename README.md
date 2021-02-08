@@ -29,7 +29,7 @@ Our project will collect, process and analyze data from open sources COVID-19 ca
 ## Data source
 [CSV files](Sources.md)
 ## Team
+- Dmitrii Lutcenko 
 - Anuradhat Edirisuriya
-- Dmitrii Lutcenko  
 - Min Wei        
-- Ruslan Kashanov
+- Ruslan Khasanov
