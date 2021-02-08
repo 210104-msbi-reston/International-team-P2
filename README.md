@@ -1,9 +1,9 @@
 # COVID-19 Data Analysis
 ## Context and Goals
-Our project will collect, process and analyze data from open sources COVID-19 cases and deaths to determine vaccine distribution priorities. The result of the project will be the creation of an informational guide with detailed recommendations for the US government on the distribution of vaccines by region (districts, cities, states), gender, race and occupation (doctors, police, etc). The generated guide will be presented as report into a PDF file.
+Our project will collect, process and analyze data from open sources COVID-19 cases and deaths to determine vaccine distribution priorities. The result of the project will be the creation of an informational guide with detailed recommendations for the US government on the distribution of vaccines by region (districts, cities, states), gender, race and age. The generated guide will be presented as report into a PDF file.
 ## Technical solution overview
 ### Action Plan
-1. Search and load a dataset from public data sources [Data Source List](DataSourceList.md).
+1. Search and load a dataset from public data sources [See Data Source List](DataSourceList.md).
 2. Process data using MS Excel to filter and remove dublicate records.
 3. Process data using SSIS to filter and merge the data.
 4. Load data into data warehouse.
@@ -20,7 +20,7 @@ Our project will collect, process and analyze data from open sources COVID-19 ca
 * SQL Server Reporting Services
 * Git (GitHub)
 ## Project work breakdown
-[TODO](TODO.md)
+[See TODO List](TODO.md)
 ## Team
 - Dmitrii Lutcenko      - Team Leader
 - Anuradhat Edirisuriya
