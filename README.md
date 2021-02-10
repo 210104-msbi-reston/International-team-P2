@@ -7,7 +7,9 @@ Our project will collect, process and analyze data from open sources COVID-19 ca
 2. Process data using MS Excel to filter and remove dublicate records.
 3. Process data using SSIS to filter and merge the data.
 4. Load data into data warehouse.
-5. Generate an OLAP structure using SSAS to organize the data.
+5. Generate an OLAP structure using SSAS to organize the data:
+  * Fact - Cases
+  * Dimensions - Patient Info, Test, Facility, Outcome, Location
 6. Prepare and generate report using SSRS.
 7. Save information report as PDF file in dedicated directory on user's machine.
 ### Tech stack
@@ -20,7 +22,7 @@ Our project will collect, process and analyze data from open sources COVID-19 ca
 * SQL Server Reporting Services
 * Git (GitHub)
 ## Project work breakdown
-[TODO List](TODO.md)
+[Trello](https://trello.com/b/MEoAmnpT/task-board)
 ## Team
 - Dmitrii Lutcenko      - Team Leader
 - Anuradhat Edirisuriya
