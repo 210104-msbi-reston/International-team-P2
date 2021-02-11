@@ -67,15 +67,10 @@ CREATE TABLE Symptom(
 	FOREIGN KEY (SymptomSeverityID) REFERENCES SymptomSeverity
 );
 
-CREATE TABLE OutcomeType(
-	OutcomeTypeID INT IDENTITY(1,1) PRIMARY KEY,
-	[Name] VARCHAR(255)	
-);
-
 CREATE TABLE Outcome(
 	OutcomeID INT IDENTITY(1,1) PRIMARY KEY,
-	OutcomeTypeID INT,
-	FOREIGN KEY (OutcomeTypeID) REFERENCES OutcomeType
+	[Name] VARCHAR(255)
+	
 );
 
 CREATE TABLE FacilityType(
@@ -91,16 +86,10 @@ CREATE TABLE Facility(
 	FOREIGN KEY (AddressID) REFERENCES [Address]
 );
 
-CREATE TABLE TestResult(
-	TestResultID INT IDENTITY(1,1) PRIMARY KEY,
-	[NAME] VARCHAR(255)
-);
-
 CREATE TABLE Test(
 	TestID INT IDENTITY(1,1) PRIMARY KEY,
 	[Date] DATETIME,
-	TestResultID INT,
-	FOREIGN KEY (TestResultID) REFERENCES TestResult
+	TestResult BIT
 );
 
 CREATE TABLE [Case](
