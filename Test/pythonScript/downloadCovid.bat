@@ -1,0 +1,1 @@
+@py.exe C:\Users\Ruslan\Desktop\Revature_training\day22_Git_demo\pythonScript\downloadData.py %*
