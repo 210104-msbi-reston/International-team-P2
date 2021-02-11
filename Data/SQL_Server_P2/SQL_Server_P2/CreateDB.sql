@@ -6,7 +6,7 @@ GO
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 DROP TABLE IF EXISTS [Case], Test, TestResult, Facility, FacilityType, 
-Outcome, OutcomeType, Symptom, SymptomSeverety, Patient, [Address], City, [State], 
+Outcome, OutcomeType, Symptom, SymptomSeverity, Patient, [Address], City, [State], 
 Occupation, Gender, Ethnicity;
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
@@ -26,15 +26,15 @@ CREATE TABLE Occupation(
 );
 
 CREATE TABLE [State](
-	StateID INT IDENTITY(1,1) PRIMARY KEY,
+	[StateCode] VARCHAR(50) PRIMARY KEY,
 	[Name] VARCHAR(255)
 );
 
 CREATE TABLE City(
 	CityID INT IDENTITY(1,1) PRIMARY KEY,
 	[Name] VARCHAR(255),
-	StateID INT,
-	FOREIGN KEY (StateID) REFERENCES [State]
+	StateCode VARCHAR (50),
+	FOREIGN KEY (StateCode) REFERENCES [State]
 );
 
 CREATE TABLE [Address](
