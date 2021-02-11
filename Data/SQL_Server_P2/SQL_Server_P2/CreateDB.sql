@@ -5,8 +5,9 @@ USE Covid19DB
 GO
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS [Case], Test, Facility, FacilityType, Result, ResultType, Outcome, 
-OutcomeType, Symptom, Patient, [Address], City, [State], Occupation, Gender, Ethnicity;
+DROP TABLE IF EXISTS [Case], Test, TestResult, Facility, FacilityType, 
+Outcome, OutcomeType, Symptom, SymptomSeverety, Patient, [Address], City, [State], 
+Occupation, Gender, Ethnicity;
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 CREATE TABLE Ethnicity(
@@ -55,31 +56,26 @@ CREATE TABLE Patient(
 	FOREIGN KEY (AddressID) REFERENCES [Address]
 );
 
+CREATE TABLE SymptomSeverity(
+	SymptomSeverityID INT IDENTITY(1,1) PRIMARY KEY,
+	Severity VARCHAR(255)
+);
+
 CREATE TABLE Symptom(
 	SymptomID INT IDENTITY(1,1) PRIMARY KEY,
-	Severity VARCHAR(255)
+	SymptomSeverityID INT,
+	FOREIGN KEY (SymptomSeverityID) REFERENCES SymptomSeverity
 );
 
 CREATE TABLE OutcomeType(
 	OutcomeTypeID INT IDENTITY(1,1) PRIMARY KEY,
-	[Name] VARCHAR(255)
+	[Name] VARCHAR(255)	
 );
 
 CREATE TABLE Outcome(
 	OutcomeID INT IDENTITY(1,1) PRIMARY KEY,
 	OutcomeTypeID INT,
 	FOREIGN KEY (OutcomeTypeID) REFERENCES OutcomeType
-);
-
-CREATE TABLE ResultType(
-	ResultTypeID INT IDENTITY(1,1) PRIMARY KEY,
-	[Name] VARCHAR(255)
-);
-
-CREATE TABLE Result(
-	ResultID INT IDENTITY(1,1) PRIMARY KEY,
-	ResultTypeID INT,
-	FOREIGN KEY (ResultTypeID) REFERENCES ResultType
 );
 
 CREATE TABLE FacilityType(
@@ -95,13 +91,16 @@ CREATE TABLE Facility(
 	FOREIGN KEY (AddressID) REFERENCES [Address]
 );
 
+CREATE TABLE TestResult(
+	TestResultID INT IDENTITY(1,1) PRIMARY KEY,
+	[NAME] VARCHAR(255)
+);
+
 CREATE TABLE Test(
 	TestID INT IDENTITY(1,1) PRIMARY KEY,
 	[Date] DATETIME,
-	PatientID INT,
-	ResultID INT,
-	FOREIGN KEY (PatientID) REFERENCES Patient,
-	FOREIGN KEY (ResultID) REFERENCES Result
+	TestResultID INT,
+	FOREIGN KEY (TestResultID) REFERENCES TestResult
 );
 
 CREATE TABLE [Case](
