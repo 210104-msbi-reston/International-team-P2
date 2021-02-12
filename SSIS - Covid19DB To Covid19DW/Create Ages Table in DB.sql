@@ -1,6 +1,6 @@
 USE Covid19DB
 
-DROP TABLE Ages
+--DROP TABLE Ages
 
 CREATE TABLE Ages (
 	age INT PRIMARY KEY
