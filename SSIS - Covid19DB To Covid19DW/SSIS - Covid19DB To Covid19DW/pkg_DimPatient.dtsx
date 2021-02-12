@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DimPatient"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{B696CA5D-5411-413B-83D0-827D72A22752}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{B09923A2-5720-4E3E-A7CA-EF84AA114F18}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -726,7 +726,6 @@
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Gender"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Load DimPatient\Load DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]" />
                     <inputColumn
@@ -845,18 +844,19 @@
                   name="Merge Join Left Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Load DimPatient\Merge Join.Inputs[Merge Join Left Input].Columns[JoinKey]"
+                      cachedDataType="i4"
+                      cachedName="JoinKey"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load DimPatient\Sort Occupation.Outputs[Sort Output].Columns[JoinKey]" />
+                    <inputColumn
                       refId="Package\Load DimPatient\Merge Join.Inputs[Merge Join Left Input].Columns[Occupation]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Occupation"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Load DimPatient\Sort Occupation.Outputs[Sort Output].Columns[Occupation]" />
-                    <inputColumn
-                      refId="Package\Load DimPatient\Merge Join.Inputs[Merge Join Left Input].Columns[JoinKey]"
-                      cachedDataType="i4"
-                      cachedName="JoinKey"
-                      lineageId="Package\Load DimPatient\Sort Occupation.Outputs[Sort Output].Columns[JoinKey]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -866,12 +866,18 @@
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Load DimPatient\Merge Join.Inputs[Merge Join Right Input].Columns[JoinKey]"
+                      cachedDataType="i4"
+                      cachedName="JoinKey"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load DimPatient\Sort AgeGroups.Outputs[Sort Output].Columns[JoinKey]" />
+                    <inputColumn
                       refId="Package\Load DimPatient\Merge Join.Inputs[Merge Join Right Input].Columns[AgeGroup]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="AgeGroup"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Load DimPatient\Sort AgeGroups.Outputs[Sort Output].Columns[AgeGroup]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -889,27 +895,13 @@
                       dataType="str"
                       length="255"
                       lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[Occupation]"
-                      name="Occupation"
-                      sortKeyPosition="1">
+                      name="Occupation">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Load DimPatient\Merge Join.Inputs[Merge Join Left Input].Columns[Occupation]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[JoinKey]"
-                      dataType="i4"
-                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[JoinKey]"
-                      name="JoinKey">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Load DimPatient\Merge Join.Inputs[Merge Join Left Input].Columns[JoinKey]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -925,6 +917,20 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Load DimPatient\Merge Join.Inputs[Merge Join Right Input].Columns[AgeGroup]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[JoinKey]"
+                      dataType="i4"
+                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[JoinKey]"
+                      name="JoinKey"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load DimPatient\Merge Join.Inputs[Merge Join Left Input].Columns[JoinKey]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -965,18 +971,19 @@
                   name="Merge Join Left Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Load DimPatient\Merge Join 1.Inputs[Merge Join Left Input].Columns[JoinKey]"
+                      cachedDataType="i4"
+                      cachedName="JoinKey"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load DimPatient\Sort Gender.Outputs[Sort Output].Columns[JoinKey]" />
+                    <inputColumn
                       refId="Package\Load DimPatient\Merge Join 1.Inputs[Merge Join Left Input].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Gender"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Load DimPatient\Sort Gender.Outputs[Sort Output].Columns[Gender]" />
-                    <inputColumn
-                      refId="Package\Load DimPatient\Merge Join 1.Inputs[Merge Join Left Input].Columns[JoinKey]"
-                      cachedDataType="i4"
-                      cachedName="JoinKey"
-                      lineageId="Package\Load DimPatient\Sort Gender.Outputs[Sort Output].Columns[JoinKey]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -986,12 +993,18 @@
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Load DimPatient\Merge Join 1.Inputs[Merge Join Right Input].Columns[JoinKey]"
+                      cachedDataType="i4"
+                      cachedName="JoinKey"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load DimPatient\Sort Ethnicity.Outputs[Sort Output].Columns[JoinKey]" />
+                    <inputColumn
                       refId="Package\Load DimPatient\Merge Join 1.Inputs[Merge Join Right Input].Columns[Ethnicity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Ethnicity"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Load DimPatient\Sort Ethnicity.Outputs[Sort Output].Columns[Ethnicity]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -1009,8 +1022,7 @@
                       dataType="str"
                       length="255"
                       lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[Gender]"
-                      name="Gender"
-                      sortKeyPosition="1">
+                      name="Gender">
                       <properties>
                         <property
                           containsID="true"
@@ -1023,7 +1035,8 @@
                       refId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[JoinKey]"
                       dataType="i4"
                       lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[JoinKey]"
-                      name="JoinKey">
+                      name="JoinKey"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -1085,20 +1098,25 @@
                   name="Merge Join Left Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[Gender]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Gender"
+                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[JoinKey]"
+                      cachedDataType="i4"
+                      cachedName="JoinKey"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[Gender]" />
+                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[JoinKey]" />
                     <inputColumn
-                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[Ethnicity]"
+                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[Occupation]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
-                      cachedName="Ethnicity"
-                      lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[Ethnicity]" />
+                      cachedName="Occupation"
+                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[Occupation]" />
+                    <inputColumn
+                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[AgeGroup]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="AgeGroup"
+                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[AgeGroup]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1108,20 +1126,25 @@
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[Occupation]"
+                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[JoinKey]"
+                      cachedDataType="i4"
+                      cachedName="JoinKey"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[JoinKey]" />
+                    <inputColumn
+                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
-                      cachedName="Occupation"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[Occupation]" />
+                      cachedName="Gender"
+                      lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[Gender]" />
                     <inputColumn
-                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[AgeGroup]"
+                      refId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[Ethnicity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="AgeGroup"
-                      lineageId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output].Columns[AgeGroup]" />
+                      cachedLength="255"
+                      cachedName="Ethnicity"
+                      lineageId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output].Columns[Ethnicity]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1129,40 +1152,8 @@
               <outputs>
                 <output
                   refId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output]"
-                  isSorted="true"
                   name="Merge Join Output">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]"
-                      name="Gender"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[Gender]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]"
-                      name="Ethnicity">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[Ethnicity]}</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Occupation]"
                       codePage="1252"
@@ -1175,7 +1166,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[Occupation]}</property>
+                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[Occupation]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1190,7 +1181,37 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[AgeGroup]}</property>
+                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input].Columns[AgeGroup]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]"
+                      name="Gender">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[Gender]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]"
+                      name="Ethnicity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input].Columns[Ethnicity]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1435,7 +1456,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimPatient]) [refTable]
-where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ?</property>
+where [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ? and [refTable].[Gender] = ? and [refTable].[Ethnicity] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -1471,7 +1492,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]};#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]};#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Occupation]};#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[AgeGroup]};</property>
+                  name="ParameterMap">#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Occupation]};#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[AgeGroup]};#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]};#{Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1500,7 +1521,6 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Gender"
-                      cachedSortKeyPosition="1"
                       lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]">
                       <properties>
                         <property
@@ -1650,7 +1670,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1666,7 +1686,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1686,7 +1706,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       length="10"
                       lineageId="Package\Load DimPatient\Sort AgeGroups.Outputs[Sort Output].Columns[AgeGroup]"
                       name="AgeGroup"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -1699,7 +1719,8 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       refId="Package\Load DimPatient\Sort AgeGroups.Outputs[Sort Output].Columns[JoinKey]"
                       dataType="i4"
                       lineageId="Package\Load DimPatient\Sort AgeGroups.Outputs[Sort Output].Columns[JoinKey]"
-                      name="JoinKey">
+                      name="JoinKey"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -1751,7 +1772,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1767,7 +1788,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1787,7 +1808,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       length="255"
                       lineageId="Package\Load DimPatient\Sort Ethnicity.Outputs[Sort Output].Columns[Ethnicity]"
                       name="Ethnicity"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -1800,7 +1821,8 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       refId="Package\Load DimPatient\Sort Ethnicity.Outputs[Sort Output].Columns[JoinKey]"
                       dataType="i4"
                       lineageId="Package\Load DimPatient\Sort Ethnicity.Outputs[Sort Output].Columns[JoinKey]"
-                      name="JoinKey">
+                      name="JoinKey"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -1852,7 +1874,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1868,7 +1890,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1888,7 +1910,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       length="255"
                       lineageId="Package\Load DimPatient\Sort Gender.Outputs[Sort Output].Columns[Gender]"
                       name="Gender"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -1901,7 +1923,8 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       refId="Package\Load DimPatient\Sort Gender.Outputs[Sort Output].Columns[JoinKey]"
                       dataType="i4"
                       lineageId="Package\Load DimPatient\Sort Gender.Outputs[Sort Output].Columns[JoinKey]"
-                      name="JoinKey">
+                      name="JoinKey"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -1953,7 +1976,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1969,7 +1992,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1989,7 +2012,7 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       length="255"
                       lineageId="Package\Load DimPatient\Sort Occupation.Outputs[Sort Output].Columns[Occupation]"
                       name="Occupation"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -2002,7 +2025,8 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
                       refId="Package\Load DimPatient\Sort Occupation.Outputs[Sort Output].Columns[JoinKey]"
                       dataType="i4"
                       lineageId="Package\Load DimPatient\Sort Occupation.Outputs[Sort Output].Columns[JoinKey]"
-                      name="JoinKey">
+                      name="JoinKey"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -2047,12 +2071,12 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
               refId="Package\Load DimPatient.Paths[Merge Join Output]"
               endId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Merge Join Output"
-              startId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output]" />
+              startId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Load DimPatient.Paths[Merge Join Output1]"
               endId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Merge Join Output"
-              startId="Package\Load DimPatient\Merge Join.Outputs[Merge Join Output]" />
+              startId="Package\Load DimPatient\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\Load DimPatient.Paths[Merge Join Output2]"
               endId="Package\Load DimPatient\Remove Deltas.Inputs[Lookup Input]"
@@ -2352,8 +2376,274 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
         </EdgeLayout>
         <NodeLayout
           Size="171,42"
+          Id="Package\Load DimPatient\Remove Deltas"
+          TopLeft="314.5,529.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Load DimPatient"
+          TopLeft="314.5,638.5" />
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Lookup No Match Output]"
+          TopLeft="400,571.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,23.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
           Id="Package\Load DimPatient\Merge Join"
-          TopLeft="237.5,311.5" />
+          TopLeft="139.5,324.5" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load DimPatient\Merge Join 1"
+          TopLeft="582.5,323.5" />
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Sort Output]"
+          TopLeft="91,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.5,73.0000000000001"
+              Start="0,0"
+              End="113.5,65.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5000000000001"
+                    Point2="0,36.5000000000001"
+                    Point3="4,36.5000000000001" />
+                  <mssgle:LineSegment
+                    End="109.5,36.5000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.5,36.5000000000001"
+                    Point2="113.5,36.5000000000001"
+                    Point3="113.5,40.5000000000001" />
+                  <mssgle:LineSegment
+                    End="113.5,65.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Sort Output1]"
+          TopLeft="323,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.1666666666667,73.0000000000001"
+              Start="0,0"
+              End="-98.1666666666667,65.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.2674772036475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.2674772036475"
+                    Point2="0,43.2674772036475"
+                    Point3="-4,43.2674772036475" />
+                  <mssgle:LineSegment
+                    End="-94.1666666666667,43.2674772036475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.1666666666667,43.2674772036475"
+                    Point2="-98.1666666666667,43.2674772036475"
+                    Point3="-98.1666666666667,47.2674772036475" />
+                  <mssgle:LineSegment
+                    End="-98.1666666666667,65.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Sort Output2]"
+          TopLeft="555,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.9999999999999,72.0000000000001"
+              Start="0,0"
+              End="96.9999999999999,64.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.0000000000001"
+                    Point2="0,36.0000000000001"
+                    Point3="4,36.0000000000001" />
+                  <mssgle:LineSegment
+                    End="92.9999999999999,36.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="92.9999999999999,36.0000000000001"
+                    Point2="96.9999999999999,36.0000000000001"
+                    Point3="96.9999999999999,40.0000000000001" />
+                  <mssgle:LineSegment
+                    End="96.9999999999999,64.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Sort Output3]"
+          TopLeft="787,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-113.166666666667,72.0000000000001"
+              Start="0,0"
+              End="-113.166666666667,64.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.7083926031295" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.7083926031295"
+                    Point2="0,42.7083926031295"
+                    Point3="-4,42.7083926031295" />
+                  <mssgle:LineSegment
+                    End="-109.166666666667,42.7083926031295" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-109.166666666667,42.7083926031295"
+                    Point2="-113.166666666667,42.7083926031295"
+                    Point3="-113.166666666667,46.7083926031295" />
+                  <mssgle:LineSegment
+                    End="-113.166666666667,64.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load DimPatient\Merge Join 2"
+          TopLeft="336.5,424.5" />
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Merge Join Output]"
+          TopLeft="204.5,366.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="201.5,58"
+              Start="0,0"
+              End="201.5,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
+                  <mssgle:LineSegment
+                    End="197.5,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="197.5,29"
+                    Point2="201.5,29"
+                    Point3="201.5,33" />
+                  <mssgle:LineSegment
+                    End="201.5,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Merge Join Output1]"
+          TopLeft="652,365.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-224.166666666667,59"
+              Start="0,0"
+              End="-224.166666666667,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.9971550497866" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.9971550497866"
+                    Point2="0,34.9971550497866"
+                    Point3="-4,34.9971550497866" />
+                  <mssgle:LineSegment
+                    End="-220.166666666667,34.9971550497866" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-220.166666666667,34.9971550497866"
+                    Point2="-224.166666666667,34.9971550497866"
+                    Point3="-224.166666666667,38.9971550497866" />
+                  <mssgle:LineSegment
+                    End="-224.166666666667,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Merge Join Output2]"
+          TopLeft="403,466.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.9999999999999"
+              Start="0,0"
+              End="0,55.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load DimPatient.Paths[OLE DB Source Output3]"
           TopLeft="323,47.5">
@@ -2374,272 +2664,6 @@ where [refTable].[Gender] = ? and [refTable].[Ethnicity] = ? and [refTable].[Occ
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output]"
-          TopLeft="91,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="204.833333333334,60"
-              Start="0,0"
-              End="204.833333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6662804171495"
-                    Point2="0,35.6662804171495"
-                    Point3="4,35.6662804171495" />
-                  <mssgle:LineSegment
-                    End="200.833333333334,35.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="200.833333333334,35.6662804171495"
-                    Point2="204.833333333334,35.6662804171495"
-                    Point3="204.833333333334,39.6662804171495" />
-                  <mssgle:LineSegment
-                    End="204.833333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output1]"
-          TopLeft="323,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="27.1666666666669,60"
-              Start="0,0"
-              End="27.1666666666669,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6662804171495"
-                    Point2="0,35.6662804171495"
-                    Point3="4,35.6662804171495" />
-                  <mssgle:LineSegment
-                    End="23.1666666666669,35.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.1666666666669,35.6662804171495"
-                    Point2="27.1666666666669,35.6662804171495"
-                    Point3="27.1666666666669,39.6662804171495" />
-                  <mssgle:LineSegment
-                    End="27.1666666666669,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Merge Join 1"
-          TopLeft="469.5,311.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Merge Join 2"
-          TopLeft="348.5,427.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Remove Deltas"
-          TopLeft="348.5,529.5" />
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output2]"
-          TopLeft="555,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-27.1666666666666,60"
-              Start="0,0"
-              End="-27.1666666666666,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6662804171495"
-                    Point2="0,35.6662804171495"
-                    Point3="-4,35.6662804171495" />
-                  <mssgle:LineSegment
-                    End="-23.1666666666666,35.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-23.1666666666666,35.6662804171495"
-                    Point2="-27.1666666666666,35.6662804171495"
-                    Point3="-27.1666666666666,39.6662804171495" />
-                  <mssgle:LineSegment
-                    End="-27.1666666666666,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output3]"
-          TopLeft="787,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-204.833333333333,60"
-              Start="0,0"
-              End="-204.833333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6662804171495"
-                    Point2="0,35.6662804171495"
-                    Point3="-4,35.6662804171495" />
-                  <mssgle:LineSegment
-                    End="-200.833333333333,35.6662804171495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-200.833333333333,35.6662804171495"
-                    Point2="-204.833333333333,35.6662804171495"
-                    Point3="-204.833333333333,39.6662804171495" />
-                  <mssgle:LineSegment
-                    End="-204.833333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Merge Join Output]"
-          TopLeft="555,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-93.8333333333334,74"
-              Start="0,0"
-              End="-93.8333333333334,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.9884125144843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.9884125144843"
-                    Point2="0,43.9884125144843"
-                    Point3="-4,43.9884125144843" />
-                  <mssgle:LineSegment
-                    End="-89.8333333333334,43.9884125144843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-89.8333333333334,43.9884125144843"
-                    Point2="-93.8333333333334,43.9884125144843"
-                    Point3="-93.8333333333334,47.9884125144843" />
-                  <mssgle:LineSegment
-                    End="-93.8333333333334,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Merge Join Output1]"
-          TopLeft="323,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="83.8333333333332,74"
-              Start="0,0"
-              End="83.8333333333332,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.9884125144844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.9884125144844"
-                    Point2="0,43.9884125144844"
-                    Point3="4,43.9884125144844" />
-                  <mssgle:LineSegment
-                    End="79.8333333333332,43.9884125144844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="79.8333333333332,43.9884125144844"
-                    Point2="83.8333333333332,43.9884125144844"
-                    Point3="83.8333333333332,47.9884125144844" />
-                  <mssgle:LineSegment
-                    End="83.8333333333332,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Merge Join Output2]"
-          TopLeft="434,469.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Load DimPatient"
-          TopLeft="348.5,638.5" />
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Lookup No Match Output]"
-          TopLeft="434,571.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,67"
-              Start="0,0"
-              End="0,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,23.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
