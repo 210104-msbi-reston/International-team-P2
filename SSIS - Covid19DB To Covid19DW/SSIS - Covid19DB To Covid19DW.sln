@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1382
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS - Covid19DB To Covid19DW", "SSIS - Covid19DB To Covid19DW\SSIS - Covid19DB To Covid19DW.dtproj", "{71E9E04C-B86E-4497-992D-F2CDA348F6EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71E9E04C-B86E-4497-992D-F2CDA348F6EF}.Development|Default.ActiveCfg = Development
+		{71E9E04C-B86E-4497-992D-F2CDA348F6EF}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF9401BD-5959-484C-A7C9-D4396164DF37}
+	EndGlobalSection
+EndGlobal

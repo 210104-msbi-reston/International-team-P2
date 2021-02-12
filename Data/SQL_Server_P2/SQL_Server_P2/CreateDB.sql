@@ -6,7 +6,7 @@ GO
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 DROP TABLE IF EXISTS [Case], Test, TestResult, Facility, FacilityType, 
-Outcome, OutcomeType, Symptom, SymptomSeverity, Patient, [Address], City, [State], 
+Outcome, OutcomeType, Symptom, SymptomSeverity, Patient, City, [State], 
 Occupation, Gender, Ethnicity;
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
@@ -37,23 +37,17 @@ CREATE TABLE City(
 	FOREIGN KEY (StateCode) REFERENCES [State]
 );
 
-CREATE TABLE [Address](
-	AddressID INT IDENTITY(1,1) PRIMARY KEY,
-	CityID INT,
-	FOREIGN KEY (CityID) REFERENCES City
-);
-
 CREATE TABLE Patient(
     PatientID INT IDENTITY(1,1) PRIMARY KEY,	
 	Age INT,
 	EthnicityID INT,
 	GenderID INT,
 	OccupationID INT,
-	AddressID INT,
+	CityID INT,
 	FOREIGN KEY (EthnicityID) REFERENCES Ethnicity,
 	FOREIGN KEY (GenderID) REFERENCES Gender,
 	FOREIGN KEY (OccupationID) REFERENCES Occupation,
-	FOREIGN KEY (AddressID) REFERENCES [Address]
+	FOREIGN KEY (CityID) REFERENCES City
 );
 
 CREATE TABLE SymptomSeverity(
@@ -81,9 +75,9 @@ CREATE TABLE FacilityType(
 CREATE TABLE Facility(
 	FacilityID INT IDENTITY(1,1) PRIMARY KEY,
 	FacilityTypeID INT,
-	AddressID INT,
+	CityID INT,
 	FOREIGN KEY (FacilityTypeID) REFERENCES FacilityType,
-	FOREIGN KEY (AddressID) REFERENCES [Address]
+	FOREIGN KEY (CityID) REFERENCES City
 );
 
 CREATE TABLE Test(
