@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-E1KTPMR"
   DTS:CreatorName="DESKTOP-E1KTPMR\Mee"
-  DTS:DTSID="{B6E3CDD6-5EC1-47E0-81E0-AEC4DDEAF6CB}"
+  DTS:DTSID="{D28D43ED-9A9D-449B-84C8-26346CDB9587}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="pkg_DimPatient EXPERIMENTAL"
+  DTS:ObjectName="pkg_DimPatient OBSOLETE"
   DTS:PackageType="5"
   DTS:VersionBuild="7"
-  DTS:VersionGUID="{B8730B92-FD18-4A93-914F-714030F761BC}">
+  DTS:VersionGUID="{363DA024-6514-42DA-8F62-DBFD3C4023D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Load DimPatient"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{D2194987-8C1B-4BCE-AE82-A10587D3D8B6}"
+      DTS:DTSID="{F62035CC-E9BD-4F90-B070-B896BF5D4180}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load DimPatient"
@@ -1450,118 +1450,6 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
               </outputs>
             </component>
             <component
-              refId="Package\Load DimPatient\Slowly Changing Dimension"
-              componentClassID="Microsoft.SCD"
-              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
-              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
-              name="Slowly Changing Dimension"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SELECT statement used to create a schema rowset."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
-                  name="CurrentRowWhere"></property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
-                  name="UpdateChangingAttributeHistory">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
-                  name="FailOnFixedAttributeChange">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the column name for the inferred member."
-                  name="InferredMemberIndicator"></property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether inferred member updates are detected."
-                  name="EnableInferredMember">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
-                  name="FailOnLookupFailure">false</property>
-                <property
-                  dataType="System.UInt32"
-                  description="Specifies that all rows in the input are new or the transformation detects the change type."
-                  name="IncomingRowChangeType"
-                  typeConverter="IncomingRowChangeType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Connections[LookupConnection]"
-                  description="Defines the connection to use for lookups in the dimension table"
-                  name="LookupConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
-                  name="Slowly Changing Dimension Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Outputs[Unchanged Output]"
-                  description="Unchanged rows"
-                  exclusionGroup="1"
-                  name="Unchanged Output"
-                  synchronousInputId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Outputs[New Output]"
-                  description="New rows"
-                  exclusionGroup="1"
-                  name="New Output"
-                  synchronousInputId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
-                  description="Rows with changes in columns tagged FixedAttribute"
-                  exclusionGroup="1"
-                  name="Fixed Attribute Output"
-                  synchronousInputId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
-                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
-                  exclusionGroup="1"
-                  name="Changing Attribute Updates Output"
-                  synchronousInputId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
-                  description="HistoricalAttribute (Type 2) changes result in these new rows"
-                  exclusionGroup="2"
-                  name="Historical Attribute Inserts Output"
-                  synchronousInputId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimPatient\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
-                  description="Information to update unpopulated initial dimension row"
-                  exclusionGroup="1"
-                  name="Inferred Member Updates Output"
-                  synchronousInputId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load DimPatient\Sort Age"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1961,6 +1849,165 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Load DimPatient\Write to DimPatient"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Write to DimPatient"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimPatient]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimPatient\Write to DimPatient.Connections[OleDbConnection]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedDataType="i4"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].Columns[Occupation]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Occupation"
+                      externalMetadataColumnId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Occupation]" />
+                    <inputColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].Columns[Ethnicity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Ethnicity"
+                      externalMetadataColumnId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Ethnicity]"
+                      lineageId="Package\Load DimPatient\Merge Join 2.Outputs[Merge Join Output].Columns[Ethnicity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      dataType="i4"
+                      name="PatientKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      dataType="i4"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Ethnicity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ethnicity" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Occupation" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimPatient\Write to DimPatient.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimPatient\Write to DimPatient.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimPatient\Write to DimPatient.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimPatient\Write to DimPatient.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -1984,10 +2031,10 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
               name="Derived Column Output"
               startId="Package\Load DimPatient\Gender JoinKey.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimPatient.Paths[Lookup Match Output]"
-              endId="Package\Load DimPatient\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
-              name="Lookup Match Output"
-              startId="Package\Load DimPatient\Get deltas.Outputs[Lookup Match Output]" />
+              refId="Package\Load DimPatient.Paths[Lookup No Match Output]"
+              endId="Package\Load DimPatient\Write to DimPatient.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Load DimPatient\Get deltas.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Load DimPatient.Paths[Merge Join Output]"
               endId="Package\Load DimPatient\Merge Join 2.Inputs[Merge Join Right Input]"
@@ -2074,94 +2121,42 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
-          Id="Package\Load DimPatient\Gender Table"
-          TopLeft="23.5000000000001,13.4999999999998" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Occupation JoinKey"
-          TopLeft="487.5,115.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Merge Join 1"
-          TopLeft="255.5,319.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Ethnicity JoinKey"
-          TopLeft="255.5,115.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Sort Age"
-          TopLeft="719.5,217.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Gender JoinKey"
-          TopLeft="23.5000000000001,115.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Sort Gender"
-          TopLeft="23.5000000000001,217.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Get deltas"
-          TopLeft="369.5,522.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Merge Join"
-          TopLeft="487.5,319.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Merge Join 2"
-          TopLeft="369.5,422.5" />
-        <NodeLayout
-          Size="171,42"
           Id="Package\Load DimPatient\Occupation Table"
           TopLeft="487.5,13.4999999999998" />
         <NodeLayout
           Size="171,42"
-          Id="Package\Load DimPatient\Ages Table"
-          TopLeft="719.5,13.4999999999998" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load DimPatient\Sort Ethnicity"
-          TopLeft="255.5,217.5" />
+          Id="Package\Load DimPatient\Gender Table"
+          TopLeft="23.5000000000001,13.4999999999998" />
         <NodeLayout
           Size="171,42"
           Id="Package\Load DimPatient\Ethnicity Table"
           TopLeft="255.5,13.4999999999998" />
         <NodeLayout
           Size="171,42"
-          Id="Package\Load DimPatient\Ages JoinKey"
-          TopLeft="719.5,115.5" />
+          Id="Package\Load DimPatient\Occupation JoinKey"
+          TopLeft="487.5,115.5" />
         <NodeLayout
           Size="171,42"
-          Id="Package\Load DimPatient\Sort Occupation"
-          TopLeft="487.5,217.5" />
+          Id="Package\Load DimPatient\Gender JoinKey"
+          TopLeft="23.5000000000001,115.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Ethnicity JoinKey"
+          TopLeft="255.5,115.5" />
         <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output3]"
-          TopLeft="573,259.5">
+          Id="Package\Load DimPatient.Paths[OLE DB Source Output]"
+          TopLeft="109,55.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-27.1666666666666,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="-27.1666666666666,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.6662804171494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6662804171494"
-                    Point2="0,35.6662804171494"
-                    Point3="-4,35.6662804171494" />
-                  <mssgle:LineSegment
-                    End="-23.1666666666666,35.6662804171494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-23.1666666666666,35.6662804171494"
-                    Point2="-27.1666666666666,35.6662804171494"
-                    Point3="-27.1666666666666,39.6662804171494" />
-                  <mssgle:LineSegment
-                    End="-27.1666666666666,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2171,14 +2166,52 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output2]"
-          TopLeft="805,259.5">
+          Id="Package\Load DimPatient.Paths[OLE DB Source Output1]"
+          TopLeft="341,55.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-204.833333333333,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="-204.833333333333,52.5">
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Merge Join 1"
+          TopLeft="255.5,319.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Sort Occupation"
+          TopLeft="487.5,217.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Sort Gender"
+          TopLeft="23.5000000000001,217.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Sort Ethnicity"
+          TopLeft="255.5,217.5" />
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Sort Output]"
+          TopLeft="341,259.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.1666666666666,60"
+              Start="0,0"
+              End="27.1666666666666,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2187,15 +2220,15 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
                   <mssgle:CubicBezierSegment
                     Point1="0,31.6662804171494"
                     Point2="0,35.6662804171494"
-                    Point3="-4,35.6662804171494" />
+                    Point3="4,35.6662804171494" />
                   <mssgle:LineSegment
-                    End="-200.833333333333,35.6662804171494" />
+                    End="23.1666666666666,35.6662804171494" />
                   <mssgle:CubicBezierSegment
-                    Point1="-200.833333333333,35.6662804171494"
-                    Point2="-204.833333333333,35.6662804171494"
-                    Point3="-204.833333333333,39.6662804171494" />
+                    Point1="23.1666666666666,35.6662804171494"
+                    Point2="27.1666666666666,35.6662804171494"
+                    Point3="27.1666666666666,39.6662804171494" />
                   <mssgle:LineSegment
-                    End="-204.833333333333,52.5" />
+                    End="27.1666666666666,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2238,62 +2271,39 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Sort Output]"
-          TopLeft="341,259.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="27.1666666666666,60"
-              Start="0,0"
-              End="27.1666666666666,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6662804171494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6662804171494"
-                    Point2="0,35.6662804171494"
-                    Point3="4,35.6662804171494" />
-                  <mssgle:LineSegment
-                    End="23.1666666666666,35.6662804171494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.1666666666666,35.6662804171494"
-                    Point2="27.1666666666666,35.6662804171494"
-                    Point3="27.1666666666666,39.6662804171494" />
-                  <mssgle:LineSegment
-                    End="27.1666666666666,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[OLE DB Source Output3]"
-          TopLeft="573,55.4999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <AnnotationLayout
+          Text="These sorts are only here to allow merging"
+          ParentId="Package\Load DimPatient"
+          FontInfo="{assembly:Null}"
+          Size="261,60"
+          Id="25a2734f-86ad-4e8c-829b-0e3796dadf88"
+          TopLeft="950.5,221.5" />
+        <AnnotationLayout
+          Text="Create a dummy join key for the purpose of a cross join&#xD;&#xA;And truncate data to varchar(50)"
+          ParentId="Package\Load DimPatient"
+          FontInfo="{assembly:Null}"
+          Size="323,60"
+          Id="2c2d7272-92c5-419b-956b-1b6d85b7dba0"
+          TopLeft="939.5,112.5" />
+        <AnnotationLayout
+          Text="Cross join the four attributes"
+          ParentId="Package\Load DimPatient"
+          FontInfo="{assembly:Null}"
+          Size="180,60"
+          Id="5a9c1f69-2e29-4562-9fa6-78515169be34"
+          TopLeft="962,365.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Ages Table"
+          TopLeft="719.5,13.4999999999998" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Ages JoinKey"
+          TopLeft="719.5,115.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Sort Age"
+          TopLeft="719.5,217.5" />
         <EdgeLayout
           Id="Package\Load DimPatient.Paths[OLE DB Source Output2]"
           TopLeft="805,55.4999999999998">
@@ -2316,9 +2326,89 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Merge Join"
+          TopLeft="487.5,319.5" />
         <EdgeLayout
-          Id="Package\Load DimPatient.Paths[OLE DB Source Output1]"
-          TopLeft="341,55.4999999999998">
+          Id="Package\Load DimPatient.Paths[Sort Output2]"
+          TopLeft="805,259.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-204.833333333333,60"
+              Start="0,0"
+              End="-204.833333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6662804171494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6662804171494"
+                    Point2="0,35.6662804171494"
+                    Point3="-4,35.6662804171494" />
+                  <mssgle:LineSegment
+                    End="-200.833333333333,35.6662804171494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-200.833333333333,35.6662804171494"
+                    Point2="-204.833333333333,35.6662804171494"
+                    Point3="-204.833333333333,39.6662804171494" />
+                  <mssgle:LineSegment
+                    End="-204.833333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Merge Join 2"
+          TopLeft="369.5,422.5" />
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Merge Join Output]"
+          TopLeft="341,361.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.8333333333334,60.9999999999999"
+              Start="0,0"
+              End="86.8333333333334,53.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.2607184241019" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.2607184241019"
+                    Point2="0,36.2607184241019"
+                    Point3="4,36.2607184241019" />
+                  <mssgle:LineSegment
+                    End="82.8333333333334,36.2607184241019" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.8333333333334,36.2607184241019"
+                    Point2="86.8333333333334,36.2607184241019"
+                    Point3="86.8333333333334,40.2607184241019" />
+                  <mssgle:LineSegment
+                    End="86.8333333333334,53.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Get deltas"
+          TopLeft="369.5,524.5" />
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Merge Join Output1]"
+          TopLeft="455,464.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2338,20 +2428,60 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load DimPatient\Write to DimPatient"
+          TopLeft="369.5,635.5" />
         <EdgeLayout
-          Id="Package\Load DimPatient.Paths[OLE DB Source Output]"
-          TopLeft="109,55.4999999999998">
+          Id="Package\Load DimPatient.Paths[Lookup No Match Output]"
+          TopLeft="455,566.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,69"
               Start="0,0"
-              End="0,52.5">
+              End="0,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,24.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Sort Output3]"
+          TopLeft="573,259.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.1666666666666,60"
+              Start="0,0"
+              End="-27.1666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6662804171494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6662804171494"
+                    Point2="0,35.6662804171494"
+                    Point3="-4,35.6662804171494" />
+                  <mssgle:LineSegment
+                    End="-23.1666666666666,35.6662804171494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.1666666666666,35.6662804171494"
+                    Point2="-27.1666666666666,35.6662804171494"
+                    Point3="-27.1666666666666,39.6662804171494" />
+                  <mssgle:LineSegment
+                    End="-27.1666666666666,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2395,108 +2525,8 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Merge Join Output1]"
-          TopLeft="455,464.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Merge Join Output]"
-          TopLeft="341,361.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86.8333333333334,60.9999999999999"
-              Start="0,0"
-              End="86.8333333333334,53.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.2607184241019" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.2607184241019"
-                    Point2="0,36.2607184241019"
-                    Point3="4,36.2607184241019" />
-                  <mssgle:LineSegment
-                    End="82.8333333333334,36.2607184241019" />
-                  <mssgle:CubicBezierSegment
-                    Point1="82.8333333333334,36.2607184241019"
-                    Point2="86.8333333333334,36.2607184241019"
-                    Point3="86.8333333333334,40.2607184241019" />
-                  <mssgle:LineSegment
-                    End="86.8333333333334,53.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Derived Column Output3]"
-          TopLeft="109,157.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Derived Column Output2]"
-          TopLeft="341,157.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Derived Column Output1]"
-          TopLeft="573,157.5">
+          Id="Package\Load DimPatient.Paths[OLE DB Source Output3]"
+          TopLeft="573,55.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2538,53 +2568,70 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="These sorts are only here to allow merging"
-          ParentId="Package\Load DimPatient"
-          FontInfo="{assembly:Null}"
-          Size="261,40"
-          Id="25a2734f-86ad-4e8c-829b-0e3796dadf88"
-          TopLeft="950.5,221.5" />
-        <AnnotationLayout
-          Text="Create a dummy join key for the purpose of a cross join&#xA;And truncate data to varchar(50)"
-          ParentId="Package\Load DimPatient"
-          FontInfo="{assembly:Null}"
-          Size="323,56"
-          Id="2c2d7272-92c5-419b-956b-1b6d85b7dba0"
-          TopLeft="939.5,112.5" />
-        <AnnotationLayout
-          Text="Cross join the four attributes"
-          ParentId="Package\Load DimPatient"
-          FontInfo="{assembly:Null}"
-          Size="180,40"
-          Id="5a9c1f69-2e29-4562-9fa6-78515169be34"
-          TopLeft="962,365.5" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\Load DimPatient\Slowly Changing Dimension"
-          TopLeft="354.5,603.5" />
         <EdgeLayout
-          Id="Package\Load DimPatient.Paths[Lookup Match Output]"
-          TopLeft="457,564.5">
+          Id="Package\Load DimPatient.Paths[Derived Column Output1]"
+          TopLeft="573,157.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,31.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Derived Column Output2]"
+          TopLeft="341,157.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimPatient.Paths[Derived Column Output3]"
+          TopLeft="109,157.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2623,6 +2670,19 @@ where [refTable].[Age] = ? and [refTable].[Gender] = ? and [refTable].[Occupatio
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimPatient\Write to DimPatient">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
