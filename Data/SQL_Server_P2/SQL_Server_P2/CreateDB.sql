@@ -1,4 +1,5 @@
--- CREATE DATABASE Covid19DB;
+--CREATE DATABASE Covid19DB
+--GO
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 USE Covid19DB
@@ -6,7 +7,7 @@ GO
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 DROP TABLE IF EXISTS [Case], Test, TestResult, Facility, FacilityType, 
-Outcome, OutcomeType, Symptom, SymptomSeverity, Patient, City, [State], 
+Outcome, OutcomeType, Symptom, Patient, City, [State], 
 Occupation, Gender, Ethnicity;
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
@@ -50,21 +51,14 @@ CREATE TABLE Patient(
 	FOREIGN KEY (CityID) REFERENCES City
 );
 
-CREATE TABLE SymptomSeverity(
-	SymptomSeverityID INT IDENTITY(1,1) PRIMARY KEY,
-	Severity VARCHAR(255)
-);
-
 CREATE TABLE Symptom(
 	SymptomID INT IDENTITY(1,1) PRIMARY KEY,
-	SymptomSeverityID INT,
-	FOREIGN KEY (SymptomSeverityID) REFERENCES SymptomSeverity
+	Severity VARCHAR(255)
 );
 
 CREATE TABLE Outcome(
 	OutcomeID INT IDENTITY(1,1) PRIMARY KEY,
-	[Name] VARCHAR(255)
-	
+	[Name] VARCHAR(255)	
 );
 
 CREATE TABLE FacilityType(

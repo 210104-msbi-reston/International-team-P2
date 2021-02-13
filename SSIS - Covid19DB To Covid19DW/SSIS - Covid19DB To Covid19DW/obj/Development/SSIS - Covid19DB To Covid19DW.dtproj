@@ -26,11 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-E1KTPMR</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXviEYzCGr06ENYm0kexYWQAAAAACAAAAAAAQZgAAAAEAACAAAADf0fqEzCRjT1PG7aIBrHnr5JhbBjfGW6G9dAaoU5KH/AAAAAAOgAAAAAIAACAAAABRTEvDap/o1uVMTydV6YNX86RDpFrj9xDREGLQha5fhZAAAABy3wV5dpwiRuiB7RkdjuYWRXXQJONaYzVJaIvvDpda4bBgayZS2JrutU4nbh+vTbibWiLNz/5ZHjQwO4K+1Da+Lsh09hfpHZA4NIvlKGfPTY5gFbGkha4Hb2+HwbQsrQOSZa3S9ScWOwpkEsWUrGrGlEII/emsJ0W6sRRgej3vzXmTE9qr7f5RWMMvhDTPkK1AAAAAmURb9nYjs+33zstb4L2Ho5s+lV4iZZQ1ebRR2kcRp2FbVPc5i/XASZ7B3EyZVeKki0c1/znOOj/wf+h3eeiCcw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXviEYzCGr06ENYm0kexYWQAAAAACAAAAAAAQZgAAAAEAACAAAACnBH+rkpRuuKx9rbcB3s5s8N8TSxdEr/UrEEbO09qwXAAAAAAOgAAAAAIAACAAAAA4GUGsEtzplZ6e18rYtYFSrQu1VB/0NoBpLzETyfdYWJAAAABYuVQd9Vv04r/tq6jlD0OhzqDRdLxXyEW2+wId3l85UoT3vgypWEf7x/SnFzqos5nNuOep/A/rd4nMwy4QS4voPTRzgiEw9VI9O9KPvcHdWn0WDn6aEOyfa9Aw0DwaR8M0c/7c0E2yDaQrpjaZ8N8G9DY5pEr1V78k0+ePH4jAIFum26YwEjtnc3v5EkU6l4dAAAAA3uGhvgeB/mFRIQ9Q8Li7038MHDgPe1FzHu94xTt2VP2Gg1hcChIg6+OfYGzpXS/UeY0pfSYSEPrrnXSDkFC1nA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="pkg_DimGeography.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pkg_FactCases.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pkg_DimPatient OBSOLETE.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pkg_DimPatient.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
@@ -234,16 +236,50 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pkg_FactCases.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{3A12D65A-1AD4-404A-A266-1B0FFA6C7430}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pkg_FactCases</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{61D49D13-AF95-4C8B-A6E3-7A445B1DED88}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pkg_DimPatient OBSOLETE.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{D28D43ED-9A9D-449B-84C8-26346CDB9587}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pkg_DimPatient OBSOLETE</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{363DA024-6514-42DA-8F62-DBFD3C4023D6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="pkg_DimPatient.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{626702A3-D2FB-4F64-BEFF-82A3FB28D763}</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{41753329-D36F-478E-88E0-D4B70052E144}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">pkg_DimPatient</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{42D9D1BA-83B1-4139-BB29-CD1281AE73FD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B09923A2-5720-4E3E-A7CA-EF84AA114F18}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

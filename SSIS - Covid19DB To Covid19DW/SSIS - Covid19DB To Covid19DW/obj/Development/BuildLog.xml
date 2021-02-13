@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS - Covid19DB To Covid19DW</Name>
-    <LastWriteTime>2021-02-12T03:58:07.2265337Z</LastWriteTime>
+    <LastWriteTime>2021-02-12T21:32:16.6929866Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -12,8 +12,18 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
+      <Name>pkg_FactCases.dtsx</Name>
+      <LastWriteTime>2021-02-12T04:56:49.8551898Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>pkg_DimPatient OBSOLETE.dtsx</Name>
+      <LastWriteTime>2021-02-12T21:31:31.7753793Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
       <Name>pkg_DimPatient.dtsx</Name>
-      <LastWriteTime>2021-02-12T03:57:59.2385178Z</LastWriteTime>
+      <LastWriteTime>2021-02-12T21:57:51.7964508Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
