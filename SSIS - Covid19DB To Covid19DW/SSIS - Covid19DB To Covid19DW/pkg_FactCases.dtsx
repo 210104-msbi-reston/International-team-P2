@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-E1KTPMR"
   DTS:CreatorName="DESKTOP-E1KTPMR\Mee"
-  DTS:DTSID="{E3831AB9-8384-4C8B-9149-72BF8E6B3620}"
+  DTS:DTSID="{CEEBEBD1-2472-421B-9F16-5B0B2526B041}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="pkg_FactTables"
+  DTS:ObjectName="pkg_FactCases"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{3BA134AA-386A-4FC5-9AD3-0EDDC884E89D}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{93506DAA-074C-46EC-BE64-D7024B5EAAC1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -225,12 +225,12 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load FactCases\Conditional Split.Outputs[FactCases]"
+                  refId="Package\Load FactCases\Conditional Split.Outputs[Infection]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="FactCases"
+                  name="Infection"
                   synchronousInputId="Package\Load FactCases\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -253,12 +253,12 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load FactCases\Conditional Split.Outputs[FactRecoveries]"
+                  refId="Package\Load FactCases\Conditional Split.Outputs[Recoveries]"
                   description="Output 2 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="FactRecoveries"
+                  name="Recoveries"
                   synchronousInputId="Package\Load FactCases\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -281,12 +281,12 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load FactCases\Conditional Split.Outputs[FactHospitalizations]"
+                  refId="Package\Load FactCases\Conditional Split.Outputs[Hospitalizations]"
                   description="Output 3 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="FactHospitalizations"
+                  name="Hospitalizations"
                   synchronousInputId="Package\Load FactCases\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -309,12 +309,12 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load FactCases\Conditional Split.Outputs[FactDeaths]"
+                  refId="Package\Load FactCases\Conditional Split.Outputs[Deaths]"
                   description="Output 4 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="FactDeaths"
+                  name="Deaths"
                   synchronousInputId="Package\Load FactCases\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -528,738 +528,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load FactCases\Covid19DW FactCases Table"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Covid19DW FactCases Table"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactCases]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load FactCases\Covid19DW FactCases Table.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[PatientKey]"
-                      cachedDataType="i4"
-                      cachedName="PatientKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
-                      cachedDataType="i4"
-                      cachedName="GeographyKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[CaseID]"
-                      cachedDataType="i4"
-                      cachedName="CaseID"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[1]"
-                      cachedDataType="i4"
-                      cachedName="1"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[0]"
-                      cachedDataType="i4"
-                      cachedName="0"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[00]"
-                      cachedDataType="i4"
-                      cachedName="00"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].Columns[000]"
-                      cachedDataType="i4"
-                      cachedName="000"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      dataType="i4"
-                      name="CaseKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      dataType="i4"
-                      name="PatientKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      dataType="i4"
-                      name="GeographyKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      dataType="i4"
-                      name="Infection" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      dataType="i4"
-                      name="Recovery" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      dataType="i4"
-                      name="Hospitalization" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      dataType="i4"
-                      name="Death" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load FactCases\Covid19DW FactCases Table.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactCases Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactCases Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactCases Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load FactCases\Covid19DW FactDeaths Table"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Covid19DW FactDeaths Table"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactCases]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load FactCases\Covid19DW FactDeaths Table.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[PatientKey]"
-                      cachedDataType="i4"
-                      cachedName="PatientKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
-                      cachedDataType="i4"
-                      cachedName="GeographyKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[CaseID]"
-                      cachedDataType="i4"
-                      cachedName="CaseID"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[0]"
-                      cachedDataType="i4"
-                      cachedName="0"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[00]"
-                      cachedDataType="i4"
-                      cachedName="00"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[000]"
-                      cachedDataType="i4"
-                      cachedName="000"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].Columns[1]"
-                      cachedDataType="i4"
-                      cachedName="1"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      dataType="i4"
-                      name="CaseKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      dataType="i4"
-                      name="PatientKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      dataType="i4"
-                      name="GeographyKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      dataType="i4"
-                      name="Infection" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      dataType="i4"
-                      name="Recovery" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      dataType="i4"
-                      name="Hospitalization" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      dataType="i4"
-                      name="Death" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load FactCases\Covid19DW FactDeaths Table.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactDeaths Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactDeaths Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactDeaths Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load FactCases\Covid19DW FactHospitalizations Table"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Covid19DW FactHospitalizations Table"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactCases]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[PatientKey]"
-                      cachedDataType="i4"
-                      cachedName="PatientKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
-                      cachedDataType="i4"
-                      cachedName="GeographyKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[CaseID]"
-                      cachedDataType="i4"
-                      cachedName="CaseID"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[0]"
-                      cachedDataType="i4"
-                      cachedName="0"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[00]"
-                      cachedDataType="i4"
-                      cachedName="00"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[000]"
-                      cachedDataType="i4"
-                      cachedName="000"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].Columns[1]"
-                      cachedDataType="i4"
-                      cachedName="1"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      dataType="i4"
-                      name="CaseKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      dataType="i4"
-                      name="PatientKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      dataType="i4"
-                      name="GeographyKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      dataType="i4"
-                      name="Infection" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      dataType="i4"
-                      name="Recovery" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      dataType="i4"
-                      name="Hospitalization" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      dataType="i4"
-                      name="Death" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load FactCases\Covid19DW FactRecoveries table"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Covid19DW FactRecoveries table"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactCases]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load FactCases\Covid19DW FactRecoveries table.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[PatientKey]"
-                      cachedDataType="i4"
-                      cachedName="PatientKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
-                      cachedDataType="i4"
-                      cachedName="GeographyKey"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[CaseID]"
-                      cachedDataType="i4"
-                      cachedName="CaseID"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[1]"
-                      cachedDataType="i4"
-                      cachedName="1"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[0]"
-                      cachedDataType="i4"
-                      cachedName="0"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[00]"
-                      cachedDataType="i4"
-                      cachedName="00"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].Columns[000]"
-                      cachedDataType="i4"
-                      cachedName="000"
-                      externalMetadataColumnId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
-                      dataType="i4"
-                      name="CaseKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
-                      dataType="i4"
-                      name="PatientKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
-                      dataType="i4"
-                      name="GeographyKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
-                      dataType="i4"
-                      name="Infection" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
-                      dataType="i4"
-                      name="Recovery" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
-                      dataType="i4"
-                      name="Hospitalization" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
-                      dataType="i4"
-                      name="Death" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load FactCases\Covid19DW FactRecoveries table.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactRecoveries table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load FactCases\Covid19DW FactRecoveries table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load FactCases\Covid19DW FactRecoveries table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load FactCases\Create 0's and 1's for insertion"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1391,6 +659,189 @@
                       refId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load FactCases\Death"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Death"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactCases]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load FactCases\Death.Connections[OleDbConnection]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[PatientKey]"
+                      cachedDataType="i4"
+                      cachedName="PatientKey"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
+                      cachedDataType="i4"
+                      cachedName="GeographyKey"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[CaseID]"
+                      cachedDataType="i4"
+                      cachedName="CaseID"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[0]"
+                      cachedDataType="i4"
+                      cachedName="0"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[00]"
+                      cachedDataType="i4"
+                      cachedName="00"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[000]"
+                      cachedDataType="i4"
+                      cachedName="000"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].Columns[1]"
+                      cachedDataType="i4"
+                      cachedName="1"
+                      externalMetadataColumnId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      dataType="i4"
+                      name="CaseKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      dataType="i4"
+                      name="PatientKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      dataType="i4"
+                      name="GeographyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      dataType="i4"
+                      name="Infection" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      dataType="i4"
+                      name="Recovery" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      dataType="i4"
+                      name="Hospitalization" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      dataType="i4"
+                      name="Death" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load FactCases\Death.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load FactCases\Death.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Death.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load FactCases\Death.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Death.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1532,6 +983,372 @@ where [refTable].[CaseKey] = ?</property>
                       refId="Package\Load FactCases\Get Deltas.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Load FactCases\Get Deltas.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load FactCases\Hospitalization"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Hospitalization"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactCases]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load FactCases\Hospitalization.Connections[OleDbConnection]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[PatientKey]"
+                      cachedDataType="i4"
+                      cachedName="PatientKey"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
+                      cachedDataType="i4"
+                      cachedName="GeographyKey"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[CaseID]"
+                      cachedDataType="i4"
+                      cachedName="CaseID"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[0]"
+                      cachedDataType="i4"
+                      cachedName="0"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[00]"
+                      cachedDataType="i4"
+                      cachedName="00"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[000]"
+                      cachedDataType="i4"
+                      cachedName="000"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].Columns[1]"
+                      cachedDataType="i4"
+                      cachedName="1"
+                      externalMetadataColumnId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      dataType="i4"
+                      name="CaseKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      dataType="i4"
+                      name="PatientKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      dataType="i4"
+                      name="GeographyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      dataType="i4"
+                      name="Infection" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      dataType="i4"
+                      name="Recovery" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      dataType="i4"
+                      name="Hospitalization" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      dataType="i4"
+                      name="Death" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load FactCases\Hospitalization.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load FactCases\Hospitalization.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Hospitalization.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load FactCases\Hospitalization.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Hospitalization.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load FactCases\Infection"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Infection"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactCases]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load FactCases\Infection.Connections[OleDbConnection]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[PatientKey]"
+                      cachedDataType="i4"
+                      cachedName="PatientKey"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
+                      cachedDataType="i4"
+                      cachedName="GeographyKey"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[CaseID]"
+                      cachedDataType="i4"
+                      cachedName="CaseID"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[1]"
+                      cachedDataType="i4"
+                      cachedName="1"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[0]"
+                      cachedDataType="i4"
+                      cachedName="0"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[00]"
+                      cachedDataType="i4"
+                      cachedName="00"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].Columns[000]"
+                      cachedDataType="i4"
+                      cachedName="000"
+                      externalMetadataColumnId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      dataType="i4"
+                      name="CaseKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      dataType="i4"
+                      name="PatientKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      dataType="i4"
+                      name="GeographyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      dataType="i4"
+                      name="Infection" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      dataType="i4"
+                      name="Recovery" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      dataType="i4"
+                      name="Hospitalization" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      dataType="i4"
+                      name="Death" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load FactCases\Infection.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load FactCases\Infection.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Infection.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load FactCases\Infection.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Infection.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3300,6 +3117,189 @@ where [refTable].[StateCode] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Load FactCases\Recovery"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Recovery"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactCases]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load FactCases\Recovery.Connections[OleDbConnection]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[PatientKey]"
+                      cachedDataType="i4"
+                      cachedName="PatientKey"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[GeographyKey]"
+                      cachedDataType="i4"
+                      cachedName="GeographyKey"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output].Columns[GeographyKey]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[CaseID]"
+                      cachedDataType="i4"
+                      cachedName="CaseID"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[1]"
+                      cachedDataType="i4"
+                      cachedName="1"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[1]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[0]"
+                      cachedDataType="i4"
+                      cachedName="0"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[0]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[00]"
+                      cachedDataType="i4"
+                      cachedName="00"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[00]" />
+                    <inputColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].Columns[000]"
+                      cachedDataType="i4"
+                      cachedName="000"
+                      externalMetadataColumnId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      lineageId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output].Columns[000]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[CaseKey]"
+                      dataType="i4"
+                      name="CaseKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[PatientKey]"
+                      dataType="i4"
+                      name="PatientKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[GeographyKey]"
+                      dataType="i4"
+                      name="GeographyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Infection]"
+                      dataType="i4"
+                      name="Infection" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Recovery]"
+                      dataType="i4"
+                      name="Recovery" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization]"
+                      dataType="i4"
+                      name="Hospitalization" />
+                    <externalMetadataColumn
+                      refId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input].ExternalColumns[Death]"
+                      dataType="i4"
+                      name="Death" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load FactCases\Recovery.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load FactCases\Recovery.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Recovery.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load FactCases\Recovery.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load FactCases\Recovery.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load FactCases\Transform Age to AgeGroup"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -3393,85 +3393,85 @@ where [refTable].[StateCode] = ?</property>
               name="Data Conversion Output"
               startId="Package\Load FactCases\Convert AgeGroup to non-unicode.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Load FactCases.Paths[Derived Column Output1]"
+              refId="Package\Load FactCases.Paths[Derived Column Output]"
               endId="Package\Load FactCases\Conditional Split.Inputs[Conditional Split Input]"
               name="Derived Column Output"
               startId="Package\Load FactCases\Create 0's and 1's for insertion.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load FactCases.Paths[Derived Column Output]"
+              refId="Package\Load FactCases.Paths[Derived Column Output1]"
               endId="Package\Load FactCases\Convert AgeGroup to non-unicode.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Load FactCases\Transform Age to AgeGroup.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load FactCases.Paths[FactCases]"
-              endId="Package\Load FactCases\Covid19DW FactCases Table.Inputs[OLE DB Destination Input]"
+              endId="Package\Load FactCases\Infection.Inputs[OLE DB Destination Input]"
               name="FactCases"
-              startId="Package\Load FactCases\Conditional Split.Outputs[FactCases]" />
+              startId="Package\Load FactCases\Conditional Split.Outputs[Infection]" />
             <path
               refId="Package\Load FactCases.Paths[FactDeaths]"
-              endId="Package\Load FactCases\Covid19DW FactDeaths Table.Inputs[OLE DB Destination Input]"
+              endId="Package\Load FactCases\Death.Inputs[OLE DB Destination Input]"
               name="FactDeaths"
-              startId="Package\Load FactCases\Conditional Split.Outputs[FactDeaths]" />
+              startId="Package\Load FactCases\Conditional Split.Outputs[Deaths]" />
             <path
               refId="Package\Load FactCases.Paths[FactHospitalizations]"
-              endId="Package\Load FactCases\Covid19DW FactHospitalizations Table.Inputs[OLE DB Destination Input]"
+              endId="Package\Load FactCases\Hospitalization.Inputs[OLE DB Destination Input]"
               name="FactHospitalizations"
-              startId="Package\Load FactCases\Conditional Split.Outputs[FactHospitalizations]" />
+              startId="Package\Load FactCases\Conditional Split.Outputs[Hospitalizations]" />
             <path
               refId="Package\Load FactCases.Paths[FactRecoveries]"
-              endId="Package\Load FactCases\Covid19DW FactRecoveries table.Inputs[OLE DB Destination Input]"
+              endId="Package\Load FactCases\Recovery.Inputs[OLE DB Destination Input]"
               name="FactRecoveries"
-              startId="Package\Load FactCases\Conditional Split.Outputs[FactRecoveries]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output8]"
-              endId="Package\Load FactCases\Lookup Geography Key.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
-              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
-              endId="Package\Load FactCases\Lookup State Name.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
-              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup State Name.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
-              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Conditional Split.Outputs[Recoveries]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output9]"
+              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output8]"
+              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
+              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
+              endId="Package\Load FactCases\Lookup DateKey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
               endId="Package\Load FactCases\Create 0's and 1's for insertion.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output1]"
-              endId="Package\Load FactCases\Lookup DateKey.Inputs[Lookup Input]"
+              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output]"
-              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output3]"
-              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
+              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup State Name.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output2]"
-              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
+              endId="Package\Load FactCases\Lookup State Name.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output]"
+              endId="Package\Load FactCases\Lookup Geography Key.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
+              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup No Match Output]"
               endId="Package\Load FactCases\Convert DateTime to Date.Inputs[Data Conversion Input]"
@@ -3512,21 +3512,73 @@ where [refTable].[StateCode] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Transform Age to AgeGroup"
-          TopLeft="480.5,416.5" />
+          Size="197,42"
+          Id="Package\Load FactCases\Lookup Outcome (Event)"
+          TopLeft="480.5,1436.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Covid19DW FactRecoveries table"
-          TopLeft="962.5,1641.5" />
+          Size="107,42"
+          Id="Package\Load FactCases\Death"
+          TopLeft="324.5,1641.5" />
         <NodeLayout
           Size="258,42"
           Id="Package\Load FactCases\Conditional Split"
           TopLeft="480.5,1538.5" />
         <NodeLayout
+          Size="147,42"
+          Id="Package\Load FactCases\Hospitalization"
+          TopLeft="643.5,1641.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup Gender"
+          TopLeft="480.5,824.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Convert DateTime to Date"
+          TopLeft="480.5,212.5" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Load FactCases\Recovery"
+          TopLeft="962.5,1641.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup Patient Information"
+          TopLeft="480.5,314.5" />
+        <NodeLayout
+          Size="223,42"
+          Id="Package\Load FactCases\Create 0's and 1's for insertion"
+          TopLeft="155.062295081967,1460.82007125891" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup PatientKey"
+          TopLeft="480.5,1130.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
+          TopLeft="480.5,518.5" />
+        <NodeLayout
           Size="258,42"
           Id="Package\Load FactCases\Lookup Geography Key"
           TopLeft="480.5,1334.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup DateKey"
+          TopLeft="480.5,1232.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup Occupation"
+          TopLeft="480.5,1028.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup City Name"
+          TopLeft="480.5,620.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Lookup State Name"
+          TopLeft="480.5,722.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Load FactCases\Transform Age to AgeGroup"
+          TopLeft="480.5,416.5" />
         <NodeLayout
           Size="258,42"
           Id="Package\Load FactCases\Lookup Ethnicity"
@@ -3537,60 +3589,12 @@ where [refTable].[StateCode] = ?</property>
           TopLeft="480.5,110.5" />
         <NodeLayout
           Size="258,42"
-          Id="Package\Load FactCases\Covid19DW FactDeaths Table"
-          TopLeft="324.5,1641.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Occupation"
-          TopLeft="480.5,1028.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
-          TopLeft="480.5,518.5" />
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Load FactCases\Lookup Outcome (Event)"
-          TopLeft="480.5,1436.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Covid19DW FactHospitalizations Table"
-          TopLeft="643.5,1641.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup City Name"
-          TopLeft="480.5,620.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Patient Information"
-          TopLeft="480.5,314.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup PatientKey"
-          TopLeft="480.5,1130.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Convert DateTime to Date"
-          TopLeft="480.5,212.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Gender"
-          TopLeft="480.5,824.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup DateKey"
-          TopLeft="480.5,1232.5" />
-        <NodeLayout
-          Size="258,42"
           Id="Package\Load FactCases\Case Table"
           TopLeft="480.5,8.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Covid19DW FactCases Table"
+          Size="121,42"
+          Id="Package\Load FactCases\Infection"
           TopLeft="5.50000000000011,1641.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup State Name"
-          TopLeft="480.5,722.5" />
         <EdgeLayout
           Id="Package\Load FactCases.Paths[OLE DB Source Output]"
           TopLeft="609.5,50.5">
@@ -3638,127 +3642,31 @@ where [refTable].[StateCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output9]"
+          TopLeft="609.5,866.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output8]"
-          TopLeft="609.5,1274.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output7]"
-          TopLeft="609.5,968.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output6]"
-          TopLeft="609.5,662.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output5]"
-          TopLeft="609.5,764.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output4]"
-          TopLeft="609.5,356.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output3]"
           TopLeft="609.5,1376.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3794,8 +3702,8 @@ where [refTable].[StateCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output2]"
-          TopLeft="609.5,866.5">
+          Id="Package\Load FactCases.Paths[Lookup Match Output7]"
+          TopLeft="609.5,1070.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3818,7 +3726,7 @@ where [refTable].[StateCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output1]"
+          Id="Package\Load FactCases.Paths[Lookup Match Output6]"
           TopLeft="609.5,1172.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3842,8 +3750,140 @@ where [refTable].[StateCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output5]"
+          TopLeft="480.5,1457.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-102.437704918033,24.3200712589073"
+              Start="0,0"
+              End="-94.9377049180328,24.3200712589073">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-47.2188524590164,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.2188524590164,0"
+                    Point2="-51.2188524590164,0"
+                    Point3="-51.2188524590164,4" />
+                  <mssgle:LineSegment
+                    End="-51.2188524590164,20.3200712589073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51.2188524590164,20.3200712589073"
+                    Point2="-51.2188524590164,24.3200712589073"
+                    Point3="-55.2188524590164,24.3200712589073" />
+                  <mssgle:LineSegment
+                    End="-94.9377049180328,24.3200712589073" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.4102391777664,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output4]"
+          TopLeft="609.5,356.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output3]"
+          TopLeft="609.5,764.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output2]"
+          TopLeft="609.5,662.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output1]"
+          TopLeft="609.5,968.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output]"
-          TopLeft="609.5,1070.5">
+          TopLeft="609.5,1274.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3871,9 +3911,9 @@ where [refTable].[StateCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="407,61"
+              EndConnector="339,61"
               Start="0,0"
-              End="407,53.5">
+              End="339,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3884,20 +3924,20 @@ where [refTable].[StateCode] = ?</property>
                     Point2="0,18"
                     Point3="4,18" />
                   <mssgle:LineSegment
-                    End="403,18" />
+                    End="335,18" />
                   <mssgle:CubicBezierSegment
-                    Point1="403,18"
-                    Point2="407,18"
-                    Point3="407,22" />
+                    Point1="335,18"
+                    Point2="339,18"
+                    Point3="339,22" />
                   <mssgle:LineSegment
-                    End="407,53.5" />
+                    End="339,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="170.077421875,23,66.84515625,9.470703125"
+              BoundingBox="145.282421875,23,48.43515625,9.470703125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3907,9 +3947,9 @@ where [refTable].[StateCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="138,61"
+              EndConnector="82.5,61"
               Start="0,0"
-              End="138,53.5">
+              End="82.5,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3920,20 +3960,20 @@ where [refTable].[StateCode] = ?</property>
                     Point2="0,27.2274678111588"
                     Point3="4,27.2274678111588" />
                   <mssgle:LineSegment
-                    End="134,27.2274678111588" />
+                    End="78.5,27.2274678111588" />
                   <mssgle:CubicBezierSegment
-                    Point1="134,27.2274678111588"
-                    Point2="138,27.2274678111588"
-                    Point3="138,31.2274678111588" />
+                    Point1="78.5,27.2274678111588"
+                    Point2="82.5,27.2274678111588"
+                    Point3="82.5,31.2274678111588" />
                   <mssgle:LineSegment
-                    End="138,53.5" />
+                    End="82.5,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.047421875,32.2274678111588,87.90515625,11.609375"
+              BoundingBox="6.502421875,32.2274678111588,69.49515625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3943,9 +3983,9 @@ where [refTable].[StateCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-131,61"
+              EndConnector="-206.5,61"
               Start="0,0"
-              End="-131,53.5">
+              End="-206.5,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3956,20 +3996,20 @@ where [refTable].[StateCode] = ?</property>
                     Point2="0,27.2274678111588"
                     Point3="-4,27.2274678111588" />
                   <mssgle:LineSegment
-                    End="-127,27.2274678111588" />
+                    End="-202.5,27.2274678111588" />
                   <mssgle:CubicBezierSegment
-                    Point1="-127,27.2274678111588"
-                    Point2="-131,27.2274678111588"
-                    Point3="-131,31.2274678111588" />
+                    Point1="-202.5,27.2274678111588"
+                    Point2="-206.5,27.2274678111588"
+                    Point3="-206.5,31.2274678111588" />
                   <mssgle:LineSegment
-                    End="-131,53.5" />
+                    End="-206.5,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-90.577578125,32.2274678111588,50.15515625,9.7490234375"
+              BoundingBox="-119.122578125,32.2274678111588,31.74515625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3979,9 +4019,9 @@ where [refTable].[StateCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-400,61"
+              EndConnector="-468.5,61"
               Start="0,0"
-              End="-400,53.5">
+              End="-468.5,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3992,25 +4032,25 @@ where [refTable].[StateCode] = ?</property>
                     Point2="0,18"
                     Point3="-4,18" />
                   <mssgle:LineSegment
-                    End="-396,18" />
+                    End="-464.5,18" />
                   <mssgle:CubicBezierSegment
-                    Point1="-396,18"
-                    Point2="-400,18"
-                    Point3="-400,22" />
+                    Point1="-464.5,18"
+                    Point2="-468.5,18"
+                    Point3="-468.5,22" />
                   <mssgle:LineSegment
-                    End="-400,53.5" />
+                    End="-468.5,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-222.462578125,23,44.92515625,9.5537109375"
+              BoundingBox="-254.20853515625,23,39.9170703125,9.7978515625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load FactCases.Paths[Derived Column Output]"
+          Id="Package\Load FactCases.Paths[Derived Column Output1]"
           TopLeft="609.5,458.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4023,6 +4063,40 @@ where [refTable].[StateCode] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Derived Column Output]"
+          TopLeft="266.562295081967,1502.82007125891">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="342.937704918033,35.6799287410927"
+              Start="0,0"
+              End="342.937704918033,28.1799287410927">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8399643705463" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8399643705463"
+                    Point2="0,17.8399643705463"
+                    Point3="4,17.8399643705463" />
+                  <mssgle:LineSegment
+                    End="338.937704918033,17.8399643705463" />
+                  <mssgle:CubicBezierSegment
+                    Point1="338.937704918033,17.8399643705463"
+                    Point2="342.937704918033,17.8399643705463"
+                    Point3="342.937704918033,21.8399643705463" />
+                  <mssgle:LineSegment
+                    End="342.937704918033,28.1799287410927" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4075,85 +4149,34 @@ where [refTable].[StateCode] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="223,42"
-          Id="Package\Load FactCases\Create 0's and 1's for insertion"
-          TopLeft="155.062295081967,1460.82007125891" />
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output9]"
-          TopLeft="480.5,1457.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-102.437704918033,24.3200712589073"
-              Start="0,0"
-              End="-94.9377049180328,24.3200712589073">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-47.2188524590164,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.2188524590164,0"
-                    Point2="-51.2188524590164,0"
-                    Point3="-51.2188524590164,4" />
-                  <mssgle:LineSegment
-                    End="-51.2188524590164,20.3200712589073" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-51.2188524590164,20.3200712589073"
-                    Point2="-51.2188524590164,24.3200712589073"
-                    Point3="-55.2188524590164,24.3200712589073" />
-                  <mssgle:LineSegment
-                    End="-94.9377049180328,24.3200712589073" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.4102391777664,-17.609375,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Derived Column Output1]"
-          TopLeft="266.562295081967,1502.82007125891">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="342.937704918033,35.6799287410927"
-              Start="0,0"
-              End="342.937704918033,28.1799287410927">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.8399643705463" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.8399643705463"
-                    Point2="0,17.8399643705463"
-                    Point3="4,17.8399643705463" />
-                  <mssgle:LineSegment
-                    End="338.937704918033,17.8399643705463" />
-                  <mssgle:CubicBezierSegment
-                    Point1="338.937704918033,17.8399643705463"
-                    Point2="342.937704918033,17.8399643705463"
-                    Point3="342.937704918033,21.8399643705463" />
-                  <mssgle:LineSegment
-                    End="342.937704918033,28.1799287410927" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Covid19DW FactRecoveries table">
+    design-time-name="Package\Load FactCases\Lookup Outcome (Event)">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Outcome]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Death">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4162,6 +4185,101 @@ where [refTable].[StateCode] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Hospitalization">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup Gender">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Gender]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Recovery">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup Patient Information">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Patient]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup PatientKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimPatient]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4177,6 +4295,98 @@ where [refTable].[StateCode] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DimGeography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup DateKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup Occupation">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Occupation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup City Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[City]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup State Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[State]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4235,193 +4445,6 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Covid19DW FactDeaths Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Occupation">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Occupation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Outcome (Event)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Outcome]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Covid19DW FactHospitalizations Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup City Name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[City]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Patient Information">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Patient]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup PatientKey">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimPatient]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Gender">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Gender]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup DateKey">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load FactCases\Case Table">
     <Properties>
       <Property>
@@ -4435,7 +4458,7 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Covid19DW FactCases Table">
+    design-time-name="Package\Load FactCases\Infection">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4444,29 +4467,6 @@ where [refTable].[StateCode] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup State Name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[State]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
