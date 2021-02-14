@@ -2,18 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS - Covid19DB To Covid19DW</Name>
-    <LastWriteTime>2021-02-13T16:24:47.4882064Z</LastWriteTime>
+    <LastWriteTime>2021-02-14T03:35:16.7724176Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>pkg_DimGeography.dtsx</Name>
       <LastWriteTime>2021-02-12T03:16:56.0760781Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>pkg_FactCases.dtsx</Name>
-      <LastWriteTime>2021-02-13T16:40:43.5968127Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -24,6 +19,11 @@
     <ProjectBuildItemInfo>
       <Name>pkg_DimPatient.dtsx</Name>
       <LastWriteTime>2021-02-13T16:24:47.4591799Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>pkg_FactTables.dtsx</Name>
+      <LastWriteTime>2021-02-14T06:04:13.0736401Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
