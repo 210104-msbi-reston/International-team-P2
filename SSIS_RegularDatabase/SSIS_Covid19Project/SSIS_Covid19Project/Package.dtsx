@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="73"
-  DTS:VersionGUID="{6AE7709E-6985-4160-AB66-10E64C4941C2}">
+  DTS:VersionBuild="80"
+  DTS:VersionGUID="{E533AC0A-95BE-44AE-8F55-53C72CFEB47B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -59,7 +59,7 @@
       DTS:DTSID="{2D5E51DE-556E-4C0F-A683-1457756E3026}"
       DTS:ObjectName="Excel Connection Manager 1">
       <DTS:PropertyExpression
-        DTS:Name="ExcelFilePath">@[$Package::ExcelFilePath1]</DTS:PropertyExpression>
+        DTS:Name="ExcelFilePath">@[$Package::ExcelFilePath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ruslan\Desktop\Revature_training\practice\ProjectSSIScOVID\Data.xls;Extended Properties=&quot;EXCEL 8.0;HDR=NO&quot;;" />
@@ -67,6 +67,15 @@
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{3D89C8CE-563E-4AF8-9D68-DD3FD010CF49}"
+      DTS:ObjectName="ExcelFilePath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\Ruslan\Desktop\Revature_training\practice\ProjectSSIScOVID\Data.xls</DTS:Property>
+    </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
@@ -93,7 +102,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{27A46ED4-0D42-4CF6-88BC-B439256083B9}"
-          SQLTask:SqlStatementSource="DELETE FROM CITY&#xA;GO&#xA;DBCC CHECKIDENT ('City', RESEED, 0);  &#xA;GO &#xA;&#xA;&#xA;DELETE FROM [State]&#xA;GO&#xA;&#xA;&#xA;DELETE FROM [CASE]&#xA;GO&#xA;DBCC CHECKIDENT ('CASE', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM PATIENT&#xA;GO&#xA;DBCC CHECKIDENT ('PATIENT', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM ETHNICITY&#xA;GO&#xA;DBCC CHECKIDENT ('ETHNICITY', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM FACILITY&#xA;GO&#xA;DBCC CHECKIDENT ('FACILITY', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM FACILITYTYPE&#xA;GO&#xA;DBCC CHECKIDENT ('FACILITYTYPE', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM GENDER&#xA;GO&#xA;DBCC CHECKIDENT ('GENDER', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM OCCUPATION&#xA;GO&#xA;DBCC CHECKIDENT ('OCCUPATION', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM OUTCOME&#xA;GO&#xA;DBCC CHECKIDENT ('OUTCOME', RESEED, 0);  &#xA;GO &#xA;&#xA;&#xA;&#xA;DELETE FROM TEST&#xA;GO&#xA;DBCC CHECKIDENT ('test', RESEED, 0);  &#xA;GO &#xA;&#xA;TRUNCATE TABLE SYMPTOM" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;&#xA;DELETE FROM [CASE]&#xA;GO&#xA;DBCC CHECKIDENT ('CASE', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM PATIENT&#xA;GO&#xA;DBCC CHECKIDENT ('PATIENT', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM ETHNICITY&#xA;GO&#xA;DBCC CHECKIDENT ('ETHNICITY', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM FACILITY&#xA;GO&#xA;DBCC CHECKIDENT ('FACILITY', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM FACILITYTYPE&#xA;GO&#xA;DBCC CHECKIDENT ('FACILITYTYPE', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM GENDER&#xA;GO&#xA;DBCC CHECKIDENT ('GENDER', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM OCCUPATION&#xA;GO&#xA;DBCC CHECKIDENT ('OCCUPATION', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM OUTCOME&#xA;GO&#xA;DBCC CHECKIDENT ('OUTCOME', RESEED, 0);  &#xA;GO &#xA;&#xA;&#xA;DELETE FROM TEST&#xA;GO&#xA;DBCC CHECKIDENT ('test', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM CITY&#xA;GO&#xA;DBCC CHECKIDENT ('City', RESEED, 0);  &#xA;GO &#xA;&#xA;DELETE FROM [State]&#xA;GO&#xA;&#xA;TRUNCATE TABLE SYMPTOM" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1367,6 +1376,12 @@
                       cachedName="Copy of type"
                       externalMetadataColumnId="Package\Populate Facility\Load facility.Inputs[OLE DB Destination Input].ExternalColumns[FacilityTypeID]"
                       lineageId="Package\Populate Facility\Transform Facility.Outputs[Data Conversion Output].Columns[Copy of type]" />
+                    <inputColumn
+                      refId="Package\Populate Facility\Load facility.Inputs[OLE DB Destination Input].Columns[Copy of CityId]"
+                      cachedDataType="ui4"
+                      cachedName="Copy of CityId"
+                      externalMetadataColumnId="Package\Populate Facility\Load facility.Inputs[OLE DB Destination Input].ExternalColumns[CityId]"
+                      lineageId="Package\Populate Facility\Transform Facility.Outputs[Data Conversion Output].Columns[Copy of CityId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1378,6 +1393,10 @@
                       refId="Package\Populate Facility\Load facility.Inputs[OLE DB Destination Input].ExternalColumns[FacilityTypeID]"
                       dataType="i4"
                       name="FacilityTypeID" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Facility\Load facility.Inputs[OLE DB Destination Input].ExternalColumns[CityId]"
+                      dataType="i4"
+                      name="CityId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1477,6 +1496,15 @@
                       lineageId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[type]"
                       name="type"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[CityId]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].ExternalColumns[F3]"
+                      lineageId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[CityId]"
+                      name="CityId"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1488,6 +1516,10 @@
                       refId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].ExternalColumns[F2]"
                       dataType="r8"
                       name="F2" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].ExternalColumns[F3]"
+                      dataType="r8"
+                      name="F3" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1505,6 +1537,11 @@
                       dataType="r8"
                       lineageId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Error Output].Columns[F2]"
                       name="F2" />
+                    <outputColumn
+                      refId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Error Output].Columns[F3]"
+                      dataType="r8"
+                      lineageId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Error Output].Columns[F3]"
+                      name="F3" />
                     <outputColumn
                       refId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1539,6 +1576,11 @@
                       cachedDataType="r8"
                       cachedName="type"
                       lineageId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[type]" />
+                    <inputColumn
+                      refId="Package\Populate Facility\Transform Facility.Inputs[Data Conversion Input].Columns[CityId]"
+                      cachedDataType="r8"
+                      cachedName="CityId"
+                      lineageId="Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[CityId]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1564,6 +1606,26 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populate Facility\Transform Facility.Outputs[Data Conversion Output].Columns[Copy of CityId]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populate Facility\Transform Facility.Outputs[Data Conversion Output].Columns[Copy of CityId]"
+                      name="Copy of CityId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populate Facility\Populate Facility.Outputs[Excel Source Output].Columns[CityId]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -3115,6 +3177,12 @@
                       cachedName="Copy of OccupationId"
                       externalMetadataColumnId="Package\Populate Patient\Load Patient.Inputs[OLE DB Destination Input].ExternalColumns[OccupationID]"
                       lineageId="Package\Populate Patient\Transform Patient.Outputs[Data Conversion Output].Columns[Copy of OccupationId]" />
+                    <inputColumn
+                      refId="Package\Populate Patient\Load Patient.Inputs[OLE DB Destination Input].Columns[Copy of CityId]"
+                      cachedDataType="ui4"
+                      cachedName="Copy of CityId"
+                      externalMetadataColumnId="Package\Populate Patient\Load Patient.Inputs[OLE DB Destination Input].ExternalColumns[CityID]"
+                      lineageId="Package\Populate Patient\Transform Patient.Outputs[Data Conversion Output].Columns[Copy of CityId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3138,6 +3206,10 @@
                       refId="Package\Populate Patient\Load Patient.Inputs[OLE DB Destination Input].ExternalColumns[OccupationID]"
                       dataType="i4"
                       name="OccupationID" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Patient\Load Patient.Inputs[OLE DB Destination Input].ExternalColumns[CityID]"
+                      dataType="i4"
+                      name="CityID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3264,6 +3336,15 @@
                       lineageId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[OccupationId]"
                       name="OccupationId"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[CityId]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].ExternalColumns[F6]"
+                      lineageId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[CityId]"
+                      name="CityId"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3287,6 +3368,10 @@
                       refId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].ExternalColumns[F5]"
                       dataType="r8"
                       name="F5" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].ExternalColumns[F6]"
+                      dataType="r8"
+                      name="F6" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3319,6 +3404,11 @@
                       dataType="r8"
                       lineageId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Error Output].Columns[F5]"
                       name="F5" />
+                    <outputColumn
+                      refId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Error Output].Columns[F6]"
+                      dataType="r8"
+                      lineageId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Error Output].Columns[F6]"
+                      name="F6" />
                     <outputColumn
                       refId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -3368,6 +3458,11 @@
                       cachedDataType="r8"
                       cachedName="OccupationId"
                       lineageId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[OccupationId]" />
+                    <inputColumn
+                      refId="Package\Populate Patient\Transform Patient.Inputs[Data Conversion Input].Columns[CityId]"
+                      cachedDataType="r8"
+                      cachedName="CityId"
+                      lineageId="Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[CityId]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3453,6 +3548,26 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[OccupationId]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populate Patient\Transform Patient.Outputs[Data Conversion Output].Columns[Copy of CityId]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populate Patient\Transform Patient.Outputs[Data Conversion Output].Columns[Copy of CityId]"
+                      name="Copy of CityId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populate Patient\Populate Patient.Outputs[Excel Source Output].Columns[CityId]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -4821,9 +4936,41 @@
           Id="Package\Populate Cities"
           TopLeft="12.4714280362032,229.937089230682" />
         <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Populate Facility"
+          TopLeft="614.785724150891,100.5000009116" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Populate Facility type"
+          TopLeft="531.214294667147,29.9705885784849" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Populate Gender"
+          TopLeft="507.642865694299,378.041181168012" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Populate Occupation"
+          TopLeft="36.9285719637968,441.34706494734" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Populate Outcome"
+          TopLeft="529.0714369769,235.852943986345" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Populate Patient"
+          TopLeft="95.5000015326909,365.676475639574" />
+        <NodeLayout
           Size="151.2,41.6"
           Id="Package\Populate States"
           TopLeft="67.3000058753149,145.535291189801" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Populate Symptom"
+          TopLeft="224.785718020128,416.041181532652" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Populate Test"
+          TopLeft="357.642863139814,228.604682229973" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="242.014288195785,66.3941174969129">
@@ -4858,14 +5005,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Populate Patient"
-          TopLeft="95.5000015326909,365.676475639574" />
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\Populate Test"
-          TopLeft="357.642863139814,228.604682229973" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="209.900001532691,334.041180074091">
@@ -4892,6 +5031,198 @@
                     Point3="-61.3333333333336,22.7874918562358" />
                   <mssgle:LineSegment
                     End="-61.3333333333336,24.135295565483" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="96.6619052971301,441.34706494734">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.4380962355608,-34.0705893077653"
+              Start="0,0"
+              End="76.4380962355608,-26.5705893077653">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-9.8132343980804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-9.8132343980804"
+                    Point2="0,-13.8132343980804"
+                    Point3="4,-13.8132343980804" />
+                  <mssgle:LineSegment
+                    End="72.4380962355608,-13.8132343980804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.4380962355608,-13.8132343980804"
+                    Point2="76.4380962355608,-13.8132343980804"
+                    Point3="76.4380962355608,-17.8132343980804" />
+                  <mssgle:LineSegment
+                    End="76.4380962355608,-26.5705893077653" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="355.614288195785,66.3941174969129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230.428577498514,311.647063671099"
+              Start="0,0"
+              End="230.428577498514,304.147063671099">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.211555331854" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,102.211555331854"
+                    Point2="0,106.211555331854"
+                    Point3="4,106.211555331854" />
+                  <mssgle:LineSegment
+                    End="226.428577498514,106.211555331854" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226.428577498514,106.211555331854"
+                    Point2="230.428577498514,106.211555331854"
+                    Point3="230.428577498514,110.211555331854" />
+                  <mssgle:LineSegment
+                    End="230.428577498514,304.147063671099" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="298.814288195785,66.3941174969129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.9619035089909,349.647064035739"
+              Start="0,0"
+              End="-16.9619035089909,342.147064035739">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,203.799724313183" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,203.799724313183"
+                    Point2="0,207.799724313183"
+                    Point3="-4,207.799724313183" />
+                  <mssgle:LineSegment
+                    End="-12.9619035089909,207.799724313183" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.9619035089909,207.799724313183"
+                    Point2="-16.9619035089909,207.799724313183"
+                    Point3="-16.9619035089909,211.799724313183" />
+                  <mssgle:LineSegment
+                    End="-16.9619035089909,342.147064035739" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="334.919051353461,416.041181532652">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.1238117012042,-49.2941182261937"
+              Start="0,0"
+              End="90.1238117012042,-41.7941182261937">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.9979929865506" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.9979929865506"
+                    Point2="0,-19.9979929865506"
+                    Point3="4,-19.9979929865506" />
+                  <mssgle:LineSegment
+                    End="86.1238117012042,-19.9979929865506" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86.1238117012042,-19.9979929865506"
+                    Point2="90.1238117012042,-19.9979929865506"
+                    Point3="90.1238117012042,-23.9979929865506" />
+                  <mssgle:LineSegment
+                    End="90.1238117012042,-41.7941182261937" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="620.414294667147,71.5705885784849">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.5714294837445,28.9294123331156"
+              Start="0,0"
+              End="71.5714294837445,21.4294123331156">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.4647061665578" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.4647061665578"
+                    Point2="0,14.4647061665578"
+                    Point3="4,14.4647061665578" />
+                  <mssgle:LineSegment
+                    End="67.5714294837445,14.4647061665578" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.5714294837445,14.4647061665578"
+                    Point2="71.5714294837445,14.4647061665578"
+                    Point3="71.5714294837445,18.4647061665578" />
+                  <mssgle:LineSegment
+                    End="71.5714294837445,21.4294123331156" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 15]"
+          TopLeft="416.414288195785,48.1823530376989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.800006471361,0"
+              Start="0,0"
+              End="107.300006471361,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="107.300006471361,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4956,10 +5287,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175.2,41.6"
-          Id="Package\Populate Occupation"
-          TopLeft="36.9285719637968,441.34706494734" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="142.900005875315,187.135291189801">
@@ -5062,10 +5389,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Populate Outcome"
-          TopLeft="529.0714369769,235.852943986345" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="611.4714369769,277.452943986345">
@@ -5168,214 +5491,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="96.6619052971301,441.34706494734">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76.4380962355608,-34.0705893077653"
-              Start="0,0"
-              End="76.4380962355608,-26.5705893077653">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-9.8132343980804" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-9.8132343980804"
-                    Point2="0,-13.8132343980804"
-                    Point3="4,-13.8132343980804" />
-                  <mssgle:LineSegment
-                    End="72.4380962355608,-13.8132343980804" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.4380962355608,-13.8132343980804"
-                    Point2="76.4380962355608,-13.8132343980804"
-                    Point3="76.4380962355608,-17.8132343980804" />
-                  <mssgle:LineSegment
-                    End="76.4380962355608,-26.5705893077653" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Populate Gender"
-          TopLeft="507.642865694299,378.041181168012" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="355.614288195785,66.3941174969129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="230.428577498514,311.647063671099"
-              Start="0,0"
-              End="230.428577498514,304.147063671099">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,102.211555331854" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,102.211555331854"
-                    Point2="0,106.211555331854"
-                    Point3="4,106.211555331854" />
-                  <mssgle:LineSegment
-                    End="226.428577498514,106.211555331854" />
-                  <mssgle:CubicBezierSegment
-                    Point1="226.428577498514,106.211555331854"
-                    Point2="230.428577498514,106.211555331854"
-                    Point3="230.428577498514,110.211555331854" />
-                  <mssgle:LineSegment
-                    End="230.428577498514,304.147063671099" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Populate Symptom"
-          TopLeft="224.785718020128,416.041181532652" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="298.814288195785,66.3941174969129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.9619035089909,349.647064035739"
-              Start="0,0"
-              End="-16.9619035089909,342.147064035739">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,203.799724313183" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,203.799724313183"
-                    Point2="0,207.799724313183"
-                    Point3="-4,207.799724313183" />
-                  <mssgle:LineSegment
-                    End="-12.9619035089909,207.799724313183" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.9619035089909,207.799724313183"
-                    Point2="-16.9619035089909,207.799724313183"
-                    Point3="-16.9619035089909,211.799724313183" />
-                  <mssgle:LineSegment
-                    End="-16.9619035089909,342.147064035739" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="334.919051353461,416.041181532652">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="90.1238117012042,-49.2941182261937"
-              Start="0,0"
-              End="90.1238117012042,-41.7941182261937">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-15.9979929865506" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.9979929865506"
-                    Point2="0,-19.9979929865506"
-                    Point3="4,-19.9979929865506" />
-                  <mssgle:LineSegment
-                    End="86.1238117012042,-19.9979929865506" />
-                  <mssgle:CubicBezierSegment
-                    Point1="86.1238117012042,-19.9979929865506"
-                    Point2="90.1238117012042,-19.9979929865506"
-                    Point3="90.1238117012042,-23.9979929865506" />
-                  <mssgle:LineSegment
-                    End="90.1238117012042,-41.7941182261937" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Populate Facility type"
-          TopLeft="531.214294667147,29.9705885784849" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Populate Facility"
-          TopLeft="614.785724150891,100.5000009116" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="620.414294667147,71.5705885784849">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="71.5714294837445,28.9294123331156"
-              Start="0,0"
-              End="71.5714294837445,21.4294123331156">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.4647061665578" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.4647061665578"
-                    Point2="0,14.4647061665578"
-                    Point3="4,14.4647061665578" />
-                  <mssgle:LineSegment
-                    End="67.5714294837445,14.4647061665578" />
-                  <mssgle:CubicBezierSegment
-                    Point1="67.5714294837445,14.4647061665578"
-                    Point2="71.5714294837445,14.4647061665578"
-                    Point3="71.5714294837445,18.4647061665578" />
-                  <mssgle:LineSegment
-                    End="71.5714294837445,21.4294123331156" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="416.414288195785,48.1823530376989">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="114.800006471361,0"
-              Start="0,0"
-              End="107.300006471361,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="107.300006471361,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5383,7 +5498,7 @@
     design-time-name="Package\Poppulate Ethnicity">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\Poppulate Ethnicity\Transform Unicode String"
@@ -5427,7 +5542,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5461,7 +5578,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5497,7 +5616,7 @@
     design-time-name="Package\Populate Case">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Populate Case\Transform Case"
@@ -5529,7 +5648,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5551,7 +5672,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5587,7 +5710,7 @@
     design-time-name="Package\Populate Cities">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="126.4,41.6"
           Id="Package\Populate Cities\LoadCities"
@@ -5615,7 +5738,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5634,653 +5759,6 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Populate States">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Populate States\Populate Satte"
-          TopLeft="139.142857142857,38" />
-        <NodeLayout
-          Size="133.6,41.6"
-          Id="Package\Populate States\Load States"
-          TopLeft="147.892857142857,221.75" />
-        <NodeLayout
-          Size="265.6,41.6"
-          Id="Package\Populate States\Convert Unicode to not nunicode values"
-          TopLeft="101.642857142857,129.25" />
-        <EdgeLayout
-          Id="Package\Populate States.Paths[Excel Source Output]"
-          TopLeft="212.342857142857,79.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="22.1,49.65"
-              Start="0,0"
-              End="22.1,42.15">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.825" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.825"
-                    Point2="0,24.825"
-                    Point3="4,24.825" />
-                  <mssgle:LineSegment
-                    End="18.1,24.825" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.1,24.825"
-                    Point2="22.1,24.825"
-                    Point3="22.1,28.825" />
-                  <mssgle:LineSegment
-                    End="22.1,42.15" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate States.Paths[Data Conversion Output]"
-          TopLeft="234.442857142857,170.85">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-19.7500000000001,50.9"
-              Start="0,0"
-              End="-19.7500000000001,43.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.45" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.45"
-                    Point2="0,25.45"
-                    Point3="-4,25.45" />
-                  <mssgle:LineSegment
-                    End="-15.7500000000001,25.45" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.7500000000001,25.45"
-                    Point2="-19.7500000000001,25.45"
-                    Point3="-19.7500000000001,29.45" />
-                  <mssgle:LineSegment
-                    End="-19.7500000000001,43.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populate States\Populate Satte">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populate States\Load States">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Populate Patient">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Populate Patient\Transform Patient"
-          TopLeft="60,135.295454545454" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Populate Patient\Populate Patient"
-          TopLeft="63.587662337662,60" />
-        <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\Populate Patient\Load Patient"
-          TopLeft="72.285714285714,222.495454545454" />
-        <EdgeLayout
-          Id="Package\Populate Patient.Paths[Excel Source Output]"
-          TopLeft="141.193831168831,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.6954545454546"
-              Start="0,0"
-              End="0,26.1954545454546">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.1954545454546" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Patient.Paths[Data Conversion Output]"
-          TopLeft="140.942857142857,176.895454545454">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.5999999999998"
-              Start="0,0"
-              End="0,38.0999999999998">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.0999999999998" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Populate Test">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Populate Test\Transform Test"
-          TopLeft="60.714285714286,142.630990598487" />
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\Populate Test\Populate Test"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="124.8,41.6"
-          Id="Package\Populate Test\Load Test"
-          TopLeft="82.857142857143,244.123568281938" />
-        <EdgeLayout
-          Id="Package\Populate Test.Paths[Excel Source Output]"
-          TopLeft="133.557142857143,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.0309905984868"
-              Start="0,0"
-              End="0,33.5309905984868">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5309905984868" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Test.Paths[Data Conversion Output]"
-          TopLeft="135.914285714286,184.230990598487">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.34285714285704,59.8925776834517"
-              Start="0,0"
-              End="9.34285714285704,52.3925776834517">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.9462888417258" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9462888417258"
-                    Point2="0,29.9462888417258"
-                    Point3="4,29.9462888417258" />
-                  <mssgle:LineSegment
-                    End="5.34285714285704,29.9462888417258" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.34285714285704,29.9462888417258"
-                    Point2="9.34285714285704,29.9462888417258"
-                    Point3="9.34285714285704,33.9462888417258" />
-                  <mssgle:LineSegment
-                    End="9.34285714285704,52.3925776834517" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Populate Occupation">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="175.2,41.6"
-          Id="Package\Populate Occupation\Populate Occupation"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Populate Occupation\Load Occupation"
-          TopLeft="88.607142857143,223.9" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Populate Occupation\transform occupation"
-          TopLeft="67.607142857143,147.357142857143" />
-        <EdgeLayout
-          Id="Package\Populate Occupation.Paths[Excel Source Output]"
-          TopLeft="147.6,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.20714285714325,45.7571428571428"
-              Start="0,0"
-              End="9.20714285714325,38.2571428571428">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.8785714285714" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.8785714285714"
-                    Point2="0,22.8785714285714"
-                    Point3="4,22.8785714285714" />
-                  <mssgle:LineSegment
-                    End="5.20714285714325,22.8785714285714" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.20714285714325,22.8785714285714"
-                    Point2="9.20714285714325,22.8785714285714"
-                    Point3="9.20714285714325,26.8785714285714" />
-                  <mssgle:LineSegment
-                    End="9.20714285714325,38.2571428571428" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Occupation.Paths[Data Conversion Output]"
-          TopLeft="156.807142857143,188.957142857143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.1999999999997,34.942857142857"
-              Start="0,0"
-              End="10.1999999999997,27.442857142857">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.4714285714285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.4714285714285"
-                    Point2="0,17.4714285714285"
-                    Point3="4,17.4714285714285" />
-                  <mssgle:LineSegment
-                    End="6.1999999999997,17.4714285714285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.1999999999997,17.4714285714285"
-                    Point2="10.1999999999997,17.4714285714285"
-                    Point3="10.1999999999997,21.4714285714285" />
-                  <mssgle:LineSegment
-                    End="10.1999999999997,27.442857142857" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Populate Outcome">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Populate Outcome\transform outcome"
-          TopLeft="66.25,154.75" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Populate Outcome\Populate Outcome"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Populate Outcome\Load Outcome"
-          TopLeft="81.107142857142,224.15" />
-        <EdgeLayout
-          Id="Package\Populate Outcome.Paths[Excel Source Output]"
-          TopLeft="146.325,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53.15"
-              Start="0,0"
-              End="0,45.65">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.65" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Outcome.Paths[Data Conversion Output]"
-          TopLeft="152.278571428571,196.35">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.7999999999999"
-              Start="0,0"
-              End="0,20.2999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Populate Gender">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="156.8,46.4"
-          Id="Package\Populate Gender\Populate Gender"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\Populate Gender\Load gender"
-          TopLeft="80.107142857143,220.4" />
-        <NodeLayout
-          Size="160,41.6"
-          Id="Package\Populate Gender\transform gender"
-          TopLeft="68.821428571429,150.571428571429" />
-        <EdgeLayout
-          Id="Package\Populate Gender.Paths[Excel Source Output]"
-          TopLeft="138.4,106.4">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.4214285714285,44.1714285714289"
-              Start="0,0"
-              End="10.4214285714285,36.6714285714289">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.0857142857144" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.0857142857144"
-                    Point2="0,22.0857142857144"
-                    Point3="4,22.0857142857144" />
-                  <mssgle:LineSegment
-                    End="6.42142857142846,22.0857142857144" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.42142857142846,22.0857142857144"
-                    Point2="10.4214285714285,22.0857142857144"
-                    Point3="10.4214285714285,26.0857142857144" />
-                  <mssgle:LineSegment
-                    End="10.4214285714285,36.6714285714289" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Gender.Paths[Data Conversion Output]"
-          TopLeft="148.664285714286,192.171428571429">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.2285714285713"
-              Start="0,0"
-              End="0,20.7285714285713">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.7285714285713" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Populate Symptom">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Populate Symptom\Populate Symptom"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="148.8,41.6"
-          Id="Package\Populate Symptom\Load Symptom"
-          TopLeft="96.571428571429,247.944996853366" />
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Populate Symptom\Transform symptom"
-          TopLeft="85.285714285715,144.880990598486" />
-        <EdgeLayout
-          Id="Package\Populate Symptom.Paths[Excel Source Output]"
-          TopLeft="143.6,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="28.4857142857146,43.2809905984866"
-              Start="0,0"
-              End="28.4857142857146,35.7809905984866">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.6404952992433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.6404952992433"
-                    Point2="0,21.6404952992433"
-                    Point3="4,21.6404952992433" />
-                  <mssgle:LineSegment
-                    End="24.4857142857146,21.6404952992433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24.4857142857146,21.6404952992433"
-                    Point2="28.4857142857146,21.6404952992433"
-                    Point3="28.4857142857146,25.6404952992433" />
-                  <mssgle:LineSegment
-                    End="28.4857142857146,35.7809905984866" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Symptom.Paths[Data Conversion Output]"
-          TopLeft="171.528571428572,186.480990598486">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.46400625488"
-              Start="0,0"
-              End="0,53.96400625488">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.96400625488" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populate Symptom\Load Symptom">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Populate Facility type">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="177.6,41.6"
-          Id="Package\Populate Facility type\Populate FacilityType"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\Populate Facility type\Load Facility Type"
-          TopLeft="148.75,222.25" />
-        <NodeLayout
-          Size="203.2,41.6"
-          Id="Package\Populate Facility type\Transform Unicode Strings"
-          TopLeft="135,134.75" />
-        <EdgeLayout
-          Id="Package\Populate Facility type.Paths[Excel Source Output]"
-          TopLeft="148.8,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="87.8000000000002,33.1500000000001"
-              Start="0,0"
-              End="87.8000000000002,25.6500000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.575"
-                    Point2="0,16.575"
-                    Point3="4,16.575" />
-                  <mssgle:LineSegment
-                    End="83.8000000000002,16.575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="83.8000000000002,16.575"
-                    Point2="87.8000000000002,16.575"
-                    Point3="87.8000000000002,20.575" />
-                  <mssgle:LineSegment
-                    End="87.8000000000002,25.6500000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Facility type.Paths[Data Conversion Output]"
-          TopLeft="233.475,176.35">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.9"
-              Start="0,0"
-              End="0,38.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <TaskHost
     design-time-name="Package\Populate Facility">
     <LayoutInfo>
@@ -6358,6 +5836,19 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Populate Facility\Populate Facility">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Populate Facility\Load facility">
     <Properties>
       <Property>
@@ -6370,5 +5861,706 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate Facility type">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Populate Facility type\Transform Unicode Strings"
+          TopLeft="135,134.75" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Populate Facility type\Load Facility Type"
+          TopLeft="148.75,222.25" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Populate Facility type\Populate FacilityType"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\Populate Facility type.Paths[Excel Source Output]"
+          TopLeft="148.8,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.8000000000002,33.1500000000001"
+              Start="0,0"
+              End="87.8000000000002,25.6500000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.575" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.575"
+                    Point2="0,16.575"
+                    Point3="4,16.575" />
+                  <mssgle:LineSegment
+                    End="83.8000000000002,16.575" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.8000000000002,16.575"
+                    Point2="87.8000000000002,16.575"
+                    Point3="87.8000000000002,20.575" />
+                  <mssgle:LineSegment
+                    End="87.8000000000002,25.6500000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Facility type.Paths[Data Conversion Output]"
+          TopLeft="233.475,176.35">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.9"
+              Start="0,0"
+              End="0,38.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populate Gender">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Populate Gender\transform gender"
+          TopLeft="68.821428571429,150.571428571429" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Populate Gender\Load gender"
+          TopLeft="80.107142857143,220.4" />
+        <NodeLayout
+          Size="156.8,46.4"
+          Id="Package\Populate Gender\Populate Gender"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\Populate Gender.Paths[Excel Source Output]"
+          TopLeft="138.4,106.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.4214285714285,44.1714285714289"
+              Start="0,0"
+              End="10.4214285714285,36.6714285714289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.0857142857144" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.0857142857144"
+                    Point2="0,22.0857142857144"
+                    Point3="4,22.0857142857144" />
+                  <mssgle:LineSegment
+                    End="6.42142857142846,22.0857142857144" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.42142857142846,22.0857142857144"
+                    Point2="10.4214285714285,22.0857142857144"
+                    Point3="10.4214285714285,26.0857142857144" />
+                  <mssgle:LineSegment
+                    End="10.4214285714285,36.6714285714289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Gender.Paths[Data Conversion Output]"
+          TopLeft="148.664285714286,192.171428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.2285714285713"
+              Start="0,0"
+              End="0,20.7285714285713">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7285714285713" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populate Occupation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Populate Occupation\transform occupation"
+          TopLeft="67.607142857143,147.357142857143" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Populate Occupation\Load Occupation"
+          TopLeft="88.607142857143,223.9" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Populate Occupation\Populate Occupation"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\Populate Occupation.Paths[Excel Source Output]"
+          TopLeft="147.6,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.20714285714325,45.7571428571428"
+              Start="0,0"
+              End="9.20714285714325,38.2571428571428">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8785714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.8785714285714"
+                    Point2="0,22.8785714285714"
+                    Point3="4,22.8785714285714" />
+                  <mssgle:LineSegment
+                    End="5.20714285714325,22.8785714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.20714285714325,22.8785714285714"
+                    Point2="9.20714285714325,22.8785714285714"
+                    Point3="9.20714285714325,26.8785714285714" />
+                  <mssgle:LineSegment
+                    End="9.20714285714325,38.2571428571428" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Occupation.Paths[Data Conversion Output]"
+          TopLeft="156.807142857143,188.957142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.1999999999997,34.942857142857"
+              Start="0,0"
+              End="10.1999999999997,27.442857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4714285714285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4714285714285"
+                    Point2="0,17.4714285714285"
+                    Point3="4,17.4714285714285" />
+                  <mssgle:LineSegment
+                    End="6.1999999999997,17.4714285714285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.1999999999997,17.4714285714285"
+                    Point2="10.1999999999997,17.4714285714285"
+                    Point3="10.1999999999997,21.4714285714285" />
+                  <mssgle:LineSegment
+                    End="10.1999999999997,27.442857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populate Outcome">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Populate Outcome\transform outcome"
+          TopLeft="66.25,154.75" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Populate Outcome\Load Outcome"
+          TopLeft="81.107142857142,224.15" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Populate Outcome\Populate Outcome"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\Populate Outcome.Paths[Excel Source Output]"
+          TopLeft="146.325,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.15"
+              Start="0,0"
+              End="0,45.65">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.65" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Outcome.Paths[Data Conversion Output]"
+          TopLeft="152.278571428571,196.35">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.7999999999999"
+              Start="0,0"
+              End="0,20.2999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populate Patient">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Populate Patient\Transform Patient"
+          TopLeft="60,135.295454545454" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Populate Patient\Load Patient"
+          TopLeft="72.285714285714,222.495454545454" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Populate Patient\Populate Patient"
+          TopLeft="63.587662337662,60" />
+        <EdgeLayout
+          Id="Package\Populate Patient.Paths[Excel Source Output]"
+          TopLeft="141.193831168831,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.6954545454546"
+              Start="0,0"
+              End="0,26.1954545454546">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1954545454546" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Patient.Paths[Data Conversion Output]"
+          TopLeft="140.942857142857,176.895454545454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.5999999999998"
+              Start="0,0"
+              End="0,38.0999999999998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.0999999999998" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Patient\Load Patient">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Patient\Populate Patient">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate States">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="133.6,41.6"
+          Id="Package\Populate States\Load States"
+          TopLeft="147.892857142857,221.75" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Populate States\Populate Satte"
+          TopLeft="139.142857142857,38" />
+        <NodeLayout
+          Size="265.6,41.6"
+          Id="Package\Populate States\Convert Unicode to not nunicode values"
+          TopLeft="101.642857142857,129.25" />
+        <EdgeLayout
+          Id="Package\Populate States.Paths[Excel Source Output]"
+          TopLeft="212.342857142857,79.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.1,49.65"
+              Start="0,0"
+              End="22.1,42.15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.825" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.825"
+                    Point2="0,24.825"
+                    Point3="4,24.825" />
+                  <mssgle:LineSegment
+                    End="18.1,24.825" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.1,24.825"
+                    Point2="22.1,24.825"
+                    Point3="22.1,28.825" />
+                  <mssgle:LineSegment
+                    End="22.1,42.15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate States.Paths[Data Conversion Output]"
+          TopLeft="234.442857142857,170.85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.7500000000001,50.9"
+              Start="0,0"
+              End="-19.7500000000001,43.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.45"
+                    Point2="0,25.45"
+                    Point3="-4,25.45" />
+                  <mssgle:LineSegment
+                    End="-15.7500000000001,25.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.7500000000001,25.45"
+                    Point2="-19.7500000000001,25.45"
+                    Point3="-19.7500000000001,29.45" />
+                  <mssgle:LineSegment
+                    End="-19.7500000000001,43.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate States\Load States">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate States\Populate Satte">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate Symptom">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Populate Symptom\Populate Symptom"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Populate Symptom\Transform symptom"
+          TopLeft="85.285714285715,144.880990598486" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Populate Symptom\Load Symptom"
+          TopLeft="96.571428571429,247.944996853366" />
+        <EdgeLayout
+          Id="Package\Populate Symptom.Paths[Excel Source Output]"
+          TopLeft="143.6,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.4857142857146,43.2809905984866"
+              Start="0,0"
+              End="28.4857142857146,35.7809905984866">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.6404952992433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6404952992433"
+                    Point2="0,21.6404952992433"
+                    Point3="4,21.6404952992433" />
+                  <mssgle:LineSegment
+                    End="24.4857142857146,21.6404952992433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.4857142857146,21.6404952992433"
+                    Point2="28.4857142857146,21.6404952992433"
+                    Point3="28.4857142857146,25.6404952992433" />
+                  <mssgle:LineSegment
+                    End="28.4857142857146,35.7809905984866" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Symptom.Paths[Data Conversion Output]"
+          TopLeft="171.528571428572,186.480990598486">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.46400625488"
+              Start="0,0"
+              End="0,53.96400625488">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.96400625488" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Symptom\Load Symptom">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate Test">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Populate Test\Transform Test"
+          TopLeft="60.714285714286,142.630990598487" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Populate Test\Populate Test"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\Populate Test\Load Test"
+          TopLeft="82.857142857143,244.123568281938" />
+        <EdgeLayout
+          Id="Package\Populate Test.Paths[Excel Source Output]"
+          TopLeft="133.557142857143,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.0309905984868"
+              Start="0,0"
+              End="0,33.5309905984868">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5309905984868" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Test.Paths[Data Conversion Output]"
+          TopLeft="135.914285714286,184.230990598487">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.34285714285704,59.8925776834517"
+              Start="0,0"
+              End="9.34285714285704,52.3925776834517">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9462888417258" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9462888417258"
+                    Point2="0,29.9462888417258"
+                    Point3="4,29.9462888417258" />
+                  <mssgle:LineSegment
+                    End="5.34285714285704,29.9462888417258" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.34285714285704,29.9462888417258"
+                    Point2="9.34285714285704,29.9462888417258"
+                    Point3="9.34285714285704,33.9462888417258" />
+                  <mssgle:LineSegment
+                    End="9.34285714285704,52.3925776834517" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
