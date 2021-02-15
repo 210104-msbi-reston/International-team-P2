@@ -27,19 +27,20 @@ CREATE TABLE Occupation(
 );
 
 CREATE TABLE [State](
-	[StateCode] VARCHAR(50) PRIMARY KEY,
+	StateID INT IDENTITY(1,1) PRIMARY KEY,
+	[StateAbbreviation] VARCHAR(2),
 	[Name] VARCHAR(255)
 );
 
 CREATE TABLE City(
 	CityID INT IDENTITY(1,1) PRIMARY KEY,
 	[Name] VARCHAR(255),
-	StateCode VARCHAR (50),
-	FOREIGN KEY (StateCode) REFERENCES [State]
+	StateID INT,
+	FOREIGN KEY (StateID) REFERENCES [State]
 );
 
 CREATE TABLE Patient(
-    PatientID INT IDENTITY(1,1) PRIMARY KEY,	
+    PatientID INT PRIMARY KEY,	
 	Age INT,
 	EthnicityID INT,
 	GenderID INT,
@@ -75,9 +76,9 @@ CREATE TABLE Facility(
 );
 
 CREATE TABLE Test(
-	TestID INT IDENTITY(1,1) PRIMARY KEY,
-	[Date] DATETIME,
-	TestResult BIT
+	TestID INT PRIMARY KEY,
+	[Date] DATE,
+	TestResult VARCHAR(50)
 );
 
 CREATE TABLE [Case](

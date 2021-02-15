@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1382
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS - Covid19DB To Covid19DW", "SSIS - Covid19DB To Covid19DW\SSIS - Covid19DB To Covid19DW.dtproj", "{71E9E04C-B86E-4497-992D-F2CDA348F6EF}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS_COVID19", "SSIS - Covid19DB To Covid19DW\SSIS_COVID19.dtproj", "{71E9E04C-B86E-4497-992D-F2CDA348F6EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
