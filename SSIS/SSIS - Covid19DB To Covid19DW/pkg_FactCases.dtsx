@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FactCases"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{93506DAA-074C-46EC-BE64-D7024B5EAAC1}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{2B5C92AA-EDD4-4402-8F0D-AAE5AB8ECC72}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -82,8 +82,8 @@
               <connections>
                 <connection
                   refId="Package\Load FactCases\Case Table.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-USS41EG0.Covid19DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -725,8 +725,8 @@
               <connections>
                 <connection
                   refId="Package\Load FactCases\Death.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -901,7 +901,7 @@ where [refTable].[CaseKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CaseKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Event" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PatientKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GeographyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CaseKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Infection" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Recovery" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Hospitalization" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Death" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PatientKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GeographyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -919,8 +919,8 @@ where [refTable].[CaseKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Get Deltas.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{9FDCD222-12F1-4DB3-848C-654BCAC3554D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-USS41EG0.Covid19DW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1049,8 +1049,8 @@ where [refTable].[CaseKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Hospitalization.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1232,8 +1232,8 @@ where [refTable].[CaseKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Infection.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1408,7 +1408,7 @@ where [refTable].[CityID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateCode" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1426,8 +1426,8 @@ where [refTable].[CityID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup City Name.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-USS41EG0.Covid19DB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1479,22 +1479,6 @@ where [refTable].[CityID] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">Name</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[StateCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Copy Column"
-                      length="50"
-                      lineageId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[StateCode]"
-                      name="StateCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">StateCode</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1602,8 +1586,8 @@ where [refTable].[FullDate] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup DateKey.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1760,8 +1744,8 @@ where [refTable].[EthnicityID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup Ethnicity.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
+                  connectionManagerRefId="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1920,8 +1904,8 @@ where [refTable].[GenderID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup Gender.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
+                  connectionManagerRefId="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2067,7 +2051,7 @@ where [refTable].[City] = ? and [refTable].[StateAbbreviation] = ? and [refTable
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[CityName]};#{Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[StateCode]};#{Package\Load FactCases\Lookup State Name.Outputs[Lookup Match Output].Columns[StateName]};</property>
+                  name="ParameterMap">#{Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[CityName]};#{Package\Load FactCases\236:invalid};#{Package\Load FactCases\Lookup State Name.Outputs[Lookup Match Output].Columns[StateName]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2080,8 +2064,8 @@ where [refTable].[City] = ? and [refTable].[StateAbbreviation] = ? and [refTable
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup Geography Key.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2096,7 +2080,7 @@ where [refTable].[City] = ? and [refTable].[StateAbbreviation] = ? and [refTable
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="StateCode"
-                      lineageId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[StateCode]">
+                      lineageId="Package\Load FactCases\236:invalid">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2276,8 +2260,8 @@ where [refTable].[OccupationID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup Occupation.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
+                  connectionManagerRefId="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2436,8 +2420,8 @@ where [refTable].[OutcomeID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup Outcome (Event).Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
+                  connectionManagerRefId="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2596,8 +2580,8 @@ where [refTable].[PatientID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup Patient Information.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-USS41EG0.Covid19DB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2810,8 +2794,8 @@ where [refTable].[AgeGroup] = ? and [refTable].[Gender] = ? and [refTable].[Ethn
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup PatientKey.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -3011,7 +2995,7 @@ where [refTable].[StateCode] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[StateCode]};</property>
+                  name="ParameterMap">#{Package\Load FactCases\236:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3024,8 +3008,8 @@ where [refTable].[StateCode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Lookup State Name.Connections[OleDbConnection]"
-                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB 1]"
+                  connectionManagerID="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
+                  connectionManagerRefId="{B4A7A317-2ACC-479E-BA02-57F958DEA29B}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -3040,7 +3024,7 @@ where [refTable].[StateCode] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="StateCode"
-                      lineageId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output].Columns[StateCode]">
+                      lineageId="Package\Load FactCases\236:invalid">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3175,8 +3159,8 @@ where [refTable].[StateCode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load FactCases\Recovery.Connections[OleDbConnection]"
-                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DW 1]"
+                  connectionManagerID="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
+                  connectionManagerRefId="{80D13DD7-8E21-4753-B853-F527A52BD4D2}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3424,54 +3408,54 @@ where [refTable].[StateCode] = ?</property>
               startId="Package\Load FactCases\Conditional Split.Outputs[Recoveries]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output9]"
-              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
+              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output8]"
-              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
-              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
-              endId="Package\Load FactCases\Lookup DateKey.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
-              endId="Package\Load FactCases\Create 0's and 1's for insertion.Inputs[Derived Column Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output1]"
-              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output3]"
-              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup State Name.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output2]"
-              endId="Package\Load FactCases\Lookup State Name.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output]"
               endId="Package\Load FactCases\Lookup Geography Key.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load FactCases\Lookup DateKey.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
-              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
+              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
+              endId="Package\Load FactCases\Lookup State Name.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup City Name.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
+              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup State Name.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
+              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output1]"
+              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output3]"
+              endId="Package\Load FactCases\Lookup DateKey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output2]"
+              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output]"
+              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
+              endId="Package\Load FactCases\Create 0's and 1's for insertion.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup No Match Output]"
               endId="Package\Load FactCases\Convert DateTime to Date.Inputs[Data Conversion Input]"
@@ -3500,7 +3484,7 @@ where [refTable].[StateCode] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="255,42"
+          Size="255.2,41.6"
           Id="Package\Load FactCases"
           TopLeft="70,203" />
       </GraphLayout>
@@ -3512,89 +3496,89 @@ where [refTable].[StateCode] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="197,42"
-          Id="Package\Load FactCases\Lookup Outcome (Event)"
-          TopLeft="480.5,1436.5" />
+          Size="120.8,41.6"
+          Id="Package\Load FactCases\Infection"
+          TopLeft="5.50000000000011,1641.5" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\Load FactCases\Death"
-          TopLeft="324.5,1641.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Conditional Split"
-          TopLeft="480.5,1538.5" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\Load FactCases\Hospitalization"
-          TopLeft="643.5,1641.5" />
-        <NodeLayout
-          Size="258,42"
+          Size="257.6,41.6"
           Id="Package\Load FactCases\Lookup Gender"
           TopLeft="480.5,824.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Convert DateTime to Date"
-          TopLeft="480.5,212.5" />
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Conditional Split"
+          TopLeft="480.5,1538.5" />
         <NodeLayout
-          Size="122,42"
-          Id="Package\Load FactCases\Recovery"
-          TopLeft="962.5,1641.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Patient Information"
-          TopLeft="480.5,314.5" />
-        <NodeLayout
-          Size="223,42"
-          Id="Package\Load FactCases\Create 0's and 1's for insertion"
-          TopLeft="155.062295081967,1460.82007125891" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup PatientKey"
-          TopLeft="480.5,1130.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
-          TopLeft="480.5,518.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Geography Key"
-          TopLeft="480.5,1334.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup DateKey"
-          TopLeft="480.5,1232.5" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Occupation"
-          TopLeft="480.5,1028.5" />
-        <NodeLayout
-          Size="258,42"
+          Size="257.6,41.6"
           Id="Package\Load FactCases\Lookup City Name"
           TopLeft="480.5,620.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup State Name"
-          TopLeft="480.5,722.5" />
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Convert DateTime to Date"
+          TopLeft="480.5,212.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Transform Age to AgeGroup"
-          TopLeft="480.5,416.5" />
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup PatientKey"
+          TopLeft="480.5,1130.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Load FactCases\Lookup Ethnicity"
-          TopLeft="480.5,926.5" />
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup Geography Key"
+          TopLeft="480.5,1334.5" />
         <NodeLayout
-          Size="258,42"
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup DateKey"
+          TopLeft="480.5,1232.5" />
+        <NodeLayout
+          Size="107.2,41.6"
+          Id="Package\Load FactCases\Death"
+          TopLeft="324.5,1641.5" />
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
+          TopLeft="480.5,518.5" />
+        <NodeLayout
+          Size="257.6,41.6"
           Id="Package\Load FactCases\Get Deltas"
           TopLeft="480.5,110.5" />
         <NodeLayout
-          Size="258,42"
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup Patient Information"
+          TopLeft="480.5,314.5" />
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\Load FactCases\Recovery"
+          TopLeft="962.5,1641.5" />
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup Ethnicity"
+          TopLeft="480.5,926.5" />
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup State Name"
+          TopLeft="480.5,722.5" />
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Transform Age to AgeGroup"
+          TopLeft="480.5,416.5" />
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Load FactCases\Lookup Occupation"
+          TopLeft="480.5,1028.5" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Load FactCases\Hospitalization"
+          TopLeft="643.5,1641.5" />
+        <NodeLayout
+          Size="257.6,41.6"
           Id="Package\Load FactCases\Case Table"
           TopLeft="480.5,8.5" />
         <NodeLayout
-          Size="121,42"
-          Id="Package\Load FactCases\Infection"
-          TopLeft="5.50000000000011,1641.5" />
+          Size="223.2,41.6"
+          Id="Package\Load FactCases\Create 0's and 1's for insertion"
+          TopLeft="155.062295081967,1460.82007125891" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Load FactCases\Lookup Outcome (Event)"
+          TopLeft="480.5,1436.5" />
         <EdgeLayout
           Id="Package\Load FactCases.Paths[OLE DB Source Output]"
           TopLeft="609.5,50.5">
@@ -3643,7 +3627,7 @@ where [refTable].[StateCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output9]"
-          TopLeft="609.5,866.5">
+          TopLeft="609.5,356.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3667,43 +3651,7 @@ where [refTable].[StateCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output8]"
-          TopLeft="609.5,1376.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-30.5,60"
-              Start="0,0"
-              End="-30.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-26.5,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.5,30"
-                    Point2="-30.5,30"
-                    Point3="-30.5,34" />
-                  <mssgle:LineSegment
-                    End="-30.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-63.44138671875,35,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output7]"
-          TopLeft="609.5,1070.5">
+          TopLeft="609.5,1274.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3721,13 +3669,37 @@ where [refTable].[StateCode] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="-57.0600390625,18.25,114.120078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output7]"
+          TopLeft="609.5,662.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.0600390625,18.25,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output6]"
-          TopLeft="609.5,1172.5">
+          TopLeft="609.5,764.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3751,6 +3723,30 @@ where [refTable].[StateCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output5]"
+          TopLeft="609.5,968.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output4]"
           TopLeft="480.5,1457.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3786,32 +3782,8 @@ where [refTable].[StateCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output4]"
-          TopLeft="609.5,356.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output3]"
-          TopLeft="609.5,764.5">
+          TopLeft="609.5,1172.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3835,7 +3807,7 @@ where [refTable].[StateCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output2]"
-          TopLeft="609.5,662.5">
+          TopLeft="609.5,1070.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3859,31 +3831,43 @@ where [refTable].[StateCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output1]"
-          TopLeft="609.5,968.5">
+          TopLeft="609.5,1376.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-30.5,60"
               Start="0,0"
-              End="0,52.5">
+              End="-30.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-26.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.5,30"
+                    Point2="-30.5,30"
+                    Point3="-30.5,34" />
+                  <mssgle:LineSegment
+                    End="-30.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="-63.44138671875,35,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output]"
-          TopLeft="609.5,1274.5">
+          TopLeft="609.5,866.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4153,43 +4137,7 @@ where [refTable].[StateCode] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Outcome (Event)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Outcome]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Death">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Hospitalization">
+    design-time-name="Package\Load FactCases\Infection">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4225,35 +4173,22 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Recovery">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Patient Information">
+    design-time-name="Package\Load FactCases\Lookup City Name">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Patient]</Value>
+          type="q3:string">[dbo].[City]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4330,22 +4265,35 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Occupation">
+    design-time-name="Package\Load FactCases\Death">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Occupation]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Get Deltas">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactCases]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4353,7 +4301,43 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup City Name">
+    design-time-name="Package\Load FactCases\Lookup Patient Information">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Patient]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Recovery">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup Ethnicity">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4363,7 +4347,7 @@ where [refTable].[StateCode] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[City]</Value>
+          type="q3:string">[dbo].[Ethnicity]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4399,7 +4383,7 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Ethnicity">
+    design-time-name="Package\Load FactCases\Lookup Occupation">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4409,7 +4393,7 @@ where [refTable].[StateCode] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Ethnicity]</Value>
+          type="q3:string">[dbo].[Occupation]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4422,25 +4406,15 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Get Deltas">
+    design-time-name="Package\Load FactCases\Hospitalization">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactCases]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4458,15 +4432,25 @@ where [refTable].[StateCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Infection">
+    design-time-name="Package\Load FactCases\Lookup Outcome (Event)">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Outcome]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FlatFileToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="129"
-  DTS:VersionGUID="{B22AA7EF-8715-40A8-AE9C-A6D71F3206BE}">
+  DTS:VersionBuild="130"
+  DTS:VersionGUID="{C5312309-B695-4F7E-BED0-F82D7B3D2B87}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -5474,7 +5474,7 @@ where [refTable].[Name] = ?</property>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Write data from file to Test table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Write data from file to Test table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TestID]"
@@ -5482,7 +5482,9 @@ where [refTable].[Name] = ?</property>
                       name="TestID" />
                     <externalMetadataColumn
                       refId="Package\Write data from file to Test table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TestResult]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="TestResult" />
                   </externalMetadataColumns>
                 </input>
@@ -5770,6 +5772,10 @@ where [refTable].[Name] = ?</property>
           Id="Package\Write data from file to Case table"
           TopLeft="9.50000000000011,919.899999999999" />
         <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\Write data from file to City table"
+          TopLeft="11.9000000000001,716.699999999999" />
+        <NodeLayout
           Size="243.2,41.6"
           Id="Package\Write data from file to Patient table"
           TopLeft="5.5000000000001,818.299999999999" />
@@ -5829,14 +5835,14 @@ where [refTable].[Name] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5881,6 +5887,28 @@ where [refTable].[Name] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="127.1,758.299999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6022,32 +6050,6 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="127.1,1164.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="230.4,41.6"
-          Id="Package\Write data from file to City table"
-          TopLeft="11.9000000000001,716.699999999999" />
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
           TopLeft="127.1,656.699999999999">
           <EdgeLayout.Curve>
@@ -6070,19 +6072,19 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="127.1,758.299999999999">
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="127.1,1164.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6710,6 +6712,146 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Write data from file to City table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="96,41.6"
+          Id="Package\Write data from file to City table\City"
+          TopLeft="242.5,264.5" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Write data from file to City table\Flat File Source"
+          TopLeft="196.5,25.5" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Write data from file to City table\OLE DB Destination"
+          TopLeft="203.5,381.099999999999" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Write data from file to City table\Data Conversion"
+          TopLeft="193,140" />
+        <EdgeLayout
+          Id="Package\Write data from file to City table.Paths[Flat File Source Output]"
+          TopLeft="271.15,67.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.9000000000001"
+              Start="0,0"
+              End="0,65.4000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.4000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Write data from file to City table.Paths[Data Conversion Output]"
+          TopLeft="270.6,181.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.9000000000001,82.9"
+              Start="0,0"
+              End="19.9000000000001,75.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.45"
+                    Point2="0,41.45"
+                    Point3="4,41.45" />
+                  <mssgle:LineSegment
+                    End="15.9000000000001,41.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.9000000000001,41.45"
+                    Point2="19.9000000000001,41.45"
+                    Point3="19.9000000000001,45.45" />
+                  <mssgle:LineSegment
+                    End="19.9000000000001,75.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Write data from file to City table.Paths[Lookup Match Output]"
+          TopLeft="289.6,306.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.999999999999"
+              Start="0,0"
+              End="0,67.499999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.499999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,27.9453124999995,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Write data from file to City table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Write data from file to City table\City">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[State]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Write data from file to Patient table">
     <LayoutInfo>
       <GraphLayout
@@ -6886,29 +7028,6 @@ where [refTable].[Name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to Patient table\Ethnicity">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Ethnicity]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Write data from file to Patient table\Gender">
     <Properties>
       <Property>
@@ -6932,22 +7051,22 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to Patient table\City">
+    design-time-name="Package\Write data from file to Patient table\Ethnicity">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[City]</Value>
+          type="q3:string">[dbo].[Ethnicity]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6966,6 +7085,29 @@ where [refTable].[Name] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Occupation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Write data from file to Patient table\City">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[City]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -7056,146 +7198,6 @@ where [refTable].[Name] = ?</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Write data from file to Test table\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Write data from file to City table">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="96,41.6"
-          Id="Package\Write data from file to City table\City"
-          TopLeft="242.5,264.5" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Write data from file to City table\Flat File Source"
-          TopLeft="196.5,25.5" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Write data from file to City table\OLE DB Destination"
-          TopLeft="203.5,381.099999999999" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Write data from file to City table\Data Conversion"
-          TopLeft="193,140" />
-        <EdgeLayout
-          Id="Package\Write data from file to City table.Paths[Flat File Source Output]"
-          TopLeft="271.15,67.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72.9000000000001"
-              Start="0,0"
-              End="0,65.4000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65.4000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to City table.Paths[Data Conversion Output]"
-          TopLeft="270.6,181.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19.9000000000001,82.9"
-              Start="0,0"
-              End="19.9000000000001,75.4">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.45" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.45"
-                    Point2="0,41.45"
-                    Point3="4,41.45" />
-                  <mssgle:LineSegment
-                    End="15.9000000000001,41.45" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.9000000000001,41.45"
-                    Point2="19.9000000000001,41.45"
-                    Point3="19.9000000000001,45.45" />
-                  <mssgle:LineSegment
-                    End="19.9000000000001,75.4" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to City table.Paths[Lookup Match Output]"
-          TopLeft="289.6,306.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74.999999999999"
-              Start="0,0"
-              End="0,67.499999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.499999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,27.9453124999995,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to City table\City">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[State]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to City table\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

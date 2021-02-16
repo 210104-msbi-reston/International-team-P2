@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-E1KTPMR</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOvxLlQfaCkO72JJ9/4qqOQAAAAACAAAAAAAQZgAAAAEAACAAAADpGyFC+QA7FZHXwS2rKRgZMx/yeA+CqS+e7aibnvdPaQAAAAAOgAAAAAIAACAAAAB2dmRLIGExY3DttXYaHXAHbJwWJe18zpIwL2q12MANk5AAAAArQ7fPUZNxwyPV+EH4eI2z3Z89iAr7T3+uuKEJ+T+vlluOPYgdThoJFk4Q93B+k+5ErC7JJysd6xNHpzPo+1oD54BspwhDgRsixq1iLmpafk8llPqpVajQR1rAdiziQK75+O1pvnALwPDPS7+U3Vn+JSk8DhfIhjb01xfC805DpHshcLyp8GJ6W6LDtd/a6GhAAAAAG7C5N7Hrh0ug//YKIjXuQ7tQsFSciAbPgbCum6Uk06+aRjb9rOdsEH01cAvAszkZ66398MfMYJFBs7y0WlrMTw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOvxLlQfaCkO72JJ9/4qqOQAAAAACAAAAAAAQZgAAAAEAACAAAAAOu1ncIGSUYBXHFHKhB6u9699e8AChmzTAwaIARTmwXwAAAAAOgAAAAAIAACAAAABCxqMvASFfJnAcc/b706EDdZEXJXRjfxLAQb43B5lVc5AAAABjBbeYro1Y4gFu/BGOidlyjoiLz77EP5rssVDHjfHsAkHKrVwn1dnisFFTJcQjdCH/KSfye5KFC5lLQhB/nzdP+8u1xiRcT6RfK/uF7jViV/FaVNN5e37J0FpQTiv/d6LiD8HwACJb6aFemllt43mMlTsRjZb0DWFGTbKbOH9PrJDHiSQzwt+J5oQsH6ZkJR9AAAAABoLZ9WDBX1nyH5hdwpe2wX3gUyDNXPNV8HQIJ/a35fT9ba0LOEtQzMfhIbykZSvrpe2bLk4kSt3HfkSYHdCxCw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -204,6 +204,8 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">
+                </SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -481,10 +483,10 @@
                 <SSIS:Property SSIS:Name="Name">pkg_DimGeography</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{38BDD7D0-02F1-401D-92E4-B8B2A0F6F19C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F123A897-6FE0-4D6E-B896-03C8A3AF0C2B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -498,10 +500,10 @@
                 <SSIS:Property SSIS:Name="Name">pkg_DimPatient</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EB15FDD3-90EB-4104-9B0A-1B553EAC3870}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{20E8E02D-D88E-4722-A655-3C26D05E4730}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -515,10 +517,10 @@
                 <SSIS:Property SSIS:Name="Name">pkg_FactCases</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{93506DAA-074C-46EC-BE64-D7024B5EAAC1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2B5C92AA-EDD4-4402-8F0D-AAE5AB8ECC72}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -532,10 +534,10 @@
                 <SSIS:Property SSIS:Name="Name">pkg_FlatFileToDB</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">121</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">129</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9727FCEF-7B28-42EA-9DAB-B0C7E5B8DE5C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B22AA7EF-8715-40A8-AE9C-A6D71F3206BE}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -570,7 +572,61 @@
           <ConfigurationSetting>
             <Id>LastModifiedTime</Id>
             <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2021-02-11T20:46:27.9667037Z</Value>
+            <Value xsi:type="xsd:dateTime">2021-02-15T22:56:31.4157522Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{a50a6da9-b4f5-470e-9a62-784900383b4b}</Id>
+            <Name>Project::ServerName</Name>
+            <Value xsi:type="xsd:string">DESKTOP-E1KTPMR\TRAININGSERVER</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{00a55bb0-351e-43cb-b2a4-991e483d255f}</Id>
+            <Name>Project::DataBaseName</Name>
+            <Value xsi:type="xsd:string">Covid19DB</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{0f196289-6fc9-47de-af74-a8d2a9ef514e}</Id>
+            <Name>Project::DataWarehouseName</Name>
+            <Value xsi:type="xsd:string">Covid19DW</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Test1</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2019</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2021-02-15T22:56:31.4187509Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{a50a6da9-b4f5-470e-9a62-784900383b4b}</Id>
+            <Name>Project::ServerName</Name>
+            <Value xsi:type="xsd:string">DESKTOP-E1KTPMR\TRAININGSERVER</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{00a55bb0-351e-43cb-b2a4-991e483d255f}</Id>
+            <Name>Project::DataBaseName</Name>
+            <Value xsi:type="xsd:string">Covid19DB</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{0f196289-6fc9-47de-af74-a8d2a9ef514e}</Id>
+            <Name>Project::DataWarehouseName</Name>
+            <Value xsi:type="xsd:string">Covid19DW</Value>
           </ConfigurationSetting>
         </ParameterConfigurationValues>
       </Options>
