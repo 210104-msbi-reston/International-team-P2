@@ -76,7 +76,7 @@ CREATE TABLE Facility(
 );
 
 CREATE TABLE Test(
-	TestID INT PRIMARY KEY,
+	TestID INT IDENTITY(1,1) PRIMARY KEY,
 	[Date] DATE,
 	TestResult VARCHAR(50)
 );
