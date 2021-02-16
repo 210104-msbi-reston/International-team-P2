@@ -40,7 +40,7 @@ CREATE TABLE City(
 );
 
 CREATE TABLE Patient(
-    PatientID INT PRIMARY KEY,	
+    PatientID INT IDENTITY(1,1) PRIMARY KEY,
 	Age INT,
 	EthnicityID INT,
 	GenderID INT,
