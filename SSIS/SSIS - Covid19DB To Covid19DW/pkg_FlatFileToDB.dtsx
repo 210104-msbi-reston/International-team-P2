@@ -11,12 +11,29 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FlatFileToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="150"
-  DTS:VersionGUID="{C8C48A4E-F8BA-415F-B358-96138F95894F}">
+  DTS:VersionBuild="177"
+  DTS:VersionGUID="{FB45892C-5948-4AF7-8A75-0327D745811B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8C2B7AF6-8C17-4DD2-8244-51DD0BB466C5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}"
+          SQLTask:SqlStatementSource="update T1 &#xA;set    T1.PatientID = T2.PatientID&#xA;from   (select row_number() over(order by PatientID) as rowid,&#xA;&#x9;&#x9;PatientID from [Case]) T1&#xA;&#x9;&#x9;join (select row_number() over(order by PatientID) as rowid,&#xA;&#x9;&#x9;PatientID from Patient) T2&#xA;ON T1.rowid = T2.rowid;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Write data from file to Case table"
       DTS:CreationName="Microsoft.Pipeline"
@@ -105,28 +122,22 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].Columns[Copy of case_date]"
-                      cachedDataType="dbDate"
+                      cachedDataType="date"
                       cachedName="Copy of case_date"
                       externalMetadataColumnId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_date]" />
+                      lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_date]" />
                     <inputColumn
                       refId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].Columns[SymptomID]"
                       cachedDataType="i4"
                       cachedName="SymptomID"
                       externalMetadataColumnId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].ExternalColumns[SymptomID]"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[SymptomID]" />
+                      lineageId="Package\Write data from file to Case table\Symptom.Outputs[Lookup Match Output].Columns[SymptomID]" />
                     <inputColumn
                       refId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].Columns[OutcomeID]"
                       cachedDataType="i4"
                       cachedName="OutcomeID"
                       externalMetadataColumnId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].ExternalColumns[OutcomeID]"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[OutcomeID]" />
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].Columns[PatientID]"
-                      cachedDataType="i4"
-                      cachedName="PatientID"
-                      externalMetadataColumnId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input].ExternalColumns[PatientID]"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[PatientID]" />
+                      lineageId="Package\Write data from file to Case table\Outcome.Outputs[Lookup Match Output].Columns[OutcomeID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -218,6 +229,13 @@
                       cachedLength="50"
                       cachedName="case_id"
                       lineageId="Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].Columns[case_id]" />
+                    <inputColumn
+                      refId="Package\Write data from file to Case table\Data Conversion.Inputs[Data Conversion Input].Columns[patient_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="patient_id"
+                      lineageId="Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].Columns[patient_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -253,7 +271,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_date]"
-                      dataType="dbDate"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_date]"
@@ -307,6 +325,26 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].Columns[case_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of patient_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of patient_id]"
+                      name="Copy of patient_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].Columns[patient_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -459,6 +497,28 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].Columns[patient_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[patient_id]"
+                      length="50"
+                      lineageId="Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Output].Columns[patient_id]"
+                      name="patient_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -572,175 +632,6 @@
                       lineageId="Package\Write data from file to Case table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Write data from file to Case table\Merge"
-              componentClassID="Microsoft.Merge"
-              contactInfo="Merge;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combines rows from multiple sorted data flows into one sorted data flow. Unlike the Merge Join, all rows flow to the output. For example, combine two sorted lists of customers into a single sorted list. If sorting is not important, use the Union All transformation. "
-              name="Merge"
-              version="1">
-              <inputs>
-                <input
-                  refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1]"
-                  name="Merge Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1].Columns[Copy of case_date]"
-                      cachedDataType="dbDate"
-                      cachedName="Copy of case_date"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of case_date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1].Columns[Copy of case_id]"
-                      cachedDataType="i4"
-                      cachedName="Copy of case_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of case_id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1].Columns[SymptomID]"
-                      cachedDataType="i4"
-                      cachedName="SymptomID"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[SymptomID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[SymptomID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1].Columns[OutcomeID]"
-                      cachedDataType="i4"
-                      cachedName="OutcomeID"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[OutcomeID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[OutcomeID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1].Columns[Copy of symptom]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of symptom"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of symptom]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of symptom]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1].Columns[Copy of outcome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of outcome"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of outcome]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of outcome]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 2]"
-                  name="Merge Input 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 2].Columns[PatientID]"
-                      cachedDataType="i4"
-                      cachedName="PatientID"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Write data from file to Case table\Sort.Outputs[Sort Output].Columns[PatientID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[PatientID]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1]"
-                  name="Merge Output 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_date]"
-                      dataType="dbDate"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_date]"
-                      name="Copy of case_date" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[SymptomID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[SymptomID]"
-                      name="SymptomID" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[OutcomeID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[OutcomeID]"
-                      name="OutcomeID" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of symptom]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of symptom]"
-                      name="Copy of symptom" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of outcome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of outcome]"
-                      name="Copy of outcome" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_id]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[Copy of case_id]"
-                      name="Copy of case_id" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[PatientID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1].Columns[PatientID]"
-                      name="PatientID" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -901,421 +792,6 @@ where [refTable].[Name] = ?</property>
                       lineageId="Package\Write data from file to Case table\Outcome.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Write data from file to Case table\Patient table"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Patient table"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Patient]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Write data from file to Case table\Patient table.Connections[OleDbConnection]"
-                  connectionManagerID="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-USS41EG0.Covid19DB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].Columns[PatientID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[PatientID]"
-                      lineageId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].Columns[PatientID]"
-                      name="PatientID"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[PatientID]"
-                      dataType="i4"
-                      name="PatientID" />
-                    <externalMetadataColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[Age]"
-                      dataType="i4"
-                      name="Age" />
-                    <externalMetadataColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[EthnicityID]"
-                      dataType="i4"
-                      name="EthnicityID" />
-                    <externalMetadataColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[GenderID]"
-                      dataType="i4"
-                      name="GenderID" />
-                    <externalMetadataColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[OccupationID]"
-                      dataType="i4"
-                      name="OccupationID" />
-                    <externalMetadataColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].ExternalColumns[CityID]"
-                      dataType="i4"
-                      name="CityID" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output].Columns[PatientID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Error Output].Columns[PatientID]"
-                      name="PatientID" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Write data from file to Case table\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Write data from file to Case table\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort.Inputs[Sort Input].Columns[PatientID]"
-                      cachedDataType="i4"
-                      cachedName="PatientID"
-                      lineageId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].Columns[PatientID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Write data from file to Case table\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort.Outputs[Sort Output].Columns[PatientID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Sort.Outputs[Sort Output].Columns[PatientID]"
-                      name="PatientID"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output].Columns[PatientID]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Write data from file to Case table\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input].Columns[Copy of case_date]"
-                      cachedDataType="dbDate"
-                      cachedName="Copy of case_date"
-                      lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_date]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input].Columns[SymptomID]"
-                      cachedDataType="i4"
-                      cachedName="SymptomID"
-                      lineageId="Package\Write data from file to Case table\Symptom.Outputs[Lookup Match Output].Columns[SymptomID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input].Columns[OutcomeID]"
-                      cachedDataType="i4"
-                      cachedName="OutcomeID"
-                      lineageId="Package\Write data from file to Case table\Outcome.Outputs[Lookup Match Output].Columns[OutcomeID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input].Columns[Copy of symptom]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of symptom"
-                      lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of symptom]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input].Columns[Copy of outcome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of outcome"
-                      lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of outcome]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input].Columns[Copy of case_id]"
-                      cachedDataType="i4"
-                      cachedName="Copy of case_id"
-                      lineageId="Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of case_date]"
-                      dataType="dbDate"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of case_date]"
-                      name="Copy of case_date">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_date]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[SymptomID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[SymptomID]"
-                      name="SymptomID">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Symptom.Outputs[Lookup Match Output].Columns[SymptomID]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[OutcomeID]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[OutcomeID]"
-                      name="OutcomeID">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Outcome.Outputs[Lookup Match Output].Columns[OutcomeID]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of symptom]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of symptom]"
-                      name="Copy of symptom">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of symptom]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of outcome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of outcome]"
-                      name="Copy of outcome">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of outcome]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of case_id]"
-                      dataType="i4"
-                      lineageId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output].Columns[Copy of case_id]"
-                      name="Copy of case_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Write data from file to Case table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_id]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1516,29 +992,9 @@ where [refTable].[Severity] = ?</property>
               startId="Package\Write data from file to Case table\Symptom.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Write data from file to Case table.Paths[Lookup Match Output1]"
-              endId="Package\Write data from file to Case table\Sort 1.Inputs[Sort Input]"
+              endId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Write data from file to Case table\Outcome.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Write data from file to Case table.Paths[Merge Output 1]"
-              endId="Package\Write data from file to Case table\Case table.Inputs[OLE DB Destination Input]"
-              name="Merge Output 1"
-              startId="Package\Write data from file to Case table\Merge.Outputs[Merge Output 1]" />
-            <path
-              refId="Package\Write data from file to Case table.Paths[OLE DB Source Output]"
-              endId="Package\Write data from file to Case table\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Write data from file to Case table\Patient table.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Write data from file to Case table.Paths[Sort Output]"
-              endId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\Write data from file to Case table\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Write data from file to Case table.Paths[Sort Output1]"
-              endId="Package\Write data from file to Case table\Merge.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\Write data from file to Case table\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -3705,6 +3161,22 @@ where [refTable].[Name] = ?</property>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{43FF7320-C790-451C-836E-B38BFE0D8D10}"
+      DTS:From="Package\Write data from file to Patient table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Write data from file to Case table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{46F79740-6A87-49D1-90B5-B19AF75CECD7}"
+      DTS:From="Package\Write data from file to Case table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
       DTS:CreationName=""
       DTS:DTSID="{29BAF007-4E38-4207-B82F-F5A1E4BDF7AA}"
@@ -3753,14 +3225,6 @@ where [refTable].[Name] = ?</property>
       DTS:ObjectName="Constraint 6"
       DTS:To="Package\Write data to Outcome table" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
-      DTS:CreationName=""
-      DTS:DTSID="{3F86B934-5DB2-4089-A1E2-E0F19E0DA41D}"
-      DTS:From="Package\Write data from file to Patient table"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 7"
-      DTS:To="Package\Write data from file to Case table" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
       DTS:DTSID="{50C4A16D-1DD0-4AA3-A089-215D34231339}"
@@ -3781,10 +3245,6 @@ where [refTable].[Name] = ?</property>
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Write data from file to Case table"
-          TopLeft="9.5000000000001,818.3" />
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\Write data from file to City table"
@@ -3950,7 +3410,33 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="127.1,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Write data from file to Case table"
+          TopLeft="9.50000000000011,818.3" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="127.1,758.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3971,9 +3457,13 @@ where [refTable].[Name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="45.9000000000001,919.9" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="127.1,555.1">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="127.1,859.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4000,30 +3490,30 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package\Write data from file to Case table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="123.2,41.6"
           Id="Package\Write data from file to Case table\Symptom"
-          TopLeft="21.5000000000001,208.7" />
+          TopLeft="21.5,208.7" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Write data from file to Case table\Flat File Source"
-          TopLeft="7.90000000000005,5.49999999999995" />
+          TopLeft="7.89999999999999,5.49999999999995" />
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\Write data from file to Case table\Outcome"
-          TopLeft="22.7000000000001,310.3" />
+          TopLeft="22.7,310.3" />
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Write data from file to Case table\Case table"
-          TopLeft="209.5,615.099999999999" />
+          TopLeft="29.5000000000001,412.9" />
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\Write data from file to Case table\Data Conversion"
-          TopLeft="5.50000000000009,107.1" />
+          TopLeft="5.50000000000001,107.1" />
         <EdgeLayout
           Id="Package\Write data from file to Case table.Paths[Lookup Match Output]"
-          TopLeft="83.1000000000001,250.3">
+          TopLeft="83.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4047,7 +3537,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Write data from file to Case table.Paths[Flat File Source Output]"
-          TopLeft="83.1000000000001,47.1">
+          TopLeft="83.1,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4069,7 +3559,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Write data from file to Case table.Paths[Data Conversion Output]"
-          TopLeft="83.1000000000001,148.7">
+          TopLeft="83.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4089,168 +3579,40 @@ where [refTable].[Name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Write data from file to Case table\Patient table"
-          TopLeft="204.3,310.3" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Write data from file to Case table\Sort"
-          TopLeft="224.3,411.9" />
-        <EdgeLayout
-          Id="Package\Write data from file to Case table.Paths[OLE DB Source Output]"
-          TopLeft="273.1,351.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Write data from file to Case table\Sort 1"
-          TopLeft="56.9000000000001,411.9" />
         <EdgeLayout
           Id="Package\Write data from file to Case table.Paths[Lookup Match Output1]"
-          TopLeft="83.1000000000001,351.9">
+          TopLeft="83.1,351.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27,59.9999999999999"
+              EndConnector="10.0000000000001,61"
               Start="0,0"
-              End="27,52.4999999999999">
+              End="10.0000000000001,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.9999999999999" />
+                    End="0,26.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="4,29.9999999999999" />
+                    Point1="0,26.5"
+                    Point2="0,30.5"
+                    Point3="4,30.5" />
                   <mssgle:LineSegment
-                    End="23,29.9999999999999" />
+                    End="6.00000000000007,30.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="23,29.9999999999999"
-                    Point2="27,29.9999999999999"
-                    Point3="27,33.9999999999999" />
+                    Point1="6.00000000000007,30.5"
+                    Point2="10.0000000000001,30.5"
+                    Point3="10.0000000000001,34.5" />
                   <mssgle:LineSegment
-                    End="27,52.4999999999999" />
+                    End="10.0000000000001,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-34.69138671875,34.9999999999999,96.3827734375,11.609375"
+              BoundingBox="-43.19138671875,35.5,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="107.2,41.6"
-          Id="Package\Write data from file to Case table\Merge"
-          TopLeft="219.5,513.5" />
-        <EdgeLayout
-          Id="Package\Write data from file to Case table.Paths[Sort Output]"
-          TopLeft="110.1,453.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="146.466666666667,59.9999999999999"
-              Start="0,0"
-              End="146.466666666667,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.4705882352941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.4705882352941"
-                    Point2="0,35.4705882352941"
-                    Point3="4,35.4705882352941" />
-                  <mssgle:LineSegment
-                    End="142.466666666667,35.4705882352941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="142.466666666667,35.4705882352941"
-                    Point2="146.466666666667,35.4705882352941"
-                    Point3="146.466666666667,39.4705882352941" />
-                  <mssgle:LineSegment
-                    End="146.466666666667,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to Case table.Paths[Sort Output1]"
-          TopLeft="273.1,453.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="16.5333333333334,59.9999999999999"
-              Start="0,0"
-              End="16.5333333333334,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.4705882352941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.4705882352941"
-                    Point2="0,35.4705882352941"
-                    Point3="4,35.4705882352941" />
-                  <mssgle:LineSegment
-                    End="12.5333333333334,35.4705882352941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.5333333333334,35.4705882352941"
-                    Point2="16.5333333333334,35.4705882352941"
-                    Point3="16.5333333333334,39.4705882352941" />
-                  <mssgle:LineSegment
-                    End="16.5333333333334,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to Case table.Paths[Merge Output 1]"
-          TopLeft="273.1,555.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4713,19 +4075,6 @@ where [refTable].[Name] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Write data from file to Patient table\Patient table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to Case table\Patient table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
