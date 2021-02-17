@@ -11,20 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FlatFileToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="177"
-  DTS:VersionGUID="{FB45892C-5948-4AF7-8A75-0327D745811B}">
+  DTS:VersionBuild="180"
+  DTS:VersionGUID="{0F89A491-FF11-46F9-848A-2967443ADEE6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\Add PatientID to Case table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{8C2B7AF6-8C17-4DD2-8244-51DD0BB466C5}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="Add PatientID to Case table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -32,6 +32,23 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}"
           SQLTask:SqlStatementSource="update T1 &#xA;set    T1.PatientID = T2.PatientID&#xA;from   (select row_number() over(order by PatientID) as rowid,&#xA;&#x9;&#x9;PatientID from [Case]) T1&#xA;&#x9;&#x9;join (select row_number() over(order by PatientID) as rowid,&#xA;&#x9;&#x9;PatientID from Patient) T2&#xA;ON T1.rowid = T2.rowid;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Prepare DB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2e5de562-c5ec-4998-bc6e-cd656ff74eb6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Prepare DB"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}"
+          SQLTask:SqlStatementSource="USE Covid19DB&#xA;GO&#xA;&#xA;DROP TABLE IF EXISTS [Case], Test, TestResult, Facility, FacilityType, &#xA;Outcome, OutcomeType, Symptom, Patient, City, [State], &#xA;Occupation, Gender, Ethnicity;&#xA;&#xA;CREATE TABLE Ethnicity(&#xA;&#x9;EthnicityID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[Name] VARCHAR(255)&#xA;);&#xA;&#xA;CREATE TABLE Gender(&#xA;&#x9;GenderID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[Name] VARCHAR(255)&#xA;);&#xA;&#xA;CREATE TABLE Occupation(&#xA;&#x9;OccupationID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[Name] VARCHAR(255)&#xA;);&#xA;&#xA;CREATE TABLE [State](&#xA;&#x9;StateID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[StateAbbreviation] VARCHAR(2),&#xA;&#x9;[Name] VARCHAR(255)&#xA;);&#xA;&#xA;CREATE TABLE City(&#xA;&#x9;CityID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[Name] VARCHAR(255),&#xA;&#x9;StateID INT,&#xA;&#x9;FOREIGN KEY (StateID) REFERENCES [State]&#xA;);&#xA;&#xA;CREATE TABLE Patient(&#xA;    PatientID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;Age INT,&#xA;&#x9;EthnicityID INT,&#xA;&#x9;GenderID INT,&#xA;&#x9;OccupationID INT,&#xA;&#x9;CityID INT,&#xA;&#x9;FOREIGN KEY (EthnicityID) REFERENCES Ethnicity,&#xA;&#x9;FOREIGN KEY (GenderID) REFERENCES Gender,&#xA;&#x9;FOREIGN KEY (OccupationID) REFERENCES Occupation,&#xA;&#x9;FOREIGN KEY (CityID) REFERENCES City&#xA;);&#xA;&#xA;CREATE TABLE Symptom(&#xA;&#x9;SymptomID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;Severity VARCHAR(255)&#xA;);&#xA;&#xA;CREATE TABLE Outcome(&#xA;&#x9;OutcomeID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[Name] VARCHAR(255)&#x9;&#xA;);&#xA;&#xA;CREATE TABLE FacilityType(&#xA;&#x9;FacilityTypeID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[NAME] VARCHAR(255)&#xA;);&#xA;&#xA;CREATE TABLE Facility(&#xA;&#x9;FacilityID INT IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;FacilityTypeID INT,&#xA;&#x9;CityID INT,&#xA;&#x9;FOREIGN KEY (FacilityTypeID) REFERENCES FacilityType,&#xA;&#x9;FOREIGN KEY (CityID) REFERENCES City&#xA;);&#xA;&#xA;CREATE TABLE [Case](&#xA;    CaseID INT IDENTITY(1,1) PRIMARY KEY,&#x9;&#xA;&#x9;[Date] DATE,&#xA;&#x9;PatientID INT,&#xA;&#x9;SymptomID INT,&#xA;&#x9;OutcomeID INT,&#xA;&#x9;FOREIGN KEY (PatientID) REFERENCES Patient,&#xA;&#x9;FOREIGN KEY (SymptomID) REFERENCES Symptom,&#xA;&#x9;FOREIGN KEY (OutcomeID) REFERENCES Outcome&#x9;&#xA;);&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3175,7 +3192,7 @@ where [refTable].[Name] = ?</property>
       DTS:From="Package\Write data from file to Case table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Execute SQL Task" />
+      DTS:To="Package\Add PatientID to Case table" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
       DTS:CreationName=""
@@ -3225,6 +3242,14 @@ where [refTable].[Name] = ?</property>
       DTS:ObjectName="Constraint 6"
       DTS:To="Package\Write data to Outcome table" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{43816C75-B325-4C89-82D0-5C0E7C9E5737}"
+      DTS:From="Package\Prepare DB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Write data to Gender table" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
       DTS:DTSID="{50C4A16D-1DD0-4AA3-A089-215D34231339}"
@@ -3246,40 +3271,92 @@ where [refTable].[Name] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Add PatientID to Case table"
+          TopLeft="22.7000000000001,1021.5" />
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Write data from file to Case table"
+          TopLeft="9.50000000000013,919.9" />
+        <NodeLayout
           Size="230.4,41.6"
           Id="Package\Write data from file to City table"
-          TopLeft="11.9000000000001,615.1" />
+          TopLeft="11.9000000000001,716.699999999999" />
         <NodeLayout
           Size="243.2,41.6"
           Id="Package\Write data from file to Patient table"
-          TopLeft="5.5000000000001,716.7" />
+          TopLeft="5.50000000000011,818.3" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Write data to Ethnicity table"
-          TopLeft="41.1,107.1" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Write data to Gender table"
-          TopLeft="41.1,5.49999999999995" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Write data to Occupation table"
           TopLeft="41.1,208.7" />
         <NodeLayout
           Size="172,41.6"
-          Id="Package\Write data to Outcome table"
-          TopLeft="41.1000000000001,513.5" />
+          Id="Package\Write data to Gender table"
+          TopLeft="41.1,107.1" />
         <NodeLayout
           Size="172,41.6"
-          Id="Package\Write data to State table"
+          Id="Package\Write data to Occupation table"
           TopLeft="41.1,310.3" />
         <NodeLayout
           Size="172,41.6"
-          Id="Package\Write data to Symptom table"
+          Id="Package\Write data to Outcome table"
+          TopLeft="41.1000000000001,615.099999999999" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Write data to State table"
           TopLeft="41.1000000000001,411.9" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Write data to Symptom table"
+          TopLeft="41.1000000000001,513.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="127.1,859.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="127.1,961.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="127.1,656.7">
+          TopLeft="127.1,758.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3301,28 +3378,6 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="127.1,47.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="127.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3344,7 +3399,7 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
+          Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="127.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3366,7 +3421,7 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
+          Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="127.1,351.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3388,7 +3443,7 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
+          Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="127.1,453.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3410,11 +3465,33 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
+          Id="Package.PrecedenceConstraints[Constraint 6]"
           TopLeft="127.1,555.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="127.1,656.699999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3432,49 +3509,23 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Write data from file to Case table"
-          TopLeft="9.50000000000011,818.3" />
+          Size="131.2,41.6"
+          Id="Package\Prepare DB"
+          TopLeft="61.5,5.49999999999995" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="127.1,758.3">
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="127.1,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="45.9000000000001,919.9" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="127.1,859.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3500,6 +3551,10 @@ where [refTable].[Name] = ?</property>
           Id="Package\Write data from file to Case table\Flat File Source"
           TopLeft="7.89999999999999,5.49999999999995" />
         <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Write data from file to Case table\Data Conversion"
+          TopLeft="5.50000000000001,107.1" />
+        <NodeLayout
           Size="120.8,41.6"
           Id="Package\Write data from file to Case table\Outcome"
           TopLeft="22.7,310.3" />
@@ -3507,10 +3562,42 @@ where [refTable].[Name] = ?</property>
           Size="127.2,41.6"
           Id="Package\Write data from file to Case table\Case table"
           TopLeft="29.5000000000001,412.9" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Write data from file to Case table\Data Conversion"
-          TopLeft="5.50000000000001,107.1" />
+        <EdgeLayout
+          Id="Package\Write data from file to Case table.Paths[Lookup Match Output1]"
+          TopLeft="83.1,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.0000000000001,61"
+              Start="0,0"
+              End="10.0000000000001,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.5"
+                    Point2="0,30.5"
+                    Point3="4,30.5" />
+                  <mssgle:LineSegment
+                    End="6.00000000000007,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.00000000000007,30.5"
+                    Point2="10.0000000000001,30.5"
+                    Point3="10.0000000000001,34.5" />
+                  <mssgle:LineSegment
+                    End="10.0000000000001,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-43.19138671875,35.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Write data from file to Case table.Paths[Lookup Match Output]"
           TopLeft="83.1,250.3">
@@ -3554,7 +3641,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3576,42 +3665,8 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to Case table.Paths[Lookup Match Output1]"
-          TopLeft="83.1,351.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.0000000000001,61"
-              Start="0,0"
-              End="10.0000000000001,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.5"
-                    Point2="0,30.5"
-                    Point3="4,30.5" />
-                  <mssgle:LineSegment
-                    End="6.00000000000007,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.00000000000007,30.5"
-                    Point2="10.0000000000001,30.5"
-                    Point3="10.0000000000001,34.5" />
-                  <mssgle:LineSegment
-                    End="10.0000000000001,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-43.19138671875,35.5,96.3827734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3624,7 +3679,7 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3634,7 +3689,7 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3660,7 +3715,7 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3670,7 +3725,7 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3683,14 +3738,6 @@ where [refTable].[Name] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="122.4,41.6"
-          Id="Package\Write data from file to City table\City table"
-          TopLeft="21.9,310.3" />
-        <NodeLayout
-          Size="96,41.6"
-          Id="Package\Write data from file to City table\City"
-          TopLeft="35.1,208.7" />
-        <NodeLayout
           Size="155.2,41.6"
           Id="Package\Write data from file to City table\Data Conversion"
           TopLeft="5.50000000000001,107.1" />
@@ -3698,6 +3745,14 @@ where [refTable].[Name] = ?</property>
           Size="150.4,41.6"
           Id="Package\Write data from file to City table\Flat File Source"
           TopLeft="7.89999999999999,5.49999999999995" />
+        <NodeLayout
+          Size="96,41.6"
+          Id="Package\Write data from file to City table\City"
+          TopLeft="35.1,208.7" />
+        <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\Write data from file to City table\City table"
+          TopLeft="21.9,310.3" />
         <EdgeLayout
           Id="Package\Write data from file to City table.Paths[Lookup Match Output]"
           TopLeft="83.1,250.3">
@@ -3741,7 +3796,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3763,25 +3820,14 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to City table\City table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Write data from file to City table\City">
     <Properties>
@@ -3805,19 +3851,32 @@ where [refTable].[Name] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Write data from file to City table\City table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Write data from file to Patient table">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Write data from file to Patient table\Gender"
-          TopLeft="26.7,208.7" />
-        <NodeLayout
           Size="155.2,41.6"
           Id="Package\Write data from file to Patient table\Data Conversion"
           TopLeft="5.50000000000001,107.1" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Write data from file to Patient table\Patient table"
+          TopLeft="14.3000000000001,615.099999999999" />
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\Write data from file to Patient table\Ethnicity"
@@ -3827,17 +3886,65 @@ where [refTable].[Name] = ?</property>
           Id="Package\Write data from file to Patient table\Occupation"
           TopLeft="17.5000000000001,411.9" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Write data from file to Patient table\Flat File Source"
-          TopLeft="7.89999999999999,5.49999999999995" />
+          Size="112.8,41.6"
+          Id="Package\Write data from file to Patient table\Gender"
+          TopLeft="26.7,208.7" />
         <NodeLayout
           Size="96,41.6"
           Id="Package\Write data from file to Patient table\City"
           TopLeft="35.1000000000001,513.5" />
         <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Write data from file to Patient table\Patient table"
-          TopLeft="14.3000000000001,615.099999999999" />
+          Size="150.4,41.6"
+          Id="Package\Write data from file to Patient table\Flat File Source"
+          TopLeft="7.89999999999999,5.49999999999995" />
+        <EdgeLayout
+          Id="Package\Write data from file to Patient table.Paths[Lookup Match Output3]"
+          TopLeft="83.1000000000001,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Write data from file to Patient table.Paths[Lookup Match Output2]"
+          TopLeft="83.1000000000001,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Write data from file to Patient table.Paths[Lookup Match Output1]"
           TopLeft="83.1000000000001,351.9">
@@ -3905,7 +4012,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3927,54 +4036,8 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to Patient table.Paths[Lookup Match Output3]"
-          TopLeft="83.1000000000001,555.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Write data from file to Patient table.Paths[Lookup Match Output2]"
-          TopLeft="83.1000000000001,453.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3982,25 +4045,15 @@ where [refTable].[Name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to Patient table\Gender">
+    design-time-name="Package\Write data from file to Patient table\Patient table">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Gender]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4051,6 +4104,29 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Write data from file to Patient table\Gender">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Gender]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Write data from file to Patient table\City">
     <Properties>
       <Property>
@@ -4070,19 +4146,6 @@ where [refTable].[Name] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Write data from file to Patient table\Patient table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
