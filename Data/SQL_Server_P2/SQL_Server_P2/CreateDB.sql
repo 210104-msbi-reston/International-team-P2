@@ -77,7 +77,7 @@ CREATE TABLE Facility(
 
 CREATE TABLE [Case](
     CaseID INT IDENTITY(1,1) PRIMARY KEY,	
-	[Date] DATE,
+	[Date] DATETIME,
 	PatientID INT,
 	SymptomID INT,
 	OutcomeID INT,
