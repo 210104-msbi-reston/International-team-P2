@@ -1,0 +1,3 @@
+USE Covid19DB
+GO
+

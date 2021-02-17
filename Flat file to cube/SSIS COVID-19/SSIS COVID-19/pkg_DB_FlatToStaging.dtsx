@@ -1,0 +1,964 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/17/2021 2:39:55 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-E1KTPMR"
+  DTS:CreatorName="DESKTOP-E1KTPMR\Mee"
+  DTS:DTSID="{161574B9-932A-4360-8BF8-FF71C911B124}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="pkg_DB_FlatToStaging"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{B9F57700-BF95-4E88-86CC-0C71A50DC7EF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[original_data_set]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A67705FF-49D2-4357-A223-38EA6B2F6747}"
+      DTS:ObjectName="original_data_set">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Package::COVID19_dataset_csv_filepath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\Revature Training\Projects\Project-2\Project\Local Repository\COVID19_dataset.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="case_id"
+              DTS:DTSID="{CC625268-EB05-4911-AA66-9E4551BABC4A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="case_date"
+              DTS:DTSID="{72B56F02-FED9-44DD-8A67-2C1C60671B24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="patient_id"
+              DTS:DTSID="{0433168F-376F-4885-AD26-29D1AAB9D72C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="patient_age"
+              DTS:DTSID="{E5F926ED-5A81-4861-A9CF-0B532647255B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="patient_gender"
+              DTS:DTSID="{D740A9CB-B319-432C-BAA6-004528C20965}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="patient_ethnicity"
+              DTS:DTSID="{3FFD0739-A506-42FF-8AFF-7162032336A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="occupation"
+              DTS:DTSID="{F9C02813-AC6D-469D-BA04-54726BEA7946}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{722C563A-05E9-43B6-8AF9-66CF980C5AC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state"
+              DTS:DTSID="{3B5EBF92-F8F3-4686-ADF5-60A26205BEBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="symptom"
+              DTS:DTSID="{87BCA778-6083-4ECE-962C-8786A954BFA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="test_id"
+              DTS:DTSID="{B04D2649-25DC-4E7F-85FD-22D4AAD61F93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="test_result"
+              DTS:DTSID="{F9494695-4FD4-490F-AD1F-EB91308849AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="test_date"
+              DTS:DTSID="{5F672A2B-E853-4DE3-9A44-1CF655AE6E1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="outcome"
+              DTS:DTSID="{3FA81225-B090-46A5-8956-E8DF97BF83B4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{77170E1A-1027-447C-AA47-CD561E045A00}"
+      DTS:ObjectName="COVID19_dataset_csv_filepath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">E:\Revature Training\Projects\Project-2\Project\Local Repository\COVID19_dataset.csv</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load staging table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{42EF8E69-C4D7-41A7-B9B1-570E85C2959D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load staging table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load staging table\Original data source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Original data source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load staging table\Original data source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[original_data_set]"
+                  connectionManagerRefId="Package.ConnectionManagers[original_data_set]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[case_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[case_id]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[case_id]"
+                      name="case_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[case_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[case_date]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[case_date]"
+                      name="case_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_id]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_id]"
+                      name="patient_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_age]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_age]"
+                      name="patient_age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_gender]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_gender]"
+                      name="patient_gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_ethnicity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_ethnicity]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_ethnicity]"
+                      name="patient_ethnicity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[occupation]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[occupation]"
+                      name="occupation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[symptom]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[symptom]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[symptom]"
+                      name="symptom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[test_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[test_id]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[test_id]"
+                      name="test_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[test_result]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[test_result]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[test_result]"
+                      name="test_result"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[test_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[test_date]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[test_date]"
+                      name="test_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[outcome]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[outcome]"
+                      length="50"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[outcome]"
+                      name="outcome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[case_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="case_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[case_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="case_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="patient_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="patient_age" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="patient_gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[patient_ethnicity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="patient_ethnicity" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="occupation" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[symptom]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="symptom" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[test_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="test_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[test_result]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="test_result" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[test_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="test_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].ExternalColumns[outcome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="outcome" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load staging table\staging_CasePatient"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="staging_CasePatient"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[staging_CasePatient]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load staging table\staging_CasePatient.Connections[OleDbConnection]"
+                  connectionManagerID="{E7BE87BA-DCA2-4607-92D6-80AD7EB92AF0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[occupation]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="occupation"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[occupation]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[symptom]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="symptom"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Symptom]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[symptom]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[outcome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="outcome"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Outcome]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[outcome]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[case_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="case_date"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[case_date]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[patient_age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="patient_age"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_age]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[patient_gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="patient_gender"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_gender]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[patient_ethnicity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="patient_ethnicity"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Ethnicity]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[patient_ethnicity]" />
+                    <inputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[StateAbbreviation]"
+                      lineageId="Package\Load staging table\Original data source.Outputs[Flat File Source Output].Columns[state]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      dataType="i4"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Ethnicity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Ethnicity" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Occupation" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[StateAbbreviation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="StateAbbreviation" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Symptom]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Symptom" />
+                    <externalMetadataColumn
+                      refId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input].ExternalColumns[Outcome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Outcome" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load staging table\staging_CasePatient.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load staging table\staging_CasePatient.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load staging table\staging_CasePatient.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load staging table\staging_CasePatient.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load staging table.Paths[Flat File Source Output]"
+              endId="Package\Load staging table\staging_CasePatient.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load staging table\Original data source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Load staging table"
+          TopLeft="262.5,133.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load staging table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Load staging table\staging_CasePatient"
+          TopLeft="168.5,285.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Load staging table\Original data source"
+          TopLeft="163.5,23.5" />
+        <EdgeLayout
+          Id="Package\Load staging table.Paths[Flat File Source Output]"
+          TopLeft="252.75,65.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,220"
+              Start="0,0"
+              End="0,212.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,212.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load staging table\staging_CasePatient">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
