@@ -75,23 +75,15 @@ CREATE TABLE Facility(
 	FOREIGN KEY (CityID) REFERENCES City
 );
 
-CREATE TABLE Test(
-	TestID INT IDENTITY(1,1) PRIMARY KEY,
-	[Date] DATE,
-	TestResult VARCHAR(50)
-);
-
 CREATE TABLE [Case](
     CaseID INT IDENTITY(1,1) PRIMARY KEY,	
-	[Date] DATETIME,
+	[Date] DATE,
 	PatientID INT,
 	SymptomID INT,
 	OutcomeID INT,
-	TestID INT,
 	FOREIGN KEY (PatientID) REFERENCES Patient,
 	FOREIGN KEY (SymptomID) REFERENCES Symptom,
-	FOREIGN KEY (OutcomeID) REFERENCES Outcome,
-	FOREIGN KEY (TestID) REFERENCES Test
+	FOREIGN KEY (OutcomeID) REFERENCES Outcome	
 );
 
 
