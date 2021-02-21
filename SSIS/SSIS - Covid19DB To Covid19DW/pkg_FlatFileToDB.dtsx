@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FlatFileToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="181"
-  DTS:VersionGUID="{EC10BC8A-0DD7-4B3E-B637-310AA4794BC4}">
+  DTS:VersionBuild="182"
+  DTS:VersionGUID="{3162733A-B685-4411-991A-1E041826B6FE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3138,7 +3138,7 @@ where [refTable].[Name] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}"
-          SQLTask:SqlStatementSource="INSERT INTO Outcome (Name) VALUES ('recovered');&#xA;INSERT INTO Outcome (Name) VALUES ('death');&#xA;INSERT INTO Outcome (Name) VALUES ('hospitalized');&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO Outcome (Name) VALUES ('recovered');&#xA;INSERT INTO Outcome (Name) VALUES ('death');&#xA;INSERT INTO Outcome (Name) VALUES ('hospitalized');&#xA;INSERT INTO Outcome (Name) VALUES ('infected');&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3796,9 +3796,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3820,9 +3818,7 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -1,564 +1,564 @@
 case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupation,city,state,symptom,test_id,test_result,test_date,outcome
-10001,2/21/2021,101,77,Female,Non-Hispanic white,Health Care,Vincent,AL,No symptoms,1001,positive,2/22/2021,recovered
-10002,2/21/2021,102,41,Male,Asian,Health Care,Delta,AL,Mild,1002,positive,2/22/2021,recovered
-10003,2/21/2021,103,20,Female,Asian,Health Care,Hydaburg,AK,Moderate,1003,positive,2/22/2021,recovered
-10004,2/21/2021,104,56,Female,Black/African American,Health Care,Nome,AK,Severe,1004,positive,2/22/2021,recovered
-10005,2/21/2021,105,46,Male,Black/African American,Sales,Ambler,AK,Severe,1005,positive,2/22/2021,recovered
-10006,2/21/2021,106,23,Male,Black/African American,Sales,Hydaburg,AK,Severe,1006,positive,2/22/2021,recovered
-10007,2/21/2021,107,36,Female,Hispanic,Sales,Nome,AK,Moderate,1007,positive,2/22/2021,recovered
+10001,2/21/2021,101,77,Female,Non-Hispanic white,Health Care,Vincent,AL,No symptoms,1001,positive,2/22/2021,infected
+10002,2/21/2021,102,41,Male,Asian,Health Care,Delta,AL,Mild,1002,positive,2/22/2021,infected
+10003,2/21/2021,103,20,Female,Asian,Health Care,Hydaburg,AK,Moderate,1003,positive,2/22/2021,infected
+10004,2/21/2021,104,56,Female,Black/African American,Health Care,Nome,AK,Severe,1004,positive,2/22/2021,infected
+10005,2/21/2021,105,46,Male,Black/African American,Sales,Ambler,AK,Severe,1005,positive,2/22/2021,infected
+10006,2/21/2021,106,23,Male,Black/African American,Sales,Hydaburg,AK,Severe,1006,positive,2/22/2021,infected
+10007,2/21/2021,107,36,Female,Hispanic,Sales,Nome,AK,Moderate,1007,positive,2/22/2021,infected
 10008,2/21/2021,108,107,Female,Hispanic,Sales,Mayer,AZ,Mild,1008,positive,2/22/2021,hospitalized
 10009,2/21/2021,109,52,Female,Hispanic,Transportation,El Mirage,AZ,Mild,1009,positive,2/22/2021,hospitalized
 10010,2/21/2021,110,61,Male,Non-Hispanic white,Transportation,Kofa,AZ,Moderate,1010,positive,2/22/2021,death
-10011,2/21/2021,111,46,Male,Asian,Transportation,Carefree,AZ,Severe,1011,positive,2/22/2021,recovered
-10012,2/21/2021,112,69,Male,Non-Hispanic white,Government/police,Pearce,AZ,Mild,1012,positive,2/22/2021,recovered
-10013,2/21/2021,113,62,Female,Asian,Government/police,Mayer,AZ,No symptoms,1013,positive,2/22/2021,recovered
-10014,2/21/2021,114,45,Female,Black/African American,Other,El Mirage,AZ,No symptoms,1014,positive,2/22/2021,recovered
-10015,2/21/2021,115,32,Female,Black/African American,Other,Kofa,AZ,No symptoms,1015,positive,2/22/2021,recovered
-10016,2/21/2021,116,82,Female,Hispanic,Health Care,Carefree,AZ,No symptoms,1016,positive,2/22/2021,recovered
-10017,2/21/2021,117,57,Male,Hispanic,Health Care,Pearce,AZ,No symptoms,1017,positive,2/22/2021,recovered
+10011,2/21/2021,111,46,Male,Asian,Transportation,Carefree,AZ,Severe,1011,positive,2/22/2021,infected
+10012,2/21/2021,112,69,Male,Non-Hispanic white,Government/police,Pearce,AZ,Mild,1012,positive,2/22/2021,infected
+10013,2/21/2021,113,62,Female,Asian,Government/police,Mayer,AZ,No symptoms,1013,positive,2/22/2021,infected
+10014,2/21/2021,114,45,Female,Black/African American,Other,El Mirage,AZ,No symptoms,1014,positive,2/22/2021,infected
+10015,2/21/2021,115,32,Female,Black/African American,Other,Kofa,AZ,No symptoms,1015,positive,2/22/2021,infected
+10016,2/21/2021,116,82,Female,Hispanic,Health Care,Carefree,AZ,No symptoms,1016,positive,2/22/2021,infected
+10017,2/21/2021,117,57,Male,Hispanic,Health Care,Pearce,AZ,No symptoms,1017,positive,2/22/2021,infected
 10018,2/21/2021,118,42,Male,Black/African American,Health Care,Mayer,AZ,Moderate,1018,positive,2/22/2021,hospitalized
 10019,2/21/2021,119,77,Male,Black/African American,Health Care,El Mirage,AZ,No symptoms,1019,positive,2/22/2021,hospitalized
 10020,2/21/2021,120,46,Male,Black/African American,Sales,Kofa,AZ,No symptoms,1020,positive,2/22/2021,death
-10021,2/21/2021,121,49,Female,Black/African American,Sales,Carefree,AZ,Moderate,1021,positive,2/22/2021,recovered
-10022,2/21/2021,122,62,Female,Hispanic,Sales,Pearce,AZ,No symptoms,1022,positive,2/22/2021,recovered
-10023,2/21/2021,123,40,Female,Non-Hispanic white,Sales,Mayer,AZ,Moderate,1023,positive,2/22/2021,recovered
-10024,2/21/2021,124,61,Female,other,Transportation,El Mirage,AZ,Severe,1024,positive,2/22/2021,recovered
-10025,2/20/2021,125,18,Female,Asian,Transportation,Kofa,AZ,Mild,1025,positive,2/21/2021,recovered
-10026,2/20/2021,126,68,Male,Non-Hispanic white,Transportation,Carefree,AZ,Severe,1026,positive,2/21/2021,recovered
-10027,2/20/2021,127,105,Male,Non-Hispanic white,Government/police,Pearce,AZ,Moderate,1027,positive,2/21/2021,recovered
+10021,2/21/2021,121,49,Female,Black/African American,Sales,Carefree,AZ,Moderate,1021,positive,2/22/2021,infected
+10022,2/21/2021,122,62,Female,Hispanic,Sales,Pearce,AZ,No symptoms,1022,positive,2/22/2021,infected
+10023,2/21/2021,123,40,Female,Non-Hispanic white,Sales,Mayer,AZ,Moderate,1023,positive,2/22/2021,infected
+10024,2/21/2021,124,61,Female,other,Transportation,El Mirage,AZ,Severe,1024,positive,2/22/2021,infected
+10025,2/20/2021,125,18,Female,Asian,Transportation,Kofa,AZ,Mild,1025,positive,2/21/2021,infected
+10026,2/20/2021,126,68,Male,Non-Hispanic white,Transportation,Carefree,AZ,Severe,1026,positive,2/21/2021,infected
+10027,2/20/2021,127,105,Male,Non-Hispanic white,Government/police,Pearce,AZ,Moderate,1027,positive,2/21/2021,infected
 10028,2/20/2021,128,41,Male,Asian,Government/police,Mayer,AZ,No symptoms,1028,positive,2/21/2021,hospitalized
 10029,2/20/2021,129,27,Male,Asian,Other,El Mirage,AZ,Moderate,1029,positive,2/21/2021,hospitalized
 10030,2/20/2021,130,111,Male,Black/African American,Other,Kofa,AZ,No symptoms,1030,positive,2/21/2021,death
-10031,2/20/2021,131,59,Male,Black/African American,Health Care,Carefree,AZ,No symptoms,1031,positive,2/21/2021,recovered
-10032,2/20/2021,132,28,Female,Black/African American,Health Care,Pearce,AZ,No symptoms,1032,positive,2/21/2021,recovered
-10033,2/20/2021,133,55,Male,Hispanic,Health Care,Mayer,AZ,Mild,1033,positive,2/21/2021,recovered
-10034,2/20/2021,134,104,Female,Hispanic,Health Care,El Mirage,AZ,Moderate,1034,positive,2/21/2021,recovered
-10035,2/20/2021,135,78,Female,Hispanic,Sales,Kofa,AZ,Severe,1035,positive,2/21/2021,recovered
-10036,2/20/2021,136,34,Male,Non-Hispanic white,Sales,Carefree,AZ,Severe,1036,positive,2/21/2021,recovered
-10037,2/20/2021,137,63,Male,Asian,Sales,Pearce,AZ,Severe,1037,positive,2/21/2021,recovered
+10031,2/20/2021,131,59,Male,Black/African American,Health Care,Carefree,AZ,No symptoms,1031,positive,2/21/2021,infected
+10032,2/20/2021,132,28,Female,Black/African American,Health Care,Pearce,AZ,No symptoms,1032,positive,2/21/2021,infected
+10033,2/20/2021,133,55,Male,Hispanic,Health Care,Mayer,AZ,Mild,1033,positive,2/21/2021,infected
+10034,2/20/2021,134,104,Female,Hispanic,Health Care,El Mirage,AZ,Moderate,1034,positive,2/21/2021,infected
+10035,2/20/2021,135,78,Female,Hispanic,Sales,Kofa,AZ,Severe,1035,positive,2/21/2021,infected
+10036,2/20/2021,136,34,Male,Non-Hispanic white,Sales,Carefree,AZ,Severe,1036,positive,2/21/2021,infected
+10037,2/20/2021,137,63,Male,Asian,Sales,Pearce,AZ,Severe,1037,positive,2/21/2021,infected
 10038,2/20/2021,138,111,Female,Non-Hispanic white,Sales,Mayer,AZ,Moderate,1038,positive,2/21/2021,hospitalized
 10039,2/20/2021,139,86,Female,Asian,Transportation,El Mirage,AZ,Mild,1039,positive,2/21/2021,hospitalized
 10040,2/20/2021,140,59,Female,Black/African American,Transportation,Kofa,AZ,Mild,1040,positive,2/21/2021,death
-10041,2/20/2021,141,43,Male,Black/African American,Transportation,Carefree,AZ,Moderate,1041,positive,2/21/2021,recovered
-10042,2/20/2021,142,44,Male,Hispanic,Government/police,Pearce,AZ,Severe,1042,positive,2/21/2021,recovered
-10043,2/20/2021,143,96,Male,Hispanic,Government/police,Mayer,AZ,Mild,1043,positive,2/21/2021,recovered
-10044,2/20/2021,144,10,Female,Black/African American,Other,El Mirage,AZ,No symptoms,1044,positive,2/21/2021,recovered
-10045,2/20/2021,145,17,Female,Black/African American,Other,Kofa,AZ,No symptoms,1045,positive,2/21/2021,recovered
-10046,2/20/2021,146,58,Female,Black/African American,Health Care,Carefree,AZ,No symptoms,1046,positive,2/21/2021,recovered
-10047,2/20/2021,147,95,Female,Black/African American,Health Care,Pearce,AZ,No symptoms,1047,positive,2/21/2021,recovered
+10041,2/20/2021,141,43,Male,Black/African American,Transportation,Carefree,AZ,Moderate,1041,positive,2/21/2021,infected
+10042,2/20/2021,142,44,Male,Hispanic,Government/police,Pearce,AZ,Severe,1042,positive,2/21/2021,infected
+10043,2/20/2021,143,96,Male,Hispanic,Government/police,Mayer,AZ,Mild,1043,positive,2/21/2021,infected
+10044,2/20/2021,144,10,Female,Black/African American,Other,El Mirage,AZ,No symptoms,1044,positive,2/21/2021,infected
+10045,2/20/2021,145,17,Female,Black/African American,Other,Kofa,AZ,No symptoms,1045,positive,2/21/2021,infected
+10046,2/20/2021,146,58,Female,Black/African American,Health Care,Carefree,AZ,No symptoms,1046,positive,2/21/2021,infected
+10047,2/20/2021,147,95,Female,Black/African American,Health Care,Pearce,AZ,No symptoms,1047,positive,2/21/2021,infected
 10048,2/20/2021,148,108,Male,Hispanic,Health Care,Mayer,AZ,No symptoms,1048,positive,2/21/2021,hospitalized
 10049,2/20/2021,149,2,Male,Non-Hispanic white,Health Care,El Mirage,AZ,Moderate,1049,positive,2/21/2021,hospitalized
 10050,2/20/2021,150,63,Male,other,Sales,Kofa,AZ,No symptoms,1050,positive,2/21/2021,death
-10051,2/20/2021,151,104,Male,Asian,Sales,Carefree,AZ,No symptoms,1051,positive,2/21/2021,recovered
-10052,2/20/2021,152,82,Female,Non-Hispanic white,Sales,Pearce,AZ,Moderate,1052,positive,2/21/2021,recovered
-10053,2/20/2021,153,83,Female,Non-Hispanic white,Sales,Mayer,AZ,No symptoms,1053,positive,2/21/2021,recovered
-10054,2/20/2021,154,54,Female,Asian,Transportation,El Mirage,AZ,Moderate,1054,positive,2/21/2021,recovered
-10055,2/20/2021,155,72,Female,Asian,Transportation,Kofa,AZ,Severe,1055,positive,2/21/2021,recovered
-10056,2/20/2021,156,64,Female,Black/African American,Transportation,Carefree,AZ,Mild,1056,positive,2/21/2021,recovered
-10057,2/19/2021,157,90,Male,Black/African American,Government/police,Pearce,AZ,Severe,1057,positive,2/20/2021,recovered
+10051,2/20/2021,151,104,Male,Asian,Sales,Carefree,AZ,No symptoms,1051,positive,2/21/2021,infected
+10052,2/20/2021,152,82,Female,Non-Hispanic white,Sales,Pearce,AZ,Moderate,1052,positive,2/21/2021,infected
+10053,2/20/2021,153,83,Female,Non-Hispanic white,Sales,Mayer,AZ,No symptoms,1053,positive,2/21/2021,infected
+10054,2/20/2021,154,54,Female,Asian,Transportation,El Mirage,AZ,Moderate,1054,positive,2/21/2021,infected
+10055,2/20/2021,155,72,Female,Asian,Transportation,Kofa,AZ,Severe,1055,positive,2/21/2021,infected
+10056,2/20/2021,156,64,Female,Black/African American,Transportation,Carefree,AZ,Mild,1056,positive,2/21/2021,infected
+10057,2/19/2021,157,90,Male,Black/African American,Government/police,Pearce,AZ,Severe,1057,positive,2/20/2021,infected
 10058,2/19/2021,158,74,Male,Black/African American,Government/police,Mayer,AZ,Moderate,1058,positive,2/20/2021,hospitalized
 10059,2/19/2021,159,21,Male,Hispanic,Other,El Mirage,AZ,No symptoms,1059,positive,2/20/2021,hospitalized
 10060,2/19/2021,160,59,Male,Hispanic,Other,Kofa,AZ,Moderate,1060,positive,2/20/2021,death
-10061,2/19/2021,161,88,Male,Hispanic,Health Care,Carefree,AZ,No symptoms,1061,positive,2/20/2021,recovered
-10062,2/19/2021,162,12,Male,Non-Hispanic white,Health Care,Pearce,AZ,No symptoms,1062,positive,2/20/2021,recovered
-10063,2/19/2021,163,34,Female,Asian,Health Care,Mayer,AZ,No symptoms,1063,positive,2/20/2021,recovered
-10064,2/19/2021,164,106,Male,Non-Hispanic white,Health Care,El Mirage,AZ,Mild,1064,positive,2/20/2021,recovered
-10065,2/19/2021,165,12,Female,Asian,Sales,Kofa,AZ,Moderate,1065,positive,2/20/2021,recovered
-10066,2/19/2021,166,30,Female,Black/African American,Sales,Carefree,AZ,Severe,1066,positive,2/20/2021,recovered
-10067,2/19/2021,167,17,Male,Black/African American,Sales,Pearce,AZ,Severe,1067,positive,2/20/2021,recovered
+10061,2/19/2021,161,88,Male,Hispanic,Health Care,Carefree,AZ,No symptoms,1061,positive,2/20/2021,infected
+10062,2/19/2021,162,12,Male,Non-Hispanic white,Health Care,Pearce,AZ,No symptoms,1062,positive,2/20/2021,infected
+10063,2/19/2021,163,34,Female,Asian,Health Care,Mayer,AZ,No symptoms,1063,positive,2/20/2021,infected
+10064,2/19/2021,164,106,Male,Non-Hispanic white,Health Care,El Mirage,AZ,Mild,1064,positive,2/20/2021,infected
+10065,2/19/2021,165,12,Female,Asian,Sales,Kofa,AZ,Moderate,1065,positive,2/20/2021,infected
+10066,2/19/2021,166,30,Female,Black/African American,Sales,Carefree,AZ,Severe,1066,positive,2/20/2021,infected
+10067,2/19/2021,167,17,Male,Black/African American,Sales,Pearce,AZ,Severe,1067,positive,2/20/2021,infected
 10068,2/19/2021,168,59,Male,Hispanic,Sales,Mayer,AZ,Severe,1068,positive,2/20/2021,hospitalized
 10069,2/19/2021,169,29,Female,Hispanic,Transportation,El Mirage,AZ,Moderate,1069,positive,2/20/2021,hospitalized
 10070,2/19/2021,170,64,Female,Black/African American,Transportation,Kofa,AZ,Mild,1070,positive,2/20/2021,death
-10071,2/19/2021,171,65,Female,Black/African American,Transportation,Carefree,AZ,Mild,1071,positive,2/20/2021,recovered
-10072,2/19/2021,172,13,Male,Black/African American,Government/police,Pearce,AZ,Moderate,1072,positive,2/20/2021,recovered
-10073,2/19/2021,173,85,Male,Black/African American,Government/police,Mayer,AZ,Severe,1073,positive,2/20/2021,recovered
-10074,2/19/2021,174,72,Male,Hispanic,Other,El Mirage,AZ,Mild,1074,positive,2/20/2021,recovered
-10075,2/19/2021,175,98,Female,Non-Hispanic white,Other,Kofa,AZ,No symptoms,1075,positive,2/20/2021,recovered
-10076,2/19/2021,176,28,Female,other,Health Care,Carefree,AZ,No symptoms,1076,positive,2/20/2021,recovered
-10077,2/19/2021,177,107,Female,Asian,Health Care,Pearce,AZ,No symptoms,1077,positive,2/20/2021,recovered
+10071,2/19/2021,171,65,Female,Black/African American,Transportation,Carefree,AZ,Mild,1071,positive,2/20/2021,infected
+10072,2/19/2021,172,13,Male,Black/African American,Government/police,Pearce,AZ,Moderate,1072,positive,2/20/2021,infected
+10073,2/19/2021,173,85,Male,Black/African American,Government/police,Mayer,AZ,Severe,1073,positive,2/20/2021,infected
+10074,2/19/2021,174,72,Male,Hispanic,Other,El Mirage,AZ,Mild,1074,positive,2/20/2021,infected
+10075,2/19/2021,175,98,Female,Non-Hispanic white,Other,Kofa,AZ,No symptoms,1075,positive,2/20/2021,infected
+10076,2/19/2021,176,28,Female,other,Health Care,Carefree,AZ,No symptoms,1076,positive,2/20/2021,infected
+10077,2/19/2021,177,107,Female,Asian,Health Care,Pearce,AZ,No symptoms,1077,positive,2/20/2021,infected
 10078,2/19/2021,178,1,Female,Non-Hispanic white,Health Care,Mayer,AZ,No symptoms,1078,positive,2/20/2021,hospitalized
 10079,2/19/2021,179,106,Male,Non-Hispanic white,Health Care,El Mirage,AZ,No symptoms,1079,positive,2/20/2021,hospitalized
 10080,2/18/2021,180,97,Male,Asian,Sales,Goodwin,AR,Moderate,1080,positive,2/19/2021,death
-10081,2/18/2021,181,91,Male,Asian,Sales,Arkinda,AR,No symptoms,1081,positive,2/19/2021,recovered
-10082,2/18/2021,182,1,Male,Black/African American,Sales,Little Flock,AR,No symptoms,1082,positive,2/19/2021,recovered
-10083,2/18/2021,183,50,Female,Black/African American,Sales,Elm Spring,AR,Moderate,1083,positive,2/19/2021,recovered
-10084,2/18/2021,184,94,Female,Black/African American,Transportation,Peel,AR,No symptoms,1084,positive,2/19/2021,recovered
-10085,2/18/2021,185,35,Female,Hispanic,Transportation,Goodwin,AR,Moderate,1085,positive,2/19/2021,recovered
-10086,2/18/2021,186,36,Female,Hispanic,Transportation,Arkinda,AR,Severe,1086,positive,2/19/2021,recovered
+10081,2/18/2021,181,91,Male,Asian,Sales,Arkinda,AR,No symptoms,1081,positive,2/19/2021,infected
+10082,2/18/2021,182,1,Male,Black/African American,Sales,Little Flock,AR,No symptoms,1082,positive,2/19/2021,infected
+10083,2/18/2021,183,50,Female,Black/African American,Sales,Elm Spring,AR,Moderate,1083,positive,2/19/2021,infected
+10084,2/18/2021,184,94,Female,Black/African American,Transportation,Peel,AR,No symptoms,1084,positive,2/19/2021,infected
+10085,2/18/2021,185,35,Female,Hispanic,Transportation,Goodwin,AR,Moderate,1085,positive,2/19/2021,infected
+10086,2/18/2021,186,36,Female,Hispanic,Transportation,Arkinda,AR,Severe,1086,positive,2/19/2021,infected
 10087,2/18/2021,187,100,Female,Hispanic,Government/police,Little Flock,AR,Mild,1087,positive,2/19/2021,recovered
 10088,2/18/2021,188,61,Male,Non-Hispanic white,Government/police,Elm Spring,AR,Severe,1088,positive,2/19/2021,hospitalized
 10089,2/18/2021,189,43,Male,Asian,Other,Peel,AR,Moderate,1089,positive,2/19/2021,hospitalized
 10090,2/18/2021,190,12,Male,Non-Hispanic white,Other,Goodwin,AR,No symptoms,1090,positive,2/19/2021,death
-10091,2/18/2021,191,27,Male,Asian,Health Care,Arkinda,AR,Moderate,1091,positive,2/19/2021,recovered
-10092,2/18/2021,192,95,Male,Black/African American,Health Care,Little Flock,AR,No symptoms,1092,positive,2/19/2021,recovered
-10093,2/18/2021,193,28,Male,Black/African American,Health Care,Elm Spring,AR,No symptoms,1093,positive,2/19/2021,recovered
-10094,2/18/2021,194,77,Female,Hispanic,Health Care,Peel,AR,No symptoms,1094,positive,2/19/2021,recovered
-10095,2/18/2021,195,76,Male,Hispanic,Sales,Goodwin,AR,Mild,1095,positive,2/19/2021,recovered
-10096,2/18/2021,196,42,Female,Black/African American,Sales,Arkinda,AR,Moderate,1096,positive,2/19/2021,recovered
+10091,2/18/2021,191,27,Male,Asian,Health Care,Arkinda,AR,Moderate,1091,positive,2/19/2021,infected
+10092,2/18/2021,192,95,Male,Black/African American,Health Care,Little Flock,AR,No symptoms,1092,positive,2/19/2021,infected
+10093,2/18/2021,193,28,Male,Black/African American,Health Care,Elm Spring,AR,No symptoms,1093,positive,2/19/2021,infected
+10094,2/18/2021,194,77,Female,Hispanic,Health Care,Peel,AR,No symptoms,1094,positive,2/19/2021,infected
+10095,2/18/2021,195,76,Male,Hispanic,Sales,Goodwin,AR,Mild,1095,positive,2/19/2021,infected
+10096,2/18/2021,196,42,Female,Black/African American,Sales,Arkinda,AR,Moderate,1096,positive,2/19/2021,infected
 10097,2/17/2021,197,92,Female,Black/African American,Sales,Little Flock,AR,Severe,1097,positive,2/18/2021,recovered
 10098,2/17/2021,198,104,Male,Black/African American,Sales,Elm Spring,AR,Severe,1098,positive,2/18/2021,hospitalized
 10099,2/17/2021,199,47,Male,Black/African American,Transportation,Peel,AR,Severe,1099,positive,2/18/2021,hospitalized
 10100,2/17/2021,200,31,Female,Hispanic,Transportation,Goodwin,AR,Moderate,1100,positive,2/18/2021,death
-10101,2/17/2021,201,47,Female,Non-Hispanic white,Transportation,Arkinda,AR,Mild,1101,positive,2/18/2021,recovered
-10102,2/17/2021,202,11,Female,other,Government/police,Little Flock,AR,Mild,1102,positive,2/18/2021,recovered
-10103,2/17/2021,203,21,Male,Asian,Government/police,Elm Spring,AR,Moderate,1103,positive,2/18/2021,recovered
-10104,2/17/2021,204,93,Male,Non-Hispanic white,Other,Peel,AR,Severe,1104,positive,2/18/2021,recovered
-10105,2/17/2021,205,30,Male,Non-Hispanic white,Other,Goodwin,AR,Mild,1105,positive,2/18/2021,recovered
-10106,2/17/2021,206,41,Female,Asian,Health Care,Arkinda,AR,No symptoms,1106,positive,2/18/2021,recovered
+10101,2/17/2021,201,47,Female,Non-Hispanic white,Transportation,Arkinda,AR,Mild,1101,positive,2/18/2021,infected
+10102,2/17/2021,202,11,Female,other,Government/police,Little Flock,AR,Mild,1102,positive,2/18/2021,infected
+10103,2/17/2021,203,21,Male,Asian,Government/police,Elm Spring,AR,Moderate,1103,positive,2/18/2021,infected
+10104,2/17/2021,204,93,Male,Non-Hispanic white,Other,Peel,AR,Severe,1104,positive,2/18/2021,infected
+10105,2/17/2021,205,30,Male,Non-Hispanic white,Other,Goodwin,AR,Mild,1105,positive,2/18/2021,infected
+10106,2/17/2021,206,41,Female,Asian,Health Care,Arkinda,AR,No symptoms,1106,positive,2/18/2021,infected
 10107,2/17/2021,207,54,Female,Asian,Health Care,Adelanto,AR,No symptoms,1107,positive,2/18/2021,recovered
 10108,2/17/2021,208,90,Female,Black/African American,Health Care,Agoura Hills,CA,No symptoms,1108,positive,2/18/2021,hospitalized
 10109,2/17/2021,209,9,Female,Black/African American,Health Care,Alameda,CA,No symptoms,1109,positive,2/18/2021,hospitalized
 10110,2/17/2021,210,102,Male,Black/African American,Sales,Albany,CA,No symptoms,1110,positive,2/18/2021,death
-10111,2/17/2021,211,83,Male,Hispanic,Sales,Alhambra,CA,Moderate,1111,positive,2/18/2021,recovered
-10112,2/17/2021,212,3,Male,Hispanic,Sales,Adelanto,CA,No symptoms,1112,positive,2/18/2021,recovered
-10113,2/17/2021,213,80,Male,Hispanic,Sales,Agoura Hills,CA,No symptoms,1113,positive,2/18/2021,recovered
-10114,2/17/2021,214,71,Female,Non-Hispanic white,Transportation,Alameda,CA,Moderate,1114,positive,2/18/2021,recovered
-10115,2/17/2021,215,27,Female,Asian,Transportation,Albany,CA,No symptoms,1115,positive,2/18/2021,recovered
-10116,2/17/2021,216,39,Female,Non-Hispanic white,Transportation,Alhambra,CA,Moderate,1116,positive,2/18/2021,recovered
+10111,2/17/2021,211,83,Male,Hispanic,Sales,Alhambra,CA,Moderate,1111,positive,2/18/2021,infected
+10112,2/17/2021,212,3,Male,Hispanic,Sales,Adelanto,CA,No symptoms,1112,positive,2/18/2021,infected
+10113,2/17/2021,213,80,Male,Hispanic,Sales,Agoura Hills,CA,No symptoms,1113,positive,2/18/2021,infected
+10114,2/17/2021,214,71,Female,Non-Hispanic white,Transportation,Alameda,CA,Moderate,1114,positive,2/18/2021,infected
+10115,2/17/2021,215,27,Female,Asian,Transportation,Albany,CA,No symptoms,1115,positive,2/18/2021,infected
+10116,2/17/2021,216,39,Female,Non-Hispanic white,Transportation,Alhambra,CA,Moderate,1116,positive,2/18/2021,infected
 10117,2/17/2021,217,16,Female,Asian,Government/police,Adelanto,CA,Severe,1117,positive,2/18/2021,recovered
 10118,2/17/2021,218,21,Female,Black/African American,Government/police,Agoura Hills,CA,Mild,1118,positive,2/18/2021,hospitalized
 10119,2/17/2021,219,86,Male,Black/African American,Other,Alameda,CA,Severe,1119,positive,2/18/2021,hospitalized
 10120,2/17/2021,220,45,Male,Hispanic,Other,Albany,CA,Moderate,1120,positive,2/18/2021,death
-10121,2/17/2021,221,22,Male,Hispanic,Health Care,Alhambra,CA,No symptoms,1121,positive,2/18/2021,recovered
-10122,2/17/2021,222,3,Male,Black/African American,Health Care,Adelanto,CA,Moderate,1122,positive,2/18/2021,recovered
-10123,2/17/2021,223,10,Male,Black/African American,Health Care,Agoura Hills,CA,No symptoms,1123,positive,2/18/2021,recovered
-10124,2/17/2021,224,2,Male,Black/African American,Health Care,Alameda,CA,No symptoms,1124,positive,2/18/2021,recovered
-10125,2/17/2021,225,69,Female,Black/African American,Sales,Albany,CA,No symptoms,1125,positive,2/18/2021,recovered
-10126,2/17/2021,226,93,Male,Hispanic,Sales,Alhambra,CA,Mild,1126,positive,2/18/2021,recovered
+10121,2/17/2021,221,22,Male,Hispanic,Health Care,Alhambra,CA,No symptoms,1121,positive,2/18/2021,infected
+10122,2/17/2021,222,3,Male,Black/African American,Health Care,Adelanto,CA,Moderate,1122,positive,2/18/2021,infected
+10123,2/17/2021,223,10,Male,Black/African American,Health Care,Agoura Hills,CA,No symptoms,1123,positive,2/18/2021,infected
+10124,2/17/2021,224,2,Male,Black/African American,Health Care,Alameda,CA,No symptoms,1124,positive,2/18/2021,infected
+10125,2/17/2021,225,69,Female,Black/African American,Sales,Albany,CA,No symptoms,1125,positive,2/18/2021,infected
+10126,2/17/2021,226,93,Male,Hispanic,Sales,Alhambra,CA,Mild,1126,positive,2/18/2021,infected
 10127,2/17/2021,227,106,Female,Non-Hispanic white,Sales,Adelanto,CA,Moderate,1127,positive,2/18/2021,recovered
 10128,2/17/2021,228,107,Female,other,Sales,Agoura Hills,CA,Severe,1128,positive,2/18/2021,hospitalized
 10129,2/17/2021,229,64,Male,Asian,Transportation,Alameda,CA,Severe,1129,positive,2/18/2021,hospitalized
 10130,2/17/2021,230,103,Male,Non-Hispanic white,Transportation,Albany,CA,Severe,1130,positive,2/18/2021,death
-10131,2/16/2021,231,91,Female,Non-Hispanic white,Transportation,Alhambra,CA,Moderate,1131,positive,2/17/2021,recovered
-10132,2/16/2021,232,44,Female,Asian,Government/police,Adelanto,CA,Mild,1132,positive,2/17/2021,recovered
-10133,2/16/2021,233,20,Female,Asian,Government/police,Agoura Hills,CA,Mild,1133,positive,2/17/2021,recovered
-10134,2/16/2021,234,65,Male,Black/African American,Other,Alameda,CA,Moderate,1134,positive,2/17/2021,recovered
-10135,2/16/2021,235,58,Male,Black/African American,Other,Albany,CA,Severe,1135,positive,2/17/2021,recovered
-10136,2/16/2021,236,25,Male,Black/African American,Health Care,Alhambra,CA,Mild,1136,positive,2/17/2021,recovered
+10131,2/16/2021,231,91,Female,Non-Hispanic white,Transportation,Alhambra,CA,Moderate,1131,positive,2/17/2021,infected
+10132,2/16/2021,232,44,Female,Asian,Government/police,Adelanto,CA,Mild,1132,positive,2/17/2021,infected
+10133,2/16/2021,233,20,Female,Asian,Government/police,Agoura Hills,CA,Mild,1133,positive,2/17/2021,infected
+10134,2/16/2021,234,65,Male,Black/African American,Other,Alameda,CA,Moderate,1134,positive,2/17/2021,infected
+10135,2/16/2021,235,58,Male,Black/African American,Other,Albany,CA,Severe,1135,positive,2/17/2021,infected
+10136,2/16/2021,236,25,Male,Black/African American,Health Care,Alhambra,CA,Mild,1136,positive,2/17/2021,infected
 10137,2/16/2021,237,78,Female,Hispanic,Health Care,Adelanto,CA,No symptoms,1137,positive,2/17/2021,recovered
 10138,2/16/2021,238,70,Female,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1138,positive,2/17/2021,hospitalized
 10139,2/16/2021,239,2,Female,Hispanic,Health Care,Alameda,CA,No symptoms,1139,positive,2/17/2021,hospitalized
 10140,2/16/2021,240,5,Female,Non-Hispanic white,Sales,Albany,CA,No symptoms,1140,positive,2/17/2021,death
-10141,2/16/2021,241,21,Male,Asian,Sales,Alhambra,CA,No symptoms,1141,positive,2/17/2021,recovered
-10142,2/16/2021,242,10,Male,Non-Hispanic white,Sales,Adelanto,CA,Moderate,1142,positive,2/17/2021,recovered
-10143,2/16/2021,243,21,Male,Asian,Sales,Agoura Hills,CA,No symptoms,1143,positive,2/17/2021,recovered
-10144,2/16/2021,244,37,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1144,positive,2/17/2021,recovered
-10145,2/16/2021,245,23,Female,Black/African American,Transportation,Albany,CA,Moderate,1145,positive,2/17/2021,recovered
-10146,2/16/2021,246,72,Female,Hispanic,Transportation,Alhambra,CA,No symptoms,1146,positive,2/17/2021,recovered
+10141,2/16/2021,241,21,Male,Asian,Sales,Alhambra,CA,No symptoms,1141,positive,2/17/2021,infected
+10142,2/16/2021,242,10,Male,Non-Hispanic white,Sales,Adelanto,CA,Moderate,1142,positive,2/17/2021,infected
+10143,2/16/2021,243,21,Male,Asian,Sales,Agoura Hills,CA,No symptoms,1143,positive,2/17/2021,infected
+10144,2/16/2021,244,37,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1144,positive,2/17/2021,infected
+10145,2/16/2021,245,23,Female,Black/African American,Transportation,Albany,CA,Moderate,1145,positive,2/17/2021,infected
+10146,2/16/2021,246,72,Female,Hispanic,Transportation,Alhambra,CA,No symptoms,1146,positive,2/17/2021,infected
 10147,2/16/2021,247,80,Female,Hispanic,Government/police,Adelanto,CA,Moderate,1147,positive,2/17/2021,recovered
 10148,2/16/2021,248,77,Female,Black/African American,Government/police,Agoura Hills,CA,Severe,1148,positive,2/17/2021,hospitalized
 10149,2/16/2021,249,62,Female,Black/African American,Other,Alameda,CA,Mild,1149,positive,2/17/2021,hospitalized
 10150,2/16/2021,250,18,Male,Black/African American,Other,Albany,CA,Severe,1150,positive,2/17/2021,death
-10151,2/16/2021,251,51,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1151,positive,2/17/2021,recovered
-10152,2/16/2021,252,15,Male,Hispanic,Health Care,Adelanto,CA,No symptoms,1152,positive,2/17/2021,recovered
-10153,2/16/2021,253,27,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,Moderate,1153,positive,2/17/2021,recovered
-10154,2/16/2021,254,71,Male,other,Health Care,Alameda,CA,No symptoms,1154,positive,2/17/2021,recovered
-10155,2/16/2021,255,106,Male,Asian,Sales,Albany,CA,No symptoms,1155,positive,2/17/2021,recovered
-10156,2/16/2021,256,17,Female,Non-Hispanic white,Sales,Alhambra,CA,No symptoms,1156,positive,2/17/2021,recovered
+10151,2/16/2021,251,51,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1151,positive,2/17/2021,infected
+10152,2/16/2021,252,15,Male,Hispanic,Health Care,Adelanto,CA,No symptoms,1152,positive,2/17/2021,infected
+10153,2/16/2021,253,27,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,Moderate,1153,positive,2/17/2021,infected
+10154,2/16/2021,254,71,Male,other,Health Care,Alameda,CA,No symptoms,1154,positive,2/17/2021,infected
+10155,2/16/2021,255,106,Male,Asian,Sales,Albany,CA,No symptoms,1155,positive,2/17/2021,infected
+10156,2/16/2021,256,17,Female,Non-Hispanic white,Sales,Alhambra,CA,No symptoms,1156,positive,2/17/2021,infected
 10157,2/16/2021,257,58,Male,Non-Hispanic white,Sales,Adelanto,CA,Mild,1157,positive,2/17/2021,recovered
 10158,2/16/2021,258,110,Female,Asian,Sales,Agoura Hills,CA,Moderate,1158,positive,2/17/2021,hospitalized
 10159,2/16/2021,259,32,Female,Asian,Transportation,Alameda,CA,Severe,1159,positive,2/17/2021,hospitalized
 10160,2/16/2021,260,80,Male,Black/African American,Transportation,Albany,CA,Severe,1160,positive,2/17/2021,death
-10161,2/16/2021,261,79,Male,Black/African American,Transportation,Alhambra,CA,Severe,1161,positive,2/17/2021,recovered
-10162,2/16/2021,262,44,Female,Black/African American,Government/police,Adelanto,CA,Moderate,1162,positive,2/17/2021,recovered
-10163,2/16/2021,263,26,Female,Hispanic,Government/police,Agoura Hills,CA,Mild,1163,positive,2/17/2021,recovered
-10164,2/15/2021,264,59,Female,Hispanic,Other,Alameda,CA,Mild,1164,positive,2/16/2021,recovered
-10165,2/15/2021,265,97,Male,Hispanic,Other,Albany,CA,Moderate,1165,positive,2/16/2021,recovered
-10166,2/15/2021,266,103,Male,Non-Hispanic white,Health Care,Alhambra,CA,Severe,1166,positive,2/16/2021,recovered
+10161,2/16/2021,261,79,Male,Black/African American,Transportation,Alhambra,CA,Severe,1161,positive,2/17/2021,infected
+10162,2/16/2021,262,44,Female,Black/African American,Government/police,Adelanto,CA,Moderate,1162,positive,2/17/2021,infected
+10163,2/16/2021,263,26,Female,Hispanic,Government/police,Agoura Hills,CA,Mild,1163,positive,2/17/2021,infected
+10164,2/15/2021,264,59,Female,Hispanic,Other,Alameda,CA,Mild,1164,positive,2/16/2021,infected
+10165,2/15/2021,265,97,Male,Hispanic,Other,Albany,CA,Moderate,1165,positive,2/16/2021,infected
+10166,2/15/2021,266,103,Male,Non-Hispanic white,Health Care,Alhambra,CA,Severe,1166,positive,2/16/2021,infected
 10167,2/15/2021,267,38,Male,Asian,Health Care,Adelanto,CA,Mild,1167,positive,2/16/2021,recovered
 10168,2/15/2021,268,27,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1168,positive,2/16/2021,hospitalized
 10169,2/15/2021,269,41,Female,Asian,Health Care,Alameda,CA,No symptoms,1169,positive,2/16/2021,hospitalized
 10170,2/15/2021,270,42,Female,Black/African American,Sales,Albany,CA,No symptoms,1170,positive,2/16/2021,death
-10171,2/15/2021,271,63,Female,Black/African American,Sales,Alhambra,CA,No symptoms,1171,positive,2/16/2021,recovered
-10172,2/15/2021,272,62,Male,Hispanic,Sales,Adelanto,CA,No symptoms,1172,positive,2/16/2021,recovered
-10173,2/15/2021,273,41,Male,Hispanic,Sales,Agoura Hills,CA,Moderate,1173,positive,2/16/2021,recovered
-10174,2/15/2021,274,13,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1174,positive,2/16/2021,recovered
-10175,2/15/2021,275,99,Male,Black/African American,Transportation,Albany,CA,No symptoms,1175,positive,2/16/2021,recovered
-10176,2/15/2021,276,72,Female,Black/African American,Transportation,Alhambra,CA,Moderate,1176,positive,2/16/2021,recovered
+10171,2/15/2021,271,63,Female,Black/African American,Sales,Alhambra,CA,No symptoms,1171,positive,2/16/2021,infected
+10172,2/15/2021,272,62,Male,Hispanic,Sales,Adelanto,CA,No symptoms,1172,positive,2/16/2021,infected
+10173,2/15/2021,273,41,Male,Hispanic,Sales,Agoura Hills,CA,Moderate,1173,positive,2/16/2021,infected
+10174,2/15/2021,274,13,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1174,positive,2/16/2021,infected
+10175,2/15/2021,275,99,Male,Black/African American,Transportation,Albany,CA,No symptoms,1175,positive,2/16/2021,infected
+10176,2/15/2021,276,72,Female,Black/African American,Transportation,Alhambra,CA,Moderate,1176,positive,2/16/2021,infected
 10177,2/15/2021,277,71,Female,Black/African American,Government/police,Adelanto,CA,No symptoms,1177,positive,2/16/2021,recovered
 10178,2/15/2021,278,1,Female,Hispanic,Government/police,Agoura Hills,CA,Moderate,1178,positive,2/16/2021,hospitalized
 10179,2/15/2021,279,67,Female,Non-Hispanic white,Other,Alameda,CA,Severe,1179,positive,2/16/2021,hospitalized
 10180,2/15/2021,280,87,Female,other,Other,Albany,CA,Mild,1180,positive,2/16/2021,death
-10181,2/15/2021,281,20,Male,Asian,Health Care,Alhambra,CA,Severe,1181,positive,2/16/2021,recovered
-10182,2/15/2021,282,99,Male,Non-Hispanic white,Health Care,Adelanto,CA,Moderate,1182,positive,2/16/2021,recovered
-10183,2/15/2021,283,7,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1183,positive,2/16/2021,recovered
-10184,2/15/2021,284,48,Male,Asian,Health Care,Alameda,CA,Moderate,1184,positive,2/16/2021,recovered
-10185,2/15/2021,285,58,Male,Asian,Sales,Albany,CA,No symptoms,1185,positive,2/16/2021,recovered
-10186,2/15/2021,286,100,Male,Black/African American,Sales,Alhambra,CA,No symptoms,1186,positive,2/16/2021,recovered
+10181,2/15/2021,281,20,Male,Asian,Health Care,Alhambra,CA,Severe,1181,positive,2/16/2021,infected
+10182,2/15/2021,282,99,Male,Non-Hispanic white,Health Care,Adelanto,CA,Moderate,1182,positive,2/16/2021,infected
+10183,2/15/2021,283,7,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1183,positive,2/16/2021,infected
+10184,2/15/2021,284,48,Male,Asian,Health Care,Alameda,CA,Moderate,1184,positive,2/16/2021,infected
+10185,2/15/2021,285,58,Male,Asian,Sales,Albany,CA,No symptoms,1185,positive,2/16/2021,infected
+10186,2/15/2021,286,100,Male,Black/African American,Sales,Alhambra,CA,No symptoms,1186,positive,2/16/2021,infected
 10187,2/15/2021,287,48,Female,Black/African American,Sales,Adelanto,CA,No symptoms,1187,positive,2/16/2021,recovered
 10188,2/15/2021,288,47,Male,Black/African American,Sales,Agoura Hills,CA,Mild,1188,positive,2/16/2021,hospitalized
 10189,2/14/2021,289,111,Female,Hispanic,Transportation,Alameda,CA,Moderate,1189,positive,2/15/2021,hospitalized
 10190,2/14/2021,290,106,Female,Hispanic,Transportation,Albany,CA,Severe,1190,positive,2/15/2021,death
-10191,2/14/2021,291,25,Male,Hispanic,Transportation,Alhambra,CA,Severe,1191,positive,2/15/2021,recovered
-10192,2/14/2021,292,35,Male,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1192,positive,2/15/2021,recovered
-10193,2/14/2021,293,20,Female,Asian,Government/police,Agoura Hills,CA,Moderate,1193,positive,2/15/2021,recovered
-10194,2/14/2021,294,90,Female,Non-Hispanic white,Other,Alameda,CA,Mild,1194,positive,2/15/2021,recovered
-10195,2/14/2021,295,43,Female,Asian,Other,Albany,CA,Mild,1195,positive,2/15/2021,recovered
-10196,2/14/2021,296,70,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1196,positive,2/15/2021,recovered
+10191,2/14/2021,291,25,Male,Hispanic,Transportation,Alhambra,CA,Severe,1191,positive,2/15/2021,infected
+10192,2/14/2021,292,35,Male,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1192,positive,2/15/2021,infected
+10193,2/14/2021,293,20,Female,Asian,Government/police,Agoura Hills,CA,Moderate,1193,positive,2/15/2021,infected
+10194,2/14/2021,294,90,Female,Non-Hispanic white,Other,Alameda,CA,Mild,1194,positive,2/15/2021,infected
+10195,2/14/2021,295,43,Female,Asian,Other,Albany,CA,Mild,1195,positive,2/15/2021,infected
+10196,2/14/2021,296,70,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1196,positive,2/15/2021,infected
 10197,2/14/2021,297,105,Male,Black/African American,Health Care,Adelanto,CA,Severe,1197,positive,2/15/2021,recovered
 10198,2/14/2021,298,75,Male,Hispanic,Health Care,Agoura Hills,CA,Mild,1198,positive,2/15/2021,hospitalized
 10199,2/14/2021,299,5,Female,Hispanic,Health Care,Alameda,CA,No symptoms,1199,positive,2/15/2021,hospitalized
 10200,2/14/2021,300,2,Female,Black/African American,Sales,Albany,CA,No symptoms,1200,positive,2/15/2021,death
-10201,2/14/2021,301,46,Female,Black/African American,Sales,Alhambra,CA,No symptoms,1201,positive,2/15/2021,recovered
-10202,2/14/2021,302,81,Female,Black/African American,Sales,Adelanto,CA,No symptoms,1202,positive,2/15/2021,recovered
-10203,2/14/2021,303,36,Male,Black/African American,Sales,Agoura Hills,CA,No symptoms,1203,positive,2/15/2021,recovered
-10204,2/14/2021,304,40,Male,Hispanic,Transportation,Alameda,CA,Moderate,1204,positive,2/15/2021,recovered
-10205,2/14/2021,305,4,Male,Non-Hispanic white,Transportation,Albany,CA,No symptoms,1205,positive,2/15/2021,recovered
-10206,2/14/2021,306,48,Male,other,Transportation,Alhambra,CA,No symptoms,1206,positive,2/15/2021,recovered
+10201,2/14/2021,301,46,Female,Black/African American,Sales,Alhambra,CA,No symptoms,1201,positive,2/15/2021,infected
+10202,2/14/2021,302,81,Female,Black/African American,Sales,Adelanto,CA,No symptoms,1202,positive,2/15/2021,infected
+10203,2/14/2021,303,36,Male,Black/African American,Sales,Agoura Hills,CA,No symptoms,1203,positive,2/15/2021,infected
+10204,2/14/2021,304,40,Male,Hispanic,Transportation,Alameda,CA,Moderate,1204,positive,2/15/2021,infected
+10205,2/14/2021,305,4,Male,Non-Hispanic white,Transportation,Albany,CA,No symptoms,1205,positive,2/15/2021,infected
+10206,2/14/2021,306,48,Male,other,Transportation,Alhambra,CA,No symptoms,1206,positive,2/15/2021,infected
 10207,2/14/2021,307,102,Female,Asian,Government/police,Adelanto,CA,Moderate,1207,positive,2/15/2021,recovered
 10208,2/14/2021,308,18,Female,Non-Hispanic white,Government/police,Agoura Hills,CA,No symptoms,1208,positive,2/15/2021,hospitalized
 10209,2/14/2021,309,6,Female,Non-Hispanic white,Other,Alameda,CA,Moderate,1209,positive,2/15/2021,hospitalized
 10210,2/14/2021,310,99,Female,Asian,Other,Albany,CA,Severe,1210,positive,2/15/2021,death
-10211,2/13/2021,311,104,Female,Asian,Health Care,Alhambra,CA,Mild,1211,positive,2/14/2021,recovered
-10212,2/13/2021,312,76,Male,Black/African American,Health Care,Adelanto,CA,Severe,1212,positive,2/14/2021,recovered
-10213,2/13/2021,313,46,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1213,positive,2/14/2021,recovered
-10214,2/13/2021,314,57,Male,Black/African American,Health Care,Alameda,CA,No symptoms,1214,positive,2/14/2021,recovered
-10215,2/13/2021,315,2,Male,Hispanic,Sales,Albany,CA,Moderate,1215,positive,2/14/2021,recovered
-10216,2/13/2021,316,39,Male,Hispanic,Sales,Alhambra,CA,No symptoms,1216,positive,2/14/2021,recovered
+10211,2/13/2021,311,104,Female,Asian,Health Care,Alhambra,CA,Mild,1211,positive,2/14/2021,infected
+10212,2/13/2021,312,76,Male,Black/African American,Health Care,Adelanto,CA,Severe,1212,positive,2/14/2021,infected
+10213,2/13/2021,313,46,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1213,positive,2/14/2021,infected
+10214,2/13/2021,314,57,Male,Black/African American,Health Care,Alameda,CA,No symptoms,1214,positive,2/14/2021,infected
+10215,2/13/2021,315,2,Male,Hispanic,Sales,Albany,CA,Moderate,1215,positive,2/14/2021,infected
+10216,2/13/2021,316,39,Male,Hispanic,Sales,Alhambra,CA,No symptoms,1216,positive,2/14/2021,infected
 10217,2/13/2021,317,57,Male,Hispanic,Sales,Adelanto,CA,No symptoms,1217,positive,2/14/2021,recovered
 10218,2/13/2021,318,63,Female,Non-Hispanic white,Sales,Agoura Hills,CA,No symptoms,1218,positive,2/14/2021,hospitalized
 10219,2/13/2021,319,59,Male,Asian,Transportation,Alameda,CA,Mild,1219,positive,2/14/2021,hospitalized
 10220,2/13/2021,320,101,Female,Non-Hispanic white,Transportation,Albany,CA,Moderate,1220,positive,2/14/2021,death
-10221,2/13/2021,321,3,Female,Asian,Transportation,Alhambra,CA,Severe,1221,positive,2/14/2021,recovered
-10222,2/13/2021,322,56,Male,Black/African American,Government/police,Adelanto,CA,Severe,1222,positive,2/14/2021,recovered
-10223,2/13/2021,323,46,Male,Black/African American,Government/police,Agoura Hills,CA,Severe,1223,positive,2/14/2021,recovered
-10224,2/13/2021,324,11,Female,Hispanic,Other,Alameda,CA,Moderate,1224,positive,2/14/2021,recovered
-10225,2/13/2021,325,83,Female,Hispanic,Other,Albany,CA,Mild,1225,positive,2/14/2021,recovered
+10221,2/13/2021,321,3,Female,Asian,Transportation,Alhambra,CA,Severe,1221,positive,2/14/2021,infected
+10222,2/13/2021,322,56,Male,Black/African American,Government/police,Adelanto,CA,Severe,1222,positive,2/14/2021,infected
+10223,2/13/2021,323,46,Male,Black/African American,Government/police,Agoura Hills,CA,Severe,1223,positive,2/14/2021,infected
+10224,2/13/2021,324,11,Female,Hispanic,Other,Alameda,CA,Moderate,1224,positive,2/14/2021,infected
+10225,2/13/2021,325,83,Female,Hispanic,Other,Albany,CA,Mild,1225,positive,2/14/2021,infected
 10226,2/13/2021,326,66,Female,Black/African American,Health Care,Alhambra,CA,Mild,1226,positive,2/14/2021,recovered
 10227,2/13/2021,327,80,Male,Black/African American,Health Care,Adelanto,CA,Moderate,1227,positive,2/14/2021,recovered
 10228,2/13/2021,328,103,Male,Black/African American,Health Care,Agoura Hills,CA,Severe,1228,positive,2/14/2021,hospitalized
 10229,2/13/2021,329,5,Male,Black/African American,Health Care,Alameda,CA,Mild,1229,positive,2/14/2021,hospitalized
 10230,2/13/2021,330,55,Female,Hispanic,Sales,Albany,CA,No symptoms,1230,positive,2/14/2021,death
-10231,2/13/2021,331,100,Female,Non-Hispanic white,Sales,Alhambra,CA,No symptoms,1231,positive,2/14/2021,recovered
-10232,2/13/2021,332,75,Female,other,Sales,Adelanto,CA,No symptoms,1232,positive,2/14/2021,recovered
-10233,2/13/2021,333,86,Female,Asian,Sales,Agoura Hills,CA,No symptoms,1233,positive,2/14/2021,recovered
-10234,2/13/2021,334,29,Male,Non-Hispanic white,Transportation,Alameda,CA,No symptoms,1234,positive,2/14/2021,recovered
-10235,2/13/2021,335,12,Male,Non-Hispanic white,Transportation,Albany,CA,Moderate,1235,positive,2/14/2021,recovered
+10231,2/13/2021,331,100,Female,Non-Hispanic white,Sales,Alhambra,CA,No symptoms,1231,positive,2/14/2021,infected
+10232,2/13/2021,332,75,Female,other,Sales,Adelanto,CA,No symptoms,1232,positive,2/14/2021,infected
+10233,2/13/2021,333,86,Female,Asian,Sales,Agoura Hills,CA,No symptoms,1233,positive,2/14/2021,infected
+10234,2/13/2021,334,29,Male,Non-Hispanic white,Transportation,Alameda,CA,No symptoms,1234,positive,2/14/2021,infected
+10235,2/13/2021,335,12,Male,Non-Hispanic white,Transportation,Albany,CA,Moderate,1235,positive,2/14/2021,infected
 10236,2/13/2021,336,14,Male,Asian,Transportation,Alhambra,CA,No symptoms,1236,positive,2/14/2021,recovered
 10237,2/13/2021,337,94,Male,Asian,Government/police,Adelanto,CA,No symptoms,1237,positive,2/14/2021,recovered
 10238,2/13/2021,338,102,Female,Black/African American,Government/police,Agoura Hills,CA,Moderate,1238,positive,2/14/2021,hospitalized
 10239,2/13/2021,339,98,Female,Black/African American,Other,Alameda,CA,No symptoms,1239,positive,2/14/2021,hospitalized
-10240,2/12/2021,340,45,Female,Black/African American,Other,Albany,CA,Moderate,1240,positive,2/13/2021,death
-10241,2/12/2021,341,89,Female,Hispanic,Health Care,Alhambra,CA,Severe,1241,positive,2/13/2021,recovered
-10242,2/12/2021,342,92,Female,Hispanic,Health Care,Adelanto,CA,Mild,1242,positive,2/13/2021,recovered
-10243,2/12/2021,343,102,Male,Hispanic,Health Care,Agoura Hills,CA,Severe,1243,positive,2/13/2021,recovered
-10244,2/12/2021,344,35,Male,Non-Hispanic white,Health Care,Alameda,CA,Moderate,1244,positive,2/13/2021,recovered
+10240,2/12/2021,340,45,Female,Black/African American,Other,Albany,CA,Moderate,1240,positive,2/13/2021,infected
+10241,2/12/2021,341,89,Female,Hispanic,Health Care,Alhambra,CA,Severe,1241,positive,2/13/2021,infected
+10242,2/12/2021,342,92,Female,Hispanic,Health Care,Adelanto,CA,Mild,1242,positive,2/13/2021,infected
+10243,2/12/2021,343,102,Male,Hispanic,Health Care,Agoura Hills,CA,Severe,1243,positive,2/13/2021,infected
+10244,2/12/2021,344,35,Male,Non-Hispanic white,Health Care,Alameda,CA,Moderate,1244,positive,2/13/2021,infected
 10245,2/12/2021,345,25,Male,Asian,Sales,Albany,CA,No symptoms,1245,positive,2/13/2021,recovered
 10246,2/12/2021,346,97,Male,Non-Hispanic white,Sales,Alhambra,CA,Moderate,1246,positive,2/13/2021,recovered
-10247,2/12/2021,347,9,Male,Asian,Sales,Adelanto,CA,No symptoms,1247,positive,2/13/2021,recovered
+10247,2/12/2021,347,9,Male,Asian,Sales,Adelanto,CA,No symptoms,1247,positive,2/13/2021,hospitalized
 10248,2/12/2021,348,100,Male,Black/African American,Sales,Agoura Hills,CA,No symptoms,1248,positive,2/13/2021,hospitalized
-10249,2/12/2021,349,102,Female,Black/African American,Transportation,Alameda,CA,No symptoms,1249,positive,2/13/2021,hospitalized
-10250,2/12/2021,350,36,Male,Hispanic,Transportation,Albany,CA,Mild,1250,positive,2/13/2021,death
-10251,2/12/2021,351,39,Female,Hispanic,Transportation,Alhambra,CA,Moderate,1251,positive,2/13/2021,recovered
-10252,2/12/2021,352,5,Female,Black/African American,Government/police,Adelanto,CA,Severe,1252,positive,2/13/2021,recovered
-10253,2/12/2021,353,8,Male,Black/African American,Government/police,Agoura Hills,CA,Severe,1253,positive,2/13/2021,recovered
-10254,2/12/2021,354,86,Male,Black/African American,Other,Alameda,CA,Severe,1254,positive,2/13/2021,recovered
+10249,2/12/2021,349,102,Female,Black/African American,Transportation,Alameda,CA,No symptoms,1249,positive,2/13/2021,death
+10250,2/12/2021,350,36,Male,Hispanic,Transportation,Albany,CA,Mild,1250,positive,2/13/2021,infected
+10251,2/12/2021,351,39,Female,Hispanic,Transportation,Alhambra,CA,Moderate,1251,positive,2/13/2021,infected
+10252,2/12/2021,352,5,Female,Black/African American,Government/police,Adelanto,CA,Severe,1252,positive,2/13/2021,infected
+10253,2/12/2021,353,8,Male,Black/African American,Government/police,Agoura Hills,CA,Severe,1253,positive,2/13/2021,infected
+10254,2/12/2021,354,86,Male,Black/African American,Other,Alameda,CA,Severe,1254,positive,2/13/2021,infected
 10255,2/12/2021,355,18,Female,Black/African American,Other,Albany,CA,Moderate,1255,positive,2/13/2021,recovered
 10256,2/12/2021,356,50,Female,Hispanic,Health Care,Alhambra,CA,Mild,1256,positive,2/13/2021,recovered
-10257,2/12/2021,357,35,Female,Non-Hispanic white,Health Care,Adelanto,CA,Mild,1257,positive,2/13/2021,recovered
+10257,2/12/2021,357,35,Female,Non-Hispanic white,Health Care,Adelanto,CA,Mild,1257,positive,2/13/2021,hospitalized
 10258,2/12/2021,358,108,Male,other,Health Care,Agoura Hills,CA,Moderate,1258,positive,2/13/2021,hospitalized
-10259,2/12/2021,359,44,Male,Asian,Health Care,Alameda,CA,Severe,1259,positive,2/13/2021,hospitalized
-10260,2/12/2021,360,91,Male,Non-Hispanic white,Sales,Albany,CA,Mild,1260,positive,2/13/2021,death
-10261,2/12/2021,361,43,Female,Non-Hispanic white,Sales,Alhambra,CA,No symptoms,1261,positive,2/13/2021,recovered
-10262,2/12/2021,362,74,Female,Asian,Sales,Adelanto,CA,No symptoms,1262,positive,2/13/2021,recovered
-10263,2/12/2021,363,98,Female,Asian,Sales,Agoura Hills,CA,No symptoms,1263,positive,2/13/2021,recovered
+10259,2/12/2021,359,44,Male,Asian,Health Care,Alameda,CA,Severe,1259,positive,2/13/2021,infected
+10260,2/12/2021,360,91,Male,Non-Hispanic white,Sales,Albany,CA,Mild,1260,positive,2/13/2021,infected
+10261,2/12/2021,361,43,Female,Non-Hispanic white,Sales,Alhambra,CA,No symptoms,1261,positive,2/13/2021,infected
+10262,2/12/2021,362,74,Female,Asian,Sales,Adelanto,CA,No symptoms,1262,positive,2/13/2021,infected
+10263,2/12/2021,363,98,Female,Asian,Sales,Agoura Hills,CA,No symptoms,1263,positive,2/13/2021,infected
 10264,2/12/2021,364,14,Female,Black/African American,Transportation,Alameda,CA,No symptoms,1264,positive,2/13/2021,recovered
 10265,2/12/2021,365,41,Male,Black/African American,Transportation,Albany,CA,No symptoms,1265,positive,2/13/2021,recovered
-10266,2/12/2021,366,45,Male,Black/African American,Transportation,Alhambra,CA,Moderate,1266,positive,2/13/2021,recovered
-10267,2/11/2021,367,58,Male,Hispanic,Government/police,Adelanto,CA,No symptoms,1267,positive,2/12/2021,recovered
-10268,2/11/2021,368,11,Male,Hispanic,Government/police,Agoura Hills,CA,No symptoms,1268,positive,2/12/2021,hospitalized
-10269,2/11/2021,369,109,Female,Hispanic,Other,Alameda,CA,Moderate,1269,positive,2/12/2021,hospitalized
-10270,2/11/2021,370,29,Female,Non-Hispanic white,Other,Albany,CA,No symptoms,1270,positive,2/12/2021,death
-10271,2/11/2021,371,21,Female,Asian,Health Care,Alhambra,CA,Moderate,1271,positive,2/12/2021,recovered
-10272,2/11/2021,372,65,Female,Non-Hispanic white,Health Care,Adelanto,CA,Severe,1272,positive,2/12/2021,recovered
-10273,2/11/2021,373,92,Female,Asian,Health Care,Agoura Hills,CA,Mild,1273,positive,2/12/2021,recovered
+10266,2/12/2021,366,45,Male,Black/African American,Transportation,Alhambra,CA,Moderate,1266,positive,2/13/2021,hospitalized
+10267,2/11/2021,367,58,Male,Hispanic,Government/police,Adelanto,CA,No symptoms,1267,positive,2/12/2021,hospitalized
+10268,2/11/2021,368,11,Male,Hispanic,Government/police,Agoura Hills,CA,No symptoms,1268,positive,2/12/2021,death
+10269,2/11/2021,369,109,Female,Hispanic,Other,Alameda,CA,Moderate,1269,positive,2/12/2021,infected
+10270,2/11/2021,370,29,Female,Non-Hispanic white,Other,Albany,CA,No symptoms,1270,positive,2/12/2021,infected
+10271,2/11/2021,371,21,Female,Asian,Health Care,Alhambra,CA,Moderate,1271,positive,2/12/2021,infected
+10272,2/11/2021,372,65,Female,Non-Hispanic white,Health Care,Adelanto,CA,Severe,1272,positive,2/12/2021,infected
+10273,2/11/2021,373,92,Female,Asian,Health Care,Agoura Hills,CA,Mild,1273,positive,2/12/2021,infected
 10274,2/11/2021,374,1,Male,Black/African American,Health Care,Alameda,CA,Severe,1274,positive,2/12/2021,recovered
 10275,2/11/2021,375,73,Male,Black/African American,Sales,Albany,CA,Moderate,1275,positive,2/12/2021,recovered
-10276,2/11/2021,376,111,Male,Hispanic,Sales,Alhambra,CA,No symptoms,1276,positive,2/12/2021,recovered
-10277,2/11/2021,377,36,Male,Hispanic,Sales,Adelanto,CA,Moderate,1277,positive,2/12/2021,recovered
-10278,2/11/2021,378,39,Male,Black/African American,Sales,Agoura Hills,CA,No symptoms,1278,positive,2/12/2021,hospitalized
-10279,2/11/2021,379,66,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1279,positive,2/12/2021,hospitalized
-10280,2/11/2021,380,66,Female,Black/African American,Transportation,Albany,CA,No symptoms,1280,positive,2/12/2021,death
+10276,2/11/2021,376,111,Male,Hispanic,Sales,Alhambra,CA,No symptoms,1276,positive,2/12/2021,hospitalized
+10277,2/11/2021,377,36,Male,Hispanic,Sales,Adelanto,CA,Moderate,1277,positive,2/12/2021,hospitalized
+10278,2/11/2021,378,39,Male,Black/African American,Sales,Agoura Hills,CA,No symptoms,1278,positive,2/12/2021,infected
+10279,2/11/2021,379,66,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1279,positive,2/12/2021,infected
+10280,2/11/2021,380,66,Female,Black/African American,Transportation,Albany,CA,No symptoms,1280,positive,2/12/2021,infected
 10281,2/11/2021,381,108,Male,Black/African American,Transportation,Alhambra,CA,Mild,1281,positive,2/12/2021,recovered
 10282,2/11/2021,382,107,Female,Hispanic,Government/police,Adelanto,CA,Moderate,1282,positive,2/12/2021,recovered
 10283,2/11/2021,383,20,Female,Non-Hispanic white,Government/police,Agoura Hills,CA,Severe,1283,positive,2/12/2021,recovered
 10284,2/11/2021,384,24,Male,other,Other,Alameda,CA,Severe,1284,positive,2/12/2021,recovered
-10285,2/11/2021,385,63,Male,Asian,Other,Albany,CA,Severe,1285,positive,2/12/2021,recovered
-10286,2/11/2021,386,32,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1286,positive,2/12/2021,recovered
+10285,2/11/2021,385,63,Male,Asian,Other,Albany,CA,Severe,1285,positive,2/12/2021,hospitalized
+10286,2/11/2021,386,32,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1286,positive,2/12/2021,hospitalized
 10287,2/11/2021,387,108,Female,Non-Hispanic white,Health Care,Adelanto,CA,Mild,1287,positive,2/12/2021,recovered
-10288,2/11/2021,388,84,Female,Asian,Health Care,Agoura Hills,CA,Mild,1288,positive,2/12/2021,hospitalized
-10289,2/11/2021,389,110,Male,Asian,Health Care,Alameda,CA,Moderate,1289,positive,2/12/2021,hospitalized
-10290,2/11/2021,390,19,Male,Black/African American,Sales,Albany,CA,Severe,1290,positive,2/12/2021,death
+10288,2/11/2021,388,84,Female,Asian,Health Care,Agoura Hills,CA,Mild,1288,positive,2/12/2021,infected
+10289,2/11/2021,389,110,Male,Asian,Health Care,Alameda,CA,Moderate,1289,positive,2/12/2021,infected
+10290,2/11/2021,390,19,Male,Black/African American,Sales,Albany,CA,Severe,1290,positive,2/12/2021,infected
 10291,2/11/2021,391,106,Male,Black/African American,Sales,Alhambra,CA,Mild,1291,positive,2/12/2021,recovered
 10292,2/11/2021,392,9,Female,Black/African American,Sales,Adelanto,CA,No symptoms,1292,positive,2/12/2021,recovered
 10293,2/11/2021,393,8,Female,Hispanic,Sales,Agoura Hills,CA,No symptoms,1293,positive,2/12/2021,recovered
 10294,2/11/2021,394,37,Female,Hispanic,Transportation,Alameda,CA,No symptoms,1294,positive,2/12/2021,recovered
-10295,2/11/2021,395,11,Female,Hispanic,Transportation,Albany,CA,No symptoms,1295,positive,2/12/2021,recovered
-10296,2/11/2021,396,42,Male,Non-Hispanic white,Transportation,Alhambra,CA,No symptoms,1296,positive,2/12/2021,recovered
-10297,2/11/2021,397,27,Male,Asian,Government/police,Adelanto,CA,Moderate,1297,positive,2/12/2021,recovered
-10298,2/11/2021,398,52,Male,Non-Hispanic white,Government/police,Agoura Hills,CA,No symptoms,1298,positive,2/12/2021,hospitalized
-10299,2/11/2021,399,85,Male,Asian,Other,Alameda,CA,No symptoms,1299,positive,2/12/2021,hospitalized
-10300,2/11/2021,400,76,Female,Black/African American,Other,Albany,CA,Moderate,1300,positive,2/12/2021,death
+10295,2/11/2021,395,11,Female,Hispanic,Transportation,Albany,CA,No symptoms,1295,positive,2/12/2021,hospitalized
+10296,2/11/2021,396,42,Male,Non-Hispanic white,Transportation,Alhambra,CA,No symptoms,1296,positive,2/12/2021,hospitalized
+10297,2/11/2021,397,27,Male,Asian,Government/police,Adelanto,CA,Moderate,1297,positive,2/12/2021,death
+10298,2/11/2021,398,52,Male,Non-Hispanic white,Government/police,Agoura Hills,CA,No symptoms,1298,positive,2/12/2021,infected
+10299,2/11/2021,399,85,Male,Asian,Other,Alameda,CA,No symptoms,1299,positive,2/12/2021,infected
+10300,2/11/2021,400,76,Female,Black/African American,Other,Albany,CA,Moderate,1300,positive,2/12/2021,infected
 10301,2/11/2021,401,64,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1301,positive,2/12/2021,recovered
 10302,2/11/2021,402,100,Female,Hispanic,Health Care,Adelanto,CA,Moderate,1302,positive,2/12/2021,recovered
 10303,2/11/2021,403,94,Female,Hispanic,Health Care,Agoura Hills,CA,Severe,1303,positive,2/12/2021,recovered
 10304,2/10/2021,404,39,Female,Black/African American,Health Care,Alameda,CA,Mild,1304,positive,2/11/2021,recovered
-10305,2/10/2021,405,38,Male,Black/African American,Sales,Albany,CA,Severe,1305,positive,2/11/2021,recovered
-10306,2/10/2021,406,51,Male,Black/African American,Sales,Alhambra,CA,Moderate,1306,positive,2/11/2021,recovered
+10305,2/10/2021,405,38,Male,Black/African American,Sales,Albany,CA,Severe,1305,positive,2/11/2021,hospitalized
+10306,2/10/2021,406,51,Male,Black/African American,Sales,Alhambra,CA,Moderate,1306,positive,2/11/2021,hospitalized
 10307,2/10/2021,407,86,Male,Black/African American,Sales,Adelanto,CA,No symptoms,1307,positive,2/11/2021,recovered
-10308,2/10/2021,408,6,Male,Hispanic,Sales,Agoura Hills,CA,Moderate,1308,positive,2/11/2021,hospitalized
-10309,2/10/2021,409,63,Male,Non-Hispanic white,Transportation,Alameda,CA,No symptoms,1309,positive,2/11/2021,hospitalized
-10310,2/10/2021,410,85,Male,other,Transportation,Albany,CA,No symptoms,1310,positive,2/11/2021,death
+10308,2/10/2021,408,6,Male,Hispanic,Sales,Agoura Hills,CA,Moderate,1308,positive,2/11/2021,infected
+10309,2/10/2021,409,63,Male,Non-Hispanic white,Transportation,Alameda,CA,No symptoms,1309,positive,2/11/2021,infected
+10310,2/10/2021,410,85,Male,other,Transportation,Albany,CA,No symptoms,1310,positive,2/11/2021,infected
 10311,2/10/2021,411,108,Female,Asian,Transportation,Alhambra,CA,No symptoms,1311,positive,2/11/2021,recovered
 10312,2/10/2021,412,37,Male,Non-Hispanic white,Government/police,Adelanto,CA,Mild,1312,positive,2/11/2021,recovered
 10313,2/10/2021,413,1,Female,Non-Hispanic white,Government/police,Agoura Hills,CA,Moderate,1313,positive,2/11/2021,recovered
 10314,2/10/2021,414,23,Female,Asian,Other,Alameda,CA,Severe,1314,positive,2/11/2021,recovered
-10315,2/10/2021,415,109,Male,Asian,Other,Albany,CA,Severe,1315,positive,2/11/2021,recovered
-10316,2/10/2021,416,43,Male,Black/African American,Health Care,Alhambra,CA,Severe,1316,positive,2/11/2021,recovered
-10317,2/10/2021,417,104,Female,Black/African American,Health Care,Adelanto,CA,Moderate,1317,positive,2/11/2021,recovered
-10318,2/10/2021,418,82,Female,Black/African American,Health Care,Agoura Hills,CA,Mild,1318,positive,2/11/2021,hospitalized
-10319,2/10/2021,419,80,Female,Hispanic,Health Care,Alameda,CA,Mild,1319,positive,2/11/2021,hospitalized
-10320,2/10/2021,420,95,Male,Hispanic,Sales,Albany,CA,Moderate,1320,positive,2/11/2021,death
+10315,2/10/2021,415,109,Male,Asian,Other,Albany,CA,Severe,1315,positive,2/11/2021,hospitalized
+10316,2/10/2021,416,43,Male,Black/African American,Health Care,Alhambra,CA,Severe,1316,positive,2/11/2021,hospitalized
+10317,2/10/2021,417,104,Female,Black/African American,Health Care,Adelanto,CA,Moderate,1317,positive,2/11/2021,death
+10318,2/10/2021,418,82,Female,Black/African American,Health Care,Agoura Hills,CA,Mild,1318,positive,2/11/2021,infected
+10319,2/10/2021,419,80,Female,Hispanic,Health Care,Alameda,CA,Mild,1319,positive,2/11/2021,infected
+10320,2/10/2021,420,95,Male,Hispanic,Sales,Albany,CA,Moderate,1320,positive,2/11/2021,infected
 10321,2/10/2021,421,103,Male,Hispanic,Sales,Alhambra,CA,Severe,1321,positive,2/11/2021,recovered
 10322,2/10/2021,422,47,Male,Non-Hispanic white,Sales,Adelanto,CA,Mild,1322,positive,2/11/2021,recovered
 10323,2/10/2021,423,43,Female,Asian,Sales,Agoura Hills,CA,No symptoms,1323,positive,2/11/2021,recovered
 10324,2/10/2021,424,32,Female,Non-Hispanic white,Transportation,Alameda,CA,No symptoms,1324,positive,2/11/2021,recovered
-10325,2/10/2021,425,51,Female,Asian,Transportation,Albany,CA,No symptoms,1325,positive,2/11/2021,recovered
-10326,2/10/2021,426,37,Female,Black/African American,Transportation,Alhambra,CA,No symptoms,1326,positive,2/11/2021,recovered
+10325,2/10/2021,425,51,Female,Asian,Transportation,Albany,CA,No symptoms,1325,positive,2/11/2021,hospitalized
+10326,2/10/2021,426,37,Female,Black/African American,Transportation,Alhambra,CA,No symptoms,1326,positive,2/11/2021,hospitalized
 10327,2/10/2021,427,1,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1327,positive,2/11/2021,recovered
-10328,2/10/2021,428,24,Male,Hispanic,Government/police,Agoura Hills,CA,Moderate,1328,positive,2/11/2021,hospitalized
-10329,2/9/2021,429,72,Male,Hispanic,Other,Alameda,CA,No symptoms,1329,positive,2/10/2021,hospitalized
-10330,2/9/2021,430,5,Male,Black/African American,Other,Albany,CA,No symptoms,1330,positive,2/10/2021,death
+10328,2/10/2021,428,24,Male,Hispanic,Government/police,Agoura Hills,CA,Moderate,1328,positive,2/11/2021,infected
+10329,2/9/2021,429,72,Male,Hispanic,Other,Alameda,CA,No symptoms,1329,positive,2/10/2021,infected
+10330,2/9/2021,430,5,Male,Black/African American,Other,Albany,CA,No symptoms,1330,positive,2/10/2021,infected
 10331,2/9/2021,431,86,Female,Black/African American,Health Care,Alhambra,CA,Moderate,1331,positive,2/10/2021,recovered
 10332,2/9/2021,432,32,Female,Black/African American,Health Care,Adelanto,CA,No symptoms,1332,positive,2/10/2021,recovered
 10333,2/9/2021,433,75,Female,Black/African American,Health Care,Agoura Hills,CA,Moderate,1333,positive,2/10/2021,recovered
 10334,2/9/2021,434,85,Female,Hispanic,Health Care,Alameda,CA,Severe,1334,positive,2/10/2021,recovered
-10335,2/9/2021,435,23,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1335,positive,2/10/2021,recovered
-10336,2/9/2021,436,93,Male,other,Sales,Alhambra,CA,Severe,1336,positive,2/10/2021,recovered
-10337,2/9/2021,437,107,Male,Asian,Sales,Adelanto,CA,Moderate,1337,positive,2/10/2021,recovered
-10338,2/9/2021,438,26,Male,Non-Hispanic white,Sales,Agoura Hills,CA,No symptoms,1338,positive,2/10/2021,hospitalized
-10339,2/9/2021,439,41,Male,Non-Hispanic white,Transportation,Alameda,CA,Moderate,1339,positive,2/10/2021,hospitalized
-10340,2/9/2021,440,65,Male,Asian,Transportation,Albany,CA,No symptoms,1340,positive,2/10/2021,death
+10335,2/9/2021,435,23,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1335,positive,2/10/2021,hospitalized
+10336,2/9/2021,436,93,Male,other,Sales,Alhambra,CA,Severe,1336,positive,2/10/2021,hospitalized
+10337,2/9/2021,437,107,Male,Asian,Sales,Adelanto,CA,Moderate,1337,positive,2/10/2021,death
+10338,2/9/2021,438,26,Male,Non-Hispanic white,Sales,Agoura Hills,CA,No symptoms,1338,positive,2/10/2021,infected
+10339,2/9/2021,439,41,Male,Non-Hispanic white,Transportation,Alameda,CA,Moderate,1339,positive,2/10/2021,infected
+10340,2/9/2021,440,65,Male,Asian,Transportation,Albany,CA,No symptoms,1340,positive,2/10/2021,infected
 10341,2/9/2021,441,36,Male,Asian,Transportation,Alhambra,CA,No symptoms,1341,positive,2/10/2021,recovered
 10342,2/9/2021,442,43,Female,Black/African American,Government/police,Adelanto,CA,No symptoms,1342,positive,2/10/2021,recovered
 10343,2/9/2021,443,15,Male,Black/African American,Government/police,Agoura Hills,CA,Mild,1343,positive,2/10/2021,recovered
 10344,2/9/2021,444,51,Female,Black/African American,Other,Alameda,CA,Moderate,1344,positive,2/10/2021,recovered
-10345,2/9/2021,445,14,Female,Hispanic,Other,Albany,CA,Severe,1345,positive,2/10/2021,recovered
-10346,2/9/2021,446,44,Male,Hispanic,Health Care,Alhambra,CA,Severe,1346,positive,2/10/2021,recovered
+10345,2/9/2021,445,14,Female,Hispanic,Other,Albany,CA,Severe,1345,positive,2/10/2021,hospitalized
+10346,2/9/2021,446,44,Male,Hispanic,Health Care,Alhambra,CA,Severe,1346,positive,2/10/2021,hospitalized
 10347,2/9/2021,447,60,Male,Hispanic,Health Care,Adelanto,CA,Severe,1347,positive,2/10/2021,recovered
-10348,2/9/2021,448,73,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,Moderate,1348,positive,2/10/2021,hospitalized
-10349,2/9/2021,449,86,Female,Asian,Health Care,Alameda,CA,Mild,1349,positive,2/10/2021,hospitalized
-10350,2/9/2021,450,44,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1350,positive,2/10/2021,death
+10348,2/9/2021,448,73,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,Moderate,1348,positive,2/10/2021,infected
+10349,2/9/2021,449,86,Female,Asian,Health Care,Alameda,CA,Mild,1349,positive,2/10/2021,infected
+10350,2/9/2021,450,44,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1350,positive,2/10/2021,infected
 10351,2/9/2021,451,74,Male,Asian,Sales,Alhambra,CA,Moderate,1351,positive,2/10/2021,recovered
 10352,2/9/2021,452,68,Male,Black/African American,Sales,Adelanto,CA,Severe,1352,positive,2/10/2021,recovered
 10353,2/9/2021,453,48,Male,Black/African American,Sales,Agoura Hills,CA,Mild,1353,positive,2/10/2021,recovered
 10354,2/9/2021,454,50,Female,Hispanic,Transportation,Alameda,CA,No symptoms,1354,positive,2/10/2021,recovered
-10355,2/9/2021,455,70,Female,Hispanic,Transportation,Albany,CA,No symptoms,1355,positive,2/10/2021,recovered
-10356,2/9/2021,456,49,Female,Black/African American,Transportation,Alhambra,CA,No symptoms,1356,positive,2/10/2021,recovered
-10357,2/9/2021,457,1,Female,Black/African American,Government/police,Adelanto,CA,No symptoms,1357,positive,2/10/2021,recovered
-10358,2/9/2021,458,45,Male,Black/African American,Government/police,Agoura Hills,CA,No symptoms,1358,positive,2/10/2021,hospitalized
-10359,2/8/2021,459,35,Male,Black/African American,Other,Alameda,CA,Moderate,1359,positive,2/9/2021,hospitalized
-10360,2/8/2021,460,42,Male,Hispanic,Other,Albany,CA,No symptoms,1360,positive,2/9/2021,death
+10355,2/9/2021,455,70,Female,Hispanic,Transportation,Albany,CA,No symptoms,1355,positive,2/10/2021,hospitalized
+10356,2/9/2021,456,49,Female,Black/African American,Transportation,Alhambra,CA,No symptoms,1356,positive,2/10/2021,hospitalized
+10357,2/9/2021,457,1,Female,Black/African American,Government/police,Adelanto,CA,No symptoms,1357,positive,2/10/2021,death
+10358,2/9/2021,458,45,Male,Black/African American,Government/police,Agoura Hills,CA,No symptoms,1358,positive,2/10/2021,infected
+10359,2/8/2021,459,35,Male,Black/African American,Other,Alameda,CA,Moderate,1359,positive,2/9/2021,infected
+10360,2/8/2021,460,42,Male,Hispanic,Other,Albany,CA,No symptoms,1360,positive,2/9/2021,recovered
 10361,2/8/2021,461,80,Male,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1361,positive,2/9/2021,recovered
 10362,2/8/2021,462,23,Female,other,Health Care,Adelanto,CA,Moderate,1362,positive,2/9/2021,recovered
 10363,2/8/2021,463,38,Female,Asian,Health Care,Agoura Hills,CA,No symptoms,1363,positive,2/9/2021,recovered
 10364,2/8/2021,464,29,Female,Non-Hispanic white,Health Care,Alameda,CA,Moderate,1364,positive,2/9/2021,recovered
-10365,2/8/2021,465,50,Female,Non-Hispanic white,Sales,Albany,CA,Severe,1365,positive,2/9/2021,recovered
-10366,2/8/2021,466,91,Female,Asian,Sales,Alhambra,CA,Mild,1366,positive,2/9/2021,recovered
+10365,2/8/2021,465,50,Female,Non-Hispanic white,Sales,Albany,CA,Severe,1365,positive,2/9/2021,hospitalized
+10366,2/8/2021,466,91,Female,Asian,Sales,Alhambra,CA,Mild,1366,positive,2/9/2021,hospitalized
 10367,2/8/2021,467,39,Male,Asian,Sales,Adelanto,CA,Severe,1367,positive,2/9/2021,recovered
-10368,2/8/2021,468,2,Male,Black/African American,Sales,Agoura Hills,CA,Moderate,1368,positive,2/9/2021,hospitalized
-10369,2/8/2021,469,8,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1369,positive,2/9/2021,hospitalized
-10370,2/8/2021,470,26,Male,Black/African American,Transportation,Albany,CA,Moderate,1370,positive,2/9/2021,death
+10368,2/8/2021,468,2,Male,Black/African American,Sales,Agoura Hills,CA,Moderate,1368,positive,2/9/2021,infected
+10369,2/8/2021,469,8,Male,Black/African American,Transportation,Alameda,CA,No symptoms,1369,positive,2/9/2021,infected
+10370,2/8/2021,470,26,Male,Black/African American,Transportation,Albany,CA,Moderate,1370,positive,2/9/2021,recovered
 10371,2/8/2021,471,63,Male,Hispanic,Transportation,Alhambra,CA,No symptoms,1371,positive,2/9/2021,recovered
 10372,2/8/2021,472,29,Male,Hispanic,Government/police,Adelanto,CA,No symptoms,1372,positive,2/9/2021,recovered
 10373,2/8/2021,473,20,Female,Hispanic,Government/police,Agoura Hills,CA,No symptoms,1373,positive,2/9/2021,recovered
 10374,2/8/2021,474,102,Male,Non-Hispanic white,Other,Alameda,CA,Mild,1374,positive,2/9/2021,recovered
-10375,2/8/2021,475,89,Female,Asian,Other,Albany,CA,Moderate,1375,positive,2/9/2021,recovered
-10376,2/8/2021,476,72,Female,Non-Hispanic white,Health Care,Alhambra,CA,Severe,1376,positive,2/9/2021,recovered
-10377,2/8/2021,477,24,Male,Asian,Health Care,Adelanto,CA,Severe,1377,positive,2/9/2021,recovered
-10378,2/8/2021,478,75,Male,Black/African American,Health Care,Agoura Hills,CA,Severe,1378,positive,2/9/2021,hospitalized
-10379,2/7/2021,479,67,Female,Black/African American,Health Care,Alameda,CA,Moderate,1379,positive,2/8/2021,hospitalized
-10380,2/7/2021,480,5,Female,Hispanic,Sales,Albany,CA,Mild,1380,positive,2/8/2021,death
+10375,2/8/2021,475,89,Female,Asian,Other,Albany,CA,Moderate,1375,positive,2/9/2021,hospitalized
+10376,2/8/2021,476,72,Female,Non-Hispanic white,Health Care,Alhambra,CA,Severe,1376,positive,2/9/2021,hospitalized
+10377,2/8/2021,477,24,Male,Asian,Health Care,Adelanto,CA,Severe,1377,positive,2/9/2021,death
+10378,2/8/2021,478,75,Male,Black/African American,Health Care,Agoura Hills,CA,Severe,1378,positive,2/9/2021,infected
+10379,2/7/2021,479,67,Female,Black/African American,Health Care,Alameda,CA,Moderate,1379,positive,2/8/2021,infected
+10380,2/7/2021,480,5,Female,Hispanic,Sales,Albany,CA,Mild,1380,positive,2/8/2021,recovered
 10381,2/7/2021,481,50,Female,Hispanic,Sales,Alhambra,CA,Mild,1381,positive,2/8/2021,recovered
 10382,2/7/2021,482,69,Male,Black/African American,Sales,Adelanto,CA,Moderate,1382,positive,2/8/2021,recovered
 10383,2/7/2021,483,92,Male,Black/African American,Sales,Agoura Hills,CA,Severe,1383,positive,2/8/2021,recovered
 10384,2/7/2021,484,54,Male,Black/African American,Transportation,Alameda,CA,Mild,1384,positive,2/8/2021,recovered
-10385,2/7/2021,485,45,Female,Black/African American,Transportation,Albany,CA,No symptoms,1385,positive,2/8/2021,recovered
-10386,2/7/2021,486,10,Female,Hispanic,Transportation,Alhambra,CA,No symptoms,1386,positive,2/8/2021,recovered
+10385,2/7/2021,485,45,Female,Black/African American,Transportation,Albany,CA,No symptoms,1385,positive,2/8/2021,hospitalized
+10386,2/7/2021,486,10,Female,Hispanic,Transportation,Alhambra,CA,No symptoms,1386,positive,2/8/2021,hospitalized
 10387,2/7/2021,487,10,Female,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1387,positive,2/8/2021,recovered
-10388,2/7/2021,488,5,Female,other,Government/police,Agoura Hills,CA,No symptoms,1388,positive,2/8/2021,hospitalized
-10389,2/7/2021,489,4,Male,Asian,Other,Alameda,CA,No symptoms,1389,positive,2/8/2021,hospitalized
-10390,2/7/2021,490,84,Male,Non-Hispanic white,Other,Albany,CA,Moderate,1390,positive,2/8/2021,death
+10388,2/7/2021,488,5,Female,other,Government/police,Agoura Hills,CA,No symptoms,1388,positive,2/8/2021,infected
+10389,2/7/2021,489,4,Male,Asian,Other,Alameda,CA,No symptoms,1389,positive,2/8/2021,infected
+10390,2/7/2021,490,84,Male,Non-Hispanic white,Other,Albany,CA,Moderate,1390,positive,2/8/2021,recovered
 10391,2/7/2021,491,111,Male,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1391,positive,2/8/2021,recovered
 10392,2/7/2021,492,38,Male,Asian,Health Care,Adelanto,CA,No symptoms,1392,positive,2/8/2021,recovered
 10393,2/7/2021,493,112,Female,Asian,Health Care,Agoura Hills,CA,Moderate,1393,positive,2/8/2021,recovered
 10394,2/7/2021,494,66,Female,Black/African American,Health Care,Alameda,CA,No symptoms,1394,positive,2/8/2021,recovered
-10395,2/7/2021,495,79,Female,Black/African American,Sales,Albany,CA,Moderate,1395,positive,2/8/2021,recovered
-10396,2/7/2021,496,51,Female,Black/African American,Sales,Alhambra,CA,Severe,1396,positive,2/8/2021,recovered
-10397,2/7/2021,497,24,Female,Hispanic,Sales,Adelanto,CA,Mild,1397,positive,2/8/2021,recovered
-10398,2/7/2021,498,109,Male,Hispanic,Sales,Agoura Hills,CA,Severe,1398,positive,2/8/2021,hospitalized
-10399,2/7/2021,499,99,Male,Hispanic,Transportation,Alameda,CA,Moderate,1399,positive,2/8/2021,hospitalized
-10400,2/7/2021,500,6,Male,Non-Hispanic white,Transportation,Albany,CA,No symptoms,1400,positive,2/8/2021,death
+10395,2/7/2021,495,79,Female,Black/African American,Sales,Albany,CA,Moderate,1395,positive,2/8/2021,hospitalized
+10396,2/7/2021,496,51,Female,Black/African American,Sales,Alhambra,CA,Severe,1396,positive,2/8/2021,hospitalized
+10397,2/7/2021,497,24,Female,Hispanic,Sales,Adelanto,CA,Mild,1397,positive,2/8/2021,death
+10398,2/7/2021,498,109,Male,Hispanic,Sales,Agoura Hills,CA,Severe,1398,positive,2/8/2021,infected
+10399,2/7/2021,499,99,Male,Hispanic,Transportation,Alameda,CA,Moderate,1399,positive,2/8/2021,infected
+10400,2/7/2021,500,6,Male,Non-Hispanic white,Transportation,Albany,CA,No symptoms,1400,positive,2/8/2021,recovered
 10401,2/7/2021,501,70,Male,Asian,Transportation,Alhambra,CA,Moderate,1401,positive,2/8/2021,recovered
 10402,2/7/2021,502,66,Male,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1402,positive,2/8/2021,recovered
 10403,2/7/2021,503,38,Male,Asian,Government/police,Agoura Hills,CA,No symptoms,1403,positive,2/8/2021,recovered
 10404,2/7/2021,504,65,Female,Black/African American,Other,Alameda,CA,No symptoms,1404,positive,2/8/2021,recovered
-10405,2/7/2021,505,58,Male,Black/African American,Other,Albany,CA,Mild,1405,positive,2/8/2021,recovered
-10406,2/7/2021,506,58,Female,Hispanic,Health Care,Alhambra,CA,Moderate,1406,positive,2/8/2021,recovered
+10405,2/7/2021,505,58,Male,Black/African American,Other,Albany,CA,Mild,1405,positive,2/8/2021,hospitalized
+10406,2/7/2021,506,58,Female,Hispanic,Health Care,Alhambra,CA,Moderate,1406,positive,2/8/2021,hospitalized
 10407,2/7/2021,507,65,Female,Hispanic,Health Care,Adelanto,CA,Severe,1407,positive,2/8/2021,recovered
-10408,2/6/2021,508,99,Male,Black/African American,Health Care,Agoura Hills,CA,Severe,1408,positive,2/7/2021,hospitalized
-10409,2/6/2021,509,87,Male,Black/African American,Health Care,Alameda,CA,Severe,1409,positive,2/7/2021,hospitalized
-10410,2/6/2021,510,76,Female,Black/African American,Sales,Albany,CA,Moderate,1410,positive,2/7/2021,death
+10408,2/6/2021,508,99,Male,Black/African American,Health Care,Agoura Hills,CA,Severe,1408,positive,2/7/2021,infected
+10409,2/6/2021,509,87,Male,Black/African American,Health Care,Alameda,CA,Severe,1409,positive,2/7/2021,infected
+10410,2/6/2021,510,76,Female,Black/African American,Sales,Albany,CA,Moderate,1410,positive,2/7/2021,recovered
 10411,2/6/2021,511,84,Female,Black/African American,Sales,Alhambra,CA,Mild,1411,positive,2/7/2021,recovered
 10412,2/6/2021,512,78,Female,Hispanic,Sales,Adelanto,CA,Mild,1412,positive,2/7/2021,recovered
 10413,2/6/2021,513,102,Male,Non-Hispanic white,Sales,Agoura Hills,CA,Moderate,1413,positive,2/7/2021,recovered
 10414,2/6/2021,514,6,Male,other,Transportation,Alameda,CA,Severe,1414,positive,2/7/2021,recovered
-10415,2/6/2021,515,73,Male,Asian,Transportation,Albany,CA,Mild,1415,positive,2/7/2021,recovered
-10416,2/6/2021,516,1,Female,Non-Hispanic white,Transportation,Alhambra,CA,No symptoms,1416,positive,2/7/2021,recovered
-10417,2/6/2021,517,16,Female,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1417,positive,2/7/2021,recovered
-10418,2/6/2021,518,21,Female,Asian,Government/police,Agoura Hills,CA,No symptoms,1418,positive,2/7/2021,hospitalized
-10419,2/6/2021,519,36,Female,Asian,Other,Alameda,CA,No symptoms,1419,positive,2/7/2021,hospitalized
-10420,2/6/2021,520,88,Male,Black/African American,Other,Albany,CA,No symptoms,1420,positive,2/7/2021,death
+10415,2/6/2021,515,73,Male,Asian,Transportation,Albany,CA,Mild,1415,positive,2/7/2021,hospitalized
+10416,2/6/2021,516,1,Female,Non-Hispanic white,Transportation,Alhambra,CA,No symptoms,1416,positive,2/7/2021,hospitalized
+10417,2/6/2021,517,16,Female,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1417,positive,2/7/2021,death
+10418,2/6/2021,518,21,Female,Asian,Government/police,Agoura Hills,CA,No symptoms,1418,positive,2/7/2021,infected
+10419,2/6/2021,519,36,Female,Asian,Other,Alameda,CA,No symptoms,1419,positive,2/7/2021,infected
+10420,2/6/2021,520,88,Male,Black/African American,Other,Albany,CA,No symptoms,1420,positive,2/7/2021,recovered
 10421,2/6/2021,521,54,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1421,positive,2/7/2021,recovered
 10422,2/6/2021,522,32,Male,Black/African American,Health Care,Adelanto,CA,No symptoms,1422,positive,2/7/2021,recovered
 10423,2/6/2021,523,96,Male,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1423,positive,2/7/2021,recovered
 10424,2/6/2021,524,17,Female,Hispanic,Health Care,Alameda,CA,Moderate,1424,positive,2/7/2021,recovered
-10425,2/6/2021,525,59,Female,Hispanic,Sales,Rush,CO,No symptoms,1425,positive,2/7/2021,recovered
-10426,2/6/2021,526,112,Female,Non-Hispanic white,Sales,Gilcrest,CO,Moderate,1426,positive,2/7/2021,recovered
+10425,2/6/2021,525,59,Female,Hispanic,Sales,Rush,CO,No symptoms,1425,positive,2/7/2021,hospitalized
+10426,2/6/2021,526,112,Female,Non-Hispanic white,Sales,Gilcrest,CO,Moderate,1426,positive,2/7/2021,hospitalized
 10427,2/6/2021,527,63,Female,Asian,Sales,Flen Haven,CO,Severe,1427,positive,2/7/2021,recovered
-10428,2/6/2021,528,81,Female,Non-Hispanic white,Sales,Mesita,CO,Mild,1428,positive,2/7/2021,hospitalized
-10429,2/6/2021,529,30,Male,Asian,Transportation,Pitkin,CO,Severe,1429,positive,2/7/2021,hospitalized
-10430,2/6/2021,530,106,Male,Black/African American,Transportation,Rush,CO,Moderate,1430,positive,2/7/2021,death
+10428,2/6/2021,528,81,Female,Non-Hispanic white,Sales,Mesita,CO,Mild,1428,positive,2/7/2021,infected
+10429,2/6/2021,529,30,Male,Asian,Transportation,Pitkin,CO,Severe,1429,positive,2/7/2021,infected
+10430,2/6/2021,530,106,Male,Black/African American,Transportation,Rush,CO,Moderate,1430,positive,2/7/2021,recovered
 10431,2/5/2021,531,84,Male,Black/African American,Transportation,Gilcrest,CO,No symptoms,1431,positive,2/6/2021,recovered
 10432,2/5/2021,532,46,Male,Hispanic,Government/police,Flen Haven,CO,Moderate,1432,positive,2/6/2021,recovered
 10433,2/5/2021,533,72,Male,Hispanic,Government/police,Mesita,CO,No symptoms,1433,positive,2/6/2021,recovered
 10434,2/5/2021,534,48,Male,Black/African American,Other,Pitkin,CO,No symptoms,1434,positive,2/6/2021,recovered
-10435,2/5/2021,535,18,Female,Black/African American,Other,Rush,CO,No symptoms,1435,positive,2/6/2021,recovered
-10436,2/5/2021,536,31,Male,Black/African American,Health Care,Gilcrest,CO,Mild,1436,positive,2/6/2021,recovered
-10437,2/5/2021,537,87,Female,Black/African American,Health Care,Flen Haven,CO,Moderate,1437,positive,2/6/2021,recovered
-10438,2/5/2021,538,28,Female,Hispanic,Health Care,Mesita,CO,Severe,1438,positive,2/6/2021,hospitalized
-10439,2/5/2021,539,106,Male,Non-Hispanic white,Health Care,Pitkin,CO,Severe,1439,positive,2/6/2021,hospitalized
-10440,2/5/2021,540,24,Male,other,Sales,Rush,CO,Severe,1440,positive,2/6/2021,death
+10435,2/5/2021,535,18,Female,Black/African American,Other,Rush,CO,No symptoms,1435,positive,2/6/2021,hospitalized
+10436,2/5/2021,536,31,Male,Black/African American,Health Care,Gilcrest,CO,Mild,1436,positive,2/6/2021,hospitalized
+10437,2/5/2021,537,87,Female,Black/African American,Health Care,Flen Haven,CO,Moderate,1437,positive,2/6/2021,death
+10438,2/5/2021,538,28,Female,Hispanic,Health Care,Mesita,CO,Severe,1438,positive,2/6/2021,infected
+10439,2/5/2021,539,106,Male,Non-Hispanic white,Health Care,Pitkin,CO,Severe,1439,positive,2/6/2021,recovered
+10440,2/5/2021,540,24,Male,other,Sales,Rush,CO,Severe,1440,positive,2/6/2021,recovered
 10441,2/5/2021,541,71,Female,Asian,Sales,Gilcrest,CO,Moderate,1441,positive,2/6/2021,recovered
 10442,2/5/2021,542,83,Female,Non-Hispanic white,Sales,Flen Haven,CO,Mild,1442,positive,2/6/2021,recovered
 10443,2/5/2021,543,71,Female,Non-Hispanic white,Sales,Mesita,CO,Mild,1443,positive,2/6/2021,recovered
 10444,2/5/2021,544,105,Male,Asian,Transportation,Pitkin,CO,Moderate,1444,positive,2/6/2021,recovered
-10445,2/5/2021,545,66,Male,Asian,Transportation,Rush,CO,Severe,1445,positive,2/6/2021,recovered
-10446,2/5/2021,546,32,Male,Black/African American,Transportation,Gilcrest,CO,Mild,1446,positive,2/6/2021,recovered
+10445,2/5/2021,545,66,Male,Asian,Transportation,Rush,CO,Severe,1445,positive,2/6/2021,hospitalized
+10446,2/5/2021,546,32,Male,Black/African American,Transportation,Gilcrest,CO,Mild,1446,positive,2/6/2021,hospitalized
 10447,2/5/2021,547,26,Female,Black/African American,Government/police,Flen Haven,CO,No symptoms,1447,positive,2/6/2021,recovered
-10448,2/5/2021,548,61,Female,Black/African American,Government/police,Mesita,CO,No symptoms,1448,positive,2/6/2021,hospitalized
-10449,2/5/2021,549,99,Female,Hispanic,Other,Pitkin,CO,No symptoms,1449,positive,2/6/2021,hospitalized
-10450,2/5/2021,550,93,Female,Hispanic,Other,Rush,CO,No symptoms,1450,positive,2/6/2021,death
+10448,2/5/2021,548,61,Female,Black/African American,Government/police,Mesita,CO,No symptoms,1448,positive,2/6/2021,infected
+10449,2/5/2021,549,99,Female,Hispanic,Other,Pitkin,CO,No symptoms,1449,positive,2/6/2021,recovered
+10450,2/5/2021,550,93,Female,Hispanic,Other,Rush,CO,No symptoms,1450,positive,2/6/2021,recovered
 10451,2/5/2021,551,44,Male,Hispanic,Health Care,Gilcrest,CO,No symptoms,1451,positive,2/6/2021,recovered
 10452,2/5/2021,552,50,Male,Non-Hispanic white,Health Care,Flen Haven,CO,Moderate,1452,positive,2/6/2021,recovered
 10453,2/5/2021,553,77,Male,Asian,Health Care,Mesita,CO,No symptoms,1453,positive,2/6/2021,recovered
 10454,2/5/2021,554,112,Male,Non-Hispanic white,Health Care,Pitkin,CO,No symptoms,1454,positive,2/6/2021,recovered
-10455,2/5/2021,555,81,Female,Asian,Sales,Rush,CO,Moderate,1455,positive,2/6/2021,recovered
-10456,2/5/2021,556,89,Female,Black/African American,Sales,Gilcrest,CO,No symptoms,1456,positive,2/6/2021,recovered
-10457,2/4/2021,557,110,Female,Black/African American,Sales,Flen Haven,CO,Moderate,1457,positive,2/5/2021,recovered
-10458,2/4/2021,558,94,Female,Hispanic,Sales,Mesita,CO,Severe,1458,positive,2/5/2021,hospitalized
-10459,2/4/2021,559,11,Female,Hispanic,Transportation,Pitkin,CO,Mild,1459,positive,2/5/2021,hospitalized
-10460,2/4/2021,560,34,Male,Black/African American,Transportation,Rush,CO,Severe,1460,positive,2/5/2021,death
+10455,2/5/2021,555,81,Female,Asian,Sales,Rush,CO,Moderate,1455,positive,2/6/2021,hospitalized
+10456,2/5/2021,556,89,Female,Black/African American,Sales,Gilcrest,CO,No symptoms,1456,positive,2/6/2021,hospitalized
+10457,2/4/2021,557,110,Female,Black/African American,Sales,Flen Haven,CO,Moderate,1457,positive,2/5/2021,death
+10458,2/4/2021,558,94,Female,Hispanic,Sales,Mesita,CO,Severe,1458,positive,2/5/2021,infected
+10459,2/4/2021,559,11,Female,Hispanic,Transportation,Pitkin,CO,Mild,1459,positive,2/5/2021,recovered
+10460,2/4/2021,560,34,Male,Black/African American,Transportation,Rush,CO,Severe,1460,positive,2/5/2021,recovered
 10461,2/4/2021,561,94,Male,Black/African American,Transportation,Canton,CO,Moderate,1461,positive,2/5/2021,recovered
 10462,2/4/2021,562,26,Male,Black/African American,Government/police,Wallongford,CT,No symptoms,1462,positive,2/5/2021,recovered
 10463,2/4/2021,563,78,Male,Black/African American,Government/police,Niantic,CT,Moderate,1463,positive,2/5/2021,recovered
 10464,2/4/2021,564,101,Male,Hispanic,Other,Stonington,CT,No symptoms,1464,positive,2/5/2021,recovered
-10465,2/4/2021,565,71,Male,Non-Hispanic white,Other,Hatrtford,CT,No symptoms,1465,positive,2/5/2021,recovered
-10466,2/4/2021,566,85,Female,other,Health Care,Canton,CT,No symptoms,1466,positive,2/5/2021,recovered
+10465,2/4/2021,565,71,Male,Non-Hispanic white,Other,Hatrtford,CT,No symptoms,1465,positive,2/5/2021,hospitalized
+10466,2/4/2021,566,85,Female,other,Health Care,Canton,CT,No symptoms,1466,positive,2/5/2021,hospitalized
 10467,2/4/2021,567,104,Male,Asian,Health Care,Wallongford,CT,Mild,1467,positive,2/5/2021,recovered
-10468,2/4/2021,568,21,Female,Non-Hispanic white,Health Care,Niantic,CT,Moderate,1468,positive,2/5/2021,hospitalized
-10469,2/4/2021,569,98,Female,Non-Hispanic white,Health Care,Stonington,CT,Severe,1469,positive,2/5/2021,hospitalized
-10470,2/4/2021,570,70,Male,Asian,Sales,Hatrtford,CT,Severe,1470,positive,2/5/2021,death
+10468,2/4/2021,568,21,Female,Non-Hispanic white,Health Care,Niantic,CT,Moderate,1468,positive,2/5/2021,infected
+10469,2/4/2021,569,98,Female,Non-Hispanic white,Health Care,Stonington,CT,Severe,1469,positive,2/5/2021,recovered
+10470,2/4/2021,570,70,Male,Asian,Sales,Hatrtford,CT,Severe,1470,positive,2/5/2021,recovered
 10471,2/4/2021,571,100,Male,Asian,Sales,Canton,CT,Severe,1471,positive,2/5/2021,recovered
 10472,2/4/2021,572,54,Female,Black/African American,Sales,Wallongford,CT,Moderate,1472,positive,2/5/2021,recovered
 10473,2/4/2021,573,64,Female,Black/African American,Sales,Niantic,CT,Mild,1473,positive,2/5/2021,recovered
 10474,2/4/2021,574,5,Female,Black/African American,Transportation,Stonington,CT,Mild,1474,positive,2/5/2021,recovered
-10475,2/4/2021,575,8,Male,Hispanic,Transportation,Hatrtford,CT,Moderate,1475,positive,2/5/2021,recovered
-10476,2/4/2021,576,21,Male,Hispanic,Transportation,Canton,CT,Severe,1476,positive,2/5/2021,recovered
-10477,2/4/2021,577,108,Male,Hispanic,Government/police,Wallongford,CT,Mild,1477,positive,2/5/2021,recovered
-10478,2/4/2021,578,12,Female,Non-Hispanic white,Government/police,Niantic,CT,No symptoms,1478,positive,2/5/2021,hospitalized
-10479,2/4/2021,579,2,Female,Asian,Other,Stonington,CT,No symptoms,1479,positive,2/5/2021,hospitalized
-10480,2/4/2021,580,80,Female,Non-Hispanic white,Other,Hatrtford,CT,No symptoms,1480,positive,2/5/2021,death
+10475,2/4/2021,575,8,Male,Hispanic,Transportation,Hatrtford,CT,Moderate,1475,positive,2/5/2021,hospitalized
+10476,2/4/2021,576,21,Male,Hispanic,Transportation,Canton,CT,Severe,1476,positive,2/5/2021,hospitalized
+10477,2/4/2021,577,108,Male,Hispanic,Government/police,Wallongford,CT,Mild,1477,positive,2/5/2021,death
+10478,2/4/2021,578,12,Female,Non-Hispanic white,Government/police,Niantic,CT,No symptoms,1478,positive,2/5/2021,infected
+10479,2/4/2021,579,2,Female,Asian,Other,Stonington,CT,No symptoms,1479,positive,2/5/2021,recovered
+10480,2/4/2021,580,80,Female,Non-Hispanic white,Other,Hatrtford,CT,No symptoms,1480,positive,2/5/2021,recovered
 10481,2/3/2021,581,92,Female,Asian,Health Care,Canton,CT,No symptoms,1481,positive,2/4/2021,recovered
 10482,2/3/2021,582,58,Male,Black/African American,Health Care,Wallongford,CT,No symptoms,1482,positive,2/4/2021,recovered
 10483,2/3/2021,583,47,Male,Black/African American,Health Care,Niantic,CT,Moderate,1483,positive,2/4/2021,recovered
 10484,2/3/2021,584,78,Male,Hispanic,Health Care,Stonington,CT,No symptoms,1484,positive,2/4/2021,recovered
-10485,2/3/2021,585,1,Male,Hispanic,Sales,Hatrtford,CT,No symptoms,1485,positive,2/4/2021,recovered
-10486,2/3/2021,586,62,Female,Black/African American,Sales,Canton,CT,Moderate,1486,positive,2/4/2021,recovered
+10485,2/3/2021,585,1,Male,Hispanic,Sales,Hatrtford,CT,No symptoms,1485,positive,2/4/2021,hospitalized
+10486,2/3/2021,586,62,Female,Black/African American,Sales,Canton,CT,Moderate,1486,positive,2/4/2021,hospitalized
 10487,2/3/2021,587,44,Female,Black/African American,Sales,Bethal,DE,No symptoms,1487,positive,2/4/2021,recovered
-10488,2/3/2021,588,102,Female,Black/African American,Sales,Clayton,DE,Moderate,1488,positive,2/4/2021,hospitalized
-10489,2/3/2021,589,102,Female,Black/African American,Transportation,Slaughter Beach,DE,Severe,1489,positive,2/4/2021,hospitalized
-10490,2/3/2021,590,97,Female,Hispanic,Transportation,Bowers,DE,Mild,1490,positive,2/4/2021,death
+10488,2/3/2021,588,102,Female,Black/African American,Sales,Clayton,DE,Moderate,1488,positive,2/4/2021,infected
+10489,2/3/2021,589,102,Female,Black/African American,Transportation,Slaughter Beach,DE,Severe,1489,positive,2/4/2021,recovered
+10490,2/3/2021,590,97,Female,Hispanic,Transportation,Bowers,DE,Mild,1490,positive,2/4/2021,recovered
 10491,2/3/2021,591,112,Male,Non-Hispanic white,Transportation,Georgetown,DE,Severe,1491,positive,2/4/2021,recovered
 10492,2/3/2021,592,73,Male,other,Government/police,Bethal,DE,Moderate,1492,positive,2/4/2021,recovered
 10493,2/3/2021,593,108,Male,Asian,Government/police,Clayton,DE,No symptoms,1493,positive,2/4/2021,recovered
 10494,2/3/2021,594,80,Male,Non-Hispanic white,Other,Apopka,FL,Moderate,1494,positive,2/4/2021,recovered
-10495,2/3/2021,595,4,Male,Non-Hispanic white,Other,Arcadia,FL,No symptoms,1495,positive,2/4/2021,recovered
-10496,2/3/2021,596,34,Male,Asian,Health Care,Archer,FL,No symptoms,1496,positive,2/4/2021,recovered
-10497,2/3/2021,597,82,Female,Asian,Health Care,Astatula,FL,No symptoms,1497,positive,2/4/2021,recovered
-10498,2/3/2021,598,4,Male,Black/African American,Health Care,Atlantic Beach,FL,Mild,1498,positive,2/4/2021,hospitalized
-10499,2/3/2021,599,50,Female,Black/African American,Health Care,Apopka,FL,Moderate,1499,positive,2/4/2021,hospitalized
-10500,2/3/2021,600,74,Female,Black/African American,Sales,Arcadia,FL,Severe,1500,positive,2/4/2021,death
+10495,2/3/2021,595,4,Male,Non-Hispanic white,Other,Arcadia,FL,No symptoms,1495,positive,2/4/2021,hospitalized
+10496,2/3/2021,596,34,Male,Asian,Health Care,Archer,FL,No symptoms,1496,positive,2/4/2021,hospitalized
+10497,2/3/2021,597,82,Female,Asian,Health Care,Astatula,FL,No symptoms,1497,positive,2/4/2021,death
+10498,2/3/2021,598,4,Male,Black/African American,Health Care,Atlantic Beach,FL,Mild,1498,positive,2/4/2021,infected
+10499,2/3/2021,599,50,Female,Black/African American,Health Care,Apopka,FL,Moderate,1499,positive,2/4/2021,recovered
+10500,2/3/2021,600,74,Female,Black/African American,Sales,Arcadia,FL,Severe,1500,positive,2/4/2021,recovered
 10501,2/3/2021,601,78,Male,Hispanic,Sales,Archer,FL,Severe,1501,positive,2/4/2021,recovered
 10502,2/3/2021,602,35,Male,Hispanic,Sales,Astatula,FL,Severe,1502,positive,2/4/2021,recovered
 10503,2/2/2021,603,52,Female,Hispanic,Sales,Atlantic Beach,FL,Moderate,1503,positive,2/3/2021,recovered
 10504,2/2/2021,604,92,Female,Non-Hispanic white,Transportation,Apopka,FL,Mild,1504,positive,2/3/2021,recovered
-10505,2/2/2021,605,77,Female,Asian,Transportation,Arcadia,FL,Mild,1505,positive,2/3/2021,recovered
-10506,2/2/2021,606,13,Male,Non-Hispanic white,Transportation,Archer,FL,Moderate,1506,positive,2/3/2021,recovered
+10505,2/2/2021,605,77,Female,Asian,Transportation,Arcadia,FL,Mild,1505,positive,2/3/2021,hospitalized
+10506,2/2/2021,606,13,Male,Non-Hispanic white,Transportation,Archer,FL,Moderate,1506,positive,2/3/2021,hospitalized
 10507,2/2/2021,607,52,Male,Asian,Government/police,Astatula,FL,Severe,1507,positive,2/3/2021,recovered
-10508,2/2/2021,608,84,Male,Black/African American,Government/police,Atlantic Beach,FL,Mild,1508,positive,2/3/2021,hospitalized
-10509,2/2/2021,609,64,Female,Black/African American,Other,Apopka,FL,No symptoms,1509,positive,2/3/2021,hospitalized
-10510,2/2/2021,610,31,Female,Hispanic,Other,Arcadia,FL,No symptoms,1510,positive,2/3/2021,death
+10508,2/2/2021,608,84,Male,Black/African American,Government/police,Atlantic Beach,FL,Mild,1508,positive,2/3/2021,infected
+10509,2/2/2021,609,64,Female,Black/African American,Other,Apopka,FL,No symptoms,1509,positive,2/3/2021,recovered
+10510,2/2/2021,610,31,Female,Hispanic,Other,Arcadia,FL,No symptoms,1510,positive,2/3/2021,recovered
 10511,2/2/2021,611,6,Female,Hispanic,Health Care,Archer,FL,No symptoms,1511,positive,2/3/2021,recovered
 10512,2/2/2021,612,103,Female,Black/African American,Health Care,Astatula,FL,No symptoms,1512,positive,2/3/2021,recovered
 10513,2/2/2021,613,22,Male,Black/African American,Health Care,Atlantic Beach,FL,No symptoms,1513,positive,2/3/2021,recovered
 10514,2/2/2021,614,44,Male,Black/African American,Health Care,Apopka,FL,Moderate,1514,positive,2/3/2021,recovered
-10515,2/2/2021,615,23,Male,Black/African American,Sales,Arcadia,FL,No symptoms,1515,positive,2/3/2021,recovered
-10516,2/2/2021,616,19,Male,Hispanic,Sales,Archer,FL,No symptoms,1516,positive,2/3/2021,recovered
-10517,2/2/2021,617,92,Female,Non-Hispanic white,Sales,Astatula,FL,Moderate,1517,positive,2/3/2021,recovered
-10518,2/2/2021,618,59,Female,other,Sales,Atlantic Beach,FL,No symptoms,1518,positive,2/3/2021,hospitalized
-10519,2/2/2021,619,44,Female,Asian,Transportation,Apopka,FL,Moderate,1519,positive,2/3/2021,hospitalized
-10520,2/2/2021,620,29,Female,Non-Hispanic white,Transportation,Arcadia,FL,Severe,1520,positive,2/3/2021,death
+10515,2/2/2021,615,23,Male,Black/African American,Sales,Arcadia,FL,No symptoms,1515,positive,2/3/2021,hospitalized
+10516,2/2/2021,616,19,Male,Hispanic,Sales,Archer,FL,No symptoms,1516,positive,2/3/2021,hospitalized
+10517,2/2/2021,617,92,Female,Non-Hispanic white,Sales,Astatula,FL,Moderate,1517,positive,2/3/2021,death
+10518,2/2/2021,618,59,Female,other,Sales,Atlantic Beach,FL,No symptoms,1518,positive,2/3/2021,infected
+10519,2/2/2021,619,44,Female,Asian,Transportation,Apopka,FL,Moderate,1519,positive,2/3/2021,recovered
+10520,2/2/2021,620,29,Female,Non-Hispanic white,Transportation,Arcadia,FL,Severe,1520,positive,2/3/2021,recovered
 10521,2/2/2021,621,25,Female,Non-Hispanic white,Transportation,Archer,FL,Mild,1521,positive,2/3/2021,recovered
 10522,2/2/2021,622,20,Male,Asian,Government/police,Astatula,FL,Severe,1522,positive,2/3/2021,recovered
 10523,2/2/2021,623,42,Male,Asian,Government/police,Atlantic Beach,FL,Moderate,1523,positive,2/3/2021,recovered
 10524,2/2/2021,624,61,Male,Black/African American,Other,Apopka,FL,No symptoms,1524,positive,2/3/2021,recovered
-10525,2/2/2021,625,98,Male,Black/African American,Other,Arcadia,FL,Moderate,1525,positive,2/3/2021,recovered
-10526,2/2/2021,626,6,Male,Black/African American,Health Care,Archer,FL,No symptoms,1526,positive,2/3/2021,recovered
+10525,2/2/2021,625,98,Male,Black/African American,Other,Arcadia,FL,Moderate,1525,positive,2/3/2021,hospitalized
+10526,2/2/2021,626,6,Male,Black/African American,Health Care,Archer,FL,No symptoms,1526,positive,2/3/2021,hospitalized
 10527,2/2/2021,627,66,Male,Hispanic,Health Care,Astatula,FL,No symptoms,1527,positive,2/3/2021,recovered
-10528,2/2/2021,628,27,Female,Hispanic,Health Care,Atlantic Beach,FL,No symptoms,1528,positive,2/3/2021,hospitalized
-10529,2/1/2021,629,54,Male,Hispanic,Health Care,Apopka,FL,Mild,1529,positive,2/2/2021,hospitalized
-10530,2/1/2021,630,96,Female,Non-Hispanic white,Sales,Arcadia,FL,Moderate,1530,positive,2/2/2021,death
+10528,2/2/2021,628,27,Female,Hispanic,Health Care,Atlantic Beach,FL,No symptoms,1528,positive,2/3/2021,infected
+10529,2/1/2021,629,54,Male,Hispanic,Health Care,Apopka,FL,Mild,1529,positive,2/2/2021,recovered
+10530,2/1/2021,630,96,Female,Non-Hispanic white,Sales,Arcadia,FL,Moderate,1530,positive,2/2/2021,recovered
 10531,2/1/2021,631,112,Female,Asian,Sales,Archer,FL,Severe,1531,positive,2/2/2021,recovered
 10532,2/1/2021,632,99,Male,Non-Hispanic white,Sales,Astatula,FL,Severe,1532,positive,2/2/2021,recovered
 10533,2/1/2021,633,81,Male,Asian,Sales,Atlantic Beach,FL,Severe,1533,positive,2/2/2021,recovered
 10534,2/1/2021,634,52,Female,Black/African American,Transportation,Apopka,FL,Moderate,1534,positive,2/2/2021,recovered
-10535,2/1/2021,635,104,Female,Black/African American,Transportation,Arcadia,FL,Mild,1535,positive,2/2/2021,recovered
-10536,2/1/2021,636,61,Female,Hispanic,Transportation,Archer,FL,Mild,1536,positive,2/2/2021,recovered
-10537,2/1/2021,637,67,Male,Hispanic,Government/police,Astatula,FL,Moderate,1537,positive,2/2/2021,recovered
-10538,2/1/2021,638,49,Male,Black/African American,Government/police,Atlantic Beach,FL,Severe,1538,positive,2/2/2021,hospitalized
-10539,2/1/2021,639,81,Male,Black/African American,Other,Apopka,FL,Mild,1539,positive,2/2/2021,hospitalized
-10540,2/1/2021,640,1,Female,Black/African American,Other,Arcadia,FL,No symptoms,1540,positive,2/2/2021,death
+10535,2/1/2021,635,104,Female,Black/African American,Transportation,Arcadia,FL,Mild,1535,positive,2/2/2021,hospitalized
+10536,2/1/2021,636,61,Female,Hispanic,Transportation,Archer,FL,Mild,1536,positive,2/2/2021,hospitalized
+10537,2/1/2021,637,67,Male,Hispanic,Government/police,Astatula,FL,Moderate,1537,positive,2/2/2021,death
+10538,2/1/2021,638,49,Male,Black/African American,Government/police,Atlantic Beach,FL,Severe,1538,positive,2/2/2021,infected
+10539,2/1/2021,639,81,Male,Black/African American,Other,Apopka,FL,Mild,1539,positive,2/2/2021,recovered
+10540,2/1/2021,640,1,Female,Black/African American,Other,Arcadia,FL,No symptoms,1540,positive,2/2/2021,recovered
 10541,2/1/2021,641,4,Female,Black/African American,Health Care,Archer,FL,No symptoms,1541,positive,2/2/2021,recovered
 10542,2/1/2021,642,43,Female,Hispanic,Health Care,Astatula,FL,No symptoms,1542,positive,2/2/2021,recovered
 10543,2/1/2021,643,88,Female,Non-Hispanic white,Health Care,Atlantic Beach,FL,No symptoms,1543,positive,2/2/2021,recovered
 10544,2/1/2021,644,105,Male,other,Health Care,Apopka,FL,No symptoms,1544,positive,2/2/2021,recovered
-10545,2/1/2021,645,35,Male,Asian,Sales,Arcadia,FL,Moderate,1545,positive,2/2/2021,recovered
-10546,2/1/2021,646,27,Male,Non-Hispanic white,Sales,Archer,FL,No symptoms,1546,positive,2/2/2021,recovered
+10545,2/1/2021,645,35,Male,Asian,Sales,Arcadia,FL,Moderate,1545,positive,2/2/2021,hospitalized
+10546,2/1/2021,646,27,Male,Non-Hispanic white,Sales,Archer,FL,No symptoms,1546,positive,2/2/2021,hospitalized
 10547,2/1/2021,647,49,Male,Non-Hispanic white,Sales,Astatula,FL,No symptoms,1547,positive,2/2/2021,recovered
-10548,2/1/2021,648,22,Female,Asian,Sales,Atlantic Beach,FL,Moderate,1548,positive,2/2/2021,hospitalized
-10549,2/1/2021,649,25,Female,Asian,Transportation,Apopka,FL,No symptoms,1549,positive,2/2/2021,hospitalized
-10550,1/31/2021,650,95,Female,Black/African American,Transportation,Arcadia,FL,Moderate,1550,positive,2/1/2021,death
+10548,2/1/2021,648,22,Female,Asian,Sales,Atlantic Beach,FL,Moderate,1548,positive,2/2/2021,infected
+10549,2/1/2021,649,25,Female,Asian,Transportation,Apopka,FL,No symptoms,1549,positive,2/2/2021,recovered
+10550,1/31/2021,650,95,Female,Black/African American,Transportation,Arcadia,FL,Moderate,1550,positive,2/1/2021,recovered
 10551,1/31/2021,651,60,Female,Black/African American,Transportation,Archer,FL,Severe,1551,positive,2/1/2021,recovered
 10552,1/31/2021,652,83,Female,Black/African American,Government/police,Astatula,FL,Mild,1552,positive,2/1/2021,recovered
 10553,1/31/2021,653,85,Male,Hispanic,Government/police,Atlantic Beach,FL,Severe,1553,positive,2/1/2021,recovered
 10554,1/31/2021,654,37,Male,Hispanic,Other,Apopka,FL,Moderate,1554,positive,2/1/2021,recovered
-10555,1/31/2021,655,73,Male,Hispanic,Other,Arcadia,FL,No symptoms,1555,positive,2/1/2021,recovered
-10556,1/31/2021,656,60,Male,Non-Hispanic white,Health Care,Archer,FL,Moderate,1556,positive,2/1/2021,recovered
-10557,1/31/2021,657,80,Male,Asian,Health Care,Astatula,FL,No symptoms,1557,positive,2/1/2021,recovered
-10558,1/31/2021,658,65,Male,Non-Hispanic white,Health Care,Atlantic Beach,FL,No symptoms,1558,positive,2/1/2021,hospitalized
-10559,1/31/2021,659,109,Female,Asian,Health Care,Apopka,FL,No symptoms,1559,positive,2/1/2021,hospitalized
-10560,1/31/2021,660,19,Male,Black/African American,Sales,Arcadia,FL,Mild,1560,positive,2/1/2021,death
+10555,1/31/2021,655,73,Male,Hispanic,Other,Arcadia,FL,No symptoms,1555,positive,2/1/2021,hospitalized
+10556,1/31/2021,656,60,Male,Non-Hispanic white,Health Care,Archer,FL,Moderate,1556,positive,2/1/2021,hospitalized
+10557,1/31/2021,657,80,Male,Asian,Health Care,Astatula,FL,No symptoms,1557,positive,2/1/2021,death
+10558,1/31/2021,658,65,Male,Non-Hispanic white,Health Care,Atlantic Beach,FL,No symptoms,1558,positive,2/1/2021,infected
+10559,1/31/2021,659,109,Female,Asian,Health Care,Apopka,FL,No symptoms,1559,positive,2/1/2021,recovered
+10560,1/31/2021,660,19,Male,Black/African American,Sales,Arcadia,FL,Mild,1560,positive,2/1/2021,recovered
 10561,1/31/2021,661,88,Female,Black/African American,Sales,Archer,FL,Moderate,1561,positive,2/1/2021,recovered
 10562,1/31/2021,662,102,Female,Hispanic,Sales,Astatula,FL,Severe,1562,positive,2/1/2021,recovered
 10563,1/31/2021,663,52,Male,Hispanic,Sales,Atlantic Beach,FL,Severe,1563,positive,2/1/2021,recovered
@@ -566,147 +566,147 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10565,1/31/2021,665,24,Female,Black/African American,Transportation,Arcadia,FL,Moderate,1565,positive,2/1/2021,recovered
 10566,1/31/2021,666,36,Female,Black/African American,Transportation,Archer,FL,Mild,1566,positive,2/1/2021,recovered
 10567,1/31/2021,667,12,Female,Black/African American,Government/police,Astatula,FL,Mild,1567,positive,2/1/2021,recovered
-10568,1/31/2021,668,29,Male,Hispanic,Government/police,Atlantic Beach,FL,Moderate,1568,positive,2/1/2021,hospitalized
-10569,1/31/2021,669,71,Male,Non-Hispanic white,Other,Apopka,FL,Severe,1569,positive,2/1/2021,hospitalized
-10570,1/31/2021,670,89,Male,other,Other,Arcadia,FL,Mild,1570,positive,2/1/2021,death
+10568,1/31/2021,668,29,Male,Hispanic,Government/police,Atlantic Beach,FL,Moderate,1568,positive,2/1/2021,infected
+10569,1/31/2021,669,71,Male,Non-Hispanic white,Other,Apopka,FL,Severe,1569,positive,2/1/2021,recovered
+10570,1/31/2021,670,89,Male,other,Other,Arcadia,FL,Mild,1570,positive,2/1/2021,recovered
 10571,1/31/2021,671,70,Female,Asian,Health Care,Archer,FL,No symptoms,1571,positive,2/1/2021,recovered
 10572,1/31/2021,672,49,Female,Non-Hispanic white,Health Care,Astatula,FL,No symptoms,1572,positive,2/1/2021,recovered
 10573,1/30/2021,673,48,Female,Non-Hispanic white,Health Care,Atlantic Beach,FL,No symptoms,1573,positive,1/31/2021,recovered
 10574,1/30/2021,674,2,Female,Asian,Health Care,Apopka,FL,No symptoms,1574,positive,1/31/2021,recovered
 10575,1/30/2021,675,6,Male,Asian,Sales,Arcadia,FL,No symptoms,1575,positive,1/31/2021,recovered
-10576,1/30/2021,676,6,Male,Black/African American,Sales,Archer,FL,Moderate,1576,positive,1/31/2021,recovered
-10577,1/30/2021,677,99,Male,Black/African American,Sales,Astatula,FL,No symptoms,1577,positive,1/31/2021,recovered
-10578,1/30/2021,678,53,Male,Black/African American,Sales,Atlantic Beach,FL,No symptoms,1578,positive,1/31/2021,hospitalized
-10579,1/30/2021,679,109,Female,Hispanic,Transportation,Apopka,FL,Moderate,1579,positive,1/31/2021,hospitalized
-10580,1/30/2021,680,3,Female,Hispanic,Transportation,Arcadia,FL,No symptoms,1580,positive,1/31/2021,death
+10576,1/30/2021,676,6,Male,Black/African American,Sales,Archer,FL,Moderate,1576,positive,1/31/2021,hospitalized
+10577,1/30/2021,677,99,Male,Black/African American,Sales,Astatula,FL,No symptoms,1577,positive,1/31/2021,death
+10578,1/30/2021,678,53,Male,Black/African American,Sales,Atlantic Beach,FL,No symptoms,1578,positive,1/31/2021,recovered
+10579,1/30/2021,679,109,Female,Hispanic,Transportation,Apopka,FL,Moderate,1579,positive,1/31/2021,recovered
+10580,1/30/2021,680,3,Female,Hispanic,Transportation,Arcadia,FL,No symptoms,1580,positive,1/31/2021,recovered
 10581,1/30/2021,681,45,Female,Hispanic,Transportation,Archer,FL,Moderate,1581,positive,1/31/2021,recovered
 10582,1/30/2021,682,97,Female,Non-Hispanic white,Government/police,Astatula,FL,Severe,1582,positive,1/31/2021,recovered
 10583,1/30/2021,683,36,Female,Asian,Government/police,Atlantic Beach,FL,Mild,1583,positive,1/31/2021,recovered
 10584,1/30/2021,684,15,Male,Non-Hispanic white,Other,Apopka,FL,Severe,1584,positive,1/31/2021,recovered
 10585,1/30/2021,685,41,Male,Asian,Other,Arcadia,FL,Moderate,1585,positive,1/31/2021,recovered
 10586,1/30/2021,686,8,Male,Black/African American,Health Care,Archer,FL,No symptoms,1586,positive,1/31/2021,recovered
-10587,1/30/2021,687,47,Male,Black/African American,Health Care,Astatula,FL,Moderate,1587,positive,1/31/2021,recovered
-10588,1/30/2021,688,36,Male,Hispanic,Health Care,Atlantic Beach,FL,No symptoms,1588,positive,1/31/2021,hospitalized
-10589,1/30/2021,689,41,Male,Hispanic,Health Care,Apopka,FL,No symptoms,1589,positive,1/31/2021,hospitalized
-10590,1/30/2021,690,55,Female,Black/African American,Sales,Arcadia,FL,No symptoms,1590,positive,1/31/2021,death
+10587,1/30/2021,687,47,Male,Black/African American,Health Care,Astatula,FL,Moderate,1587,positive,1/31/2021,infected
+10588,1/30/2021,688,36,Male,Hispanic,Health Care,Atlantic Beach,FL,No symptoms,1588,positive,1/31/2021,recovered
+10589,1/30/2021,689,41,Male,Hispanic,Health Care,Apopka,FL,No symptoms,1589,positive,1/31/2021,recovered
+10590,1/30/2021,690,55,Female,Black/African American,Sales,Arcadia,FL,No symptoms,1590,positive,1/31/2021,recovered
 10591,1/30/2021,691,62,Male,Black/African American,Sales,Archer,FL,Mild,1591,positive,1/31/2021,recovered
 10592,1/30/2021,692,44,Female,Black/African American,Sales,Astatula,FL,Moderate,1592,positive,1/31/2021,recovered
 10593,1/30/2021,693,49,Female,Black/African American,Sales,Atlantic Beach,FL,Severe,1593,positive,1/31/2021,recovered
 10594,1/29/2021,694,95,Male,Hispanic,Transportation,Apopka,FL,Severe,1594,positive,1/30/2021,recovered
-10595,1/29/2021,695,80,Male,Non-Hispanic white,Transportation,Arcadia,FL,Severe,1595,positive,1/30/2021,recovered
-10596,1/29/2021,696,59,Female,other,Transportation,Archer,FL,Moderate,1596,positive,1/30/2021,recovered
+10595,1/29/2021,695,80,Male,Non-Hispanic white,Transportation,Arcadia,FL,Severe,1595,positive,1/30/2021,hospitalized
+10596,1/29/2021,696,59,Female,other,Transportation,Archer,FL,Moderate,1596,positive,1/30/2021,death
 10597,1/29/2021,697,34,Female,Asian,Government/police,Astatula,FL,Mild,1597,positive,1/30/2021,recovered
-10598,1/29/2021,698,54,Female,Non-Hispanic white,Government/police,Atlantic Beach,FL,Mild,1598,positive,1/30/2021,hospitalized
-10599,1/29/2021,699,50,Male,Non-Hispanic white,Other,Apopka,FL,Moderate,1599,positive,1/30/2021,hospitalized
-10600,1/29/2021,700,33,Male,Asian,Other,Arcadia,FL,Severe,1600,positive,1/30/2021,death
+10598,1/29/2021,698,54,Female,Non-Hispanic white,Government/police,Atlantic Beach,FL,Mild,1598,positive,1/30/2021,recovered
+10599,1/29/2021,699,50,Male,Non-Hispanic white,Other,Apopka,FL,Moderate,1599,positive,1/30/2021,recovered
+10600,1/29/2021,700,33,Male,Asian,Other,Arcadia,FL,Severe,1600,positive,1/30/2021,recovered
 10601,1/29/2021,701,71,Male,Asian,Health Care,Archer,FL,Mild,1601,positive,1/30/2021,recovered
 10602,1/29/2021,702,103,Female,Black/African American,Health Care,Astatula,FL,No symptoms,1602,positive,1/30/2021,recovered
 10603,1/29/2021,703,76,Female,Black/African American,Health Care,Atlantic Beach,FL,No symptoms,1603,positive,1/30/2021,recovered
 10604,1/29/2021,704,20,Female,Black/African American,Health Care,Apopka,FL,No symptoms,1604,positive,1/30/2021,recovered
 10605,1/29/2021,705,63,Female,Hispanic,Sales,Arcadia,FL,No symptoms,1605,positive,1/30/2021,recovered
-10606,1/29/2021,706,86,Male,Hispanic,Sales,Archer,FL,No symptoms,1606,positive,1/30/2021,recovered
+10606,1/29/2021,706,86,Male,Hispanic,Sales,Archer,FL,No symptoms,1606,positive,1/30/2021,infected
 10607,1/29/2021,707,86,Male,Hispanic,Sales,Astatula,FL,Moderate,1607,positive,1/30/2021,recovered
-10608,1/29/2021,708,47,Male,Non-Hispanic white,Sales,Atlantic Beach,FL,No symptoms,1608,positive,1/30/2021,hospitalized
-10609,1/29/2021,709,44,Male,Asian,Transportation,Apopka,FL,No symptoms,1609,positive,1/30/2021,hospitalized
-10610,1/29/2021,710,45,Female,Non-Hispanic white,Transportation,Arcadia,FL,Moderate,1610,positive,1/30/2021,death
+10608,1/29/2021,708,47,Male,Non-Hispanic white,Sales,Atlantic Beach,FL,No symptoms,1608,positive,1/30/2021,recovered
+10609,1/29/2021,709,44,Male,Asian,Transportation,Apopka,FL,No symptoms,1609,positive,1/30/2021,recovered
+10610,1/29/2021,710,45,Female,Non-Hispanic white,Transportation,Arcadia,FL,Moderate,1610,positive,1/30/2021,recovered
 10611,1/29/2021,711,45,Female,Asian,Transportation,Archer,FL,No symptoms,1611,positive,1/30/2021,recovered
 10612,1/29/2021,712,4,Female,Black/African American,Government/police,Astatula,FL,Moderate,1612,positive,1/30/2021,recovered
 10613,1/29/2021,713,34,Female,Black/African American,Government/police,Atlantic Beach,FL,Severe,1613,positive,1/30/2021,recovered
-10614,1/29/2021,714,3,Female,Hispanic,Other,Apopka,FL,Mild,1614,positive,1/30/2021,recovered
-10615,1/29/2021,715,14,Male,Hispanic,Other,Arcadia,FL,Severe,1615,positive,1/30/2021,recovered
+10614,1/29/2021,714,3,Female,Hispanic,Other,Apopka,FL,Mild,1614,positive,1/30/2021,hospitalized
+10615,1/29/2021,715,14,Male,Hispanic,Other,Arcadia,FL,Severe,1615,positive,1/30/2021,death
 10616,1/29/2021,716,17,Male,Black/African American,Health Care,Archer,FL,Moderate,1616,positive,1/30/2021,recovered
 10617,1/29/2021,717,73,Male,Black/African American,Health Care,Astatula,FL,No symptoms,1617,positive,1/30/2021,recovered
-10618,1/28/2021,718,56,Male,Black/African American,Health Care,Atlantic Beach,FL,Moderate,1618,positive,1/29/2021,hospitalized
-10619,1/28/2021,719,81,Male,Black/African American,Health Care,Apopka,FL,No symptoms,1619,positive,1/29/2021,hospitalized
-10620,1/28/2021,720,74,Male,Hispanic,Sales,Arcadia,FL,No symptoms,1620,positive,1/29/2021,death
+10618,1/28/2021,718,56,Male,Black/African American,Health Care,Atlantic Beach,FL,Moderate,1618,positive,1/29/2021,recovered
+10619,1/28/2021,719,81,Male,Black/African American,Health Care,Apopka,FL,No symptoms,1619,positive,1/29/2021,recovered
+10620,1/28/2021,720,74,Male,Hispanic,Sales,Arcadia,FL,No symptoms,1620,positive,1/29/2021,recovered
 10621,1/28/2021,721,89,Female,Non-Hispanic white,Sales,Archer,FL,No symptoms,1621,positive,1/29/2021,recovered
 10622,1/28/2021,722,32,Male,other,Sales,Astatula,FL,Mild,1622,positive,1/29/2021,recovered
 10623,1/28/2021,723,89,Female,Asian,Sales,Atlantic Beach,FL,Moderate,1623,positive,1/29/2021,recovered
 10624,1/28/2021,724,44,Female,Non-Hispanic white,Transportation,Apopka,FL,Severe,1624,positive,1/29/2021,recovered
-10625,1/28/2021,725,112,Male,Non-Hispanic white,Transportation,Arcadia,FL,Severe,1625,positive,1/29/2021,recovered
+10625,1/28/2021,725,112,Male,Non-Hispanic white,Transportation,Arcadia,FL,Severe,1625,positive,1/29/2021,infected
 10626,1/28/2021,726,15,Male,Asian,Transportation,Archer,FL,Severe,1626,positive,1/29/2021,recovered
 10627,1/28/2021,727,31,Female,Asian,Government/police,Astatula,FL,Moderate,1627,positive,1/29/2021,recovered
-10628,1/28/2021,728,54,Female,Black/African American,Government/police,Atlantic Beach,FL,Mild,1628,positive,1/29/2021,hospitalized
-10629,1/28/2021,729,68,Female,Black/African American,Other,Apopka,FL,Mild,1629,positive,1/29/2021,hospitalized
-10630,1/28/2021,730,43,Male,Black/African American,Other,Arcadia,FL,Moderate,1630,positive,1/29/2021,death
+10628,1/28/2021,728,54,Female,Black/African American,Government/police,Atlantic Beach,FL,Mild,1628,positive,1/29/2021,recovered
+10629,1/28/2021,729,68,Female,Black/African American,Other,Apopka,FL,Mild,1629,positive,1/29/2021,recovered
+10630,1/28/2021,730,43,Male,Black/African American,Other,Arcadia,FL,Moderate,1630,positive,1/29/2021,recovered
 10631,1/28/2021,731,97,Male,Hispanic,Health Care,Archer,FL,Severe,1631,positive,1/29/2021,recovered
 10632,1/28/2021,732,111,Male,Hispanic,Health Care,Astatula,FL,Mild,1632,positive,1/29/2021,recovered
-10633,1/28/2021,733,16,Female,Hispanic,Health Care,Atlantic Beach,FL,No symptoms,1633,positive,1/29/2021,recovered
-10634,1/28/2021,734,66,Female,Non-Hispanic white,Health Care,Apopka,FL,No symptoms,1634,positive,1/29/2021,recovered
+10633,1/28/2021,733,16,Female,Hispanic,Health Care,Atlantic Beach,FL,No symptoms,1633,positive,1/29/2021,hospitalized
+10634,1/28/2021,734,66,Female,Non-Hispanic white,Health Care,Apopka,FL,No symptoms,1634,positive,1/29/2021,death
 10635,1/28/2021,735,58,Female,Asian,Sales,Arcadia,FL,No symptoms,1635,positive,1/29/2021,recovered
 10636,1/28/2021,736,97,Female,Non-Hispanic white,Sales,Archer,FL,No symptoms,1636,positive,1/29/2021,recovered
 10637,1/28/2021,737,82,Male,Asian,Sales,Astatula,FL,No symptoms,1637,positive,1/29/2021,recovered
-10638,1/28/2021,738,2,Male,Black/African American,Sales,Atlantic Beach,FL,Moderate,1638,positive,1/29/2021,hospitalized
-10639,1/27/2021,739,81,Male,Black/African American,Transportation,Apopka,FL,No symptoms,1639,positive,1/28/2021,hospitalized
-10640,1/27/2021,740,59,Male,Hispanic,Transportation,Arcadia,FL,No symptoms,1640,positive,1/28/2021,death
+10638,1/28/2021,738,2,Male,Black/African American,Sales,Atlantic Beach,FL,Moderate,1638,positive,1/29/2021,recovered
+10639,1/27/2021,739,81,Male,Black/African American,Transportation,Apopka,FL,No symptoms,1639,positive,1/28/2021,recovered
+10640,1/27/2021,740,59,Male,Hispanic,Transportation,Arcadia,FL,No symptoms,1640,positive,1/28/2021,recovered
 10641,1/27/2021,741,49,Female,Hispanic,Transportation,Archer,FL,Moderate,1641,positive,1/28/2021,recovered
 10642,1/27/2021,742,65,Female,Black/African American,Government/police,Astatula,FL,No symptoms,1642,positive,1/28/2021,recovered
 10643,1/27/2021,743,22,Female,Black/African American,Government/police,Atlantic Beach,FL,Moderate,1643,positive,1/28/2021,recovered
-10644,1/27/2021,744,44,Female,Black/African American,Other,Apopka,FL,Severe,1644,positive,1/28/2021,recovered
+10644,1/27/2021,744,44,Female,Black/African American,Other,Apopka,FL,Severe,1644,positive,1/28/2021,infected
 10645,1/27/2021,745,35,Female,Black/African American,Other,Arcadia,FL,Mild,1645,positive,1/28/2021,recovered
 10646,1/27/2021,746,1,Male,Hispanic,Health Care,Archer,FL,Severe,1646,positive,1/28/2021,recovered
 10647,1/27/2021,747,70,Male,Non-Hispanic white,Health Care,Astatula,FL,Moderate,1647,positive,1/28/2021,recovered
-10648,1/27/2021,748,59,Male,other,Health Care,Atlantic Beach,FL,No symptoms,1648,positive,1/28/2021,hospitalized
-10649,1/27/2021,749,70,Male,Asian,Health Care,Apopka,FL,Moderate,1649,positive,1/28/2021,hospitalized
-10650,1/27/2021,750,16,Male,Non-Hispanic white,Sales,Arcadia,FL,No symptoms,1650,positive,1/28/2021,death
+10648,1/27/2021,748,59,Male,other,Health Care,Atlantic Beach,FL,No symptoms,1648,positive,1/28/2021,recovered
+10649,1/27/2021,749,70,Male,Asian,Health Care,Apopka,FL,Moderate,1649,positive,1/28/2021,recovered
+10650,1/27/2021,750,16,Male,Non-Hispanic white,Sales,Arcadia,FL,No symptoms,1650,positive,1/28/2021,recovered
 10651,1/27/2021,751,44,Male,Non-Hispanic white,Sales,Archer,FL,No symptoms,1651,positive,1/28/2021,recovered
-10652,1/27/2021,752,71,Female,Asian,Sales,Astatula,FL,No symptoms,1652,positive,1/28/2021,recovered
-10653,1/27/2021,753,44,Male,Asian,Sales,Atlantic Beach,FL,Mild,1653,positive,1/28/2021,recovered
+10652,1/27/2021,752,71,Female,Asian,Sales,Astatula,FL,No symptoms,1652,positive,1/28/2021,hospitalized
+10653,1/27/2021,753,44,Male,Asian,Sales,Atlantic Beach,FL,Mild,1653,positive,1/28/2021,death
 10654,1/27/2021,754,108,Female,Black/African American,Transportation,Apopka,FL,Moderate,1654,positive,1/28/2021,recovered
 10655,1/27/2021,755,100,Female,Black/African American,Transportation,Arcadia,FL,Severe,1655,positive,1/28/2021,recovered
 10656,1/27/2021,756,27,Male,Black/African American,Transportation,Archer,FL,Severe,1656,positive,1/28/2021,recovered
 10657,1/27/2021,757,26,Male,Hispanic,Government/police,Astatula,FL,Severe,1657,positive,1/28/2021,recovered
-10658,1/27/2021,758,34,Female,Hispanic,Government/police,Atlantic Beach,FL,Moderate,1658,positive,1/28/2021,hospitalized
-10659,1/27/2021,759,42,Female,Hispanic,Other,Atlanta,FL,Mild,1659,positive,1/28/2021,hospitalized
-10660,1/26/2021,760,53,Female,Non-Hispanic white,Other,Augusta,GA,Mild,1660,positive,1/27/2021,death
+10658,1/27/2021,758,34,Female,Hispanic,Government/police,Atlantic Beach,FL,Moderate,1658,positive,1/28/2021,recovered
+10659,1/27/2021,759,42,Female,Hispanic,Other,Atlanta,FL,Mild,1659,positive,1/28/2021,recovered
+10660,1/26/2021,760,53,Female,Non-Hispanic white,Other,Augusta,GA,Mild,1660,positive,1/27/2021,recovered
 10661,1/26/2021,761,53,Male,Asian,Health Care,Columbus,GA,Moderate,1661,positive,1/27/2021,recovered
 10662,1/26/2021,762,94,Male,Non-Hispanic white,Health Care,Savannah,GA,Severe,1662,positive,1/27/2021,recovered
-10663,1/26/2021,763,95,Male,Asian,Health Care,Athens,GA,Mild,1663,positive,1/27/2021,recovered
+10663,1/26/2021,763,95,Male,Asian,Health Care,Athens,GA,Mild,1663,positive,1/27/2021,infected
 10664,1/26/2021,764,82,Female,Black/African American,Health Care,Atlanta,GA,No symptoms,1664,positive,1/27/2021,recovered
 10665,1/26/2021,765,17,Female,Black/African American,Sales,Augusta,GA,No symptoms,1665,positive,1/27/2021,recovered
 10666,1/26/2021,766,57,Female,Hispanic,Sales,Columbus,GA,No symptoms,1666,positive,1/27/2021,recovered
 10667,1/26/2021,767,76,Female,Hispanic,Sales,Savannah,GA,No symptoms,1667,positive,1/27/2021,recovered
-10668,1/26/2021,768,67,Male,Black/African American,Sales,Athens,GA,No symptoms,1668,positive,1/27/2021,hospitalized
-10669,1/26/2021,769,106,Male,Black/African American,Transportation,Atlanta,GA,Moderate,1669,positive,1/27/2021,hospitalized
-10670,1/26/2021,770,100,Male,Black/African American,Transportation,Augusta,GA,No symptoms,1670,positive,1/27/2021,death
-10671,1/26/2021,771,32,Male,Black/African American,Transportation,Columbus,GA,No symptoms,1671,positive,1/27/2021,recovered
-10672,1/26/2021,772,76,Female,Hispanic,Government/police,Savannah,GA,Moderate,1672,positive,1/27/2021,recovered
+10668,1/26/2021,768,67,Male,Black/African American,Sales,Athens,GA,No symptoms,1668,positive,1/27/2021,recovered
+10669,1/26/2021,769,106,Male,Black/African American,Transportation,Atlanta,GA,Moderate,1669,positive,1/27/2021,recovered
+10670,1/26/2021,770,100,Male,Black/African American,Transportation,Augusta,GA,No symptoms,1670,positive,1/27/2021,recovered
+10671,1/26/2021,771,32,Male,Black/African American,Transportation,Columbus,GA,No symptoms,1671,positive,1/27/2021,hospitalized
+10672,1/26/2021,772,76,Female,Hispanic,Government/police,Savannah,GA,Moderate,1672,positive,1/27/2021,death
 10673,1/26/2021,773,34,Female,Non-Hispanic white,Government/police,Athens,GA,No symptoms,1673,positive,1/27/2021,recovered
 10674,1/26/2021,774,92,Female,other,Other,Atlanta,GA,Moderate,1674,positive,1/27/2021,recovered
 10675,1/26/2021,775,4,Female,Asian,Other,Augusta,GA,Severe,1675,positive,1/27/2021,recovered
 10676,1/26/2021,776,39,Female,Non-Hispanic white,Health Care,Columbus,GA,Mild,1676,positive,1/27/2021,recovered
 10677,1/26/2021,777,32,Male,Non-Hispanic white,Health Care,Savannah,GA,Severe,1677,positive,1/27/2021,recovered
-10678,1/26/2021,778,52,Male,Asian,Health Care,Athens,GA,Moderate,1678,positive,1/27/2021,hospitalized
-10679,1/26/2021,779,27,Male,Asian,Health Care,Atlanta,GA,No symptoms,1679,positive,1/27/2021,hospitalized
-10680,1/26/2021,780,4,Male,Black/African American,Sales,Augusta,GA,Moderate,1680,positive,1/27/2021,death
+10678,1/26/2021,778,52,Male,Asian,Health Care,Athens,GA,Moderate,1678,positive,1/27/2021,recovered
+10679,1/26/2021,779,27,Male,Asian,Health Care,Atlanta,GA,No symptoms,1679,positive,1/27/2021,recovered
+10680,1/26/2021,780,4,Male,Black/African American,Sales,Augusta,GA,Moderate,1680,positive,1/27/2021,recovered
 10681,1/26/2021,781,21,Male,Black/African American,Sales,Columbus,GA,No symptoms,1681,positive,1/27/2021,recovered
-10682,1/26/2021,782,17,Male,Black/African American,Sales,Savannah,GA,No symptoms,1682,positive,1/27/2021,recovered
+10682,1/26/2021,782,17,Male,Black/African American,Sales,Savannah,GA,No symptoms,1682,positive,1/27/2021,infected
 10683,1/26/2021,783,105,Female,Hispanic,Sales,Athens,GA,No symptoms,1683,positive,1/27/2021,recovered
 10684,1/26/2021,784,21,Male,Hispanic,Transportation,Atlanta,GA,Mild,1684,positive,1/27/2021,recovered
 10685,1/26/2021,785,2,Female,Hispanic,Transportation,Augusta,GA,Moderate,1685,positive,1/27/2021,recovered
 10686,1/26/2021,786,11,Female,Non-Hispanic white,Transportation,Columbus,GA,Severe,1686,positive,1/27/2021,recovered
 10687,1/26/2021,787,64,Male,Asian,Government/police,Savannah,GA,Severe,1687,positive,1/27/2021,recovered
-10688,1/26/2021,788,68,Male,Non-Hispanic white,Government/police,Athens,GA,Severe,1688,positive,1/27/2021,hospitalized
-10689,1/26/2021,789,39,Female,Asian,Other,Atlanta,GA,Moderate,1689,positive,1/27/2021,hospitalized
-10690,1/26/2021,790,58,Female,Black/African American,Other,Augusta,GA,Mild,1690,positive,1/27/2021,death
-10691,1/25/2021,791,52,Female,Black/African American,Health Care,Columbus,GA,Mild,1691,positive,1/26/2021,recovered
+10688,1/26/2021,788,68,Male,Non-Hispanic white,Government/police,Athens,GA,Severe,1688,positive,1/27/2021,recovered
+10689,1/26/2021,789,39,Female,Asian,Other,Atlanta,GA,Moderate,1689,positive,1/27/2021,recovered
+10690,1/26/2021,790,58,Female,Black/African American,Other,Augusta,GA,Mild,1690,positive,1/27/2021,hospitalized
+10691,1/25/2021,791,52,Female,Black/African American,Health Care,Columbus,GA,Mild,1691,positive,1/26/2021,death
 10692,1/25/2021,792,66,Male,Hispanic,Health Care,Savannah,GA,Moderate,1692,positive,1/26/2021,recovered
 10693,1/25/2021,793,78,Male,Hispanic,Health Care,Athens,GA,Severe,1693,positive,1/26/2021,recovered
 10694,1/25/2021,794,44,Male,Black/African American,Health Care,Atlanta,GA,Mild,1694,positive,1/26/2021,recovered
 10695,1/25/2021,795,81,Female,Black/African American,Sales,Augusta,GA,No symptoms,1695,positive,1/26/2021,recovered
 10696,1/25/2021,796,103,Female,Black/African American,Sales,Columbus,GA,No symptoms,1696,positive,1/26/2021,recovered
 10697,1/25/2021,797,110,Female,Black/African American,Sales,Savannah,GA,No symptoms,1697,positive,1/26/2021,recovered
-10698,1/25/2021,798,96,Female,Hispanic,Sales,Athens,GA,No symptoms,1698,positive,1/26/2021,hospitalized
-10699,1/25/2021,799,81,Male,Non-Hispanic white,Transportation,Atlanta,GA,No symptoms,1699,positive,1/26/2021,hospitalized
-10700,1/25/2021,800,56,Male,other,Transportation,Augusta,GA,Moderate,1700,positive,1/26/2021,death
-10701,1/25/2021,801,69,Male,Asian,Transportation,Columbus,GA,No symptoms,1701,positive,1/26/2021,recovered
+10698,1/25/2021,798,96,Female,Hispanic,Sales,Athens,GA,No symptoms,1698,positive,1/26/2021,recovered
+10699,1/25/2021,799,81,Male,Non-Hispanic white,Transportation,Atlanta,GA,No symptoms,1699,positive,1/26/2021,recovered
+10700,1/25/2021,800,56,Male,other,Transportation,Augusta,GA,Moderate,1700,positive,1/26/2021,recovered
+10701,1/25/2021,801,69,Male,Asian,Transportation,Columbus,GA,No symptoms,1701,positive,1/26/2021,infected
 10702,1/25/2021,802,38,Male,Non-Hispanic white,Government/police,Savannah,GA,No symptoms,1702,positive,1/26/2021,recovered
 10703,1/25/2021,803,78,Female,Non-Hispanic white,Government/police,Athens,GA,Moderate,1703,positive,1/26/2021,recovered
 10704,1/25/2021,804,83,Female,Asian,Other,Atlanta,GA,No symptoms,1704,positive,1/26/2021,recovered
 10705,1/25/2021,805,106,Female,Asian,Other,Augusta,GA,Moderate,1705,positive,1/26/2021,recovered
 10706,1/25/2021,806,36,Female,Black/African American,Health Care,Columbus,GA,Severe,1706,positive,1/26/2021,recovered
 10707,1/25/2021,807,64,Female,Black/African American,Health Care,Savannah,GA,Mild,1707,positive,1/26/2021,recovered
-10708,1/25/2021,808,61,Male,Black/African American,Health Care,Athens,GA,Severe,1708,positive,1/26/2021,hospitalized
+10708,1/25/2021,808,61,Male,Black/African American,Health Care,Athens,GA,Severe,1708,positive,1/26/2021,recovered
 10709,1/25/2021,809,111,Male,Hispanic,Health Care,Atlanta,GA,Moderate,1709,positive,1/26/2021,hospitalized
 10710,1/25/2021,810,83,Male,Hispanic,Sales,Augusta,GA,No symptoms,1710,positive,1/26/2021,death
 10711,1/25/2021,811,69,Male,Hispanic,Sales,Columbus,GA,Moderate,1711,positive,1/26/2021,recovered
@@ -716,9 +716,9 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10715,1/25/2021,815,36,Male,Asian,Transportation,Augusta,GA,Mild,1715,positive,1/26/2021,recovered
 10716,1/24/2021,816,86,Female,Black/African American,Transportation,Columbus,GA,Moderate,1716,positive,1/25/2021,recovered
 10717,1/24/2021,817,109,Female,Black/African American,Government/police,Savannah,GA,Severe,1717,positive,1/25/2021,recovered
-10718,1/24/2021,818,13,Male,Hispanic,Government/police,Athens,GA,Severe,1718,positive,1/25/2021,hospitalized
-10719,1/24/2021,819,77,Male,Hispanic,Other,Atlanta,GA,Severe,1719,positive,1/25/2021,hospitalized
-10720,1/24/2021,820,90,Female,Black/African American,Other,Augusta,GA,Moderate,1720,positive,1/25/2021,death
+10718,1/24/2021,818,13,Male,Hispanic,Government/police,Athens,GA,Severe,1718,positive,1/25/2021,recovered
+10719,1/24/2021,819,77,Male,Hispanic,Other,Atlanta,GA,Severe,1719,positive,1/25/2021,recovered
+10720,1/24/2021,820,90,Female,Black/African American,Other,Augusta,GA,Moderate,1720,positive,1/25/2021,infected
 10721,1/24/2021,821,78,Female,Black/African American,Health Care,Columbus,GA,Mild,1721,positive,1/25/2021,recovered
 10722,1/24/2021,822,64,Female,Black/African American,Health Care,Savannah,GA,Mild,1722,positive,1/25/2021,recovered
 10723,1/24/2021,823,66,Male,Black/African American,Health Care,Athens,GA,Moderate,1723,positive,1/25/2021,recovered
@@ -727,8 +727,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10726,1/24/2021,826,85,Female,other,Sales,Columbus,GA,No symptoms,1726,positive,1/25/2021,recovered
 10727,1/24/2021,827,103,Female,Asian,Sales,Savannah,GA,No symptoms,1727,positive,1/25/2021,recovered
 10728,1/24/2021,828,52,Female,Non-Hispanic white,Sales,Athens,GA,No symptoms,1728,positive,1/25/2021,hospitalized
-10729,1/24/2021,829,4,Female,Non-Hispanic white,Transportation,Atlanta,GA,No symptoms,1729,positive,1/25/2021,hospitalized
-10730,1/24/2021,830,78,Male,Asian,Transportation,Augusta,GA,No symptoms,1730,positive,1/25/2021,death
+10729,1/24/2021,829,4,Female,Non-Hispanic white,Transportation,Atlanta,GA,No symptoms,1729,positive,1/25/2021,death
+10730,1/24/2021,830,78,Male,Asian,Transportation,Augusta,GA,No symptoms,1730,positive,1/25/2021,recovered
 10731,1/23/2021,831,48,Male,Asian,Transportation,Columbus,GA,Moderate,1731,positive,1/24/2021,recovered
 10732,1/23/2021,832,30,Male,Black/African American,Government/police,Savannah,GA,No symptoms,1732,positive,1/24/2021,recovered
 10733,1/23/2021,833,71,Male,Black/African American,Government/police,Athens,GA,No symptoms,1733,positive,1/24/2021,recovered
@@ -736,19 +736,19 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10735,1/23/2021,835,5,Female,Hispanic,Other,Augusta,GA,No symptoms,1735,positive,1/24/2021,recovered
 10736,1/23/2021,836,55,Female,Hispanic,Health Care,Columbus,GA,Moderate,1736,positive,1/24/2021,recovered
 10737,1/23/2021,837,77,Female,Hispanic,Health Care,Savannah,GA,Severe,1737,positive,1/24/2021,recovered
-10738,1/23/2021,838,28,Female,Non-Hispanic white,Health Care,Athens,GA,Mild,1738,positive,1/24/2021,hospitalized
-10739,1/23/2021,839,62,Male,Asian,Health Care,Atlanta,GA,Severe,1739,positive,1/24/2021,hospitalized
-10740,1/23/2021,840,37,Male,Non-Hispanic white,Sales,Augusta,GA,Moderate,1740,positive,1/24/2021,death
+10738,1/23/2021,838,28,Female,Non-Hispanic white,Health Care,Athens,GA,Mild,1738,positive,1/24/2021,recovered
+10739,1/23/2021,839,62,Male,Asian,Health Care,Atlanta,GA,Severe,1739,positive,1/24/2021,infected
+10740,1/23/2021,840,37,Male,Non-Hispanic white,Sales,Augusta,GA,Moderate,1740,positive,1/24/2021,recovered
 10741,1/23/2021,841,74,Male,Asian,Sales,Columbus,GA,No symptoms,1741,positive,1/24/2021,recovered
 10742,1/23/2021,842,52,Male,Black/African American,Sales,Savannah,GA,Moderate,1742,positive,1/24/2021,recovered
 10743,1/23/2021,843,38,Male,Black/African American,Sales,Athens,GA,No symptoms,1743,positive,1/24/2021,recovered
 10744,1/23/2021,844,46,Male,Hispanic,Transportation,Atlanta,GA,No symptoms,1744,positive,1/24/2021,recovered
 10745,1/23/2021,845,45,Female,Hispanic,Transportation,Augusta,GA,No symptoms,1745,positive,1/24/2021,recovered
 10746,1/23/2021,846,70,Male,Black/African American,Transportation,Columbus,GA,Mild,1746,positive,1/24/2021,recovered
-10747,1/23/2021,847,31,Female,Black/African American,Government/police,Wahiawa,HI,Moderate,1747,positive,1/24/2021,recovered
-10748,1/23/2021,848,112,Female,Black/African American,Government/police,Kekaha,HI,Severe,1748,positive,1/24/2021,hospitalized
-10749,1/23/2021,849,20,Male,Black/African American,Other,Hilo,HI,Severe,1749,positive,1/24/2021,hospitalized
-10750,1/23/2021,850,12,Male,Hispanic,Other,Burley,ID,Severe,1750,positive,1/24/2021,death
+10747,1/23/2021,847,31,Female,Black/African American,Government/police,Wahiawa,HI,Moderate,1747,positive,1/24/2021,hospitalized
+10748,1/23/2021,848,112,Female,Black/African American,Government/police,Kekaha,HI,Severe,1748,positive,1/24/2021,death
+10749,1/23/2021,849,20,Male,Black/African American,Other,Hilo,HI,Severe,1749,positive,1/24/2021,recovered
+10750,1/23/2021,850,12,Male,Hispanic,Other,Burley,ID,Severe,1750,positive,1/24/2021,recovered
 10751,1/23/2021,851,37,Female,Non-Hispanic white,Health Care,Lorenzo,ID,Moderate,1751,positive,1/24/2021,recovered
 10752,1/23/2021,852,75,Female,other,Health Care,Fairfield,ID,Mild,1752,positive,1/24/2021,recovered
 10753,1/23/2021,853,105,Female,Asian,Health Care,Myrtle,ID,Mild,1753,positive,1/24/2021,recovered
@@ -756,147 +756,147 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10755,1/23/2021,855,14,Male,Non-Hispanic white,Sales,Bruneau,ID,Severe,1755,positive,1/24/2021,recovered
 10756,1/23/2021,856,62,Male,Asian,Sales,Dixie,ID,Mild,1756,positive,1/24/2021,recovered
 10757,1/23/2021,857,52,Female,Asian,Sales,Burley,ID,No symptoms,1757,positive,1/24/2021,recovered
-10758,1/23/2021,858,86,Female,Black/African American,Sales,Lorenzo,ID,No symptoms,1758,positive,1/24/2021,hospitalized
-10759,1/23/2021,859,42,Female,Black/African American,Transportation,Fairfield,ID,No symptoms,1759,positive,1/24/2021,hospitalized
-10760,1/22/2021,860,40,Female,Black/African American,Transportation,Myrtle,ID,No symptoms,1760,positive,1/23/2021,death
+10758,1/23/2021,858,86,Female,Black/African American,Sales,Lorenzo,ID,No symptoms,1758,positive,1/24/2021,infected
+10759,1/23/2021,859,42,Female,Black/African American,Transportation,Fairfield,ID,No symptoms,1759,positive,1/24/2021,recovered
+10760,1/22/2021,860,40,Female,Black/African American,Transportation,Myrtle,ID,No symptoms,1760,positive,1/23/2021,recovered
 10761,1/22/2021,861,29,Male,Hispanic,Transportation,Inkom,ID,No symptoms,1761,positive,1/23/2021,recovered
 10762,1/22/2021,862,86,Male,Hispanic,Government/police,Bruneau,ID,Moderate,1762,positive,1/23/2021,recovered
 10763,1/22/2021,863,99,Male,Hispanic,Government/police,Dixie,ID,No symptoms,1763,positive,1/23/2021,recovered
 10764,1/22/2021,864,83,Male,Non-Hispanic white,Other,Burley,ID,No symptoms,1764,positive,1/23/2021,recovered
 10765,1/22/2021,865,10,Female,Asian,Other,Aurora,IL,Moderate,1765,positive,1/23/2021,recovered
-10766,1/22/2021,866,50,Female,Non-Hispanic white,Health Care,Rockford,IL,No symptoms,1766,positive,1/23/2021,recovered
-10767,1/22/2021,867,10,Female,Asian,Health Care,Joliet,IL,Moderate,1767,positive,1/23/2021,recovered
-10768,1/22/2021,868,32,Female,Black/African American,Health Care,Naperville,IL,Severe,1768,positive,1/23/2021,hospitalized
-10769,1/22/2021,869,29,Female,Black/African American,Health Care,Springfield,IL,Mild,1769,positive,1/23/2021,hospitalized
-10770,1/22/2021,870,100,Male,Hispanic,Sales,Aurora,IL,Severe,1770,positive,1/23/2021,death
+10766,1/22/2021,866,50,Female,Non-Hispanic white,Health Care,Rockford,IL,No symptoms,1766,positive,1/23/2021,hospitalized
+10767,1/22/2021,867,10,Female,Asian,Health Care,Joliet,IL,Moderate,1767,positive,1/23/2021,death
+10768,1/22/2021,868,32,Female,Black/African American,Health Care,Naperville,IL,Severe,1768,positive,1/23/2021,recovered
+10769,1/22/2021,869,29,Female,Black/African American,Health Care,Springfield,IL,Mild,1769,positive,1/23/2021,recovered
+10770,1/22/2021,870,100,Male,Hispanic,Sales,Aurora,IL,Severe,1770,positive,1/23/2021,recovered
 10771,1/22/2021,871,69,Male,Hispanic,Sales,Rockford,IL,Moderate,1771,positive,1/23/2021,recovered
 10772,1/22/2021,872,86,Male,Black/African American,Sales,Joliet,IL,No symptoms,1772,positive,1/23/2021,recovered
 10773,1/22/2021,873,52,Male,Black/African American,Sales,Naperville,IL,Moderate,1773,positive,1/23/2021,recovered
 10774,1/22/2021,874,83,Male,Black/African American,Transportation,Springfield,IL,No symptoms,1774,positive,1/23/2021,recovered
 10775,1/22/2021,875,106,Male,Black/African American,Transportation,Aurora,IL,No symptoms,1775,positive,1/23/2021,recovered
 10776,1/22/2021,876,98,Female,Hispanic,Transportation,Rockford,IL,No symptoms,1776,positive,1/23/2021,recovered
-10777,1/22/2021,877,76,Male,Non-Hispanic white,Government/police,Joliet,IL,Mild,1777,positive,1/23/2021,recovered
-10778,1/22/2021,878,101,Female,other,Government/police,Naperville,IL,Moderate,1778,positive,1/23/2021,hospitalized
-10779,1/22/2021,879,95,Female,Asian,Other,Springfield,IL,Severe,1779,positive,1/23/2021,hospitalized
-10780,1/22/2021,880,89,Male,Non-Hispanic white,Other,Aurora,IL,Severe,1780,positive,1/23/2021,death
+10777,1/22/2021,877,76,Male,Non-Hispanic white,Government/police,Joliet,IL,Mild,1777,positive,1/23/2021,infected
+10778,1/22/2021,878,101,Female,other,Government/police,Naperville,IL,Moderate,1778,positive,1/23/2021,recovered
+10779,1/22/2021,879,95,Female,Asian,Other,Springfield,IL,Severe,1779,positive,1/23/2021,recovered
+10780,1/22/2021,880,89,Male,Non-Hispanic white,Other,Aurora,IL,Severe,1780,positive,1/23/2021,recovered
 10781,1/22/2021,881,79,Male,Non-Hispanic white,Health Care,Rockford,IL,Severe,1781,positive,1/23/2021,recovered
 10782,1/22/2021,882,37,Female,Asian,Health Care,Joliet,IL,Moderate,1782,positive,1/23/2021,recovered
 10783,1/22/2021,883,64,Female,Asian,Health Care,Naperville,IL,Mild,1783,positive,1/23/2021,recovered
 10784,1/22/2021,884,104,Female,Black/African American,Health Care,Springfield,IL,Mild,1784,positive,1/23/2021,recovered
-10785,1/22/2021,885,12,Male,Black/African American,Sales,Aurora,IL,Moderate,1785,positive,1/23/2021,recovered
-10786,1/21/2021,886,12,Male,Black/African American,Sales,Rockford,IL,Severe,1786,positive,1/22/2021,recovered
+10785,1/22/2021,885,12,Male,Black/African American,Sales,Aurora,IL,Moderate,1785,positive,1/23/2021,hospitalized
+10786,1/21/2021,886,12,Male,Black/African American,Sales,Rockford,IL,Severe,1786,positive,1/22/2021,death
 10787,1/21/2021,887,101,Male,Hispanic,Sales,Joliet,IL,Mild,1787,positive,1/22/2021,recovered
-10788,1/21/2021,888,61,Female,Hispanic,Sales,Naperville,IL,No symptoms,1788,positive,1/22/2021,hospitalized
-10789,1/21/2021,889,93,Female,Hispanic,Transportation,Springfield,IL,No symptoms,1789,positive,1/22/2021,hospitalized
-10790,1/21/2021,890,50,Female,Non-Hispanic white,Transportation,Aurora,IL,No symptoms,1790,positive,1/22/2021,death
+10788,1/21/2021,888,61,Female,Hispanic,Sales,Naperville,IL,No symptoms,1788,positive,1/22/2021,recovered
+10789,1/21/2021,889,93,Female,Hispanic,Transportation,Springfield,IL,No symptoms,1789,positive,1/22/2021,recovered
+10790,1/21/2021,890,50,Female,Non-Hispanic white,Transportation,Aurora,IL,No symptoms,1790,positive,1/22/2021,recovered
 10791,1/21/2021,891,48,Female,Asian,Transportation,Rockford,IL,No symptoms,1791,positive,1/22/2021,recovered
 10792,1/21/2021,892,84,Male,Non-Hispanic white,Government/police,Joliet,IL,No symptoms,1792,positive,1/22/2021,recovered
 10793,1/21/2021,893,48,Male,Asian,Government/police,Naperville,IL,Moderate,1793,positive,1/22/2021,recovered
 10794,1/21/2021,894,51,Male,Black/African American,Other,Springfield,IL,No symptoms,1794,positive,1/22/2021,recovered
 10795,1/21/2021,895,24,Male,Black/African American,Other,Aurora,IL,No symptoms,1795,positive,1/22/2021,recovered
-10796,1/21/2021,896,10,Female,Hispanic,Health Care,Rockford,IL,Moderate,1796,positive,1/22/2021,recovered
+10796,1/21/2021,896,10,Female,Hispanic,Health Care,Rockford,IL,Moderate,1796,positive,1/22/2021,infected
 10797,1/21/2021,897,103,Female,Hispanic,Health Care,Joliet,IL,No symptoms,1797,positive,1/22/2021,recovered
-10798,1/21/2021,898,108,Female,Black/African American,Health Care,Naperville,IL,Moderate,1798,positive,1/22/2021,hospitalized
-10799,1/21/2021,899,17,Female,Black/African American,Health Care,Springfield,IL,Severe,1799,positive,1/22/2021,hospitalized
-10800,1/21/2021,900,78,Female,Black/African American,Sales,Aurora,IL,Mild,1800,positive,1/22/2021,death
+10798,1/21/2021,898,108,Female,Black/African American,Health Care,Naperville,IL,Moderate,1798,positive,1/22/2021,recovered
+10799,1/21/2021,899,17,Female,Black/African American,Health Care,Springfield,IL,Severe,1799,positive,1/22/2021,recovered
+10800,1/21/2021,900,78,Female,Black/African American,Sales,Aurora,IL,Mild,1800,positive,1/22/2021,recovered
 10801,1/21/2021,901,38,Male,Black/African American,Sales,Rockford,IL,Severe,1801,positive,1/22/2021,recovered
 10802,1/21/2021,902,27,Male,Hispanic,Sales,Joliet,IL,Moderate,1802,positive,1/22/2021,recovered
 10803,1/21/2021,903,42,Male,Non-Hispanic white,Sales,Naperville,IL,No symptoms,1803,positive,1/22/2021,recovered
-10804,1/21/2021,904,104,Male,other,Transportation,Springfield,IL,Moderate,1804,positive,1/22/2021,recovered
-10805,1/21/2021,905,104,Male,Asian,Transportation,Aurora,IL,No symptoms,1805,positive,1/22/2021,recovered
+10804,1/21/2021,904,104,Male,other,Transportation,Springfield,IL,Moderate,1804,positive,1/22/2021,hospitalized
+10805,1/21/2021,905,104,Male,Asian,Transportation,Aurora,IL,No symptoms,1805,positive,1/22/2021,death
 10806,1/21/2021,906,17,Male,Non-Hispanic white,Transportation,Rockford,IL,No symptoms,1806,positive,1/22/2021,recovered
 10807,1/21/2021,907,38,Female,Non-Hispanic white,Government/police,Joliet,IL,No symptoms,1807,positive,1/22/2021,recovered
-10808,1/21/2021,908,10,Male,Asian,Government/police,Naperville,IL,Mild,1808,positive,1/22/2021,hospitalized
-10809,1/21/2021,909,41,Female,Asian,Other,Springfield,IL,Moderate,1809,positive,1/22/2021,hospitalized
-10810,1/21/2021,910,54,Female,Black/African American,Other,Aurora,IL,Severe,1810,positive,1/22/2021,death
+10808,1/21/2021,908,10,Male,Asian,Government/police,Naperville,IL,Mild,1808,positive,1/22/2021,recovered
+10809,1/21/2021,909,41,Female,Asian,Other,Springfield,IL,Moderate,1809,positive,1/22/2021,recovered
+10810,1/21/2021,910,54,Female,Black/African American,Other,Aurora,IL,Severe,1810,positive,1/22/2021,recovered
 10811,1/21/2021,911,29,Male,Black/African American,Health Care,Rockford,IL,Severe,1811,positive,1/22/2021,recovered
 10812,1/21/2021,912,6,Male,Black/African American,Health Care,Joliet,IL,Severe,1812,positive,1/22/2021,recovered
 10813,1/21/2021,913,20,Female,Hispanic,Health Care,Naperville,IL,Moderate,1813,positive,1/22/2021,recovered
 10814,1/20/2021,914,43,Female,Hispanic,Health Care,Springfield,IL,Mild,1814,positive,1/21/2021,recovered
-10815,1/20/2021,915,23,Female,Hispanic,Sales,Aurora,IL,Mild,1815,positive,1/21/2021,recovered
+10815,1/20/2021,915,23,Female,Hispanic,Sales,Aurora,IL,Mild,1815,positive,1/21/2021,infected
 10816,1/20/2021,916,26,Male,Non-Hispanic white,Sales,Rockford,IL,Moderate,1816,positive,1/21/2021,recovered
 10817,1/20/2021,917,14,Male,Asian,Sales,Joliet,IL,Severe,1817,positive,1/21/2021,recovered
-10818,1/20/2021,918,40,Male,Non-Hispanic white,Sales,Naperville,IL,Mild,1818,positive,1/21/2021,hospitalized
-10819,1/20/2021,919,19,Female,Asian,Transportation,Springfield,IL,No symptoms,1819,positive,1/21/2021,hospitalized
-10820,1/20/2021,920,28,Female,Black/African American,Transportation,Aurora,IL,No symptoms,1820,positive,1/21/2021,death
+10818,1/20/2021,918,40,Male,Non-Hispanic white,Sales,Naperville,IL,Mild,1818,positive,1/21/2021,recovered
+10819,1/20/2021,919,19,Female,Asian,Transportation,Springfield,IL,No symptoms,1819,positive,1/21/2021,recovered
+10820,1/20/2021,920,28,Female,Black/African American,Transportation,Aurora,IL,No symptoms,1820,positive,1/21/2021,recovered
 10821,1/20/2021,921,75,Female,Black/African American,Transportation,Rockford,IL,No symptoms,1821,positive,1/21/2021,recovered
 10822,1/20/2021,922,90,Female,Hispanic,Government/police,Joliet,IL,No symptoms,1822,positive,1/21/2021,recovered
-10823,1/20/2021,923,45,Male,Hispanic,Government/police,Naperville,IL,No symptoms,1823,positive,1/21/2021,recovered
-10824,1/20/2021,924,51,Male,Black/African American,Other,Springfield,IL,Moderate,1824,positive,1/21/2021,recovered
+10823,1/20/2021,923,45,Male,Hispanic,Government/police,Naperville,IL,No symptoms,1823,positive,1/21/2021,hospitalized
+10824,1/20/2021,924,51,Male,Black/African American,Other,Springfield,IL,Moderate,1824,positive,1/21/2021,death
 10825,1/20/2021,925,29,Male,Black/African American,Other,Aurora,IL,No symptoms,1825,positive,1/21/2021,recovered
 10826,1/20/2021,926,27,Male,Black/African American,Health Care,Rockford,IL,No symptoms,1826,positive,1/21/2021,recovered
 10827,1/20/2021,927,35,Female,Black/African American,Health Care,Joliet,IL,Moderate,1827,positive,1/21/2021,recovered
-10828,1/20/2021,928,73,Female,Hispanic,Health Care,Naperville,IL,No symptoms,1828,positive,1/21/2021,hospitalized
-10829,1/20/2021,929,64,Female,Non-Hispanic white,Health Care,Springfield,IL,Moderate,1829,positive,1/21/2021,hospitalized
-10830,1/20/2021,930,98,Female,other,Sales,Aurora,IL,Severe,1830,positive,1/21/2021,death
+10828,1/20/2021,928,73,Female,Hispanic,Health Care,Naperville,IL,No symptoms,1828,positive,1/21/2021,recovered
+10829,1/20/2021,929,64,Female,Non-Hispanic white,Health Care,Springfield,IL,Moderate,1829,positive,1/21/2021,recovered
+10830,1/20/2021,930,98,Female,other,Sales,Aurora,IL,Severe,1830,positive,1/21/2021,recovered
 10831,1/20/2021,931,47,Female,Asian,Sales,Rockford,IL,Mild,1831,positive,1/21/2021,recovered
 10832,1/20/2021,932,7,Male,Non-Hispanic white,Sales,Joliet,IL,Severe,1832,positive,1/21/2021,recovered
 10833,1/20/2021,933,70,Male,Non-Hispanic white,Sales,Naperville,IL,Moderate,1833,positive,1/21/2021,recovered
-10834,1/20/2021,934,42,Male,Asian,Transportation,Springfield,IL,No symptoms,1834,positive,1/21/2021,recovered
+10834,1/20/2021,934,42,Male,Asian,Transportation,Springfield,IL,No symptoms,1834,positive,1/21/2021,infected
 10835,1/20/2021,935,79,Male,Asian,Transportation,Aurora,IL,Moderate,1835,positive,1/21/2021,recovered
 10836,1/20/2021,936,87,Male,Black/African American,Transportation,Rockford,IL,No symptoms,1836,positive,1/21/2021,recovered
 10837,1/20/2021,937,4,Male,Black/African American,Government/police,Joliet,IL,No symptoms,1837,positive,1/21/2021,recovered
-10838,1/20/2021,938,33,Female,Black/African American,Government/police,Naperville,IL,No symptoms,1838,positive,1/21/2021,hospitalized
-10839,1/20/2021,939,84,Male,Hispanic,Other,Springfield,IL,Mild,1839,positive,1/21/2021,hospitalized
-10840,1/19/2021,940,76,Female,Hispanic,Other,Aurora,IL,Moderate,1840,positive,1/20/2021,death
+10838,1/20/2021,938,33,Female,Black/African American,Government/police,Naperville,IL,No symptoms,1838,positive,1/21/2021,recovered
+10839,1/20/2021,939,84,Male,Hispanic,Other,Springfield,IL,Mild,1839,positive,1/21/2021,recovered
+10840,1/19/2021,940,76,Female,Hispanic,Other,Aurora,IL,Moderate,1840,positive,1/20/2021,recovered
 10841,1/19/2021,941,102,Female,Hispanic,Health Care,Rockford,IL,Severe,1841,positive,1/20/2021,recovered
-10842,1/19/2021,942,84,Male,Non-Hispanic white,Health Care,Joliet,IL,Severe,1842,positive,1/20/2021,recovered
-10843,1/19/2021,943,16,Male,Asian,Health Care,Naperville,IL,Severe,1843,positive,1/20/2021,recovered
+10842,1/19/2021,942,84,Male,Non-Hispanic white,Health Care,Joliet,IL,Severe,1842,positive,1/20/2021,hospitalized
+10843,1/19/2021,943,16,Male,Asian,Health Care,Naperville,IL,Severe,1843,positive,1/20/2021,death
 10844,1/19/2021,944,6,Female,Non-Hispanic white,Health Care,Springfield,IL,Moderate,1844,positive,1/20/2021,recovered
 10845,1/19/2021,945,74,Female,Asian,Sales,Aurora,IL,Mild,1845,positive,1/20/2021,recovered
 10846,1/19/2021,946,24,Female,Black/African American,Sales,Rockford,IL,Mild,1846,positive,1/20/2021,recovered
 10847,1/19/2021,947,97,Male,Black/African American,Sales,Joliet,IL,Moderate,1847,positive,1/20/2021,recovered
-10848,1/19/2021,948,92,Male,Hispanic,Sales,Naperville,IL,Severe,1848,positive,1/20/2021,hospitalized
-10849,1/19/2021,949,70,Male,Hispanic,Transportation,Springfield,IL,Mild,1849,positive,1/20/2021,hospitalized
-10850,1/19/2021,950,84,Female,Black/African American,Transportation,Aurora,IL,No symptoms,1850,positive,1/20/2021,death
+10848,1/19/2021,948,92,Male,Hispanic,Sales,Naperville,IL,Severe,1848,positive,1/20/2021,recovered
+10849,1/19/2021,949,70,Male,Hispanic,Transportation,Springfield,IL,Mild,1849,positive,1/20/2021,recovered
+10850,1/19/2021,950,84,Female,Black/African American,Transportation,Aurora,IL,No symptoms,1850,positive,1/20/2021,recovered
 10851,1/19/2021,951,1,Female,Black/African American,Transportation,Rockford,IL,No symptoms,1851,positive,1/20/2021,recovered
-10852,1/19/2021,952,52,Female,Black/African American,Government/police,Joliet,IL,No symptoms,1852,positive,1/20/2021,recovered
-10853,1/19/2021,953,54,Female,Black/African American,Government/police,Naperville,IL,No symptoms,1853,positive,1/20/2021,recovered
+10852,1/19/2021,952,52,Female,Black/African American,Government/police,Joliet,IL,No symptoms,1852,positive,1/20/2021,death
+10853,1/19/2021,953,54,Female,Black/African American,Government/police,Naperville,IL,No symptoms,1853,positive,1/20/2021,infected
 10854,1/19/2021,954,84,Male,Hispanic,Other,Springfield,IL,No symptoms,1854,positive,1/20/2021,recovered
 10855,1/19/2021,955,5,Male,Non-Hispanic white,Other,Aurora,IL,Moderate,1855,positive,1/20/2021,recovered
 10856,1/19/2021,956,32,Male,other,Health Care,Rockford,IL,No symptoms,1856,positive,1/20/2021,recovered
 10857,1/19/2021,957,40,Male,Asian,Health Care,Joliet,IL,No symptoms,1857,positive,1/20/2021,recovered
-10858,1/19/2021,958,94,Female,Non-Hispanic white,Health Care,Naperville,IL,Moderate,1858,positive,1/20/2021,hospitalized
-10859,1/19/2021,959,30,Female,Non-Hispanic white,Health Care,Springfield,IL,No symptoms,1859,positive,1/20/2021,hospitalized
-10860,1/19/2021,960,44,Female,Asian,Sales,Aurora,IL,Moderate,1860,positive,1/20/2021,death
-10861,1/19/2021,961,96,Female,Asian,Sales,Rockford,IL,Severe,1861,positive,1/20/2021,recovered
-10862,1/19/2021,962,80,Female,Black/African American,Sales,Joliet,IL,Mild,1862,positive,1/20/2021,recovered
+10858,1/19/2021,958,94,Female,Non-Hispanic white,Health Care,Naperville,IL,Moderate,1858,positive,1/20/2021,recovered
+10859,1/19/2021,959,30,Female,Non-Hispanic white,Health Care,Springfield,IL,No symptoms,1859,positive,1/20/2021,recovered
+10860,1/19/2021,960,44,Female,Asian,Sales,Aurora,IL,Moderate,1860,positive,1/20/2021,recovered
+10861,1/19/2021,961,96,Female,Asian,Sales,Rockford,IL,Severe,1861,positive,1/20/2021,hospitalized
+10862,1/19/2021,962,80,Female,Black/African American,Sales,Joliet,IL,Mild,1862,positive,1/20/2021,death
 10863,1/19/2021,963,38,Male,Black/African American,Sales,Naperville,IL,Severe,1863,positive,1/20/2021,recovered
 10864,1/19/2021,964,9,Male,Black/African American,Transportation,Springfield,IL,Moderate,1864,positive,1/20/2021,recovered
 10865,1/19/2021,965,106,Male,Hispanic,Transportation,Aurora,IL,No symptoms,1865,positive,1/20/2021,recovered
 10866,1/19/2021,966,77,Male,Hispanic,Transportation,Rockford,IL,Moderate,1866,positive,1/20/2021,recovered
 10867,1/19/2021,967,3,Male,Hispanic,Government/police,Joliet,IL,No symptoms,1867,positive,1/20/2021,recovered
-10868,1/19/2021,968,72,Male,Non-Hispanic white,Government/police,Naperville,IL,No symptoms,1868,positive,1/20/2021,hospitalized
-10869,1/19/2021,969,7,Female,Asian,Other,Springfield,IL,No symptoms,1869,positive,1/20/2021,hospitalized
-10870,1/18/2021,970,34,Male,Non-Hispanic white,Other,Aurora,IL,Mild,1870,positive,1/19/2021,death
-10871,1/18/2021,971,96,Female,Asian,Health Care,Anderson,IN,Moderate,1871,positive,1/19/2021,recovered
-10872,1/18/2021,972,94,Female,Black/African American,Health Care,Angola,IN,Severe,1872,positive,1/19/2021,recovered
+10868,1/19/2021,968,72,Male,Non-Hispanic white,Government/police,Naperville,IL,No symptoms,1868,positive,1/20/2021,recovered
+10869,1/19/2021,969,7,Female,Asian,Other,Springfield,IL,No symptoms,1869,positive,1/20/2021,recovered
+10870,1/18/2021,970,34,Male,Non-Hispanic white,Other,Aurora,IL,Mild,1870,positive,1/19/2021,recovered
+10871,1/18/2021,971,96,Female,Asian,Health Care,Anderson,IN,Moderate,1871,positive,1/19/2021,death
+10872,1/18/2021,972,94,Female,Black/African American,Health Care,Angola,IN,Severe,1872,positive,1/19/2021,infected
 10873,1/18/2021,973,72,Male,Black/African American,Health Care,Attica,IN,Severe,1873,positive,1/19/2021,recovered
 10874,1/18/2021,974,107,Male,Hispanic,Health Care,Auburn,IN,Severe,1874,positive,1/19/2021,recovered
 10875,1/18/2021,975,71,Female,Hispanic,Sales,Aurora,IN,Moderate,1875,positive,1/19/2021,recovered
 10876,1/18/2021,976,32,Female,Black/African American,Sales,Anderson,IN,Mild,1876,positive,1/19/2021,recovered
 10877,1/18/2021,977,19,Female,Black/African American,Sales,Angola,IN,Mild,1877,positive,1/19/2021,recovered
-10878,1/18/2021,978,20,Male,Black/African American,Sales,Attica,IN,Moderate,1878,positive,1/19/2021,hospitalized
-10879,1/18/2021,979,67,Male,Black/African American,Transportation,Auburn,IN,Severe,1879,positive,1/19/2021,hospitalized
-10880,1/18/2021,980,23,Male,Hispanic,Transportation,Aurora,IN,Mild,1880,positive,1/19/2021,death
-10881,1/18/2021,981,84,Female,Non-Hispanic white,Transportation,Anderson,IN,No symptoms,1881,positive,1/19/2021,recovered
+10878,1/18/2021,978,20,Male,Black/African American,Sales,Attica,IN,Moderate,1878,positive,1/19/2021,recovered
+10879,1/18/2021,979,67,Male,Black/African American,Transportation,Auburn,IN,Severe,1879,positive,1/19/2021,recovered
+10880,1/18/2021,980,23,Male,Hispanic,Transportation,Aurora,IN,Mild,1880,positive,1/19/2021,hospitalized
+10881,1/18/2021,981,84,Female,Non-Hispanic white,Transportation,Anderson,IN,No symptoms,1881,positive,1/19/2021,death
 10882,1/18/2021,982,64,Female,other,Government/police,Angola,IN,No symptoms,1882,positive,1/19/2021,recovered
 10883,1/18/2021,983,17,Female,Asian,Government/police,Attica,IN,No symptoms,1883,positive,1/19/2021,recovered
 10884,1/18/2021,984,23,Female,Non-Hispanic white,Other,Auburn,IN,No symptoms,1884,positive,1/19/2021,recovered
 10885,1/18/2021,985,20,Male,Non-Hispanic white,Other,Aurora,IN,No symptoms,1885,positive,1/19/2021,recovered
 10886,1/18/2021,986,58,Male,Asian,Health Care,Anderson,IN,Moderate,1886,positive,1/19/2021,recovered
 10887,1/18/2021,987,104,Male,Asian,Health Care,Angola,IN,No symptoms,1887,positive,1/19/2021,recovered
-10888,1/18/2021,988,33,Male,Black/African American,Health Care,Attica,IN,No symptoms,1888,positive,1/19/2021,hospitalized
-10889,1/18/2021,989,93,Female,Black/African American,Health Care,Auburn,IN,Moderate,1889,positive,1/19/2021,hospitalized
+10888,1/18/2021,988,33,Male,Black/African American,Health Care,Attica,IN,No symptoms,1888,positive,1/19/2021,recovered
+10889,1/18/2021,989,93,Female,Black/African American,Health Care,Auburn,IN,Moderate,1889,positive,1/19/2021,recovered
 10890,1/18/2021,990,79,Female,Black/African American,Sales,Aurora,IN,No symptoms,1890,positive,1/19/2021,death
-10891,1/18/2021,991,54,Female,Hispanic,Sales,Anderson,IN,Moderate,1891,positive,1/19/2021,recovered
+10891,1/18/2021,991,54,Female,Hispanic,Sales,Anderson,IN,Moderate,1891,positive,1/19/2021,infected
 10892,1/18/2021,992,67,Female,Hispanic,Sales,Angola,IN,Severe,1892,positive,1/19/2021,recovered
 10893,1/18/2021,993,26,Female,Hispanic,Sales,Attica,IN,Mild,1893,positive,1/19/2021,recovered
 10894,1/18/2021,994,35,Male,Non-Hispanic white,Transportation,Auburn,IN,Severe,1894,positive,1/19/2021,recovered
 10895,1/18/2021,995,36,Male,Asian,Transportation,Aurora,IN,Moderate,1895,positive,1/19/2021,recovered
 10896,1/18/2021,996,27,Male,Non-Hispanic white,Transportation,Anderson,IN,No symptoms,1896,positive,1/19/2021,recovered
 10897,1/18/2021,997,51,Male,Asian,Government/police,Angola,IN,Moderate,1897,positive,1/19/2021,recovered
-10898,1/18/2021,998,109,Male,Black/African American,Government/police,Attica,IN,No symptoms,1898,positive,1/19/2021,hospitalized
+10898,1/18/2021,998,109,Male,Black/African American,Government/police,Attica,IN,No symptoms,1898,positive,1/19/2021,recovered
 10899,1/18/2021,999,19,Male,Black/African American,Other,Auburn,IN,No symptoms,1899,positive,1/19/2021,hospitalized
 10900,1/17/2021,1000,79,Female,Hispanic,Other,Aurora,IN,No symptoms,1900,positive,1/18/2021,death
 10901,1/17/2021,1001,92,Male,Hispanic,Health Care,Anderson,IN,Mild,1901,positive,1/18/2021,recovered
@@ -906,9 +906,9 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10905,1/17/2021,1005,59,Male,Black/African American,Sales,Aurora,IN,Severe,1905,positive,1/18/2021,recovered
 10906,1/17/2021,1006,69,Female,Hispanic,Sales,Anderson,IN,Moderate,1906,positive,1/18/2021,recovered
 10907,1/17/2021,1007,42,Female,Non-Hispanic white,Sales,Angola,IN,Mild,1907,positive,1/18/2021,recovered
-10908,1/17/2021,1008,43,Female,other,Sales,Attica,IN,Mild,1908,positive,1/18/2021,hospitalized
-10909,1/17/2021,1009,51,Male,Asian,Transportation,Auburn,IN,Moderate,1909,positive,1/18/2021,hospitalized
-10910,1/17/2021,1010,53,Male,Non-Hispanic white,Transportation,Aurora,IN,Severe,1910,positive,1/18/2021,death
+10908,1/17/2021,1008,43,Female,other,Sales,Attica,IN,Mild,1908,positive,1/18/2021,recovered
+10909,1/17/2021,1009,51,Male,Asian,Transportation,Auburn,IN,Moderate,1909,positive,1/18/2021,death
+10910,1/17/2021,1010,53,Male,Non-Hispanic white,Transportation,Aurora,IN,Severe,1910,positive,1/18/2021,infected
 10911,1/17/2021,1011,6,Male,Non-Hispanic white,Transportation,Anderson,IN,Mild,1911,positive,1/18/2021,recovered
 10912,1/17/2021,1012,73,Female,Asian,Government/police,Angola,IN,No symptoms,1912,positive,1/18/2021,recovered
 10913,1/17/2021,1013,62,Female,Asian,Government/police,Attica,IN,No symptoms,1913,positive,1/18/2021,recovered
@@ -917,8 +917,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10916,1/17/2021,1016,1,Male,Black/African American,Health Care,Anderson,IN,No symptoms,1916,positive,1/18/2021,recovered
 10917,1/17/2021,1017,26,Male,Hispanic,Health Care,Angola,IN,Moderate,1917,positive,1/18/2021,recovered
 10918,1/17/2021,1018,97,Male,Hispanic,Health Care,Attica,IN,No symptoms,1918,positive,1/18/2021,hospitalized
-10919,1/17/2021,1019,51,Male,Hispanic,Health Care,Auburn,IN,No symptoms,1919,positive,1/18/2021,hospitalized
-10920,1/17/2021,1020,50,Female,Non-Hispanic white,Sales,Aurora,IN,Moderate,1920,positive,1/18/2021,death
+10919,1/17/2021,1019,51,Male,Hispanic,Health Care,Auburn,IN,No symptoms,1919,positive,1/18/2021,death
+10920,1/17/2021,1020,50,Female,Non-Hispanic white,Sales,Aurora,IN,Moderate,1920,positive,1/18/2021,recovered
 10921,1/17/2021,1021,55,Female,Asian,Sales,Anderson,IN,No symptoms,1921,positive,1/18/2021,recovered
 10922,1/17/2021,1022,80,Female,Non-Hispanic white,Sales,Angola,IN,Moderate,1922,positive,1/18/2021,recovered
 10923,1/17/2021,1023,104,Female,Asian,Sales,Attica,IN,Severe,1923,positive,1/18/2021,recovered
@@ -926,84 +926,84 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10925,1/16/2021,1025,97,Male,Black/African American,Transportation,Aurora,IN,Severe,1925,positive,1/17/2021,recovered
 10926,1/16/2021,1026,30,Male,Hispanic,Transportation,Anderson,IN,Moderate,1926,positive,1/17/2021,recovered
 10927,1/16/2021,1027,25,Male,Hispanic,Government/police,Angola,IN,No symptoms,1927,positive,1/17/2021,recovered
-10928,1/16/2021,1028,111,Male,Black/African American,Government/police,Attica,IN,Moderate,1928,positive,1/17/2021,hospitalized
-10929,1/16/2021,1029,8,Male,Black/African American,Other,Auburn,IN,No symptoms,1929,positive,1/17/2021,hospitalized
-10930,1/16/2021,1030,20,Male,Black/African American,Other,Aurora,IN,No symptoms,1930,positive,1/17/2021,death
+10928,1/16/2021,1028,111,Male,Black/African American,Government/police,Attica,IN,Moderate,1928,positive,1/17/2021,death
+10929,1/16/2021,1029,8,Male,Black/African American,Other,Auburn,IN,No symptoms,1929,positive,1/17/2021,infected
+10930,1/16/2021,1030,20,Male,Black/African American,Other,Aurora,IN,No symptoms,1930,positive,1/17/2021,recovered
 10931,1/16/2021,1031,67,Female,Black/African American,Health Care,Nemaha,IA,No symptoms,1931,positive,1/17/2021,recovered
 10932,1/16/2021,1032,39,Male,Hispanic,Health Care,Corwith,IA,Mild,1932,positive,1/17/2021,recovered
 10933,1/16/2021,1033,20,Female,Non-Hispanic white,Health Care,Rock Falls,IA,Moderate,1933,positive,1/17/2021,recovered
 10934,1/16/2021,1034,73,Female,other,Health Care,Salix,IA,Severe,1934,positive,1/17/2021,recovered
 10935,1/16/2021,1035,51,Male,Asian,Sales,AnkenyKirkman,IA,Severe,1935,positive,1/17/2021,recovered
 10936,1/16/2021,1036,23,Male,Non-Hispanic white,Sales,Nemaha,IA,Severe,1936,positive,1/17/2021,recovered
-10937,1/16/2021,1037,27,Female,Non-Hispanic white,Sales,Corwith,IA,Moderate,1937,positive,1/17/2021,recovered
-10938,1/16/2021,1038,40,Female,Asian,Sales,Rock Falls,IA,Mild,1938,positive,1/17/2021,hospitalized
-10939,1/16/2021,1039,90,Female,Asian,Transportation,Salix,IA,Mild,1939,positive,1/17/2021,hospitalized
-10940,1/16/2021,1040,2,Male,Black/African American,Transportation,AnkenyKirkman,IA,Moderate,1940,positive,1/17/2021,death
+10937,1/16/2021,1037,27,Female,Non-Hispanic white,Sales,Corwith,IA,Moderate,1937,positive,1/17/2021,hospitalized
+10938,1/16/2021,1038,40,Female,Asian,Sales,Rock Falls,IA,Mild,1938,positive,1/17/2021,death
+10939,1/16/2021,1039,90,Female,Asian,Transportation,Salix,IA,Mild,1939,positive,1/17/2021,recovered
+10940,1/16/2021,1040,2,Male,Black/African American,Transportation,AnkenyKirkman,IA,Moderate,1940,positive,1/17/2021,recovered
 10941,1/16/2021,1041,5,Male,Black/African American,Transportation,Nemaha,IA,Severe,1941,positive,1/17/2021,recovered
 10942,1/16/2021,1042,28,Male,Black/African American,Government/police,Corwith,IA,Mild,1942,positive,1/17/2021,recovered
 10943,1/16/2021,1043,59,Female,Hispanic,Government/police,Rock Falls,IA,No symptoms,1943,positive,1/17/2021,recovered
 10944,1/16/2021,1044,77,Female,Hispanic,Other,Salix,IA,No symptoms,1944,positive,1/17/2021,recovered
 10945,1/16/2021,1045,37,Female,Hispanic,Other,AnkenyKirkman,IA,No symptoms,1945,positive,1/17/2021,recovered
 10946,1/16/2021,1046,55,Female,Non-Hispanic white,Health Care,Nemaha,IA,No symptoms,1946,positive,1/17/2021,recovered
-10947,1/16/2021,1047,32,Male,Asian,Health Care,Corwith,IA,No symptoms,1947,positive,1/17/2021,recovered
-10948,1/16/2021,1048,98,Male,Non-Hispanic white,Health Care,Rock Falls,IA,Moderate,1948,positive,1/17/2021,hospitalized
-10949,1/16/2021,1049,50,Male,Asian,Health Care,Salix,IA,No symptoms,1949,positive,1/17/2021,hospitalized
-10950,1/16/2021,1050,29,Male,Black/African American,Sales,AnkenyKirkman,IA,No symptoms,1950,positive,1/17/2021,death
+10947,1/16/2021,1047,32,Male,Asian,Health Care,Corwith,IA,No symptoms,1947,positive,1/17/2021,death
+10948,1/16/2021,1048,98,Male,Non-Hispanic white,Health Care,Rock Falls,IA,Moderate,1948,positive,1/17/2021,infected
+10949,1/16/2021,1049,50,Male,Asian,Health Care,Salix,IA,No symptoms,1949,positive,1/17/2021,recovered
+10950,1/16/2021,1050,29,Male,Black/African American,Sales,AnkenyKirkman,IA,No symptoms,1950,positive,1/17/2021,recovered
 10951,1/16/2021,1051,14,Female,Black/African American,Sales,Nemaha,IA,Moderate,1951,positive,1/17/2021,recovered
 10952,1/15/2021,1052,86,Female,Hispanic,Sales,Corwith,IA,No symptoms,1952,positive,1/16/2021,recovered
 10953,1/15/2021,1053,69,Female,Hispanic,Sales,Rock Falls,IA,Moderate,1953,positive,1/16/2021,recovered
 10954,1/15/2021,1054,37,Female,Black/African American,Transportation,Salix,IA,Severe,1954,positive,1/16/2021,recovered
 10955,1/15/2021,1055,30,Female,Black/African American,Transportation,AnkenyKirkman,IA,Mild,1955,positive,1/16/2021,recovered
-10956,1/15/2021,1056,105,Male,Black/African American,Transportation,Nemaha,IA,Severe,1956,positive,1/16/2021,recovered
-10957,1/15/2021,1057,67,Male,Black/African American,Government/police,Corwith,IA,Moderate,1957,positive,1/16/2021,recovered
-10958,1/15/2021,1058,68,Male,Hispanic,Government/police,Rock Falls,IA,No symptoms,1958,positive,1/16/2021,hospitalized
-10959,1/15/2021,1059,85,Male,Non-Hispanic white,Other,Salix,IA,Moderate,1959,positive,1/16/2021,hospitalized
-10960,1/15/2021,1060,29,Male,other,Other,AnkenyKirkman,IA,No symptoms,1960,positive,1/16/2021,death
+10956,1/15/2021,1056,105,Male,Black/African American,Transportation,Nemaha,IA,Severe,1956,positive,1/16/2021,hospitalized
+10957,1/15/2021,1057,67,Male,Black/African American,Government/police,Corwith,IA,Moderate,1957,positive,1/16/2021,death
+10958,1/15/2021,1058,68,Male,Hispanic,Government/police,Rock Falls,IA,No symptoms,1958,positive,1/16/2021,recovered
+10959,1/15/2021,1059,85,Male,Non-Hispanic white,Other,Salix,IA,Moderate,1959,positive,1/16/2021,recovered
+10960,1/15/2021,1060,29,Male,other,Other,AnkenyKirkman,IA,No symptoms,1960,positive,1/16/2021,recovered
 10961,1/15/2021,1061,92,Male,Asian,Health Care,Piedmoind,KS,No symptoms,1961,positive,1/16/2021,recovered
 10962,1/15/2021,1062,83,Female,Non-Hispanic white,Health Care,Franklin,KS,No symptoms,1962,positive,1/16/2021,recovered
 10963,1/15/2021,1063,35,Male,Non-Hispanic white,Health Care,chapman,KS,Mild,1963,positive,1/16/2021,recovered
 10964,1/15/2021,1064,89,Female,Asian,Health Care,Elmo,KS,Moderate,1964,positive,1/16/2021,recovered
 10965,1/15/2021,1065,99,Female,Asian,Sales,New Albany,KS,Severe,1965,positive,1/16/2021,recovered
-10966,1/15/2021,1066,89,Male,Black/African American,Sales,Piedmoind,KS,Severe,1966,positive,1/16/2021,recovered
-10967,1/15/2021,1067,98,Male,Black/African American,Sales,Franklin,KS,Severe,1967,positive,1/16/2021,recovered
-10968,1/15/2021,1068,49,Female,Black/African American,Sales,chapman,KS,Moderate,1968,positive,1/16/2021,hospitalized
-10969,1/15/2021,1069,20,Female,Hispanic,Transportation,Elmo,KS,Mild,1969,positive,1/16/2021,hospitalized
-10970,1/15/2021,1070,27,Female,Hispanic,Transportation,New Albany,KS,Mild,1970,positive,1/16/2021,death
+10966,1/15/2021,1066,89,Male,Black/African American,Sales,Piedmoind,KS,Severe,1966,positive,1/16/2021,death
+10967,1/15/2021,1067,98,Male,Black/African American,Sales,Franklin,KS,Severe,1967,positive,1/16/2021,infected
+10968,1/15/2021,1068,49,Female,Black/African American,Sales,chapman,KS,Moderate,1968,positive,1/16/2021,recovered
+10969,1/15/2021,1069,20,Female,Hispanic,Transportation,Elmo,KS,Mild,1969,positive,1/16/2021,recovered
+10970,1/15/2021,1070,27,Female,Hispanic,Transportation,New Albany,KS,Mild,1970,positive,1/16/2021,recovered
 10971,1/15/2021,1071,88,Male,Hispanic,Transportation,Piedmoind,KS,Moderate,1971,positive,1/16/2021,recovered
 10972,1/15/2021,1072,100,Male,Non-Hispanic white,Government/police,Franklin,KS,Severe,1972,positive,1/16/2021,recovered
 10973,1/15/2021,1073,55,Male,Asian,Government/police,chapman,KS,Mild,1973,positive,1/16/2021,recovered
 10974,1/15/2021,1074,109,Female,Non-Hispanic white,Other,Elmo,KS,No symptoms,1974,positive,1/16/2021,recovered
-10975,1/15/2021,1075,24,Female,Asian,Other,New Albany,KS,No symptoms,1975,positive,1/16/2021,recovered
-10976,1/15/2021,1076,101,Female,Black/African American,Health Care,Piedmoind,KS,No symptoms,1976,positive,1/16/2021,recovered
+10975,1/15/2021,1075,24,Female,Asian,Other,New Albany,KS,No symptoms,1975,positive,1/16/2021,hospitalized
+10976,1/15/2021,1076,101,Female,Black/African American,Health Care,Piedmoind,KS,No symptoms,1976,positive,1/16/2021,death
 10977,1/15/2021,1077,92,Female,Black/African American,Health Care,Franklin,KS,No symptoms,1977,positive,1/16/2021,recovered
-10978,1/15/2021,1078,85,Male,Hispanic,Health Care,chapman,KS,No symptoms,1978,positive,1/16/2021,hospitalized
-10979,1/15/2021,1079,89,Male,Hispanic,Health Care,Elmo,KS,Moderate,1979,positive,1/16/2021,hospitalized
-10980,1/15/2021,1080,67,Male,Black/African American,Sales,New Albany,KS,No symptoms,1980,positive,1/16/2021,death
+10978,1/15/2021,1078,85,Male,Hispanic,Health Care,chapman,KS,No symptoms,1978,positive,1/16/2021,recovered
+10979,1/15/2021,1079,89,Male,Hispanic,Health Care,Elmo,KS,Moderate,1979,positive,1/16/2021,recovered
+10980,1/15/2021,1080,67,Male,Black/African American,Sales,New Albany,KS,No symptoms,1980,positive,1/16/2021,recovered
 10981,1/14/2021,1081,33,Male,Black/African American,Sales,Piedmoind,KS,No symptoms,1981,positive,1/15/2021,recovered
 10982,1/14/2021,1082,46,Female,Black/African American,Sales,Franklin,KS,Moderate,1982,positive,1/15/2021,recovered
 10983,1/14/2021,1083,33,Female,Black/African American,Sales,chapman,KS,No symptoms,1983,positive,1/15/2021,recovered
 10984,1/14/2021,1084,96,Female,Hispanic,Transportation,Elmo,KS,Moderate,1984,positive,1/15/2021,recovered
-10985,1/14/2021,1085,8,Female,Non-Hispanic white,Transportation,New Albany,KS,Severe,1985,positive,1/15/2021,recovered
-10986,1/14/2021,1086,99,Female,other,Transportation,Piedmoind,KS,Mild,1986,positive,1/15/2021,recovered
+10985,1/14/2021,1085,8,Female,Non-Hispanic white,Transportation,New Albany,KS,Severe,1985,positive,1/15/2021,death
+10986,1/14/2021,1086,99,Female,other,Transportation,Piedmoind,KS,Mild,1986,positive,1/15/2021,infected
 10987,1/14/2021,1087,99,Male,Asian,Government/police,Franklin,KS,Severe,1987,positive,1/15/2021,recovered
-10988,1/14/2021,1088,27,Male,Non-Hispanic white,Government/police,Springlee,KY,Moderate,1988,positive,1/15/2021,hospitalized
-10989,1/14/2021,1089,106,Male,Non-Hispanic white,Other,Nina,KY,No symptoms,1989,positive,1/15/2021,hospitalized
-10990,1/14/2021,1090,87,Male,Asian,Other,Wolf Creek,KY,Moderate,1990,positive,1/15/2021,death
+10988,1/14/2021,1088,27,Male,Non-Hispanic white,Government/police,Springlee,KY,Moderate,1988,positive,1/15/2021,recovered
+10989,1/14/2021,1089,106,Male,Non-Hispanic white,Other,Nina,KY,No symptoms,1989,positive,1/15/2021,recovered
+10990,1/14/2021,1090,87,Male,Asian,Other,Wolf Creek,KY,Moderate,1990,positive,1/15/2021,recovered
 10991,1/14/2021,1091,101,Male,Asian,Health Care,Ritchie,KY,No symptoms,1991,positive,1/15/2021,recovered
 10992,1/14/2021,1092,84,Male,Black/African American,Health Care,Cayce,KY,No symptoms,1992,positive,1/15/2021,recovered
 10993,1/14/2021,1093,83,Female,Black/African American,Health Care,Springlee,KY,No symptoms,1993,positive,1/15/2021,recovered
-10994,1/14/2021,1094,4,Male,Black/African American,Health Care,Nina,KY,Mild,1994,positive,1/15/2021,recovered
-10995,1/14/2021,1095,91,Female,Hispanic,Sales,Wolf Creek,KY,Moderate,1995,positive,1/15/2021,recovered
+10994,1/14/2021,1094,4,Male,Black/African American,Health Care,Nina,KY,Mild,1994,positive,1/15/2021,hospitalized
+10995,1/14/2021,1095,91,Female,Hispanic,Sales,Wolf Creek,KY,Moderate,1995,positive,1/15/2021,death
 10996,1/14/2021,1096,94,Female,Hispanic,Sales,Ritchie,KY,Severe,1996,positive,1/15/2021,recovered
 10997,1/14/2021,1097,81,Male,Hispanic,Sales,Cayce,KY,Severe,1997,positive,1/15/2021,recovered
-10998,1/14/2021,1098,87,Male,Non-Hispanic white,Sales,Springlee,KY,Severe,1998,positive,1/15/2021,hospitalized
-10999,1/14/2021,1099,30,Female,Asian,Transportation,Nina,KY,Moderate,1999,positive,1/15/2021,death
-11000,1/14/2021,1100,13,Female,Non-Hispanic white,Transportation,Wolf Creek,KY,Mild,2000,positive,1/15/2021,death
-11001,1/14/2021,1101,53,Female,Asian,Transportation,Ritchie,KY,Mild,2001,positive,1/15/2021,death
-11002,1/14/2021,1102,68,Male,Black/African American,Government/police,Cayce,KY,Moderate,2002,positive,1/15/2021,death
+10998,1/14/2021,1098,87,Male,Non-Hispanic white,Sales,Springlee,KY,Severe,1998,positive,1/15/2021,recovered
+10999,1/14/2021,1099,30,Female,Asian,Transportation,Nina,KY,Moderate,1999,positive,1/15/2021,recovered
+11000,1/14/2021,1100,13,Female,Non-Hispanic white,Transportation,Wolf Creek,KY,Mild,2000,positive,1/15/2021,recovered
+11001,1/14/2021,1101,53,Female,Asian,Transportation,Ritchie,KY,Mild,2001,positive,1/15/2021,recovered
+11002,1/14/2021,1102,68,Male,Black/African American,Government/police,Cayce,KY,Moderate,2002,positive,1/15/2021,recovered
 11003,1/14/2021,1103,24,Male,Black/African American,Government/police,Springlee,KY,Severe,2003,positive,1/15/2021,recovered
-11004,1/13/2021,1104,11,Male,Hispanic,Other,Nina,KY,Mild,2004,positive,1/14/2021,recovered
-11005,1/13/2021,1105,110,Female,Hispanic,Other,Wolf Creek,KY,No symptoms,2005,positive,1/14/2021,recovered
+11004,1/13/2021,1104,11,Male,Hispanic,Other,Nina,KY,Mild,2004,positive,1/14/2021,death
+11005,1/13/2021,1105,110,Female,Hispanic,Other,Wolf Creek,KY,No symptoms,2005,positive,1/14/2021,infected
 11006,1/13/2021,1106,76,Female,Black/African American,Health Care,Ritchie,KY,No symptoms,2006,positive,1/14/2021,recovered
 11007,1/13/2021,1107,42,Female,Black/African American,Health Care,Cayce,KY,No symptoms,2007,positive,1/14/2021,recovered
 11008,1/13/2021,1108,38,Female,Black/African American,Health Care,Springlee,KY,No symptoms,2008,positive,1/14/2021,recovered
@@ -1011,8 +1011,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11010,1/13/2021,1110,100,Male,Hispanic,Sales,Wolf Creek,KY,Moderate,2010,positive,1/14/2021,recovered
 11011,1/13/2021,1111,59,Male,Non-Hispanic white,Sales,Ritchie,KY,No symptoms,2011,positive,1/14/2021,recovered
 11012,1/13/2021,1112,20,Male,other,Sales,Cayce,KY,No symptoms,2012,positive,1/14/2021,recovered
-11013,1/13/2021,1113,5,Female,Asian,Sales,Springlee,KY,Moderate,2013,positive,1/14/2021,recovered
-11014,1/13/2021,1114,80,Female,Non-Hispanic white,Transportation,Nina,KY,No symptoms,2014,positive,1/14/2021,recovered
+11013,1/13/2021,1113,5,Female,Asian,Sales,Springlee,KY,Moderate,2013,positive,1/14/2021,hospitalized
+11014,1/13/2021,1114,80,Female,Non-Hispanic white,Transportation,Nina,KY,No symptoms,2014,positive,1/14/2021,death
 11015,1/13/2021,1115,43,Female,Non-Hispanic white,Transportation,Wolf Creek,KY,Moderate,2015,positive,1/14/2021,recovered
 11016,1/13/2021,1116,40,Female,Asian,Transportation,Ritchie,KY,Severe,2016,positive,1/14/2021,recovered
 11017,1/13/2021,1117,76,Female,Asian,Government/police,Cayce,KY,Mild,2017,positive,1/14/2021,recovered
@@ -1021,8 +1021,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11020,1/13/2021,1120,11,Male,Black/African American,Other,Wolf Creek,KY,No symptoms,2020,positive,1/14/2021,recovered
 11021,1/13/2021,1121,66,Male,Hispanic,Health Care,Ritchie,KY,Moderate,2021,positive,1/14/2021,recovered
 11022,1/13/2021,1122,10,Male,Hispanic,Health Care,Cayce,KY,No symptoms,2022,positive,1/14/2021,recovered
-11023,1/13/2021,1123,15,Male,Hispanic,Health Care,Addis,LA,No symptoms,2023,positive,1/14/2021,recovered
-11024,1/13/2021,1124,90,Female,Non-Hispanic white,Health Care,Albany,LA,No symptoms,2024,positive,1/14/2021,recovered
+11023,1/13/2021,1123,15,Male,Hispanic,Health Care,Addis,LA,No symptoms,2023,positive,1/14/2021,death
+11024,1/13/2021,1124,90,Female,Non-Hispanic white,Health Care,Albany,LA,No symptoms,2024,positive,1/14/2021,infected
 11025,1/13/2021,1125,8,Male,Asian,Sales,Alexandria,LA,Mild,2025,positive,1/14/2021,recovered
 11026,1/13/2021,1126,57,Female,Non-Hispanic white,Sales,Ama,LA,Moderate,2026,positive,1/14/2021,recovered
 11027,1/13/2021,1127,90,Female,Asian,Sales,Amelia,LA,Severe,2027,positive,1/14/2021,recovered
@@ -1030,8 +1030,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11029,1/13/2021,1129,93,Male,Black/African American,Transportation,Albany,LA,Severe,2029,positive,1/14/2021,recovered
 11030,1/12/2021,1130,58,Female,Hispanic,Transportation,Alexandria,LA,Moderate,2030,positive,1/13/2021,recovered
 11031,1/12/2021,1131,36,Female,Hispanic,Transportation,Ama,LA,Mild,2031,positive,1/13/2021,recovered
-11032,1/12/2021,1132,41,Female,Black/African American,Government/police,Amelia,LA,Mild,2032,positive,1/13/2021,recovered
-11033,1/12/2021,1133,20,Male,Black/African American,Government/police,Addis,LA,Moderate,2033,positive,1/13/2021,recovered
+11032,1/12/2021,1132,41,Female,Black/African American,Government/police,Amelia,LA,Mild,2032,positive,1/13/2021,hospitalized
+11033,1/12/2021,1133,20,Male,Black/African American,Government/police,Addis,LA,Moderate,2033,positive,1/13/2021,death
 11034,1/12/2021,1134,83,Male,Black/African American,Other,Albany,LA,Severe,2034,positive,1/13/2021,recovered
 11035,1/12/2021,1135,44,Male,Black/African American,Other,Alexandria,LA,Mild,2035,positive,1/13/2021,recovered
 11036,1/12/2021,1136,1,Female,Hispanic,Health Care,Ama,LA,No symptoms,2036,positive,1/13/2021,recovered
@@ -1040,8 +1040,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11039,1/12/2021,1139,31,Female,Asian,Health Care,Albany,LA,No symptoms,2039,positive,1/13/2021,recovered
 11040,1/12/2021,1140,31,Male,Non-Hispanic white,Sales,Alexandria,LA,No symptoms,2040,positive,1/13/2021,recovered
 11041,1/12/2021,1141,24,Male,Non-Hispanic white,Sales,Ama,LA,Moderate,2041,positive,1/13/2021,recovered
-11042,1/12/2021,1142,68,Male,Asian,Sales,Amelia,LA,No symptoms,2042,positive,1/13/2021,recovered
-11043,1/12/2021,1143,92,Male,Asian,Sales,Addis,LA,No symptoms,2043,positive,1/13/2021,recovered
+11042,1/12/2021,1142,68,Male,Asian,Sales,Amelia,LA,No symptoms,2042,positive,1/13/2021,death
+11043,1/12/2021,1143,92,Male,Asian,Sales,Addis,LA,No symptoms,2043,positive,1/13/2021,infected
 11044,1/12/2021,1144,84,Female,Black/African American,Transportation,Albany,LA,Moderate,2044,positive,1/13/2021,recovered
 11045,1/12/2021,1145,10,Female,Black/African American,Transportation,Alexandria,LA,No symptoms,2045,positive,1/13/2021,recovered
 11046,1/12/2021,1146,35,Female,Black/African American,Transportation,Ama,LA,Moderate,2046,positive,1/13/2021,recovered
@@ -1049,8 +1049,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11048,1/12/2021,1148,44,Female,Hispanic,Government/police,Addis,LA,Mild,2048,positive,1/13/2021,recovered
 11049,1/12/2021,1149,57,Male,Hispanic,Other,Albany,LA,Severe,2049,positive,1/13/2021,recovered
 11050,1/12/2021,1150,81,Male,Non-Hispanic white,Other,Alexandria,LA,Moderate,2050,positive,1/13/2021,recovered
-11051,1/12/2021,1151,74,Male,Asian,Health Care,Ama,LA,No symptoms,2051,positive,1/13/2021,recovered
-11052,1/12/2021,1152,103,Male,Non-Hispanic white,Health Care,Amelia,LA,Moderate,2052,positive,1/13/2021,recovered
+11051,1/12/2021,1151,74,Male,Asian,Health Care,Ama,LA,No symptoms,2051,positive,1/13/2021,hospitalized
+11052,1/12/2021,1152,103,Male,Non-Hispanic white,Health Care,Amelia,LA,Moderate,2052,positive,1/13/2021,death
 11053,1/12/2021,1153,52,Male,Asian,Health Care,Addis,LA,No symptoms,2053,positive,1/13/2021,recovered
 11054,1/12/2021,1154,76,Male,Black/African American,Health Care,Albany,LA,No symptoms,2054,positive,1/13/2021,recovered
 11055,1/12/2021,1155,57,Female,Black/African American,Sales,Alexandria,LA,No symptoms,2055,positive,1/13/2021,recovered
@@ -1059,8 +1059,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11058,1/12/2021,1158,86,Female,Black/African American,Sales,Addis,LA,Severe,2058,positive,1/13/2021,recovered
 11059,1/12/2021,1159,2,Male,Black/African American,Transportation,Albany,LA,Severe,2059,positive,1/13/2021,recovered
 11060,1/12/2021,1160,87,Male,Black/African American,Transportation,Alexandria,LA,Severe,2060,positive,1/13/2021,recovered
-11061,1/12/2021,1161,72,Female,Black/African American,Transportation,Corinna,ME,Moderate,2061,positive,1/13/2021,recovered
-11062,1/12/2021,1162,18,Female,Hispanic,Government/police,Chesterville,ME,Mild,2062,positive,1/13/2021,recovered
+11061,1/12/2021,1161,72,Female,Black/African American,Transportation,Corinna,ME,Moderate,2061,positive,1/13/2021,death
+11062,1/12/2021,1162,18,Female,Hispanic,Government/police,Chesterville,ME,Mild,2062,positive,1/13/2021,infected
 11063,1/11/2021,1163,9,Female,Non-Hispanic white,Government/police,Pittsfield,ME,Mild,2063,positive,1/12/2021,recovered
 11064,1/11/2021,1164,79,Male,other,Other,South Paris,ME,Moderate,2064,positive,1/12/2021,recovered
 11065,1/11/2021,1165,110,Male,Asian,Other,Brunswick,MD,Severe,2065,positive,1/12/2021,recovered
@@ -1068,8 +1068,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11067,1/11/2021,1167,25,Female,Non-Hispanic white,Health Care,College Park,MD,No symptoms,2067,positive,1/12/2021,recovered
 11068,1/11/2021,1168,80,Female,Asian,Health Care,Crisfield,MD,No symptoms,2068,positive,1/12/2021,recovered
 11069,1/11/2021,1169,6,Female,Asian,Health Care,Cumberland,MD,No symptoms,2069,positive,1/12/2021,recovered
-11070,1/11/2021,1170,76,Female,Black/African American,Sales,Brunswick,MD,No symptoms,2070,positive,1/12/2021,recovered
-11071,1/11/2021,1171,30,Male,Black/African American,Sales,Cambridge,MD,No symptoms,2071,positive,1/12/2021,recovered
+11070,1/11/2021,1170,76,Female,Black/African American,Sales,Brunswick,MD,No symptoms,2070,positive,1/12/2021,hospitalized
+11071,1/11/2021,1171,30,Male,Black/African American,Sales,Cambridge,MD,No symptoms,2071,positive,1/12/2021,death
 11072,1/11/2021,1172,71,Male,Black/African American,Sales,College Park,MD,Moderate,2072,positive,1/12/2021,recovered
 11073,1/11/2021,1173,105,Male,Hispanic,Sales,Crisfield,MD,No symptoms,2073,positive,1/12/2021,recovered
 11074,1/11/2021,1174,51,Male,Hispanic,Transportation,Cumberland,MD,No symptoms,2074,positive,1/12/2021,recovered
@@ -1078,8 +1078,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11077,1/11/2021,1177,14,Female,Asian,Government/police,College Park,MD,Moderate,2077,positive,1/12/2021,recovered
 11078,1/11/2021,1178,48,Female,Non-Hispanic white,Government/police,Crisfield,MD,Severe,2078,positive,1/12/2021,recovered
 11079,1/11/2021,1179,42,Female,Asian,Other,Cumberland,MD,Mild,2079,positive,1/12/2021,recovered
-11080,1/11/2021,1180,49,Male,Black/African American,Other,Brunswick,MD,Severe,2080,positive,1/12/2021,recovered
-11081,1/11/2021,1181,110,Male,Black/African American,Health Care,Cambridge,MD,Moderate,2081,positive,1/12/2021,recovered
+11080,1/11/2021,1180,49,Male,Black/African American,Other,Brunswick,MD,Severe,2080,positive,1/12/2021,death
+11081,1/11/2021,1181,110,Male,Black/African American,Health Care,Cambridge,MD,Moderate,2081,positive,1/12/2021,infected
 11082,1/11/2021,1182,84,Male,Hispanic,Health Care,College Park,MD,No symptoms,2082,positive,1/12/2021,recovered
 11083,1/11/2021,1183,75,Male,Hispanic,Health Care,Crisfield,MD,Moderate,2083,positive,1/12/2021,recovered
 11084,1/11/2021,1184,26,Male,Black/African American,Health Care,Cumberland,MD,No symptoms,2084,positive,1/12/2021,recovered
@@ -1087,8 +1087,8 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11086,1/11/2021,1186,16,Female,Black/African American,Sales,Cambridge,MD,No symptoms,2086,positive,1/12/2021,recovered
 11087,1/11/2021,1187,43,Male,Black/African American,Sales,College Park,MD,Mild,2087,positive,1/12/2021,recovered
 11088,1/11/2021,1188,83,Female,Hispanic,Sales,Crisfield,MD,Moderate,2088,positive,1/12/2021,recovered
-11089,1/11/2021,1189,39,Female,Non-Hispanic white,Transportation,Cumberland,MD,Severe,2089,positive,1/12/2021,recovered
-11090,1/11/2021,1190,99,Male,other,Transportation,Brunswick,MD,Severe,2090,positive,1/12/2021,recovered
+11089,1/11/2021,1189,39,Female,Non-Hispanic white,Transportation,Cumberland,MD,Severe,2089,positive,1/12/2021,hospitalized
+11090,1/11/2021,1190,99,Male,other,Transportation,Brunswick,MD,Severe,2090,positive,1/12/2021,death
 11091,1/11/2021,1191,46,Male,Asian,Transportation,Cambridge,MD,Severe,2091,positive,1/12/2021,recovered
 11092,1/11/2021,1192,7,Female,Non-Hispanic white,Government/police,College Park,MD,Moderate,2092,positive,1/12/2021,recovered
 11093,1/11/2021,1193,112,Female,Non-Hispanic white,Government/police,Crisfield,MD,Mild,2093,positive,1/12/2021,recovered
@@ -1097,17 +1097,17 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 11096,1/10/2021,1196,55,Male,Black/African American,Health Care,Cambridge,MD,Severe,2096,positive,1/11/2021,recovered
 11097,1/10/2021,1197,31,Male,Black/African American,Health Care,College Park,MD,Mild,2097,positive,1/11/2021,recovered
 11098,1/10/2021,1198,95,Female,Black/African American,Health Care,Crisfield,MD,No symptoms,2098,positive,1/11/2021,recovered
-11099,1/10/2021,1199,42,Female,Hispanic,Health Care,Hampden,MA,No symptoms,2099,positive,1/11/2021,recovered
-11100,1/10/2021,1200,72,Female,Hispanic,Sales,Fayville,MA,No symptoms,2100,positive,1/11/2021,recovered
-11101,1/10/2021,1201,4,Female,Hispanic,Sales,Taunton,MA,No symptoms,2101,positive,1/11/2021,death
-11102,1/10/2021,1202,32,Male,Non-Hispanic white,Sales,Rowe,MA,No symptoms,2102,positive,1/11/2021,death
-11103,1/10/2021,1203,56,Male,Asian,Sales,Princeton,MA,Moderate,2103,positive,1/11/2021,death
+11099,1/10/2021,1199,42,Female,Hispanic,Health Care,Hampden,MA,No symptoms,2099,positive,1/11/2021,death
+11100,1/10/2021,1200,72,Female,Hispanic,Sales,Fayville,MA,No symptoms,2100,positive,1/11/2021,infected
+11101,1/10/2021,1201,4,Female,Hispanic,Sales,Taunton,MA,No symptoms,2101,positive,1/11/2021,recovered
+11102,1/10/2021,1202,32,Male,Non-Hispanic white,Sales,Rowe,MA,No symptoms,2102,positive,1/11/2021,recovered
+11103,1/10/2021,1203,56,Male,Asian,Sales,Princeton,MA,Moderate,2103,positive,1/11/2021,recovered
 11104,1/10/2021,1204,35,Male,Non-Hispanic white,Transportation,Hampden,MA,No symptoms,2104,positive,1/11/2021,recovered
 11105,1/10/2021,1205,56,Male,Asian,Transportation,Fayville,MA,No symptoms,2105,positive,1/11/2021,recovered
 11106,1/10/2021,1206,67,Female,Black/African American,Transportation,Taunton,MA,Moderate,2106,positive,1/11/2021,recovered
 11107,1/10/2021,1207,1,Female,Black/African American,Government/police,Rowe,MA,No symptoms,2107,positive,1/11/2021,recovered
-11108,1/10/2021,1208,91,Female,Hispanic,Government/police,Princeton,MA,Moderate,2108,positive,1/11/2021,recovered
-11109,1/10/2021,1209,43,Female,Hispanic,Other,Hampden,MA,Severe,2109,positive,1/11/2021,recovered
+11108,1/10/2021,1208,91,Female,Hispanic,Government/police,Princeton,MA,Moderate,2108,positive,1/11/2021,hospitalized
+11109,1/10/2021,1209,43,Female,Hispanic,Other,Hampden,MA,Severe,2109,positive,1/11/2021,death
 11110,1/10/2021,1210,9,Female,Black/African American,Other,Fayville,MA,Mild,2110,positive,1/11/2021,recovered
 11111,1/10/2021,1211,14,Male,Black/African American,Health Care,Taunton,MA,Severe,2111,positive,1/11/2021,recovered
 11112,1/10/2021,1212,103,Male,Black/African American,Health Care,Rowe,MA,Moderate,2112,positive,1/11/2021,recovered
