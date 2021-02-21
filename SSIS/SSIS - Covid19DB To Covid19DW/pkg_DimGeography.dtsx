@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DimGeography"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{F123A897-6FE0-4D6E-B896-03C8A3AF0C2B}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{345B17F8-F919-435F-A6F7-E99E289D1A6D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -893,81 +893,39 @@ where [refTable].[StateID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Load DimGeography\City table"
-          TopLeft="457.5,55.5" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Load DimGeography\State lookup"
-          TopLeft="476.428579542102,155.176472540133" />
-        <EdgeLayout
-          Id="Package\Load DimGeography.Paths[OLE DB Source Output]"
-          TopLeft="544.164289771051,97.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.0764725401328"
-              Start="0,0"
-              End="0,50.5764725401328">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5764725401328" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="147.2,41.6"
+          Id="Package\Load DimGeography\Remove deltas"
+          TopLeft="17.5,310.3" />
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\Load DimGeography\Sort"
-          TopLeft="501.428579967849,247.635296659404" />
-        <EdgeLayout
-          Id="Package\Load DimGeography.Paths[Lookup Match Output]"
-          TopLeft="547.728579754976,196.776472540133">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.8588241192708"
-              Start="0,0"
-              End="0,43.3588241192708">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.3588241192708" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,15.8747245596354,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="42.3,208.7" />
         <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Load DimGeography\Remove deltas"
-          TopLeft="475.714293815652,340.435295930123" />
+          Size="170.4,41.6"
+          Id="Package\Load DimGeography\OLE DB Destination"
+          TopLeft="5.90000000000003,411.9" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load DimGeography\City table"
+          TopLeft="5.5,5.49999999999995" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Load DimGeography\State lookup"
+          TopLeft="22.3,107.1" />
         <EdgeLayout
           Id="Package\Load DimGeography.Paths[Sort Output]"
-          TopLeft="549.771436891751,289.235296659404">
+          TopLeft="91.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.1999992707197"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,43.6999992707197">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.6999992707197" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -976,31 +934,73 @@ where [refTable].[StateID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Load DimGeography\OLE DB Destination"
-          TopLeft="471.428579456952,429.717651155663" />
         <EdgeLayout
-          Id="Package\Load DimGeography.Paths[Lookup No Match Output]"
-          TopLeft="552.971436636302,382.035295930123">
+          Id="Package\Load DimGeography.Paths[OLE DB Source Output]"
+          TopLeft="91.1,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.6823552255399"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,40.1823552255399">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.1823552255399" />
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimGeography.Paths[Lookup No Match Output]"
+          TopLeft="91.1,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,14.28649011277,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,20.4453124999999,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimGeography.Paths[Lookup Match Output]"
+          TopLeft="91.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1008,15 +1008,25 @@ where [refTable].[StateID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimGeography\City table">
+    design-time-name="Package\Load DimGeography\Remove deltas">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimGeography]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1044,30 +1054,20 @@ where [refTable].[StateID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimGeography\Remove deltas">
+    design-time-name="Package\Load DimGeography\OLE DB Destination">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimGeography]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimGeography\OLE DB Destination">
+    design-time-name="Package\Load DimGeography\City table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

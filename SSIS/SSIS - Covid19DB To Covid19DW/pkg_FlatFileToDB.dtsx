@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FlatFileToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="180"
-  DTS:VersionGUID="{0F89A491-FF11-46F9-848A-2967443ADEE6}">
+  DTS:VersionBuild="181"
+  DTS:VersionGUID="{EC10BC8A-0DD7-4B3E-B637-310AA4794BC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3087,7 +3087,7 @@ where [refTable].[Name] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FEA6E5CC-4CA5-41AD-8147-F52073AB9518}"
-          SQLTask:SqlStatementSource="INSERT INTO Ethnicity (Name) VALUES ('other');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Non-Hispanic white');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Black/African American');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Hispanic');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO Ethnicity (Name) VALUES ('other');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Non-Hispanic white');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Black/African American');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Hispanic');&#xA;INSERT INTO Ethnicity (Name) VALUES ('Asian');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3274,6 +3274,10 @@ where [refTable].[Name] = ?</property>
           Size="208.8,41.6"
           Id="Package\Add PatientID to Case table"
           TopLeft="22.7000000000001,1021.5" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Prepare DB"
+          TopLeft="61.5,5.49999999999995" />
         <NodeLayout
           Size="235.2,41.6"
           Id="Package\Write data from file to Case table"
@@ -3487,32 +3491,6 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="127.1,656.699999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="131.2,41.6"
-          Id="Package\Prepare DB"
-          TopLeft="61.5,5.49999999999995" />
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="127.1,47.1">
           <EdgeLayout.Curve>
@@ -3526,6 +3504,28 @@ where [refTable].[Name] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="127.1,656.699999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
