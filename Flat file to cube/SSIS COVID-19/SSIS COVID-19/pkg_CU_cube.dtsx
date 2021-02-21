@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_CU_cube"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{9B43316F-7695-478B-8689-7C3AFE68189A}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{541F8C4A-A596-413B-AC52-ECB1BAD8FBC8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
