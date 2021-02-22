@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>Covid-SSAS</DataSourceReference>
+      <CommandText> SELECT NON EMPTY { [Measures].[Infection], [Measures].[Hospitalization], [Measures].[Recovery], [Measures].[Death] } ON COLUMNS, NON EMPTY { ([Patient Info].[Age Group].[Age Group].ALLMEMBERS * [Patient Info].[Ethnicity].[Ethnicity].ALLMEMBERS * [Patient Info].[Occupation].[Occupation].ALLMEMBERS * [Patient Info].[Gender].[Gender].ALLMEMBERS * [Dim Geography].[State Abbreviation].[State Abbreviation].ALLMEMBERS * [Dim Geography].[City].[City].ALLMEMBERS * [Dim Date].[Calendar Year].[Calendar Year].ALLMEMBERS * [Dim Date].[Calendar Month].[Calendar Month].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Covid19DW] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Patient Info</DimensionName>
+                    <HierarchyName>Age Group</HierarchyName>
+                    <HierarchyUniqueName>[Patient Info].[Age Group]</HierarchyUniqueName>
+                    <LevelName>Age Group</LevelName>
+                    <UniqueName>[Patient Info].[Age Group].[Age Group]</UniqueName>
+                  </ID>
+                  <ItemCaption>Age Group</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Patient Info</DimensionName>
+                    <HierarchyName>Ethnicity</HierarchyName>
+                    <HierarchyUniqueName>[Patient Info].[Ethnicity]</HierarchyUniqueName>
+                    <LevelName>Ethnicity</LevelName>
+                    <UniqueName>[Patient Info].[Ethnicity].[Ethnicity]</UniqueName>
+                  </ID>
+                  <ItemCaption>Ethnicity</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Patient Info</DimensionName>
+                    <HierarchyName>Occupation</HierarchyName>
+                    <HierarchyUniqueName>[Patient Info].[Occupation]</HierarchyUniqueName>
+                    <LevelName>Occupation</LevelName>
+                    <UniqueName>[Patient Info].[Occupation].[Occupation]</UniqueName>
+                  </ID>
+                  <ItemCaption>Occupation</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Patient Info</DimensionName>
+                    <HierarchyName>Gender</HierarchyName>
+                    <HierarchyUniqueName>[Patient Info].[Gender]</HierarchyUniqueName>
+                    <LevelName>Gender</LevelName>
+                    <UniqueName>[Patient Info].[Gender].[Gender]</UniqueName>
+                  </ID>
+                  <ItemCaption>Gender</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Geography</DimensionName>
+                    <HierarchyName>State Abbreviation</HierarchyName>
+                    <HierarchyUniqueName>[Dim Geography].[State Abbreviation]</HierarchyUniqueName>
+                    <LevelName>State Abbreviation</LevelName>
+                    <UniqueName>[Dim Geography].[State Abbreviation].[State Abbreviation]</UniqueName>
+                  </ID>
+                  <ItemCaption>State Abbreviation</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Geography</DimensionName>
+                    <HierarchyName>City</HierarchyName>
+                    <HierarchyUniqueName>[Dim Geography].[City]</HierarchyUniqueName>
+                    <LevelName>City</LevelName>
+                    <UniqueName>[Dim Geography].[City].[City]</UniqueName>
+                  </ID>
+                  <ItemCaption>City</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Calendar Year</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Calendar Year]</HierarchyUniqueName>
+                    <LevelName>Calendar Year</LevelName>
+                    <UniqueName>[Dim Date].[Calendar Year].[Calendar Year]</UniqueName>
+                  </ID>
+                  <ItemCaption>Calendar Year</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Calendar Month</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Calendar Month]</HierarchyUniqueName>
+                    <LevelName>Calendar Month</LevelName>
+                    <UniqueName>[Dim Date].[Calendar Month].[Calendar Month]</UniqueName>
+                  </ID>
+                  <ItemCaption>Calendar Month</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Infection</MeasureName>
+                    <UniqueName>[Measures].[Infection]</UniqueName>
+                  </ID>
+                  <ItemCaption>Infection</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Hospitalization</MeasureName>
+                    <UniqueName>[Measures].[Hospitalization]</UniqueName>
+                  </ID>
+                  <ItemCaption>Hospitalization</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Recovery</MeasureName>
+                    <UniqueName>[Measures].[Recovery]</UniqueName>
+                  </ID>
+                  <ItemCaption>Recovery</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Death</MeasureName>
+                    <UniqueName>[Measures].[Death]</UniqueName>
+                  </ID>
+                  <ItemCaption>Death</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Covid19DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement> SELECT NON EMPTY { [Measures].[Infection], [Measures].[Hospitalization], [Measures].[Recovery], [Measures].[Death] } ON COLUMNS, NON EMPTY { ([Patient Info].[Age Group].[Age Group].ALLMEMBERS * [Patient Info].[Ethnicity].[Ethnicity].ALLMEMBERS * [Patient Info].[Occupation].[Occupation].ALLMEMBERS * [Patient Info].[Gender].[Gender].ALLMEMBERS * [Dim Geography].[State Abbreviation].[State Abbreviation].ALLMEMBERS * [Dim Geography].[City].[City].ALLMEMBERS * [Dim Date].[Calendar Year].[Calendar Year].ALLMEMBERS * [Dim Date].[Calendar Month].[Calendar Month].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Covid19DW] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Age_Group">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Patient Info].[Age Group].[Age Group]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Ethnicity">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Patient Info].[Ethnicity].[Ethnicity]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Occupation">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Patient Info].[Occupation].[Occupation]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Gender">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Patient Info].[Gender].[Gender]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="State_Abbreviation">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Geography].[State Abbreviation].[State Abbreviation]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Infection">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Infection]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Geography].[City].[City]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Hospitalization">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Hospitalization]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Calendar_Year">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Date].[Calendar Year].[Calendar Year]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Recovery">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Recovery]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Calendar_Month">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Date].[Calendar Month].[Calendar Month]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Death">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Death]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

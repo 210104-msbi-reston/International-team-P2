@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>Covid-SSAS</DataSourceReference>
+      <CommandText>WITH MEMBER [Measures].[Percent_of_Dead] AS [Measures].[Death]/[Measures].[Infection]*100 MEMBER [Measures].[Percent_of_Recovered] AS ([Measures].[Recovery]/[Measures].[Infection])*100 SELECT NON EMPTY { [Measures].[Infection], [Measures].[Hospitalization], [Measures].[Recovery], [Measures].[Death], [Measures].[Percent_of_Dead], [Measures].[Percent_of_Recovered] } ON COLUMNS, NON EMPTY { ([Dim Geography].[State Abbreviation].[State Abbreviation].ALLMEMBERS * [Dim Geography].[City].[City].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Covid19DW] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Geography</DimensionName>
+                    <HierarchyName>State Abbreviation</HierarchyName>
+                    <HierarchyUniqueName>[Dim Geography].[State Abbreviation]</HierarchyUniqueName>
+                    <LevelName>State Abbreviation</LevelName>
+                    <UniqueName>[Dim Geography].[State Abbreviation].[State Abbreviation]</UniqueName>
+                  </ID>
+                  <ItemCaption>State Abbreviation</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Geography</DimensionName>
+                    <HierarchyName>City</HierarchyName>
+                    <HierarchyUniqueName>[Dim Geography].[City]</HierarchyUniqueName>
+                    <LevelName>City</LevelName>
+                    <UniqueName>[Dim Geography].[City].[City]</UniqueName>
+                  </ID>
+                  <ItemCaption>City</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Infection</MeasureName>
+                    <UniqueName>[Measures].[Infection]</UniqueName>
+                  </ID>
+                  <ItemCaption>Infection</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Hospitalization</MeasureName>
+                    <UniqueName>[Measures].[Hospitalization]</UniqueName>
+                  </ID>
+                  <ItemCaption>Hospitalization</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Recovery</MeasureName>
+                    <UniqueName>[Measures].[Recovery]</UniqueName>
+                  </ID>
+                  <ItemCaption>Recovery</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Death</MeasureName>
+                    <UniqueName>[Measures].[Death]</UniqueName>
+                  </ID>
+                  <ItemCaption>Death</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Percent_of_Dead</MeasureName>
+                    <UniqueName>[Measures].[Percent_of_Dead]</UniqueName>
+                  </ID>
+                  <ItemCaption>Percent_of_Dead</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Percent_of_Recovered</MeasureName>
+                    <UniqueName>[Measures].[Percent_of_Recovered]</UniqueName>
+                  </ID>
+                  <ItemCaption>Percent_of_Recovered</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Covid19DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations>
+              <Calculation>
+                <ID>[Percent_of_Dead]</ID>
+                <Name>Percent_of_Dead</Name>
+                <ParentUniqueName>[Measures]</ParentUniqueName>
+                <Expression>[Measures].[Death]/[Measures].[Infection]*100</Expression>
+              </Calculation>
+              <Calculation>
+                <ID>[Percent_of_Recovered]</ID>
+                <Name>Percent_of_Recovered</Name>
+                <ParentUniqueName>[Measures]</ParentUniqueName>
+                <Expression>([Measures].[Recovery]/[Measures].[Infection])*100</Expression>
+              </Calculation>
+            </Calculations>
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>WITH MEMBER [Measures].[Percent_of_Dead] AS [Measures].[Death]/[Measures].[Infection]*100 MEMBER [Measures].[Percent_of_Recovered] AS ([Measures].[Recovery]/[Measures].[Infection])*100 SELECT NON EMPTY { [Measures].[Infection], [Measures].[Hospitalization], [Measures].[Recovery], [Measures].[Death], [Measures].[Percent_of_Dead], [Measures].[Percent_of_Recovered] } ON COLUMNS, NON EMPTY { ([Dim Geography].[State Abbreviation].[State Abbreviation].ALLMEMBERS * [Dim Geography].[City].[City].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Covid19DW] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="State_Abbreviation">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Geography].[State Abbreviation].[State Abbreviation]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Geography].[City].[City]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Infection">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Infection]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Hospitalization">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Hospitalization]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Recovery">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Recovery]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Death">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Death]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Percent_of_Dead">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Percent_of_Dead]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Percent_of_Recovered">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Percent_of_Recovered]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

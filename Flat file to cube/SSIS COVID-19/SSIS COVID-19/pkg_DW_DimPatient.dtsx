@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DW_DimPatient"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{59B426F6-DD07-4531-8657-04E45DD7FFA3}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{8073C544-230E-4214-B8EB-AD5599BF944D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2140,7 +2140,7 @@ where [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ? and [refTable].[
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\Load DimPatient"
           TopLeft="5.5,5.5" />
       </GraphLayout>
@@ -2152,71 +2152,71 @@ where [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ? and [refTable].[
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Gender Table"
           TopLeft="469.5,5.49999999999977" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Sort Ethnicity"
           TopLeft="701.5,209.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Ethnicity JoinKey"
           TopLeft="701.5,107.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Occupation JoinKey"
           TopLeft="5.5,107.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Occupation Table"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Load DimPatient\Merge Join 1"
           TopLeft="582.5,323.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Gender JoinKey"
           TopLeft="469.5,107.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Sort Occupation"
           TopLeft="5.5,209.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Remove Deltas"
           TopLeft="314.5,529.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Load DimPatient"
           TopLeft="314.5,638.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Sort AgeGroups"
           TopLeft="237.5,209.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\AgeGroups Table"
           TopLeft="237.5,5.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Sort Gender"
           TopLeft="469.5,209.5" />
         <NodeLayout
-          Size="130,42"
+          Size="129.6,41.6"
           Id="Package\Load DimPatient\Merge Join"
           TopLeft="139.5,324.5" />
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Load DimPatient\Merge Join 2"
           TopLeft="336.5,424.5" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\Ethnicity Table"
           TopLeft="701.5,5.49999999999977" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Load DimPatient\AgeGroups JoinKey"
           TopLeft="237.5,107.5" />
         <EdgeLayout
@@ -2649,14 +2649,14 @@ where [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ? and [refTable].[
           Text="These sorts are only here to allow merging"
           ParentId="Package\Load DimPatient"
           FontInfo="{assembly:Null}"
-          Size="261,40"
+          Size="260.8,40"
           Id="25a2734f-86ad-4e8c-829b-0e3796dadf88"
           TopLeft="924.5,208.5" />
         <AnnotationLayout
           Text="Create a dummy join key for the purpose of a cross join&#xA;And truncate data to varchar(50)"
           ParentId="Package\Load DimPatient"
           FontInfo="{assembly:Null}"
-          Size="323,56"
+          Size="323.2,56"
           Id="2c2d7272-92c5-419b-956b-1b6d85b7dba0"
           TopLeft="905.5,99.4999999999998" />
         <AnnotationLayout
