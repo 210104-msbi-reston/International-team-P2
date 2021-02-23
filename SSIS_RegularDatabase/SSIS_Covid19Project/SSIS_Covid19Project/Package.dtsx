@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="80"
-  DTS:VersionGUID="{E533AC0A-95BE-44AE-8F55-53C72CFEB47B}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{A56885E1-307B-4754-A7C1-8B8558FE57FB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -54,6 +54,16 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C5D7453F-304C-4834-8D82-154EBADE362F}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\International_GroupProjectold\International-team-P2\SSIS_RegularDatabase\Data.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
       DTS:CreationName="EXCEL"
       DTS:DTSID="{2D5E51DE-556E-4C0F-A683-1457756E3026}"
@@ -63,6 +73,26 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ruslan\Desktop\Revature_training\practice\ProjectSSIScOVID\Data.xls;Extended Properties=&quot;EXCEL 8.0;HDR=NO&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6849EE12-9F7A-48B4-8EB5-5A0466E4C45A}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\International_GroupProjectold\International-team-P2\SSIS_RegularDatabase\Data.xls;Extended Properties=&quot;Excel 8.0;HDR=NO&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-PA9UJJBG\TXSERVER1.Covid19DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CD7F0CF4-2FA9-427F-BE0F-35F5D53BF56A}"
+      DTS:ObjectName="LAPTOP-PA9UJJBG\TXSERVER1.Covid19DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-PA9UJJBG\TXSERVER1;Initial Catalog=Covid19DB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -3644,17 +3674,17 @@
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populate States\Convert Unicode to not nunicode values.Inputs[Data Conversion Input].Columns[StateName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="StateName"
-                      lineageId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[StateName]" />
-                    <inputColumn
                       refId="Package\Populate States\Convert Unicode to not nunicode values.Inputs[Data Conversion Input].Columns[StateCode]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="StateCode"
                       lineageId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[StateCode]" />
+                    <inputColumn
+                      refId="Package\Populate States\Convert Unicode to not nunicode values.Inputs[Data Conversion Input].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State"
+                      lineageId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[State]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3667,21 +3697,21 @@
                   synchronousInputId="Package\Populate States\Convert Unicode to not nunicode values.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[CopyOfStateName]"
+                      refId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[Copy of State]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[CopyOfStateName]"
-                      name="CopyOfStateName"
+                      lineageId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      name="Copy of State"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[StateName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[State]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -3796,8 +3826,8 @@
               <connections>
                 <connection
                   refId="Package\Populate States\Load States.Connections[OleDbConnection]"
-                  connectionManagerID="{27A46ED4-0D42-4CF6-88BC-B439256083B9}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-2880HMN_LEARNINGSERVER.Covid19DB]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-PA9UJJBG\TXSERVER1.Covid19DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-PA9UJJBG\TXSERVER1.Covid19DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3810,21 +3840,21 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].Columns[CopyOfStateName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CopyOfStateName"
-                      externalMetadataColumnId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      lineageId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[CopyOfStateName]" />
-                    <inputColumn
                       refId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].Columns[Copy Of State Code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="Copy Of State Code"
-                      externalMetadataColumnId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      externalMetadataColumnId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[StateAbbreviation]"
                       lineageId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[Copy Of State Code]" />
+                    <inputColumn
+                      refId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].Columns[Copy of State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of State"
+                      externalMetadataColumnId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Populate States\Convert Unicode to not nunicode values.Outputs[Data Conversion Output].Columns[Copy of State]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3835,11 +3865,15 @@
                       length="255"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      refId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[StateID]"
+                      dataType="i4"
+                      name="StateID" />
+                    <externalMetadataColumn
+                      refId="Package\Populate States\Load States.Inputs[OLE DB Destination Input].ExternalColumns[StateAbbreviation]"
                       codePage="1252"
                       dataType="str"
                       length="2"
-                      name="StateCode" />
+                      name="StateAbbreviation" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3911,8 +3945,8 @@
               <connections>
                 <connection
                   refId="Package\Populate States\Populate Satte.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3922,14 +3956,14 @@
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[StateName]"
+                      refId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[State]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].ExternalColumns[F1]"
                       length="255"
-                      lineageId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[StateName]"
-                      name="StateName"
+                      lineageId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[State]"
+                      name="State"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populate States\Populate Satte.Outputs[Excel Source Output].Columns[StateCode]"
@@ -4920,83 +4954,83 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="235.2,41.6"
+          Size="235,42"
           Id="Package\Delete Existing Data From Tables"
           TopLeft="181.214288195785,24.7941174969129" />
         <NodeLayout
-          Size="168.8,41.6"
+          Size="169,42"
           Id="Package\Poppulate Ethnicity"
           TopLeft="125.500001532691,292.441180074091" />
         <NodeLayout
-          Size="144.8,41.6"
+          Size="145,42"
           Id="Package\Populate Case"
           TopLeft="352.642863054665,325.147063306458" />
         <NodeLayout
-          Size="148,41.6"
+          Size="148,42"
           Id="Package\Populate Cities"
           TopLeft="12.4714280362032,229.937089230682" />
         <NodeLayout
-          Size="154.4,41.6"
+          Size="154,42"
           Id="Package\Populate Facility"
           TopLeft="614.785724150891,100.5000009116" />
         <NodeLayout
-          Size="178.4,41.6"
+          Size="178,42"
           Id="Package\Populate Facility type"
           TopLeft="531.214294667147,29.9705885784849" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Populate Gender"
           TopLeft="507.642865694299,378.041181168012" />
         <NodeLayout
-          Size="175.2,41.6"
+          Size="175,42"
           Id="Package\Populate Occupation"
           TopLeft="36.9285719637968,441.34706494734" />
         <NodeLayout
-          Size="164.8,41.6"
+          Size="165,42"
           Id="Package\Populate Outcome"
           TopLeft="529.0714369769,235.852943986345" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\Populate Patient"
           TopLeft="95.5000015326909,365.676475639574" />
         <NodeLayout
-          Size="151.2,41.6"
+          Size="152,42"
           Id="Package\Populate States"
           TopLeft="67.3000058753149,145.535291189801" />
         <NodeLayout
-          Size="167.2,41.6"
+          Size="167,42"
           Id="Package\Populate Symptom"
           TopLeft="224.785718020128,416.041181532652" />
         <NodeLayout
-          Size="142.4,41.6"
+          Size="142,42"
           Id="Package\Populate Test"
           TopLeft="357.642863139814,228.604682229973" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="242.014288195785,66.3941174969129">
+          TopLeft="241.964288195785,66.7941174969129">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-99.1142823204705,79.1411736928878"
+              EndConnector="-98.6642823204701,78.7411736928881"
               Start="0,0"
-              End="-99.1142823204705,71.6411736928878">
+              End="-98.6642823204701,71.2411736928881">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.9718798235851" />
+                    End="0,22.8360521842522" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.9718798235851"
-                    Point2="0,26.9718798235851"
-                    Point3="-4,26.9718798235851" />
+                    Point1="0,22.8360521842522"
+                    Point2="0,26.8360521842522"
+                    Point3="-4,26.8360521842522" />
                   <mssgle:LineSegment
-                    End="-95.1142823204705,26.9718798235851" />
+                    End="-94.6642823204701,26.8360521842522" />
                   <mssgle:CubicBezierSegment
-                    Point1="-95.1142823204705,26.9718798235851"
-                    Point2="-99.1142823204705,26.9718798235851"
-                    Point3="-99.1142823204705,30.9718798235851" />
+                    Point1="-94.6642823204701,26.8360521842522"
+                    Point2="-98.6642823204701,26.8360521842522"
+                    Point3="-98.6642823204701,30.8360521842522" />
                   <mssgle:LineSegment
-                    End="-99.1142823204705,71.6411736928878" />
+                    End="-98.6642823204701,71.2411736928881" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5289,30 +5323,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="142.900005875315,187.135291189801">
+          TopLeft="143.300005875315,187.535291189801">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-56.4285778391117,42.8017980408814"
+              EndConnector="-56.8285778391117,42.401798040881"
               Start="0,0"
-              End="-56.4285778391117,35.3017980408814">
+              End="-56.8285778391117,34.901798040881">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.4008990204407" />
+                    End="0,17.2008990204405" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.4008990204407"
-                    Point2="0,21.4008990204407"
-                    Point3="-4,21.4008990204407" />
+                    Point1="0,17.2008990204405"
+                    Point2="0,21.2008990204405"
+                    Point3="-4,21.2008990204405" />
                   <mssgle:LineSegment
-                    End="-52.4285778391117,21.4008990204407" />
+                    End="-52.8285778391117,21.2008990204405" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.4285778391117,21.4008990204407"
-                    Point2="-56.4285778391117,21.4008990204407"
-                    Point3="-56.4285778391117,25.4008990204407" />
+                    Point1="-52.8285778391117,21.2008990204405"
+                    Point2="-56.8285778391117,21.2008990204405"
+                    Point3="-56.8285778391117,25.2008990204405" />
                   <mssgle:LineSegment
-                    End="-56.4285778391117,35.3017980408814" />
+                    End="-56.8285778391117,34.901798040881" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6246,7 +6280,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Populate Patient\Load Patient">
+    design-time-name="Package\Populate Patient\Populate Patient">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6259,7 +6293,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Populate Patient\Populate Patient">
+    design-time-name="Package\Populate Patient\Load Patient">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6275,89 +6309,85 @@
     design-time-name="Package\Populate States">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="133.6,41.6"
+          Size="134,42"
           Id="Package\Populate States\Load States"
           TopLeft="147.892857142857,221.75" />
         <NodeLayout
-          Size="146.4,41.6"
+          Size="146,42"
           Id="Package\Populate States\Populate Satte"
           TopLeft="139.142857142857,38" />
         <NodeLayout
-          Size="265.6,41.6"
+          Size="267,42"
           Id="Package\Populate States\Convert Unicode to not nunicode values"
           TopLeft="101.642857142857,129.25" />
         <EdgeLayout
           Id="Package\Populate States.Paths[Excel Source Output]"
-          TopLeft="212.342857142857,79.6">
+          TopLeft="212.142857142857,80">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="22.1,49.65"
+              EndConnector="23,49.25"
               Start="0,0"
-              End="22.1,42.15">
+              End="23,41.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.825" />
+                    End="0,20.625" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.825"
-                    Point2="0,24.825"
-                    Point3="4,24.825" />
+                    Point1="0,20.625"
+                    Point2="0,24.625"
+                    Point3="4,24.625" />
                   <mssgle:LineSegment
-                    End="18.1,24.825" />
+                    End="19,24.625" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.1,24.825"
-                    Point2="22.1,24.825"
-                    Point3="22.1,28.825" />
+                    Point1="19,24.625"
+                    Point2="23,24.625"
+                    Point3="23,28.625" />
                   <mssgle:LineSegment
-                    End="22.1,42.15" />
+                    End="23,41.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populate States.Paths[Data Conversion Output]"
-          TopLeft="234.442857142857,170.85">
+          TopLeft="235.142857142857,171.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19.7500000000001,50.9"
+              EndConnector="-20.25,50.5"
               Start="0,0"
-              End="-19.7500000000001,43.4">
+              End="-20.25,43">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.45" />
+                    End="0,21.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.45"
-                    Point2="0,25.45"
-                    Point3="-4,25.45" />
+                    Point1="0,21.25"
+                    Point2="0,25.25"
+                    Point3="-4,25.25" />
                   <mssgle:LineSegment
-                    End="-15.7500000000001,25.45" />
+                    End="-16.25,25.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="-15.7500000000001,25.45"
-                    Point2="-19.7500000000001,25.45"
-                    Point3="-19.7500000000001,29.45" />
+                    Point1="-16.25,25.25"
+                    Point2="-20.25,25.25"
+                    Point3="-20.25,29.25" />
                   <mssgle:LineSegment
-                    End="-19.7500000000001,43.4" />
+                    End="-20.25,43" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

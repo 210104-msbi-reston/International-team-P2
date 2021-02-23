@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DB_FlatToStaging"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{B9F57700-BF95-4E88-86CC-0C71A50DC7EF}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{DF339FF3-D720-455D-99CB-28DA9899C1B5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Revature Training\Projects\Project-2\Project\Local Repository\COVID19_dataset.csv">
+          DTS:ConnectionString="D:\International_GroupProjectold\International-team-P2\International-team-P2\Data\SourceData\Covid19_dataset.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -41,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_id"
-              DTS:DTSID="{CC625268-EB05-4911-AA66-9E4551BABC4A}"
+              DTS:DTSID="{81C4B4E1-F86F-4B3A-B712-7A2A3EC2FB02}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_date"
-              DTS:DTSID="{72B56F02-FED9-44DD-8A67-2C1C60671B24}"
+              DTS:DTSID="{580F5566-1FFC-44B3-B3BA-8DF7B9615109}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="patient_id"
-              DTS:DTSID="{0433168F-376F-4885-AD26-29D1AAB9D72C}"
+              DTS:DTSID="{DF084039-6491-45CD-84F7-FF644BA62F49}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="patient_age"
-              DTS:DTSID="{E5F926ED-5A81-4861-A9CF-0B532647255B}"
+              DTS:DTSID="{31445DDC-3A9D-4187-AD4F-6E5BC48CCD6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="patient_gender"
-              DTS:DTSID="{D740A9CB-B319-432C-BAA6-004528C20965}"
+              DTS:DTSID="{E654D1E2-B363-4948-AE13-2A5F12C57773}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="patient_ethnicity"
-              DTS:DTSID="{3FFD0739-A506-42FF-8AFF-7162032336A2}"
+              DTS:DTSID="{E13E853E-E12C-434C-A6B0-39536F0519AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +95,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="occupation"
-              DTS:DTSID="{F9C02813-AC6D-469D-BA04-54726BEA7946}"
+              DTS:DTSID="{685CA7EB-0AA7-4068-833F-C0614C47417A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,7 +104,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{722C563A-05E9-43B6-8AF9-66CF980C5AC5}"
+              DTS:DTSID="{40F9E1E5-3605-4B41-94E4-09857BEB04AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="state"
-              DTS:DTSID="{3B5EBF92-F8F3-4686-ADF5-60A26205BEBE}"
+              DTS:DTSID="{E6DC36D8-BACF-4F8B-A744-B53CFB50D5DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +122,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="symptom"
-              DTS:DTSID="{87BCA778-6083-4ECE-962C-8786A954BFA9}"
+              DTS:DTSID="{892B4BC1-B79A-4A50-80DF-DBB276620A6B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +131,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="test_id"
-              DTS:DTSID="{B04D2649-25DC-4E7F-85FD-22D4AAD61F93}"
+              DTS:DTSID="{C5FB19C6-76AE-4CC6-9244-3DFFDC1DB15B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="test_result"
-              DTS:DTSID="{F9494695-4FD4-490F-AD1F-EB91308849AA}"
+              DTS:DTSID="{1569F6D6-6BDB-4B37-9310-90175BB256DC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +149,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="test_date"
-              DTS:DTSID="{5F672A2B-E853-4DE3-9A44-1CF655AE6E1D}"
+              DTS:DTSID="{3772351F-A6F8-4587-85F1-F6199F9717AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -158,7 +158,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="outcome"
-              DTS:DTSID="{3FA81225-B090-46A5-8956-E8DF97BF83B4}"
+              DTS:DTSID="{85674E6C-5C73-4D33-AA63-0A866F0A7845}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -173,7 +173,7 @@
       DTS:ObjectName="COVID19_dataset_csv_filepath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">E:\Revature Training\Projects\Project-2\Project\Local Repository\COVID19_dataset.csv</DTS:Property>
+        DTS:Name="ParameterValue">D:\International_GroupProjectold\International-team-P2\International-team-P2\Data\SourceData\Covid19_dataset.csv</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -921,21 +921,21 @@
         <NodeLayout
           Size="173,42"
           Id="Package\Load staging table\Original data source"
-          TopLeft="163.5,23.5" />
+          TopLeft="163.5,22.5" />
         <EdgeLayout
           Id="Package\Load staging table.Paths[Flat File Source Output]"
-          TopLeft="252.75,65.5">
+          TopLeft="252.75,64.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,220"
+              EndConnector="0,221"
               Start="0,0"
-              End="0,212.5">
+              End="0,213.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,212.5" />
+                    End="0,213.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

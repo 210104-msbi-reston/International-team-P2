@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DW_DimPatient"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{59B426F6-DD07-4531-8657-04E45DD7FFA3}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{C54A8791-0FDB-4455-B3FD-C134A2C5DB1B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2196,7 +2196,7 @@ where [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ? and [refTable].[
           Id="Package\Load DimPatient\Sort AgeGroups"
           TopLeft="237.5,209.5" />
         <NodeLayout
-          Size="171,42"
+          Size="159,42"
           Id="Package\Load DimPatient\AgeGroups Table"
           TopLeft="237.5,5.5" />
         <NodeLayout
@@ -2357,7 +2357,7 @@ where [refTable].[Occupation] = ? and [refTable].[AgeGroup] = ? and [refTable].[
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load DimPatient.Paths[OLE DB Source Output3]"
-          TopLeft="323,47.5">
+          TopLeft="320,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

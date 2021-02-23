@@ -200,219 +200,219 @@ case_id,case_date,patient_id,patient_age,patient_gender,patient_ethnicity,occupa
 10199,6/6/2020,592,88,Male,Hispanic,Sales,Alameda,CA,No symptoms,1199,positive,12/7/2020,recovered
 10200,4/8/2020,593,15,Female,Hispanic,Transportation,Albany,CA,No symptoms,1200,negative,4/7/2020,recovered
 10201,4/15/2020,594,88,Female,Hispanic,Health Care,Alhambra,CA,No symptoms,1201,positive,3/6/2020,death
-10202,7/11/2020,595,96,Male,Hispanic,Transportation,Adelanto,CA,No symptoms,1202,negative,11/10/2020,hospitalized
-10203,11/29/2020,596,20,Male,other,Other,Agoura Hills,CA,No symptoms,1203,positive,7/4/2020,hospitalized
-10204,12/1/2020,597,100,Female,Non-Hispanic white,Government/police,Alameda,CA,Moderate,1204,negative,5/20/2020,death
-10205,1/9/2021,598,51,Female,Black/African American,Sales,Albany,CA,No symptoms,1205,positive,6/24/2020,death
-10206,12/31/2020,599,99,Female,other,Health Care,Alhambra,CA,No symptoms,1206,positive,8/4/2020,hospitalized
-10207,3/22/2020,600,89,Male,Black/African American,Government/police,Adelanto,CA,Moderate,1207,positive,9/3/2020,hospitalized
-10208,10/24/2020,601,26,Male,Black/African American,Health Care,Agoura Hills,CA,No symptoms,1208,negative,9/28/2020,recovered
-10209,3/2/2020,602,56,Male,Hispanic,Sales,Alameda,CA,Moderate,1209,positive,4/25/2020,hospitalized
-10210,12/7/2020,603,12,Male,other,Transportation,Albany,CA,Severe,1210,negative,1/12/2021,hospitalized
-10211,11/11/2020,604,40,Female,Hispanic,Health Care,Alhambra,CA,Mild,1211,positive,8/15/2020,hospitalized
-10212,6/21/2020,605,13,Female,Hispanic,Transportation,Adelanto,CA,Severe,1212,negative,10/9/2020,recovered
-10213,7/23/2020,606,9,Female,Non-Hispanic white,Other,Agoura Hills,CA,Moderate,1213,positive,4/19/2020,hospitalized
-10214,7/18/2020,607,18,Male,Non-Hispanic white,Government/police,Alameda,CA,No symptoms,1214,positive,10/19/2020,hospitalized
-10215,5/2/2020,608,95,Female,Non-Hispanic white,Sales,Albany,CA,Moderate,1215,positive,9/3/2020,recovered
-10216,4/24/2020,609,41,Male,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1216,negative,7/14/2020,hospitalized
-10217,8/1/2020,610,76,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1217,positive,7/21/2020,hospitalized
-10218,6/6/2020,611,88,Female,other,Health Care,Agoura Hills,CA,No symptoms,1218,negative,10/27/2020,death
-10219,4/21/2020,612,22,Male,Hispanic,Sales,Alameda,CA,Mild,1219,positive,8/11/2020,death
-10220,1/7/2021,613,65,Female,other,Transportation,Albany,CA,Moderate,1220,negative,12/10/2020,death
-10221,4/23/2020,614,54,Male,Black/African American,Health Care,Alhambra,CA,Severe,1221,positive,4/28/2020,recovered
-10222,6/1/2020,615,96,Female,Non-Hispanic white,Transportation,Adelanto,CA,Severe,1222,positive,12/19/2020,hospitalized
-10223,4/2/2020,616,75,Female,Non-Hispanic white,Other,Agoura Hills,CA,Severe,1223,positive,3/26/2020,recovered
-10224,8/24/2020,617,92,Female,Non-Hispanic white,Government/police,Alameda,CA,Moderate,1224,negative,7/16/2020,recovered
-10225,10/28/2020,618,60,Male,Hispanic,Sales,Albany,CA,Mild,1225,positive,5/16/2020,recovered
-10226,9/1/2020,619,85,Male,Non-Hispanic white,Health Care,Alhambra,CA,Mild,1226,negative,7/3/2020,recovered
-10227,3/1/2020,620,88,Male,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1227,positive,8/24/2020,recovered
-10228,12/15/2020,621,65,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,Severe,1228,negative,10/1/2020,hospitalized
-10229,6/30/2020,622,17,Male,Non-Hispanic white,Sales,Alameda,CA,Mild,1229,positive,7/6/2020,death
-10230,10/11/2020,623,82,Female,other,Transportation,Albany,CA,No symptoms,1230,positive,9/27/2020,hospitalized
-10231,10/26/2020,624,51,Male,Hispanic,Health Care,Alhambra,CA,No symptoms,1231,positive,9/4/2020,hospitalized
-10232,3/23/2020,625,86,Male,other,Transportation,Adelanto,CA,No symptoms,1232,negative,7/29/2020,death
-10233,6/27/2020,626,6,Male,Non-Hispanic white,Other,Agoura Hills,CA,No symptoms,1233,positive,10/29/2020,death
-10234,10/5/2020,627,73,Male,other,Government/police,Alameda,CA,No symptoms,1234,negative,5/28/2020,recovered
-10235,5/2/2020,628,90,Male,Non-Hispanic white,Sales,Albany,CA,Moderate,1235,positive,12/25/2020,death
-10236,5/9/2020,629,92,Female,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1236,negative,6/2/2020,recovered
-10237,12/13/2020,630,81,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1237,positive,11/13/2020,hospitalized
-10238,9/27/2020,631,53,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1238,positive,11/8/2020,death
-10239,11/5/2020,632,93,Female,other,Sales,Alameda,CA,No symptoms,1239,positive,3/11/2020,death
-10240,3/12/2020,633,11,Female,Black/African American,Transportation,Albany,CA,Moderate,1240,negative,12/19/2020,hospitalized
-10241,7/25/2020,634,36,Male,Hispanic,Health Care,Alhambra,CA,Severe,1241,positive,8/21/2020,hospitalized
-10242,12/23/2020,635,31,Female,other,Transportation,Adelanto,CA,Mild,1242,negative,9/19/2020,hospitalized
-10243,1/2/2021,636,91,Female,other,Other,Agoura Hills,CA,Severe,1243,positive,12/18/2020,hospitalized
-10244,8/19/2020,637,37,Female,Hispanic,Government/police,Alameda,CA,Moderate,1244,negative,10/10/2020,recovered
-10245,12/13/2020,638,24,Male,Non-Hispanic white,Sales,Albany,CA,No symptoms,1245,positive,12/30/2020,recovered
-10246,11/26/2020,639,96,Male,Hispanic,Health Care,Alhambra,CA,Moderate,1246,positive,6/21/2020,recovered
-10247,5/29/2020,640,75,Male,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1247,positive,9/25/2020,death
-10248,11/6/2020,641,34,Male,other,Health Care,Agoura Hills,CA,No symptoms,1248,negative,8/7/2020,death
-10249,12/15/2020,642,71,Female,Hispanic,Sales,Alameda,CA,No symptoms,1249,positive,9/20/2020,recovered
-10250,4/16/2020,643,48,Female,Black/African American,Transportation,Albany,CA,Mild,1250,negative,3/3/2020,death
-10251,12/13/2020,644,76,Female,other,Health Care,Alhambra,CA,Moderate,1251,positive,7/26/2020,recovered
-10252,12/5/2020,645,77,Female,other,Transportation,Adelanto,CA,Severe,1252,negative,10/19/2020,hospitalized
-10253,10/3/2020,646,55,Male,Hispanic,Other,Agoura Hills,CA,Severe,1253,positive,6/13/2020,recovered
-10254,4/20/2020,647,26,Female,Non-Hispanic white,Government/police,Alameda,CA,Severe,1254,positive,7/31/2020,death
-10255,12/8/2020,648,100,Female,Hispanic,Sales,Albany,CA,Moderate,1255,positive,7/14/2020,death
-10256,10/3/2020,649,29,Male,Black/African American,Health Care,Alhambra,CA,Mild,1256,negative,9/28/2020,hospitalized
-10257,11/17/2020,650,86,Female,Black/African American,Government/police,Adelanto,CA,Mild,1257,positive,8/21/2020,recovered
-10258,11/15/2020,651,82,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,Moderate,1258,negative,9/15/2020,death
-10259,12/22/2020,652,19,Male,other,Sales,Alameda,CA,Severe,1259,positive,10/13/2020,hospitalized
-10260,9/25/2020,653,84,Female,Hispanic,Transportation,Albany,CA,Mild,1260,negative,7/27/2020,death
-10261,12/20/2020,654,63,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1261,positive,5/27/2020,recovered
-10262,7/29/2020,655,56,Male,other,Transportation,Adelanto,CA,No symptoms,1262,positive,6/17/2020,recovered
-10263,11/30/2020,656,11,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1263,positive,6/28/2020,hospitalized
-10264,5/7/2020,657,38,Female,Hispanic,Government/police,Alameda,CA,No symptoms,1264,negative,5/6/2020,death
-10265,8/7/2020,658,45,Female,Black/African American,Sales,Albany,CA,No symptoms,1265,positive,12/12/2020,hospitalized
-10266,9/17/2020,659,59,Male,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1266,negative,4/16/2020,death
-10267,3/28/2020,660,44,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1267,positive,9/7/2020,death
-10268,11/28/2020,661,40,Female,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1268,negative,9/26/2020,death
-10269,8/24/2020,662,94,Male,Non-Hispanic white,Sales,Alameda,CA,Moderate,1269,positive,4/3/2020,recovered
-10270,10/8/2020,663,56,Male,other,Transportation,Albany,CA,No symptoms,1270,positive,1/11/2021,recovered
-10271,3/2/2020,664,2,Female,Black/African American,Health Care,Alhambra,CA,Moderate,1271,positive,11/5/2020,recovered
-10272,8/13/2020,665,59,Male,Hispanic,Transportation,Adelanto,CA,Severe,1272,negative,3/24/2020,recovered
-10273,6/30/2020,666,84,Female,Hispanic,Other,Agoura Hills,CA,Mild,1273,positive,8/7/2020,hospitalized
-10274,6/10/2020,667,46,Male,other,Government/police,Alameda,CA,Severe,1274,negative,1/5/2021,recovered
-10275,11/18/2020,668,39,Female,Non-Hispanic white,Sales,Albany,CA,Moderate,1275,positive,6/7/2020,death
-10276,5/18/2020,669,53,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1276,negative,5/27/2020,death
-10277,7/16/2020,670,28,Female,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1277,positive,4/15/2020,death
-10278,4/23/2020,671,63,Male,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1278,positive,3/16/2020,hospitalized
-10279,11/7/2020,672,71,Female,other,Sales,Alameda,CA,No symptoms,1279,positive,6/18/2020,death
-10280,7/7/2020,673,28,Male,other,Transportation,Albany,CA,No symptoms,1280,negative,11/20/2020,death
-10281,7/4/2020,674,32,Male,other,Health Care,Alhambra,CA,Mild,1281,positive,1/15/2021,hospitalized
-10282,3/13/2020,675,44,Male,Non-Hispanic white,Transportation,Adelanto,CA,Moderate,1282,negative,11/12/2020,death
-10283,7/23/2020,676,5,Female,Non-Hispanic white,Other,Agoura Hills,CA,Severe,1283,positive,7/4/2020,death
-10284,3/7/2020,677,87,Male,Non-Hispanic white,Government/police,Alameda,CA,Severe,1284,negative,8/25/2020,recovered
-10285,9/8/2020,678,19,Male,Black/African American,Sales,Albany,CA,Severe,1285,positive,7/6/2020,recovered
-10286,8/22/2020,679,65,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1286,positive,1/6/2021,recovered
-10287,7/2/2020,680,52,Male,Black/African American,Government/police,Adelanto,CA,Mild,1287,positive,8/6/2020,recovered
-10288,6/16/2020,681,72,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,Mild,1288,negative,1/4/2021,hospitalized
-10289,8/22/2020,682,54,Male,other,Sales,Alameda,CA,Moderate,1289,positive,3/25/2020,hospitalized
-10290,8/4/2020,683,55,Female,other,Transportation,Albany,CA,Severe,1290,negative,7/25/2020,death
-10291,5/27/2020,684,27,Female,other,Health Care,Alhambra,CA,Mild,1291,positive,4/1/2020,death
-10292,7/11/2020,685,17,Female,Black/African American,Transportation,Adelanto,CA,No symptoms,1292,negative,8/12/2020,hospitalized
-10293,4/5/2020,686,52,Male,Black/African American,Other,Agoura Hills,CA,No symptoms,1293,positive,7/2/2020,hospitalized
-10294,8/19/2020,687,79,Male,Black/African American,Government/police,Alameda,CA,No symptoms,1294,positive,3/30/2020,death
-10295,12/10/2020,688,39,Male,Non-Hispanic white,Sales,Albany,CA,No symptoms,1295,positive,7/10/2020,hospitalized
-10296,11/8/2020,689,49,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1296,negative,7/7/2020,recovered
-10297,7/16/2020,690,49,Male,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1297,positive,8/17/2020,hospitalized
-10298,8/12/2020,691,50,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1298,negative,5/3/2020,hospitalized
-10299,5/10/2020,692,5,Female,Black/African American,Sales,Alameda,CA,No symptoms,1299,positive,4/9/2020,hospitalized
-10300,6/6/2020,693,18,Female,other,Transportation,Albany,CA,Moderate,1300,negative,12/9/2020,hospitalized
-10301,7/24/2020,694,45,Male,Black/African American,Health Care,Alhambra,CA,No symptoms,1301,positive,10/7/2020,hospitalized
-10302,9/2/2020,695,17,Male,Non-Hispanic white,Transportation,Adelanto,CA,Moderate,1302,positive,8/10/2020,death
-10303,10/30/2020,696,86,Male,Non-Hispanic white,Other,Agoura Hills,CA,Severe,1303,positive,6/6/2020,recovered
-10304,12/22/2020,697,39,Male,Hispanic,Government/police,Alameda,CA,Mild,1304,negative,5/28/2020,death
-10305,6/24/2020,698,86,Male,Hispanic,Sales,Albany,CA,Severe,1305,positive,4/29/2020,recovered
-10306,8/23/2020,699,94,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1306,negative,11/28/2020,recovered
-10307,9/19/2020,700,51,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1307,positive,4/10/2020,hospitalized
-10308,7/8/2020,701,45,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1308,negative,7/12/2020,death
-10309,3/10/2020,702,13,Female,Black/African American,Sales,Alameda,CA,No symptoms,1309,positive,4/6/2020,death
-10310,6/16/2020,703,63,Male,other,Transportation,Albany,CA,No symptoms,1310,positive,10/1/2020,recovered
-10311,7/21/2020,704,13,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1311,positive,3/10/2020,death
-10312,4/14/2020,705,29,Female,Black/African American,Transportation,Adelanto,CA,Mild,1312,negative,5/2/2020,recovered
-10313,5/30/2020,706,62,Female,Non-Hispanic white,Other,Agoura Hills,CA,Moderate,1313,positive,8/16/2020,death
-10314,6/14/2020,707,81,Male,other,Government/police,Alameda,CA,Severe,1314,negative,11/2/2020,hospitalized
-10315,4/26/2020,708,78,Female,Hispanic,Sales,Albany,CA,Severe,1315,positive,5/19/2020,death
-10316,3/16/2020,709,70,Female,other,Health Care,Alhambra,CA,Severe,1316,negative,12/24/2020,recovered
-10317,6/3/2020,710,84,Male,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1317,positive,3/24/2020,death
-10318,11/25/2020,711,99,Male,Black/African American,Health Care,Agoura Hills,CA,Mild,1318,positive,8/20/2020,death
-10319,8/29/2020,712,85,Female,other,Sales,Alameda,CA,Mild,1319,positive,10/17/2020,recovered
-10320,4/8/2020,713,13,Female,other,Transportation,Albany,CA,Moderate,1320,negative,10/2/2020,death
-10321,4/29/2020,714,13,Female,Hispanic,Health Care,Alhambra,CA,Severe,1321,positive,9/15/2020,hospitalized
-10322,9/17/2020,715,62,Male,Black/African American,Transportation,Adelanto,CA,Mild,1322,negative,3/12/2020,hospitalized
-10323,4/29/2020,716,29,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1323,positive,3/21/2020,hospitalized
-10324,8/25/2020,717,40,Female,Hispanic,Government/police,Alameda,CA,No symptoms,1324,negative,1/5/2021,death
-10325,4/26/2020,718,93,Male,Black/African American,Sales,Albany,CA,No symptoms,1325,positive,1/12/2021,death
-10326,9/24/2020,719,22,Female,other,Health Care,Alhambra,CA,No symptoms,1326,positive,4/6/2020,death
-10327,10/9/2020,720,96,Female,Black/African American,Government/police,Adelanto,CA,No symptoms,1327,positive,12/13/2020,death
-10328,4/11/2020,721,55,Male,Hispanic,Health Care,Agoura Hills,CA,Moderate,1328,negative,7/18/2020,hospitalized
-10329,12/9/2020,722,17,Female,other,Sales,Alameda,CA,No symptoms,1329,positive,4/24/2020,recovered
-10330,1/9/2021,723,5,Female,other,Transportation,Albany,CA,No symptoms,1330,negative,7/24/2020,death
-10331,5/23/2020,724,11,Male,other,Health Care,Alhambra,CA,Moderate,1331,positive,3/22/2020,death
-10332,8/3/2020,725,38,Male,Non-Hispanic white,Transportation,Adelanto,CA,No symptoms,1332,negative,3/26/2020,death
-10333,11/19/2020,726,53,Female,other,Other,Agoura Hills,CA,Moderate,1333,positive,7/4/2020,recovered
-10334,4/14/2020,727,36,Male,other,Government/police,Alameda,CA,Severe,1334,positive,4/30/2020,recovered
-10335,7/3/2020,728,82,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1335,positive,11/18/2020,death
-10336,5/15/2020,729,95,Female,other,Health Care,Alhambra,CA,Severe,1336,negative,8/20/2020,death
-10337,4/8/2020,730,16,Male,other,Government/police,Adelanto,CA,Moderate,1337,positive,1/14/2021,recovered
-10338,10/28/2020,731,27,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1338,negative,5/24/2020,hospitalized
-10339,4/25/2020,732,13,Male,Black/African American,Sales,Alameda,CA,Moderate,1339,positive,5/27/2020,death
-10340,10/4/2020,733,76,Male,Non-Hispanic white,Transportation,Albany,CA,No symptoms,1340,negative,11/9/2020,death
-10341,9/29/2020,734,71,Female,Hispanic,Health Care,Alhambra,CA,No symptoms,1341,positive,1/4/2021,hospitalized
-10342,9/6/2020,735,26,Male,Non-Hispanic white,Transportation,Adelanto,CA,No symptoms,1342,positive,4/26/2020,death
-10343,10/1/2020,736,95,Male,Non-Hispanic white,Other,Agoura Hills,CA,Mild,1343,positive,5/11/2020,death
-10344,11/24/2020,737,21,Male,Black/African American,Government/police,Alameda,CA,Moderate,1344,negative,6/12/2020,hospitalized
-10345,5/1/2020,738,13,Female,other,Sales,Albany,CA,Severe,1345,positive,11/17/2020,recovered
-10346,5/18/2020,739,13,Female,other,Health Care,Alhambra,CA,Severe,1346,negative,11/22/2020,hospitalized
-10347,11/5/2020,740,21,Male,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1347,positive,11/4/2020,hospitalized
-10348,8/22/2020,741,27,Female,Black/African American,Health Care,Agoura Hills,CA,Moderate,1348,negative,12/28/2020,recovered
-10349,6/24/2020,742,56,Female,Non-Hispanic white,Sales,Alameda,CA,Mild,1349,positive,10/24/2020,hospitalized
-10350,8/14/2020,743,70,Female,Black/African American,Transportation,Albany,CA,Mild,1350,positive,8/18/2020,recovered
-10351,7/24/2020,744,11,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1351,positive,4/8/2020,recovered
-10352,7/10/2020,745,98,Male,Non-Hispanic white,Transportation,Adelanto,CA,Severe,1352,negative,1/4/2021,death
-10353,10/1/2020,746,48,Female,other,Other,Agoura Hills,CA,Mild,1353,positive,5/14/2020,death
-10354,7/29/2020,747,33,Male,other,Government/police,Alameda,CA,No symptoms,1354,negative,1/10/2021,hospitalized
-10355,3/10/2020,748,20,Female,Non-Hispanic white,Sales,Albany,CA,No symptoms,1355,positive,6/10/2020,hospitalized
-10356,4/25/2020,749,10,Male,other,Health Care,Alhambra,CA,No symptoms,1356,negative,7/12/2020,death
-10357,12/27/2020,750,89,Female,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1357,positive,5/16/2020,recovered
-10358,8/15/2020,751,96,Male,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1358,positive,4/2/2020,recovered
-10359,3/6/2020,752,3,Male,other,Sales,Alameda,CA,Moderate,1359,positive,10/28/2020,hospitalized
-10360,11/6/2020,753,74,Female,other,Transportation,Albany,CA,No symptoms,1360,negative,3/7/2020,death
-10361,1/7/2021,754,93,Male,Black/African American,Health Care,Alhambra,CA,No symptoms,1361,positive,11/28/2020,recovered
-10362,3/2/2020,755,90,Female,other,Transportation,Adelanto,CA,Moderate,1362,negative,1/7/2021,death
-10363,10/12/2020,756,8,Male,other,Other,Agoura Hills,CA,No symptoms,1363,positive,7/24/2020,recovered
-10364,6/10/2020,757,42,Male,Hispanic,Government/police,Alameda,CA,Moderate,1364,negative,8/7/2020,death
-10365,12/29/2020,758,88,Male,Black/African American,Sales,Albany,CA,Severe,1365,positive,11/1/2020,hospitalized
-10366,10/26/2020,759,47,Female,other,Health Care,Alhambra,CA,Mild,1366,positive,6/3/2020,hospitalized
-10367,5/30/2020,760,7,Female,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1367,positive,3/4/2020,hospitalized
-10368,10/22/2020,761,77,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1368,negative,6/25/2020,recovered
-10369,5/5/2020,762,83,Female,Hispanic,Sales,Alameda,CA,No symptoms,1369,positive,3/19/2020,hospitalized
-10370,8/14/2020,763,5,Male,Black/African American,Transportation,Albany,CA,Moderate,1370,negative,9/18/2020,recovered
-10371,10/9/2020,764,73,Female,other,Health Care,Alhambra,CA,No symptoms,1371,positive,11/25/2020,recovered
-10372,6/13/2020,765,56,Male,other,Transportation,Adelanto,CA,No symptoms,1372,negative,5/30/2020,hospitalized
-10373,11/19/2020,766,66,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1373,positive,3/18/2020,death
-10374,10/31/2020,767,41,Female,Non-Hispanic white,Government/police,Alameda,CA,Mild,1374,positive,3/31/2020,recovered
-10375,12/10/2020,768,58,Female,Non-Hispanic white,Sales,Albany,CA,Moderate,1375,positive,12/18/2020,recovered
-10376,3/30/2020,769,76,Male,Black/African American,Health Care,Alhambra,CA,Severe,1376,negative,9/7/2020,hospitalized
-10377,4/14/2020,770,42,Female,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1377,positive,7/12/2020,death
-10378,4/4/2020,771,93,Female,other,Health Care,Agoura Hills,CA,Severe,1378,negative,9/25/2020,recovered
-10379,11/18/2020,772,17,Male,Black/African American,Sales,Alameda,CA,Moderate,1379,positive,6/10/2020,hospitalized
-10380,8/17/2020,773,56,Female,other,Transportation,Albany,CA,Mild,1380,negative,4/24/2020,death
-10381,9/20/2020,774,96,Female,other,Health Care,Alhambra,CA,Mild,1381,positive,6/21/2020,death
-10382,5/6/2020,775,94,Female,Hispanic,Transportation,Adelanto,CA,Moderate,1382,positive,10/25/2020,death
-10383,6/12/2020,776,71,Male,Black/African American,Other,Agoura Hills,CA,Severe,1383,positive,12/13/2020,hospitalized
-10384,7/6/2020,777,37,Male,other,Government/police,Alameda,CA,Mild,1384,negative,8/25/2020,hospitalized
-10385,9/13/2020,778,10,Male,other,Sales,Albany,CA,No symptoms,1385,positive,9/20/2020,hospitalized
-10386,4/6/2020,779,8,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1386,negative,3/26/2020,hospitalized
-10387,8/18/2020,780,78,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1387,positive,9/10/2020,hospitalized
-10388,1/3/2021,781,17,Female,other,Health Care,Agoura Hills,CA,No symptoms,1388,negative,11/15/2020,recovered
-10389,12/29/2020,782,54,Male,other,Sales,Alameda,CA,No symptoms,1389,positive,10/29/2020,death
-10390,12/26/2020,783,52,Male,Black/African American,Transportation,Albany,CA,Moderate,1390,positive,10/9/2020,recovered
-10391,3/24/2020,784,90,Male,Hispanic,Health Care,Alhambra,CA,No symptoms,1391,positive,1/14/2021,recovered
-10392,4/21/2020,785,60,Male,Non-Hispanic white,Transportation,Adelanto,CA,No symptoms,1392,negative,5/24/2020,hospitalized
-10393,11/22/2020,786,16,Male,Non-Hispanic white,Other,Agoura Hills,CA,Moderate,1393,positive,7/5/2020,hospitalized
-10394,8/24/2020,787,50,Male,other,Government/police,Alameda,CA,No symptoms,1394,negative,11/10/2020,hospitalized
-10395,6/19/2020,788,80,Male,Black/African American,Sales,Albany,CA,Moderate,1395,positive,12/21/2020,death
-10396,4/1/2020,789,52,Male,Non-Hispanic white,Health Care,Alhambra,CA,Severe,1396,negative,11/20/2020,death
-10397,8/25/2020,790,94,Male,other,Government/police,Adelanto,CA,Mild,1397,positive,8/7/2020,death
-10398,4/20/2020,791,87,Female,Black/African American,Health Care,Agoura Hills,CA,Severe,1398,positive,3/11/2020,recovered
-10399,9/6/2020,792,72,Female,Non-Hispanic white,Sales,Alameda,CA,Moderate,1399,positive,4/30/2020,recovered
-10400,10/22/2020,793,79,Male,Black/African American,Transportation,Albany,CA,No symptoms,1400,negative,4/7/2020,hospitalized
-10401,4/13/2020,794,11,Male,other,Health Care,Alhambra,CA,Moderate,1401,positive,3/7/2020,recovered
-10402,12/11/2020,795,27,Male,other,Transportation,Adelanto,CA,No symptoms,1402,negative,1/11/2021,death
-10403,5/13/2020,796,62,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1403,positive,3/17/2020,death
-10404,5/18/2020,797,61,Male,Non-Hispanic white,Government/police,Alameda,CA,No symptoms,1404,negative,10/25/2020,hospitalized
-10405,10/29/2020,798,24,Male,other,Sales,Albany,CA,Mild,1405,positive,12/20/2020,hospitalized
-10406,5/2/2020,799,33,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1406,positive,9/25/2020,recovered
-10407,3/15/2020,800,47,Female,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1407,positive,10/4/2020,death
-10408,12/12/2020,801,78,Male,other,Health Care,Agoura Hills,CA,Severe,1408,negative,7/26/2020,death
-10409,6/3/2020,802,33,Female,Black/African American,Sales,Alameda,CA,Severe,1409,positive,7/3/2020,death
-10410,7/11/2020,803,33,Female,other,Transportation,Albany,CA,Moderate,1410,negative,7/25/2020,recovered
-10411,3/30/2020,804,42,Female,Hispanic,Health Care,Alhambra,CA,Mild,1411,positive,3/17/2020,hospitalized
-10412,6/10/2020,805,84,Female,Black/African American,Transportation,Adelanto,CA,Mild,1412,negative,11/4/2020,death
-10413,6/10/2020,806,12,Male,other,Other,Agoura Hills,CA,Moderate,1413,positive,11/2/2020,hospitalized
-10414,4/23/2020,807,8,Male,other,Government/police,Alameda,CA,Severe,1414,positive,11/12/2020,death
+10202,7/11/2020,595,96,Male,Hispanic,Transportation,Adelanto,CA,No symptoms,1202,negative,11/10/2020,Infected
+10203,11/29/2020,596,20,Male,other,Other,Agoura Hills,CA,No symptoms,1203,positive,7/4/2020,Infected
+10204,12/1/2020,597,100,Female,Non-Hispanic white,Government/police,Alameda,CA,Moderate,1204,negative,5/20/2020,Infected
+10205,1/9/2021,598,51,Female,Black/African American,Sales,Albany,CA,No symptoms,1205,positive,6/24/2020,Infected
+10206,12/31/2020,599,99,Female,other,Health Care,Alhambra,CA,No symptoms,1206,positive,8/4/2020,Infected
+10207,3/22/2020,600,89,Male,Black/African American,Government/police,Adelanto,CA,Moderate,1207,positive,9/3/2020,Infected
+10208,10/24/2020,601,26,Male,Black/African American,Health Care,Agoura Hills,CA,No symptoms,1208,negative,9/28/2020,Infected
+10209,3/2/2020,602,56,Male,Hispanic,Sales,Alameda,CA,Moderate,1209,positive,4/25/2020,Infected
+10210,12/7/2020,603,12,Male,other,Transportation,Albany,CA,Severe,1210,negative,1/12/2021,Infected
+10211,11/11/2020,604,40,Female,Hispanic,Health Care,Alhambra,CA,Mild,1211,positive,8/15/2020,Infected
+10212,6/21/2020,605,13,Female,Hispanic,Transportation,Adelanto,CA,Severe,1212,negative,10/9/2020,Infected
+10213,7/23/2020,606,9,Female,Non-Hispanic white,Other,Agoura Hills,CA,Moderate,1213,positive,4/19/2020,Infected
+10214,7/18/2020,607,18,Male,Non-Hispanic white,Government/police,Alameda,CA,No symptoms,1214,positive,10/19/2020,Infected
+10215,5/2/2020,608,95,Female,Non-Hispanic white,Sales,Albany,CA,Moderate,1215,positive,9/3/2020,Infected
+10216,4/24/2020,609,41,Male,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1216,negative,7/14/2020,Infected
+10217,8/1/2020,610,76,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1217,positive,7/21/2020,Infected
+10218,6/6/2020,611,88,Female,other,Health Care,Agoura Hills,CA,No symptoms,1218,negative,10/27/2020,Infected
+10219,4/21/2020,612,22,Male,Hispanic,Sales,Alameda,CA,Mild,1219,positive,8/11/2020,Infected
+10220,1/7/2021,613,65,Female,other,Transportation,Albany,CA,Moderate,1220,negative,12/10/2020,Infected
+10221,4/23/2020,614,54,Male,Black/African American,Health Care,Alhambra,CA,Severe,1221,positive,4/28/2020,Infected
+10222,6/1/2020,615,96,Female,Non-Hispanic white,Transportation,Adelanto,CA,Severe,1222,positive,12/19/2020,Infected
+10223,4/2/2020,616,75,Female,Non-Hispanic white,Other,Agoura Hills,CA,Severe,1223,positive,3/26/2020,Infected
+10224,8/24/2020,617,92,Female,Non-Hispanic white,Government/police,Alameda,CA,Moderate,1224,negative,7/16/2020,Infected
+10225,10/28/2020,618,60,Male,Hispanic,Sales,Albany,CA,Mild,1225,positive,5/16/2020,Infected
+10226,9/1/2020,619,85,Male,Non-Hispanic white,Health Care,Alhambra,CA,Mild,1226,negative,7/3/2020,Infected
+10227,3/1/2020,620,88,Male,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1227,positive,8/24/2020,Infected
+10228,12/15/2020,621,65,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,Severe,1228,negative,10/1/2020,Infected
+10229,6/30/2020,622,17,Male,Non-Hispanic white,Sales,Alameda,CA,Mild,1229,positive,7/6/2020,Infected
+10230,10/11/2020,623,82,Female,other,Transportation,Albany,CA,No symptoms,1230,positive,9/27/2020,Infected
+10231,10/26/2020,624,51,Male,Hispanic,Health Care,Alhambra,CA,No symptoms,1231,positive,9/4/2020,Infected
+10232,3/23/2020,625,86,Male,other,Transportation,Adelanto,CA,No symptoms,1232,negative,7/29/2020,Infected
+10233,6/27/2020,626,6,Male,Non-Hispanic white,Other,Agoura Hills,CA,No symptoms,1233,positive,10/29/2020,Infected
+10234,10/5/2020,627,73,Male,other,Government/police,Alameda,CA,No symptoms,1234,negative,5/28/2020,Infected
+10235,5/2/2020,628,90,Male,Non-Hispanic white,Sales,Albany,CA,Moderate,1235,positive,12/25/2020,Infected
+10236,5/9/2020,629,92,Female,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1236,negative,6/2/2020,Infected
+10237,12/13/2020,630,81,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1237,positive,11/13/2020,Infected
+10238,9/27/2020,631,53,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1238,positive,11/8/2020,Infected
+10239,11/5/2020,632,93,Female,other,Sales,Alameda,CA,No symptoms,1239,positive,3/11/2020,Infected
+10240,3/12/2020,633,11,Female,Black/African American,Transportation,Albany,CA,Moderate,1240,negative,12/19/2020,Infected
+10241,7/25/2020,634,36,Male,Hispanic,Health Care,Alhambra,CA,Severe,1241,positive,8/21/2020,Infected
+10242,12/23/2020,635,31,Female,other,Transportation,Adelanto,CA,Mild,1242,negative,9/19/2020,Infected
+10243,1/2/2021,636,91,Female,other,Other,Agoura Hills,CA,Severe,1243,positive,12/18/2020,Infected
+10244,8/19/2020,637,37,Female,Hispanic,Government/police,Alameda,CA,Moderate,1244,negative,10/10/2020,Infected
+10245,12/13/2020,638,24,Male,Non-Hispanic white,Sales,Albany,CA,No symptoms,1245,positive,12/30/2020,Infected
+10246,11/26/2020,639,96,Male,Hispanic,Health Care,Alhambra,CA,Moderate,1246,positive,6/21/2020,Infected
+10247,5/29/2020,640,75,Male,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1247,positive,9/25/2020,Infected
+10248,11/6/2020,641,34,Male,other,Health Care,Agoura Hills,CA,No symptoms,1248,negative,8/7/2020,Infected
+10249,12/15/2020,642,71,Female,Hispanic,Sales,Alameda,CA,No symptoms,1249,positive,9/20/2020,Infected
+10250,4/16/2020,643,48,Female,Black/African American,Transportation,Albany,CA,Mild,1250,negative,3/3/2020,Infected
+10251,12/13/2020,644,76,Female,other,Health Care,Alhambra,CA,Moderate,1251,positive,7/26/2020,Infected
+10252,12/5/2020,645,77,Female,other,Transportation,Adelanto,CA,Severe,1252,negative,10/19/2020,Infected
+10253,10/3/2020,646,55,Male,Hispanic,Other,Agoura Hills,CA,Severe,1253,positive,6/13/2020,Infected
+10254,4/20/2020,647,26,Female,Non-Hispanic white,Government/police,Alameda,CA,Severe,1254,positive,7/31/2020,Infected
+10255,12/8/2020,648,100,Female,Hispanic,Sales,Albany,CA,Moderate,1255,positive,7/14/2020,Infected
+10256,10/3/2020,649,29,Male,Black/African American,Health Care,Alhambra,CA,Mild,1256,negative,9/28/2020,Infected
+10257,11/17/2020,650,86,Female,Black/African American,Government/police,Adelanto,CA,Mild,1257,positive,8/21/2020,Infected
+10258,11/15/2020,651,82,Male,Non-Hispanic white,Health Care,Agoura Hills,CA,Moderate,1258,negative,9/15/2020,Infected
+10259,12/22/2020,652,19,Male,other,Sales,Alameda,CA,Severe,1259,positive,10/13/2020,Infected
+10260,9/25/2020,653,84,Female,Hispanic,Transportation,Albany,CA,Mild,1260,negative,7/27/2020,Infected
+10261,12/20/2020,654,63,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1261,positive,5/27/2020,Infected
+10262,7/29/2020,655,56,Male,other,Transportation,Adelanto,CA,No symptoms,1262,positive,6/17/2020,Infected
+10263,11/30/2020,656,11,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1263,positive,6/28/2020,Infected
+10264,5/7/2020,657,38,Female,Hispanic,Government/police,Alameda,CA,No symptoms,1264,negative,5/6/2020,Infected
+10265,8/7/2020,658,45,Female,Black/African American,Sales,Albany,CA,No symptoms,1265,positive,12/12/2020,Infected
+10266,9/17/2020,659,59,Male,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1266,negative,4/16/2020,Infected
+10267,3/28/2020,660,44,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1267,positive,9/7/2020,Infected
+10268,11/28/2020,661,40,Female,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1268,negative,9/26/2020,Infected
+10269,8/24/2020,662,94,Male,Non-Hispanic white,Sales,Alameda,CA,Moderate,1269,positive,4/3/2020,Infected
+10270,10/8/2020,663,56,Male,other,Transportation,Albany,CA,No symptoms,1270,positive,1/11/2021,Infected
+10271,3/2/2020,664,2,Female,Black/African American,Health Care,Alhambra,CA,Moderate,1271,positive,11/5/2020,Infected
+10272,8/13/2020,665,59,Male,Hispanic,Transportation,Adelanto,CA,Severe,1272,negative,3/24/2020,Infected
+10273,6/30/2020,666,84,Female,Hispanic,Other,Agoura Hills,CA,Mild,1273,positive,8/7/2020,Infected
+10274,6/10/2020,667,46,Male,other,Government/police,Alameda,CA,Severe,1274,negative,1/5/2021,Infected
+10275,11/18/2020,668,39,Female,Non-Hispanic white,Sales,Albany,CA,Moderate,1275,positive,6/7/2020,Infected
+10276,5/18/2020,669,53,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1276,negative,5/27/2020,Infected
+10277,7/16/2020,670,28,Female,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1277,positive,4/15/2020,Infected
+10278,4/23/2020,671,63,Male,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1278,positive,3/16/2020,Infected
+10279,11/7/2020,672,71,Female,other,Sales,Alameda,CA,No symptoms,1279,positive,6/18/2020,Infected
+10280,7/7/2020,673,28,Male,other,Transportation,Albany,CA,No symptoms,1280,negative,11/20/2020,Infected
+10281,7/4/2020,674,32,Male,other,Health Care,Alhambra,CA,Mild,1281,positive,1/15/2021,Infected
+10282,3/13/2020,675,44,Male,Non-Hispanic white,Transportation,Adelanto,CA,Moderate,1282,negative,11/12/2020,Infected
+10283,7/23/2020,676,5,Female,Non-Hispanic white,Other,Agoura Hills,CA,Severe,1283,positive,7/4/2020,Infected
+10284,3/7/2020,677,87,Male,Non-Hispanic white,Government/police,Alameda,CA,Severe,1284,negative,8/25/2020,Infected
+10285,9/8/2020,678,19,Male,Black/African American,Sales,Albany,CA,Severe,1285,positive,7/6/2020,Infected
+10286,8/22/2020,679,65,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1286,positive,1/6/2021,Infected
+10287,7/2/2020,680,52,Male,Black/African American,Government/police,Adelanto,CA,Mild,1287,positive,8/6/2020,Infected
+10288,6/16/2020,681,72,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,Mild,1288,negative,1/4/2021,Infected
+10289,8/22/2020,682,54,Male,other,Sales,Alameda,CA,Moderate,1289,positive,3/25/2020,Infected
+10290,8/4/2020,683,55,Female,other,Transportation,Albany,CA,Severe,1290,negative,7/25/2020,Infected
+10291,5/27/2020,684,27,Female,other,Health Care,Alhambra,CA,Mild,1291,positive,4/1/2020,Infected
+10292,7/11/2020,685,17,Female,Black/African American,Transportation,Adelanto,CA,No symptoms,1292,negative,8/12/2020,Infected
+10293,4/5/2020,686,52,Male,Black/African American,Other,Agoura Hills,CA,No symptoms,1293,positive,7/2/2020,Infected
+10294,8/19/2020,687,79,Male,Black/African American,Government/police,Alameda,CA,No symptoms,1294,positive,3/30/2020,Infected
+10295,12/10/2020,688,39,Male,Non-Hispanic white,Sales,Albany,CA,No symptoms,1295,positive,7/10/2020,Infected
+10296,11/8/2020,689,49,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1296,negative,7/7/2020,Infected
+10297,7/16/2020,690,49,Male,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1297,positive,8/17/2020,Infected
+10298,8/12/2020,691,50,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1298,negative,5/3/2020,Infected
+10299,5/10/2020,692,5,Female,Black/African American,Sales,Alameda,CA,No symptoms,1299,positive,4/9/2020,Infected
+10300,6/6/2020,693,18,Female,other,Transportation,Albany,CA,Moderate,1300,negative,12/9/2020,Infected
+10301,7/24/2020,694,45,Male,Black/African American,Health Care,Alhambra,CA,No symptoms,1301,positive,10/7/2020,Infected
+10302,9/2/2020,695,17,Male,Non-Hispanic white,Transportation,Adelanto,CA,Moderate,1302,positive,8/10/2020,Infected
+10303,10/30/2020,696,86,Male,Non-Hispanic white,Other,Agoura Hills,CA,Severe,1303,positive,6/6/2020,Infected
+10304,12/22/2020,697,39,Male,Hispanic,Government/police,Alameda,CA,Mild,1304,negative,5/28/2020,Infected
+10305,6/24/2020,698,86,Male,Hispanic,Sales,Albany,CA,Severe,1305,positive,4/29/2020,Infected
+10306,8/23/2020,699,94,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1306,negative,11/28/2020,Infected
+10307,9/19/2020,700,51,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1307,positive,4/10/2020,Infected
+10308,7/8/2020,701,45,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1308,negative,7/12/2020,Infected
+10309,3/10/2020,702,13,Female,Black/African American,Sales,Alameda,CA,No symptoms,1309,positive,4/6/2020,Infected
+10310,6/16/2020,703,63,Male,other,Transportation,Albany,CA,No symptoms,1310,positive,10/1/2020,Infected
+10311,7/21/2020,704,13,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1311,positive,3/10/2020,Infected
+10312,4/14/2020,705,29,Female,Black/African American,Transportation,Adelanto,CA,Mild,1312,negative,5/2/2020,Infected
+10313,5/30/2020,706,62,Female,Non-Hispanic white,Other,Agoura Hills,CA,Moderate,1313,positive,8/16/2020,Infected
+10314,6/14/2020,707,81,Male,other,Government/police,Alameda,CA,Severe,1314,negative,11/2/2020,Infected
+10315,4/26/2020,708,78,Female,Hispanic,Sales,Albany,CA,Severe,1315,positive,5/19/2020,Infected
+10316,3/16/2020,709,70,Female,other,Health Care,Alhambra,CA,Severe,1316,negative,12/24/2020,Infected
+10317,6/3/2020,710,84,Male,Non-Hispanic white,Government/police,Adelanto,CA,Moderate,1317,positive,3/24/2020,Infected
+10318,11/25/2020,711,99,Male,Black/African American,Health Care,Agoura Hills,CA,Mild,1318,positive,8/20/2020,Infected
+10319,8/29/2020,712,85,Female,other,Sales,Alameda,CA,Mild,1319,positive,10/17/2020,Infected
+10320,4/8/2020,713,13,Female,other,Transportation,Albany,CA,Moderate,1320,negative,10/2/2020,Infected
+10321,4/29/2020,714,13,Female,Hispanic,Health Care,Alhambra,CA,Severe,1321,positive,9/15/2020,Infected
+10322,9/17/2020,715,62,Male,Black/African American,Transportation,Adelanto,CA,Mild,1322,negative,3/12/2020,Infected
+10323,4/29/2020,716,29,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1323,positive,3/21/2020,Infected
+10324,8/25/2020,717,40,Female,Hispanic,Government/police,Alameda,CA,No symptoms,1324,negative,1/5/2021,Infected
+10325,4/26/2020,718,93,Male,Black/African American,Sales,Albany,CA,No symptoms,1325,positive,1/12/2021,Infected
+10326,9/24/2020,719,22,Female,other,Health Care,Alhambra,CA,No symptoms,1326,positive,4/6/2020,Infected
+10327,10/9/2020,720,96,Female,Black/African American,Government/police,Adelanto,CA,No symptoms,1327,positive,12/13/2020,Infected
+10328,4/11/2020,721,55,Male,Hispanic,Health Care,Agoura Hills,CA,Moderate,1328,negative,7/18/2020,Infected
+10329,12/9/2020,722,17,Female,other,Sales,Alameda,CA,No symptoms,1329,positive,4/24/2020,Infected
+10330,1/9/2021,723,5,Female,other,Transportation,Albany,CA,No symptoms,1330,negative,7/24/2020,Infected
+10331,5/23/2020,724,11,Male,other,Health Care,Alhambra,CA,Moderate,1331,positive,3/22/2020,Infected
+10332,8/3/2020,725,38,Male,Non-Hispanic white,Transportation,Adelanto,CA,No symptoms,1332,negative,3/26/2020,Infected
+10333,11/19/2020,726,53,Female,other,Other,Agoura Hills,CA,Moderate,1333,positive,7/4/2020,Infected
+10334,4/14/2020,727,36,Male,other,Government/police,Alameda,CA,Severe,1334,positive,4/30/2020,Infected
+10335,7/3/2020,728,82,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1335,positive,11/18/2020,Infected
+10336,5/15/2020,729,95,Female,other,Health Care,Alhambra,CA,Severe,1336,negative,8/20/2020,Infected
+10337,4/8/2020,730,16,Male,other,Government/police,Adelanto,CA,Moderate,1337,positive,1/14/2021,Infected
+10338,10/28/2020,731,27,Female,Non-Hispanic white,Health Care,Agoura Hills,CA,No symptoms,1338,negative,5/24/2020,Infected
+10339,4/25/2020,732,13,Male,Black/African American,Sales,Alameda,CA,Moderate,1339,positive,5/27/2020,Infected
+10340,10/4/2020,733,76,Male,Non-Hispanic white,Transportation,Albany,CA,No symptoms,1340,negative,11/9/2020,Infected
+10341,9/29/2020,734,71,Female,Hispanic,Health Care,Alhambra,CA,No symptoms,1341,positive,1/4/2021,Infected
+10342,9/6/2020,735,26,Male,Non-Hispanic white,Transportation,Adelanto,CA,No symptoms,1342,positive,4/26/2020,Infected
+10343,10/1/2020,736,95,Male,Non-Hispanic white,Other,Agoura Hills,CA,Mild,1343,positive,5/11/2020,Infected
+10344,11/24/2020,737,21,Male,Black/African American,Government/police,Alameda,CA,Moderate,1344,negative,6/12/2020,Infected
+10345,5/1/2020,738,13,Female,other,Sales,Albany,CA,Severe,1345,positive,11/17/2020,Infected
+10346,5/18/2020,739,13,Female,other,Health Care,Alhambra,CA,Severe,1346,negative,11/22/2020,Infected
+10347,11/5/2020,740,21,Male,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1347,positive,11/4/2020,Infected
+10348,8/22/2020,741,27,Female,Black/African American,Health Care,Agoura Hills,CA,Moderate,1348,negative,12/28/2020,Infected
+10349,6/24/2020,742,56,Female,Non-Hispanic white,Sales,Alameda,CA,Mild,1349,positive,10/24/2020,Infected
+10350,8/14/2020,743,70,Female,Black/African American,Transportation,Albany,CA,Mild,1350,positive,8/18/2020,Infected
+10351,7/24/2020,744,11,Male,Black/African American,Health Care,Alhambra,CA,Moderate,1351,positive,4/8/2020,Infected
+10352,7/10/2020,745,98,Male,Non-Hispanic white,Transportation,Adelanto,CA,Severe,1352,negative,1/4/2021,Infected
+10353,10/1/2020,746,48,Female,other,Other,Agoura Hills,CA,Mild,1353,positive,5/14/2020,Infected
+10354,7/29/2020,747,33,Male,other,Government/police,Alameda,CA,No symptoms,1354,negative,1/10/2021,Infected
+10355,3/10/2020,748,20,Female,Non-Hispanic white,Sales,Albany,CA,No symptoms,1355,positive,6/10/2020,Infected
+10356,4/25/2020,749,10,Male,other,Health Care,Alhambra,CA,No symptoms,1356,negative,7/12/2020,Infected
+10357,12/27/2020,750,89,Female,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1357,positive,5/16/2020,Infected
+10358,8/15/2020,751,96,Male,Hispanic,Health Care,Agoura Hills,CA,No symptoms,1358,positive,4/2/2020,Infected
+10359,3/6/2020,752,3,Male,other,Sales,Alameda,CA,Moderate,1359,positive,10/28/2020,Infected
+10360,11/6/2020,753,74,Female,other,Transportation,Albany,CA,No symptoms,1360,negative,3/7/2020,Infected
+10361,1/7/2021,754,93,Male,Black/African American,Health Care,Alhambra,CA,No symptoms,1361,positive,11/28/2020,Infected
+10362,3/2/2020,755,90,Female,other,Transportation,Adelanto,CA,Moderate,1362,negative,1/7/2021,Infected
+10363,10/12/2020,756,8,Male,other,Other,Agoura Hills,CA,No symptoms,1363,positive,7/24/2020,Infected
+10364,6/10/2020,757,42,Male,Hispanic,Government/police,Alameda,CA,Moderate,1364,negative,8/7/2020,Infected
+10365,12/29/2020,758,88,Male,Black/African American,Sales,Albany,CA,Severe,1365,positive,11/1/2020,Infected
+10366,10/26/2020,759,47,Female,other,Health Care,Alhambra,CA,Mild,1366,positive,6/3/2020,Infected
+10367,5/30/2020,760,7,Female,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1367,positive,3/4/2020,Infected
+10368,10/22/2020,761,77,Male,Black/African American,Health Care,Agoura Hills,CA,Moderate,1368,negative,6/25/2020,Infected
+10369,5/5/2020,762,83,Female,Hispanic,Sales,Alameda,CA,No symptoms,1369,positive,3/19/2020,Infected
+10370,8/14/2020,763,5,Male,Black/African American,Transportation,Albany,CA,Moderate,1370,negative,9/18/2020,Infected
+10371,10/9/2020,764,73,Female,other,Health Care,Alhambra,CA,No symptoms,1371,positive,11/25/2020,Infected
+10372,6/13/2020,765,56,Male,other,Transportation,Adelanto,CA,No symptoms,1372,negative,5/30/2020,Infected
+10373,11/19/2020,766,66,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1373,positive,3/18/2020,Infected
+10374,10/31/2020,767,41,Female,Non-Hispanic white,Government/police,Alameda,CA,Mild,1374,positive,3/31/2020,Infected
+10375,12/10/2020,768,58,Female,Non-Hispanic white,Sales,Albany,CA,Moderate,1375,positive,12/18/2020,Infected
+10376,3/30/2020,769,76,Male,Black/African American,Health Care,Alhambra,CA,Severe,1376,negative,9/7/2020,Infected
+10377,4/14/2020,770,42,Female,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1377,positive,7/12/2020,Infected
+10378,4/4/2020,771,93,Female,other,Health Care,Agoura Hills,CA,Severe,1378,negative,9/25/2020,Infected
+10379,11/18/2020,772,17,Male,Black/African American,Sales,Alameda,CA,Moderate,1379,positive,6/10/2020,Infected
+10380,8/17/2020,773,56,Female,other,Transportation,Albany,CA,Mild,1380,negative,4/24/2020,Infected
+10381,9/20/2020,774,96,Female,other,Health Care,Alhambra,CA,Mild,1381,positive,6/21/2020,Infected
+10382,5/6/2020,775,94,Female,Hispanic,Transportation,Adelanto,CA,Moderate,1382,positive,10/25/2020,Infected
+10383,6/12/2020,776,71,Male,Black/African American,Other,Agoura Hills,CA,Severe,1383,positive,12/13/2020,Infected
+10384,7/6/2020,777,37,Male,other,Government/police,Alameda,CA,Mild,1384,negative,8/25/2020,Infected
+10385,9/13/2020,778,10,Male,other,Sales,Albany,CA,No symptoms,1385,positive,9/20/2020,Infected
+10386,4/6/2020,779,8,Female,Black/African American,Health Care,Alhambra,CA,No symptoms,1386,negative,3/26/2020,Infected
+10387,8/18/2020,780,78,Male,Black/African American,Government/police,Adelanto,CA,No symptoms,1387,positive,9/10/2020,Infected
+10388,1/3/2021,781,17,Female,other,Health Care,Agoura Hills,CA,No symptoms,1388,negative,11/15/2020,Infected
+10389,12/29/2020,782,54,Male,other,Sales,Alameda,CA,No symptoms,1389,positive,10/29/2020,Infected
+10390,12/26/2020,783,52,Male,Black/African American,Transportation,Albany,CA,Moderate,1390,positive,10/9/2020,Infected
+10391,3/24/2020,784,90,Male,Hispanic,Health Care,Alhambra,CA,No symptoms,1391,positive,1/14/2021,Infected
+10392,4/21/2020,785,60,Male,Non-Hispanic white,Transportation,Adelanto,CA,No symptoms,1392,negative,5/24/2020,Infected
+10393,11/22/2020,786,16,Male,Non-Hispanic white,Other,Agoura Hills,CA,Moderate,1393,positive,7/5/2020,Infected
+10394,8/24/2020,787,50,Male,other,Government/police,Alameda,CA,No symptoms,1394,negative,11/10/2020,Infected
+10395,6/19/2020,788,80,Male,Black/African American,Sales,Albany,CA,Moderate,1395,positive,12/21/2020,Infected
+10396,4/1/2020,789,52,Male,Non-Hispanic white,Health Care,Alhambra,CA,Severe,1396,negative,11/20/2020,Infected
+10397,8/25/2020,790,94,Male,other,Government/police,Adelanto,CA,Mild,1397,positive,8/7/2020,Infected
+10398,4/20/2020,791,87,Female,Black/African American,Health Care,Agoura Hills,CA,Severe,1398,positive,3/11/2020,Infected
+10399,9/6/2020,792,72,Female,Non-Hispanic white,Sales,Alameda,CA,Moderate,1399,positive,4/30/2020,Infected
+10400,10/22/2020,793,79,Male,Black/African American,Transportation,Albany,CA,No symptoms,1400,negative,4/7/2020,Infected
+10401,4/13/2020,794,11,Male,other,Health Care,Alhambra,CA,Moderate,1401,positive,3/7/2020,Infected
+10402,12/11/2020,795,27,Male,other,Transportation,Adelanto,CA,No symptoms,1402,negative,1/11/2021,Infected
+10403,5/13/2020,796,62,Male,Hispanic,Other,Agoura Hills,CA,No symptoms,1403,positive,3/17/2020,Infected
+10404,5/18/2020,797,61,Male,Non-Hispanic white,Government/police,Alameda,CA,No symptoms,1404,negative,10/25/2020,Infected
+10405,10/29/2020,798,24,Male,other,Sales,Albany,CA,Mild,1405,positive,12/20/2020,Infected
+10406,5/2/2020,799,33,Female,Non-Hispanic white,Health Care,Alhambra,CA,Moderate,1406,positive,9/25/2020,Infected
+10407,3/15/2020,800,47,Female,Non-Hispanic white,Government/police,Adelanto,CA,Severe,1407,positive,10/4/2020,Infected
+10408,12/12/2020,801,78,Male,other,Health Care,Agoura Hills,CA,Severe,1408,negative,7/26/2020,Infected
+10409,6/3/2020,802,33,Female,Black/African American,Sales,Alameda,CA,Severe,1409,positive,7/3/2020,Infected
+10410,7/11/2020,803,33,Female,other,Transportation,Albany,CA,Moderate,1410,negative,7/25/2020,Infected
+10411,3/30/2020,804,42,Female,Hispanic,Health Care,Alhambra,CA,Mild,1411,positive,3/17/2020,Infected
+10412,6/10/2020,805,84,Female,Black/African American,Transportation,Adelanto,CA,Mild,1412,negative,11/4/2020,Infected
+10413,6/10/2020,806,12,Male,other,Other,Agoura Hills,CA,Moderate,1413,positive,11/2/2020,Infected
+10414,4/23/2020,807,8,Male,other,Government/police,Alameda,CA,Severe,1414,positive,11/12/2020,Infected
 10415,6/13/2020,808,70,Female,Non-Hispanic white,Sales,Albany,CA,Mild,1415,positive,11/17/2020,recovered
 10416,1/10/2021,809,81,Female,Non-Hispanic white,Health Care,Alhambra,CA,No symptoms,1416,negative,9/17/2020,recovered
 10417,11/30/2020,810,64,Male,Non-Hispanic white,Government/police,Adelanto,CA,No symptoms,1417,positive,7/10/2020,hospitalized

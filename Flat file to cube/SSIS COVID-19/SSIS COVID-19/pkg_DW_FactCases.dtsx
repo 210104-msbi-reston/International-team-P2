@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DW_FactCases"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{4DD16E25-BCFB-4C33-8CC3-57CF8BBFFB4A}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{0C94EFF2-2E90-4433-918F-46007417FA74}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -467,13 +467,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "Recovered"</property>
+                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "recovered"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Event == "Recovered"</property>
+                      name="FriendlyExpression">Event == "recovered"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -495,13 +495,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "Hospitalized"</property>
+                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "hospitalized"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Event == "Hospitalized"</property>
+                      name="FriendlyExpression">Event == "hospitalized"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -523,13 +523,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "Died"</property>
+                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "death"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Event == "Died"</property>
+                      name="FriendlyExpression">Event == "death"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -974,299 +974,6 @@
                   <externalMetadataColumns />
                 </output>
               </outputs>
-            </component>
-            <component
-              refId="Package\Load FactCases\Geography Key Errors"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Geography Key Errors"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load FactCases\Geography Key Errors.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Geography Key errors]"
-                  connectionManagerRefId="Package.ConnectionManagers[Geography Key errors]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[CaseID]"
-                      cachedDataType="i4"
-                      cachedName="CaseID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[CaseID]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[CaseID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Date"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[Date]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[PatientID]"
-                      cachedDataType="i4"
-                      cachedName="PatientID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[PatientID]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[PatientID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[OutcomeID]"
-                      cachedDataType="i4"
-                      cachedName="OutcomeID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[OutcomeID]"
-                      lineageId="Package\Load FactCases\Case Table.Outputs[OLE DB Source Output].Columns[OutcomeID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[Age]"
-                      cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Age]"
-                      lineageId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output].Columns[Age]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[EthnicityID]"
-                      cachedDataType="i4"
-                      cachedName="EthnicityID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[EthnicityID]"
-                      lineageId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output].Columns[EthnicityID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[GenderID]"
-                      cachedDataType="i4"
-                      cachedName="GenderID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[GenderID]"
-                      lineageId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output].Columns[GenderID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[OccupationID]"
-                      cachedDataType="i4"
-                      cachedName="OccupationID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[OccupationID]"
-                      lineageId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output].Columns[OccupationID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[CityID]"
-                      cachedDataType="i4"
-                      cachedName="CityID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[CityID]"
-                      lineageId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output].Columns[CityID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[AgeGroup Unicode]"
-                      cachedDataType="wstr"
-                      cachedLength="5"
-                      cachedName="AgeGroup Unicode"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[AgeGroup Unicode]"
-                      lineageId="Package\Load FactCases\Transform Age to AgeGroup.Outputs[Derived Column Output].Columns[AgeGroup Unicode]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[AgeGroup]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="AgeGroup"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[AgeGroup]"
-                      lineageId="Package\Load FactCases\Convert AgeGroup to non-unicode.Outputs[Data Conversion Output].Columns[AgeGroup]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[CityName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="CityName"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[CityName]"
-                      lineageId="Package\Load FactCases\Lookup City.Outputs[Lookup Match Output].Columns[CityName]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[StateID]"
-                      cachedDataType="i4"
-                      cachedName="StateID"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[StateID]"
-                      lineageId="Package\Load FactCases\Lookup City.Outputs[Lookup Match Output].Columns[StateID]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[StateAbbreviation]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="2"
-                      cachedName="StateAbbreviation"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[StateAbbreviation]"
-                      lineageId="Package\Load FactCases\Lookup State.Outputs[Lookup Match Output].Columns[StateAbbreviation]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[StateName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="StateName"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[StateName]"
-                      lineageId="Package\Load FactCases\Lookup State.Outputs[Lookup Match Output].Columns[StateName]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[Gender]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Gender"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
-                      lineageId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output].Columns[Gender]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[Ethnicity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Ethnicity"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Ethnicity]"
-                      lineageId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output].Columns[Ethnicity]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[Occupation]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Occupation"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Occupation]"
-                      lineageId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output].Columns[Occupation]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[PatientKey]"
-                      cachedDataType="i4"
-                      cachedName="PatientKey"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[PatientKey]"
-                      lineageId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output].Columns[PatientKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactCases\Lookup Datekey.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[CaseID]"
-                      dataType="i4"
-                      name="CaseID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Date]"
-                      dataType="dbDate"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[PatientID]"
-                      dataType="i4"
-                      name="PatientID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[OutcomeID]"
-                      dataType="i4"
-                      name="OutcomeID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Age]"
-                      dataType="i4"
-                      name="Age" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[EthnicityID]"
-                      dataType="i4"
-                      name="EthnicityID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[GenderID]"
-                      dataType="i4"
-                      name="GenderID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[OccupationID]"
-                      dataType="i4"
-                      name="OccupationID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[CityID]"
-                      dataType="i4"
-                      name="CityID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[AgeGroup Unicode]"
-                      dataType="wstr"
-                      length="5"
-                      name="AgeGroup Unicode" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[AgeGroup]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="AgeGroup" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[CityName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="CityName" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[StateID]"
-                      dataType="i4"
-                      name="StateID" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[StateAbbreviation]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="StateAbbreviation" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[StateName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="StateName" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Gender" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Ethnicity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Ethnicity" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[Occupation]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Occupation" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[PatientKey]"
-                      dataType="i4"
-                      name="PatientKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
             </component>
             <component
               refId="Package\Load FactCases\Get Deltas"
@@ -3826,60 +3533,55 @@ where [refTable].[StateID] = ?</property>
               name="Infection"
               startId="Package\Load FactCases\Conditional Split.Outputs[Infection]" />
             <path
-              refId="Package\Load FactCases.Paths[Lookup Error Output]"
-              endId="Package\Load FactCases\Geography Key Errors.Inputs[Flat File Destination Input]"
-              name="Lookup Error Output"
-              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output1]"
-              endId="Package\Load FactCases\Create 0's and 1's for insertion.Inputs[Derived Column Input]"
+              refId="Package\Load FactCases.Paths[Lookup Match Output9]"
+              endId="Package\Load FactCases\Lookup Datekey.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output2]"
-              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
-              endId="Package\Load FactCases\Lookup State.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup City.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
-              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
-              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
-              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup State.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output8]"
-              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output9]"
-              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output]"
               endId="Package\Load FactCases\Lookup Geography Key.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load FactCases\Lookup Datekey.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output3]"
-              endId="Package\Load FactCases\Lookup Datekey.Inputs[Lookup Input]"
+              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
+              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
+              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
+              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
+              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup State.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output3]"
+              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output2]"
+              endId="Package\Load FactCases\Lookup State.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup City.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output1]"
+              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output]"
+              endId="Package\Load FactCases\Create 0's and 1's for insertion.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
+              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup No Match Output]"
               endId="Package\Load FactCases\Lookup Patient Information.Inputs[Lookup Input]"
@@ -3913,7 +3615,7 @@ where [refTable].[StateID] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="255,42"
+          Size="152,42"
           Id="Package\Load FactCases"
           TopLeft="70,203" />
       </GraphLayout>
@@ -3924,30 +3626,6 @@ where [refTable].[StateID] = ?</property>
     <LayoutInfo>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Lookup Ethnicity"
-          TopLeft="605.5,821.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Lookup State"
-          TopLeft="605.5,617.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Conditional Split"
-          TopLeft="605.5,1535.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Transform Age to AgeGroup"
-          TopLeft="605.5,311.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Hospitalizations"
-          TopLeft="605.5,1637.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Lookup Outcome (Event)"
-          TopLeft="605.5,1331.5" />
         <NodeLayout
           Size="239,42"
           Id="Package\Load FactCases\Infection"
@@ -3962,12 +3640,12 @@ where [refTable].[StateID] = ?</property>
           TopLeft="605.5,515.5" />
         <NodeLayout
           Size="239,42"
-          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
-          TopLeft="605.5,413.5" />
+          Id="Package\Load FactCases\Lookup PatientKey"
+          TopLeft="605.5,1025.5" />
         <NodeLayout
           Size="239,42"
-          Id="Package\Load FactCases\Lookup Patient Information"
-          TopLeft="605.5,209.5" />
+          Id="Package\Load FactCases\Conditional Split"
+          TopLeft="605.5,1535.5" />
         <NodeLayout
           Size="239,42"
           Id="Package\Load FactCases\Create 0's and 1's for insertion"
@@ -3982,28 +3660,52 @@ where [refTable].[StateID] = ?</property>
           TopLeft="605.5,1127.5" />
         <NodeLayout
           Size="239,42"
-          Id="Package\Load FactCases\Deaths"
-          TopLeft="305.5,1637.5" />
+          Id="Package\Load FactCases\Lookup Outcome (Event)"
+          TopLeft="605.5,1331.5" />
         <NodeLayout
           Size="239,42"
-          Id="Package\Load FactCases\Lookup PatientKey"
-          TopLeft="605.5,1025.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Get Deltas"
-          TopLeft="605.5,107.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Load FactCases\Case Table"
-          TopLeft="605.5,5.5" />
+          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
+          TopLeft="605.5,413.5" />
         <NodeLayout
           Size="239,42"
           Id="Package\Load FactCases\Lookup Occupation"
           TopLeft="605.5,923.5" />
         <NodeLayout
           Size="239,42"
+          Id="Package\Load FactCases\Get Deltas"
+          TopLeft="605.5,107.5" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Load FactCases\Lookup Patient Information"
+          TopLeft="604.5,211.5" />
+        <NodeLayout
+          Size="239,42"
           Id="Package\Load FactCases\Recoveries"
           TopLeft="905.5,1637.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load FactCases\Lookup Ethnicity"
+          TopLeft="605.5,821.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load FactCases\Deaths"
+          TopLeft="305.5,1637.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load FactCases\Transform Age to AgeGroup"
+          TopLeft="605.5,311.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load FactCases\Lookup State"
+          TopLeft="605.5,617.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load FactCases\Hospitalizations"
+          TopLeft="605.5,1637.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Load FactCases\Case Table"
+          TopLeft="605.5,5.5" />
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Recoveries]"
           TopLeft="794.3,1577.5">
@@ -4068,170 +3770,38 @@ where [refTable].[StateID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-16.5,62"
               Start="0,0"
-              End="0,52.5">
+              End="-16.5,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="-4,31" />
+                  <mssgle:LineSegment
+                    End="-12.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.5,31"
+                    Point2="-16.5,31"
+                    Point3="-16.5,35" />
+                  <mssgle:LineSegment
+                    End="-16.5,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              BoundingBox="-64.05638671875,36,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output9]"
-          TopLeft="725,761.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output8]"
-          TopLeft="725,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output7]"
-          TopLeft="725,659.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output6]"
-          TopLeft="725,1271.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output5]"
-          TopLeft="725,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output4]"
-          TopLeft="725,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Match Output3]"
           TopLeft="725,1067.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4255,8 +3825,164 @@ where [refTable].[StateID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output8]"
+          TopLeft="725,1169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output7]"
+          TopLeft="725,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output6]"
+          TopLeft="725,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output5]"
+          TopLeft="725,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output4]"
+          TopLeft="725,1271.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactCases.Paths[Lookup Match Output3]"
+          TopLeft="708.5,253.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,58"
+              Start="0,0"
+              End="16.5,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
+                  <mssgle:LineSegment
+                    End="12.5,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,29"
+                    Point2="16.5,29"
+                    Point3="16.5,33" />
+                  <mssgle:LineSegment
+                    End="16.5,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-39.94138671875,34,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output2]"
-          TopLeft="725,965.5">
+          TopLeft="725,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4280,7 +4006,7 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output1]"
-          TopLeft="725,1373.5">
+          TopLeft="725,965.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4304,7 +4030,7 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output]"
-          TopLeft="725,1169.5">
+          TopLeft="725,1373.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4500,119 +4226,9 @@ where [refTable].[StateID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load FactCases\Geography Key Errors"
-          TopLeft="267.5,1228.5" />
-        <EdgeLayout
-          Id="Package\Load FactCases.Paths[Lookup Error Output]"
-          TopLeft="605.5,1250">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-156,0"
-              Start="0,0"
-              End="-148.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-148.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-120.11638671875,5,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Ethnicity">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Ethnicity]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup State">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[State]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Hospitalizations">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Outcome (Event)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Outcome]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load FactCases\Infection">
     <Properties>
@@ -4673,7 +4289,7 @@ where [refTable].[StateID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup Patient Information">
+    design-time-name="Package\Load FactCases\Lookup PatientKey">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4683,7 +4299,7 @@ where [refTable].[StateID] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Patient]</Value>
+          type="q3:string">[dbo].[DimPatient]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4701,7 +4317,7 @@ where [refTable].[StateID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4742,20 +4358,7 @@ where [refTable].[StateID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Deaths">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Lookup PatientKey">
+    design-time-name="Package\Load FactCases\Lookup Outcome (Event)">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4765,7 +4368,7 @@ where [refTable].[StateID] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimPatient]</Value>
+          type="q3:string">[dbo].[Outcome]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4774,42 +4377,6 @@ where [refTable].[StateID] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Get Deltas">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactCases]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactCases\Case Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4837,7 +4404,138 @@ where [refTable].[StateID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Get Deltas">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactCases]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup Patient Information">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Patient]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load FactCases\Recoveries">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup Ethnicity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Ethnicity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Deaths">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Lookup State">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[State]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Hospitalizations">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactCases\Case Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
