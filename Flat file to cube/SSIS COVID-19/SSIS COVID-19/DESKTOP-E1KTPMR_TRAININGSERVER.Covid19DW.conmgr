@@ -5,6 +5,10 @@
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
+<<<<<<< HEAD
       DTS:ConnectionString="Data Source=LAPTOP-PA9UJJBG\TXSERVER1;Initial Catalog=Covid19DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+=======
+      DTS:ConnectionString="Data Source=DESKTOP-2880HMN\LEARNINGSERVER;Initial Catalog=Covid19DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
   </DTS:ObjectData>
 </DTS:ConnectionManager>

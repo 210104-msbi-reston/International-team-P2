@@ -11,8 +11,13 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DW_FactCases"
   DTS:PackageType="5"
+<<<<<<< HEAD
   DTS:VersionBuild="29"
   DTS:VersionGUID="{0C94EFF2-2E90-4433-918F-46007417FA74}">
+=======
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{AB033B05-BD1C-4F19-845A-4E97B4698EE2}">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -439,13 +444,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "Infected"</property>
+                      name="Expression">#{Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output].Columns[Event]} == "infected"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Event == "Infected"</property>
+                      name="FriendlyExpression">Event == "infected"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -3534,30 +3539,56 @@ where [refTable].[StateID] = ?</property>
               startId="Package\Load FactCases\Conditional Split.Outputs[Infection]" />
             <path
               refId="Package\Load FactCases.Paths[Lookup Match Output9]"
-              endId="Package\Load FactCases\Lookup Datekey.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output8]"
-              endId="Package\Load FactCases\Lookup Geography Key.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Datekey.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
-              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
-              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
+<<<<<<< HEAD
+=======
               endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load FactCases\Lookup State.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output8]"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+              endId="Package\Load FactCases\Lookup Datekey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup PatientKey.Outputs[Lookup Match Output]" />
+            <path
+<<<<<<< HEAD
+              refId="Package\Load FactCases.Paths[Lookup Match Output8]"
+=======
+              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+              endId="Package\Load FactCases\Lookup Geography Key.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Datekey.Outputs[Lookup Match Output]" />
+            <path
+<<<<<<< HEAD
+              refId="Package\Load FactCases.Paths[Lookup Match Output7]"
+=======
+              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+              endId="Package\Load FactCases\Lookup Ethnicity.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Gender.Outputs[Lookup Match Output]" />
+            <path
+<<<<<<< HEAD
+              refId="Package\Load FactCases.Paths[Lookup Match Output6]"
+=======
+              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+              endId="Package\Load FactCases\Lookup Occupation.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Ethnicity.Outputs[Lookup Match Output]" />
+            <path
+<<<<<<< HEAD
+              refId="Package\Load FactCases.Paths[Lookup Match Output5]"
+              endId="Package\Load FactCases\Lookup Gender.Inputs[Lookup Input]"
+=======
+              refId="Package\Load FactCases.Paths[Lookup Match Output3]"
+              endId="Package\Load FactCases\Lookup State.Inputs[Lookup Input]"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup City.Outputs[Lookup Match Output]" />
+            <path
+<<<<<<< HEAD
               refId="Package\Load FactCases.Paths[Lookup Match Output3]"
               endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
               name="Lookup Match Output"
@@ -3582,6 +3613,27 @@ where [refTable].[StateID] = ?</property>
               endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
+=======
+              refId="Package\Load FactCases.Paths[Lookup Match Output2]"
+              endId="Package\Load FactCases\Lookup PatientKey.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Occupation.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output1]"
+              endId="Package\Load FactCases\Create 0's and 1's for insertion.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Outcome (Event).Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output]"
+              endId="Package\Load FactCases\Lookup Outcome (Event).Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Geography Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load FactCases.Paths[Lookup Match Output4]"
+              endId="Package\Load FactCases\Transform Age to AgeGroup.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load FactCases\Lookup Patient Information.Outputs[Lookup Match Output]" />
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
             <path
               refId="Package\Load FactCases.Paths[Lookup No Match Output]"
               endId="Package\Load FactCases\Lookup Patient Information.Inputs[Lookup Input]"
@@ -3615,7 +3667,11 @@ where [refTable].[StateID] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
+<<<<<<< HEAD
           Size="152,42"
+=======
+          Size="255.2,41.6"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           Id="Package\Load FactCases"
           TopLeft="70,203" />
       </GraphLayout>
@@ -3627,18 +3683,47 @@ where [refTable].[StateID] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+<<<<<<< HEAD
           Size="239,42"
+=======
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Lookup Ethnicity"
+          TopLeft="605.5,821.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Lookup State"
+          TopLeft="605.5,617.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Conditional Split"
+          TopLeft="605.5,1535.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Transform Age to AgeGroup"
+          TopLeft="605.5,311.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Hospitalizations"
+          TopLeft="605.5,1637.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Lookup Outcome (Event)"
+          TopLeft="605.5,1331.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           Id="Package\Load FactCases\Infection"
           TopLeft="5.50000000000011,1637.5" />
         <NodeLayout
-          Size="239,42"
+          Size="239.2,41.6"
           Id="Package\Load FactCases\Lookup Gender"
           TopLeft="605.5,719.5" />
         <NodeLayout
-          Size="239,42"
+          Size="239.2,41.6"
           Id="Package\Load FactCases\Lookup City"
           TopLeft="605.5,515.5" />
         <NodeLayout
+<<<<<<< HEAD
           Size="239,42"
           Id="Package\Load FactCases\Lookup PatientKey"
           TopLeft="605.5,1025.5" />
@@ -3646,19 +3731,29 @@ where [refTable].[StateID] = ?</property>
           Size="239,42"
           Id="Package\Load FactCases\Conditional Split"
           TopLeft="605.5,1535.5" />
+=======
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Convert AgeGroup to non-unicode"
+          TopLeft="605.5,413.5" />
         <NodeLayout
-          Size="239,42"
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Lookup Patient Information"
+          TopLeft="605.5,209.5" />
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+        <NodeLayout
+          Size="239.2,41.6"
           Id="Package\Load FactCases\Create 0's and 1's for insertion"
           TopLeft="605.5,1433.5" />
         <NodeLayout
-          Size="239,42"
+          Size="239.2,41.6"
           Id="Package\Load FactCases\Lookup Geography Key"
           TopLeft="605.5,1229.5" />
         <NodeLayout
-          Size="239,42"
+          Size="239.2,41.6"
           Id="Package\Load FactCases\Lookup Datekey"
           TopLeft="605.5,1127.5" />
         <NodeLayout
+<<<<<<< HEAD
           Size="239,42"
           Id="Package\Load FactCases\Lookup Outcome (Event)"
           TopLeft="605.5,1331.5" />
@@ -3670,11 +3765,21 @@ where [refTable].[StateID] = ?</property>
           Size="239,42"
           Id="Package\Load FactCases\Lookup Occupation"
           TopLeft="605.5,923.5" />
+=======
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Deaths"
+          TopLeft="305.5,1637.5" />
         <NodeLayout
-          Size="239,42"
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Lookup PatientKey"
+          TopLeft="605.5,1025.5" />
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
+        <NodeLayout
+          Size="239.2,41.6"
           Id="Package\Load FactCases\Get Deltas"
           TopLeft="605.5,107.5" />
         <NodeLayout
+<<<<<<< HEAD
           Size="208,42"
           Id="Package\Load FactCases\Lookup Patient Information"
           TopLeft="604.5,211.5" />
@@ -3706,6 +3811,19 @@ where [refTable].[StateID] = ?</property>
           Size="239,42"
           Id="Package\Load FactCases\Case Table"
           TopLeft="605.5,5.5" />
+=======
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Case Table"
+          TopLeft="605.5,5.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Lookup Occupation"
+          TopLeft="605.5,923.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Load FactCases\Recoveries"
+          TopLeft="905.5,1637.5" />
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Recoveries]"
           TopLeft="794.3,1577.5">
@@ -3802,7 +3920,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output9]"
+<<<<<<< HEAD
           TopLeft="725,1067.5">
+=======
+          TopLeft="725,659.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3826,7 +3948,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output8]"
+<<<<<<< HEAD
           TopLeft="725,1169.5">
+=======
+          TopLeft="725,1067.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3850,7 +3976,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output7]"
+<<<<<<< HEAD
           TopLeft="725,761.5">
+=======
+          TopLeft="725,1169.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3874,7 +4004,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output6]"
+<<<<<<< HEAD
           TopLeft="725,863.5">
+=======
+          TopLeft="725,761.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3898,7 +4032,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output5]"
+<<<<<<< HEAD
           TopLeft="725,659.5">
+=======
+          TopLeft="725,863.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3922,7 +4060,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output4]"
+<<<<<<< HEAD
           TopLeft="725,1271.5">
+=======
+          TopLeft="725,251.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3946,7 +4088,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output3]"
+<<<<<<< HEAD
           TopLeft="708.5,253.5">
+=======
+          TopLeft="725,557.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4030,7 +4176,11 @@ where [refTable].[StateID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactCases.Paths[Lookup Match Output]"
+<<<<<<< HEAD
           TopLeft="725,1373.5">
+=======
+          TopLeft="725,1271.5">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4409,7 +4559,7 @@ where [refTable].[StateID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

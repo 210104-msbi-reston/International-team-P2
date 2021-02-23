@@ -26,7 +26,15 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-E1KTPMR</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
+<<<<<<< HEAD
           <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKlGxG1MPxkiT/RoCmHIeXgAAAAACAAAAAAAQZgAAAAEAACAAAADLrROtpfVh24qv9ptzIOmIeISTMDkWJg5K9IUQuhLpyAAAAAAOgAAAAAIAACAAAABNMpctoqWUU674wC+uuzRMaCMd8CgbiUDax0yFnDHPnZAAAACLQ5NT2w2eifgpl3n9p9r5mXde0Jz8mW3eIeFi/h3Rd1sNwyUr8qcoWOsPY1vQeGL9FbOn6IQBjkOazvEFynZ7MnFf7Cdogml3w+JMpxoHeP7iEllXLlFnNoVfqtl/FuaKfksNhv5M9XGkbvfq8CVQTigeGInhfCwYHP9argHdKNCoRoERZ87CiSPKcZnm7stAAAAAH/tBu2wsEA3LLOQxsk/svvib2cJ/+TFt1hM6FK0a99M9k7IB1HCsK3W5hmgHq7jLtsWtJD20DSXHD+tTBvzq8A==</SSIS:Property>
+=======
+<<<<<<< HEAD
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqXlSX6KGEkyo6X9gEOsY5wAAAAACAAAAAAAQZgAAAAEAACAAAAAdeIwHPmhewLfZe8ZlKAddH+fG394opZ1WsnWogsY1ggAAAAAOgAAAAAIAACAAAADR+BN7ZtdthlKPN4mUZKmIdcl1XbrayJaVfl20SijI7ZAAAACFqN2ujhHpBYnFYOD0f979RrtSJaa6D/Vjn3G622csABKOh+lVtnTRqhoUUS1gz+eRBuCJNSBda0V9Gdn2WsNq043FplT/ISYrFgdv0rJjAOG5E6+nc4RfX66aPjJca6qIuz5HJxdXVh9kSvt3oZSx6Gv0nWlMH5bak/JI7kRVLg+TwXAK3H0ovOQdaaExZG1AAAAAlwWJ4QypVZPewVUqDfySIk2zmYuYA3TNWEj20xr5FkN1PGaO4MOOMFEge8Lhk0lN0X8R7W+LcXhAdqSApSaTVQ==</SSIS:Property>
+=======
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXviEYzCGr06ENYm0kexYWQAAAAACAAAAAAAQZgAAAAEAACAAAAADJsY3wRpN0t1ywgZkpqzieGVs/xXr7PghgfEG4wE1GgAAAAAOgAAAAAIAACAAAACkbVgk/HATQxgIAxy2Xlwb8m9ebbSpLQdL7FyfnPs/IpAAAAD9hKsmrEg93J3GhLpPHHH0suLYWwNgJYp+hABMK4ibFFG5qLGkXEx3Qz0vgs2YNyFz8V0+f02Bb7hi592QGBb66kKCkjwxnrcvyRLCwoSzw1esNaB+RN7rUR6uuVSwhw6dBpMS8E7wBYULwaKGOzNR7Q3JenYPgB7vywtDhK1sWW8AiNHO8Wl3tAP8poOiplBAAAAAm4Kzs2uTKsQUsb4ldYWafsSg/jGTxaZwPkxS3kZwRkeOZxdCLj8vI5cNXhMrL+py+CdgMpTAtdTPAxJlUkUAIA==</SSIS:Property>
+>>>>>>> 22d4d5f141b13836c1d4d6bcb36e2accdbee7b43
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -36,7 +44,11 @@
           <SSIS:Package SSIS:Name="pkg_DW_DimPatient.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pkg_DW_DimGeography.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pkg_CU_cube.dtsx" SSIS:EntryPoint="1" />
+<<<<<<< HEAD
           <SSIS:Package SSIS:Name="pkg_DB_Master.dtsx" SSIS:EntryPoint="1" />
+=======
+          <SSIS:Package SSIS:Name="pkg_Master_Execute.dtsx" SSIS:EntryPoint="1" />
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="DESKTOP-E1KTPMR_TRAININGSERVER.Covid19DB.conmgr" />
@@ -70,7 +82,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-PA9UJJBG\TXSERVER1;Initial Catalog=Covid19DB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-2880HMN\LEARNINGSERVER;Initial Catalog=Covid19DB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -173,7 +189,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-PA9UJJBG\TXSERVER1;Initial Catalog=Covid19DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-2880HMN\LEARNINGSERVER;Initial Catalog=Covid19DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -247,7 +267,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="Value">LAPTOP-PA9UJJBG\TXSERVER1</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="Value">DESKTOP-2880HMN\LEARNINGSERVER</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -444,8 +468,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -487,10 +509,17 @@
                 <SSIS:Property SSIS:Name="Name">pkg_DB_FlatToStaging</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{DF339FF3-D720-455D-99CB-28DA9899C1B5}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{FAC0C5AD-04F7-44CF-B4C0-905309F527DB}</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -507,7 +536,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+<<<<<<< HEAD
                     <SSIS:Property SSIS:Name="Value">D:\International_GroupProjectold\International-team-P2\International-team-P2\Data\SourceData\Covid19_dataset.csv</SSIS:Property>
+=======
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Ruslan\Desktop\Git_test\International-team-P2\Data\SourceData\COVID19_dataset.csv</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -658,8 +691,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -701,10 +732,17 @@
                 <SSIS:Property SSIS:Name="Name">pkg_DW_FactCases</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="VersionBuild">29</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{0C94EFF2-2E90-4433-918F-46007417FA74}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionBuild">25</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{BDA942BE-7E11-4777-B58C-47C4CD6FA484}</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -919,7 +957,11 @@
                 <SSIS:Property SSIS:Name="VersionBuild">19</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="VersionGUID">{C54A8791-0FDB-4455-B3FD-C134A2C5DB1B}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionGUID">{8073C544-230E-4214-B8EB-AD5599BF944D}</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -950,10 +992,24 @@
                 <SSIS:Property SSIS:Name="Name">pkg_CU_cube</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{44820D5B-FDCF-4443-9D41-8E77DACF7C68}</SSIS:Property>
+=======
+<<<<<<< HEAD
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{05CA22B3-3BC8-4C1F-BC67-8409F58AC991}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{541F8C4A-A596-413B-AC52-ECB1BAD8FBC8}</SSIS:Property>
+>>>>>>> 22d4d5f141b13836c1d4d6bcb36e2accdbee7b43
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -985,6 +1041,109 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">DESKTOP-E1KTPMR\TRAININGSERVER</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-2880HMN\LEARNINGSERVER;Initial Catalog=SSAS COVID-19;Provider=MSOLAP.8;Integrated Security=SSPI;Impersonation Level=Impersonate;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">SSAS COVID-19</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DESKTOP-2880HMN\LEARNINGSERVER</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.DESKTOP-2880HMN\LEARNINGSERVER.SSAS COVID-19.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1166,16 +1325,27 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
+<<<<<<< HEAD
             <SSIS:PackageMetaData SSIS:Name="pkg_DB_Master.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{402E5FF2-CAA3-4348-A6A0-7527728B35C3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">pkg_DB_Master</SSIS:Property>
+=======
+            <SSIS:PackageMetaData SSIS:Name="pkg_Master_Execute.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E693B37B-FFD5-4028-8086-7B7A8B3EBA43}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pkg_Master_Execute</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
+<<<<<<< HEAD
                 <SSIS:Property SSIS:Name="VersionGUID">{EDF35516-6225-4551-9E58-DA3D92D4D6E2}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionGUID">{75E4751E-637E-4767-9CBF-0BA1E1240993}</SSIS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

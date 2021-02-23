@@ -11,8 +11,13 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_DB_FlatToStaging"
   DTS:PackageType="5"
+<<<<<<< HEAD
   DTS:VersionBuild="11"
   DTS:VersionGUID="{DF339FF3-D720-455D-99CB-28DA9899C1B5}">
+=======
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{FAC0C5AD-04F7-44CF-B4C0-905309F527DB}">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +37,11 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
+<<<<<<< HEAD
           DTS:ConnectionString="D:\International_GroupProjectold\International-team-P2\International-team-P2\Data\SourceData\Covid19_dataset.csv">
+=======
+          DTS:ConnectionString="C:\Users\Ruslan\Desktop\Git_test\International-team-P2\Data\SourceData\COVID19_dataset.csv">
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +182,11 @@
       DTS:ObjectName="COVID19_dataset_csv_filepath">
       <DTS:Property
         DTS:DataType="8"
+<<<<<<< HEAD
         DTS:Name="ParameterValue">D:\International_GroupProjectold\International-team-P2\International-team-P2\Data\SourceData\Covid19_dataset.csv</DTS:Property>
+=======
+        DTS:Name="ParameterValue">C:\Users\Ruslan\Desktop\Git_test\International-team-P2\Data\SourceData\COVID19_dataset.csv</DTS:Property>
+>>>>>>> d1a091f305ff91e81df60110f2b7547c0836f18c
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -903,7 +916,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="165,42"
+          Size="164.8,41.6"
           Id="Package\Load staging table"
           TopLeft="262.5,133.5" />
       </GraphLayout>
@@ -915,11 +928,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174,42"
+          Size="174.4,41.6"
           Id="Package\Load staging table\staging_CasePatient"
           TopLeft="168.5,285.5" />
         <NodeLayout
-          Size="173,42"
+          Size="172.8,41.6"
           Id="Package\Load staging table\Original data source"
           TopLeft="163.5,22.5" />
         <EdgeLayout

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DatabaseSourceCovidDB</DataSourceReference>
+      <CommandText>SELECT [year],MonthInt,[month],[0] as Death, [1] as Hospitalized, [2] as recovered, [3] as infected FROM
+(	SELECT YEAR(Date) AS [Year],Month(date) as MonthInt,DATENAME(month, Date) AS [Month],OutcomeID
+
+FROM [Case]
+
+)  AS P
+PIVOT  
+(  
+COUNT (outcomeId)  
+FOR outcomeId IN  
+( [0], [1], [2], [3])  
+) AS pvt  
+ORDER BY pvt.Year,pvt.MonthInt; </CommandText>
+    </Query>
+    <Fields>
+      <Field Name="year">
+        <DataField>year</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="MonthInt">
+        <DataField>MonthInt</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="month">
+        <DataField>month</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Death">
+        <DataField>Death</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Hospitalized">
+        <DataField>Hospitalized</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="recovered">
+        <DataField>recovered</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="infected">
+        <DataField>infected</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

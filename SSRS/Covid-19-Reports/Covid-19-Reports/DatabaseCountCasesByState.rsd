@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DatabaseSourceCovidDB</DataSourceReference>
+      <CommandText>select S.Name,S.StateAbbreviation,COUNT(CaseID) AS TotalCases from [Case] C
+JOIN Patient P ON P.PatientID=C.PatientID
+JOIN City CT ON CT.CityID=p.CityID
+join [State] S ON S.StateID=CT.StateID
+group by S.Name,S.StateAbbreviation
+ORDER BY S.StateAbbreviation</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Name">
+        <DataField>Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StateAbbreviation">
+        <DataField>StateAbbreviation</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TotalCases">
+        <DataField>TotalCases</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
